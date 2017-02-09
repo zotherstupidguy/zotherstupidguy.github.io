@@ -1,0 +1,19 @@
+* About
+I am mo
+
+* Sources
+** Mathematics
+a lot of books about math
+*** Number Theory 
+a lot of books about Number Theory and its applications
+*** Proof Theory 
+Dig deeper into the history of Proof Theory via a lot of resources.
+
+** ComputerScience
+*** Theory of Computation 
+A lot of books about Turing, Church, Neuman
+*** Machine Learning
+The current trend here
+
+* Travel, Languages, & Cultures
+a lot about life mainly yoga, and brasalian songs.
