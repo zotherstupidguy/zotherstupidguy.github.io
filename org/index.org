@@ -1,5 +1,5 @@
 * About
-I am mo
+I am mo, and this is my mainfesto!
 
 * Sources
 ** Mathematics
