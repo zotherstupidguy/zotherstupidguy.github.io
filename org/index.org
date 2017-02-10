@@ -1,6 +1,376 @@
-* About
-I am mo, and this is my mainfesto!
+#+TITLE:    zotherstupidguy log 
+#+AUTHOR:    Mohamed Fouad
+#+EMAIL:     zotherstupidguy@gmail.com
+#+DESCRIPTION: daily log of zotherstupidguy life 
+#+KEYWORDS:  emacs, mathematics, computer science, machine learning 
+#+LANGUAGE:  en
+#+STYLE:body {font-family: "Source Sans Pro Black",sans-serif;}
 
+
+* About
+  Hello, I am Mohamed Fouad aka zotherstupidguy, and this is my all day-to-day activies b(log). 
+  I consider myself to be living the life of a Software Philosopher, a non stop curiosity and a never-ending learning journey.
+  I am available for hire, and you can find my resume here[link to google docs]. 
+  
+Each headline Grit, Universities, Studying Strategy, Sources, Practice.... is a post and the rest of its content is part of the post body 
+  OR
+  Only the subheadings of Sources  and Practice are Posts and their content are body of the posts
+
+
+* Grit 
+**  ss
+   + item-1
+     1. item-1.1
+     2. item-1.2
+     3. item-1.3
+   + item-2
+     - item-2.1
+     - item-2.2
+     - item-2.3
+   + item-3  
+
+
+* Universities
+  Here I examine how each university offer its computer science programs and what kind of books they set as 
+  textbooks.
+
+  
+* Studying Strategy 
+  My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the 
+  knowledge that I aquire into this file, and I organize it accordingly.
+  Naturally I could write a book or two from the notes I have written into this file. As a matter of fact, I belive that
+  the only way computer scientets are capable of writing so many powerful books is due to the fact that they use
+  emacs in a similar way to what i am doing here, I can collect information and tag it, search it easily and update it,
+  check cross referencing, etc. it is really awesome. I think i will keep taking notes in notebooks and as a reviesion I 
+  will transfer the notes to here. I expect to be able to have codeblocks, latex formulas and maybe some progress
+  graphs.
+
+  Publish a series about computer science via https://leanpub.com, 
+  call it "hackspree computer science series", each volume is small 100pages book of notes and commentary. 
+
+  Make this log.org file my personal blog on zotherstupidguy.github.io, all in just one big huge page to get so many fucken hits.
+  This log is published via an autoback configuration from Emacs, meaning that some times drafts are included.
+
+** Zone of Proximal Development [1/2]
+   If i am studying a book, I can label its chapters as Done, TODO, or without label.
+*** DONE is  I-can
+*** TODO is ZPD 
+*** notag is I-can't
+
+
+** Cronell Note Taking System
+   trying to find a CornellNoteTakingSystem mode for Emacs.
+
+*** SQ3R
+
+** Finding Sources
+   using ./link to automatically download new youtube videos and generate an RSS of it and update log.org with a TODO for watching new things.
+   I can't add ZPT, can, and can't folders in the sources folders as it will make ./link difficult to know what already got downloaded.
+
+** Emacs Tips
+   M- left arrow can make org elements go to sub
+   Because I am using Evil-mode I can simply paste using P or p, same as vim's http://vim.wikia.com/wiki/Copy,_cut_and_paste
+*** TODO find a way to do org-plot
+** Blog
+   + TODO 
+     + making a blog from a single org document
+     + Theme
+       - use the font and theme from here http://www.davidchristiansen.dk/2014/07/16/implementing-an-emacs-programming-language-mode-beyond-the-basics/
+     + References 
+       -ref: http://endlessparentheses.com/how-i-blog-one-year-of-posts-in-a-single-org-file.html
+     + ref: http://orgmode.org/worg/org-web.html
+     + ref: https://ogbe.net/blog/blogging_with_org.html 
+     + reff: http://nicolas.petton.fr/blog/blogging-with-org-mode.html (prefered to start with!!!!!!!)
+
+** Email
+   access all emails from emacs for easy regex search
+** IRC [0/1]
+   access IRC from inside emacs to automatically log all important channels and always search them for answers before going online.
+   erc works awesome ;) 
+*** TODO
+    - find some nice configruations for erc
+    - Register username/password
+    - log all opened channels automatically everytime emacs starts
+    - back them up automatically somehow. 
+
+** Backup
+   search for an emacs mode that would allow you to backup my files automatically somehow to googledrive/ github/ or server.
+   I prefer Github, that way I can auto publish everytime I make an edit on the file (maybe a job that runs every hour or so).
+
+   https://github.com/ryuslash/git-auto-commit-mode
+** Time Management
+   using ClockWork app, I work only for 10mins to take 5mins break and a rest every 10x3. 
+   it is like this because to move slowly is better than being depressed and not moving at all.
+
+** LaTex
+** RSS
+   upwork rss jobs and other stuff.
+   http://pragmaticemacs.com/category/elfeed/
+
+** Git
+   need to use 'maget
+
+** Citations [0/1]
+*** TODO 
+    find somthing like org-ref http://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/ 
+    this way we can provide citations for the things we have in Sources Directory
+    
+
+* Sources
+  This file contains links to all the material to study, :can:zpd:can't:anytag:
+  *Six Thinking* Hats in solving ~competitive programming~ questions.
+  *bold* /italics/ _underline_ ~verbatim~ +strike-through+
+
+** Philosphy
+*** Socrates
+**** Refrences
+     - SomeRefernce
+*** Plato
+**** Refrences
+     - TTC Video David Roochnik Platos Republic
+
+
+** Mathematics [0/2]
+*** Problem Solving
+**** TTC VIDEO - The Art and Craft of Mathematical Problem Solving  :problemsolving:
+     - Diference between Problem and Exercise :: Scope doesn't work as expected, and messes everything up
+          when loops mix variables up in recursive functions.
+          - Namespaces :: You wish. 
+          - Header Files :: Nope.
+
+*** Set Theory
+**** SourceA
+     information about the source here, author, edition, date, who is using it in univ cources, etc.
+**** [#B] SourceB
+     ssfsf
+*** Proof Theory
+*** Category Theory
+*** Single-Variable Calculas
+*** Multi-Variable Calculas 
+*** Number Theory
+**** Elementry Number Theory - 6th Edition - Kenneth H. Rosen 
+***** Chapter1
+****** Introduction  :zpd:numbertheory:
+       (p) somthing is a predicate
+       (i) somthing is impelied
+       (q)
+       tags for can, cannot, zpd
+*****  Source
+      could be google drive linkk 
+      [[file:3.Sources/NumberTheory/Books/Elementary%20Number%20Theory%20-%206th%20Edition%20-%20Kenneth%20H.%20Rosen.pdf][file:3.Sources/NumberTheory/Books/Elementary Number Theory - 6th Edition - Kenneth H. Rosen.pdf]]  
+
+*** Vedic Mathematics (Mental Math)
+*** Graph Theory
+*** TODO [#A] Discerete Mathematics
+*** TODO [#B] Concerete Mathematics
+*** Continous Mathematics
+*** Statistics
+*** Real Analysis
+
+
+** Computer Science
+*** Theory of Computation
+**** Introduction to the Theory of Computation - 3rd - Spiser
+*** DataStructures
+*** Algorithms
+    you don't need to program to understand algorithms, only pen and paper. only in interviews and competitive programming you need to practice via code
+
+*** Artificial Intellegence
+**** Machine Learning
+This is a very small font?????????????
+This is a very small font?????????????
+This is a very small font?????????????
+This is a very small font?????????????
+
+**** Deep Learning
+**** BigData
+**** R
+**** Python
+
+
+** Competitive Programming
+*** C programming :course:
+**** VideoName                                                   :studentcan:
+     - dfdfd :studentcann't:
+     - dfdfddfdf :ZPD:
+
+*** hackerrank :youtube:
+*** arabic competitive programming :youtube:
+*** codejam :youtube:
+*** codemasrytube :youtube:
+*** mycodeschool :youtube:
+*** saurabhschool
+*** codinginterviewhub
+*** conor 
+*** geeksforgeeks
+
+
+** Puzzles
+
+
+* Practice
+** tips  
+   every solution is a finite state automata
+   use inf-ruby more often please
+   ;; inf-ruby
+   ;;Use C-c C-s to launch the inf-ruby process.
+   ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
+   ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
+   ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
+   ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
+   ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
+   ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
+   (autoload 'inf-ruby-minor-mode "inf-
+
+
+** HackerRank
+**** Practice
+***** Core CS
+****** Mathematics
+******* Fundamentals 
+******* NumberTheory 
+******* Combinatorics 
+******* Algebra 
+******* Geometry 
+******* Probability 
+******* LinarAlgebraFoundations
+
+****** DataStructres
+
+****** Algorithms
+*******  Warmup 
+*******  Implementation 
+*******  ConstructiveAlgorithms 
+*******  Strings
+*******  Sorting
+*******  Search
+*******  GraphTheory
+*******  Greedy
+*******  DynamicProgramming
+*******  BitManipulation
+*******  Recursion
+*******  GameTheory
+*******  NPComplete 
+
+
+
+***** Tutorials 
+****** 30 Days of Code
+****** Cracking The Coding Interview
+****** 10 Days of Statistics
+
+
+***** Specialized Skills
+****** Artificial Intelligence
+****** Distributed Systems
+****** Regex
+****** Security
+******* Functions
+******* Terminoloy and Concepts
+******* Cryptography
+
+
+
+***** Languages 
+****** C++
+****** Python
+****** Ruby 
+****** LinuxShell
+****** Functional Programming
+
+
+**** Compete
+***** RookieRank2
+      
+
+** Codeforces
+*** Contests
+**** 1
+***** A
+      dd
+***** B :numeration::regex:
+      this introdces custom numeration systems and requires regex to be solved
+
+***** C
+**** 2
+     
+     
+* Interviews
+  keep log of all the interviews I made and schedules for upcoming interviews, as well as info for mastering the
+  art of interviews. 
+  
+  Some people make multiple interviews with fake names, imporsnating someone who doens't
+  have a public profile photo on twitter and github, they require a fake skypename for that! You are too lazy for this :))
+*** Cracking the Coding Interview :book:zpd:
+
+    
+* Opensource
+** Gitlapse
+   + Improvments 
+     - Use ElDoc-mode in emacs to identify what is going on while writing the code, and then text-to-speech the output of ElDoc mode and create a video out of it.
+     - Create a Gitlapse-mode for doing all my stuff?? maybe not a great idea. But wasamasa can help and tehn Emacsers can do this gitlapse thing on their own machines.
+** Mushin
+** Utter
+   What are Microservices? they are hexagons
+   Hexagonal architecture (paper introduced by whom?)
+   autonmous
+   independent processes communicate over APIs high degree of autonomy- take one ser
+   small, focused on doing one thing well, unix philosphy
+   microservices is just an opinonated way of SOA.
+   small autonomous services that work together, independant processes communicating over APIs, focused on one thing and doing one thing well.
+   Better alignment with the organizsation.
+   exaptation
+   Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organizationâs communication structure.
+   Monolith application
+   target security concern enalbe segregation models
+   Adopt a balanced portfolio of risk around technology.
+   not locked into a single programming idiom
+   Principles of MicroServices
+   Modelled around business domain
+   Culture of Automation
+   Hide Implementation details
+   Decentralise all the things
+   Deploy independently
+   Consumer first
+   Modeling around Business Domain
+   Presentation - Business Logic - Data Access
+** SSD
+
+
+* Work
+** UpWork
+*** Rails
+*** Ruby
+*** Python
+*** Django
+** Penetration Testing
+   
+   
+* Travel, Languages, & Culture
+** Yoga
+*** The Yoga Warrior 
+**** Verstile Warrior
+** Aikido 
+** Portougese Language 
+** Samba Songs
+** Sertanjijo Songs
+** Brasalian Funk Song
+** Brazlian Rap
+   - projota 
+   - Songname
+     - Lyrica
+     - Translation
+     - Important Words
+   - emicida 
+   - rodrigo ogi
+   - black alien
+   - criolo
+** Japanese Language 
+   
+I am dddmo a.k.a zotherstupidguy, and this is my log of everything!!
+#+caption: mo
+[[file:img/mo.jpg]]
+-----
 * Sources
 ** Mathematics
 a lot of books about math
@@ -13,7 +383,22 @@ Dig deeper into the history of Proof Theory via a lot of resources.
 *** Theory of Computation 
 A lot of books about Turing, Church, Neuman
 *** Machine Learning
-The current trend here
+    The current trend here
+          - [X] Checked.
+          - [-] Half-checked.
+          - [ ] Not checked.
+          - Normal list item.
 
 * Travel, Languages, & Cultures
-a lot about life mainly yoga, and brasalian songs.
+  a lot about life mainly yoga, and brasalian songs.
+  - First term to define ::
+       Definition of the first term. We add a few words to show the line wrapping,
+       to see what happens when you have long lines.
+
+  - Second term ::
+                   Explication of the second term with *inline markup*.
+  | Cell in column 1, row 1 | Cell in column 2, row 1 |
+  | Cell in column 1, row 2 | Cell in column 2, row 2 |
+
+  In many paragraphs.
+

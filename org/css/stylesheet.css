@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Source+Code+Pro|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+
+html, body {
+    height: 100%;
+}
+
+html {
+}
+
+body {
+    font-family: Source Pro;
+    font-size: 30px;
+    line-height: 1.1;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Sans Pro Black",sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: inherit;
+}
+
+code {
+    color: black;
+}
+
+/* When highlighted code blocks are too wide, they wrap. Resulting in the */
+/* line numbers column's rows not lining up with the code rows. Prevent */
+/* wrapping. */
+pre {
+    white-space: pre;
+    width: inherit;
+}
+
+
+p.pub {
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+    text-align: left;
+}
+
+.pub .title {
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: bold;
+}
+
+.pub .venue {
+    font-weight: bold;
+}
+
+.pub .description {
+    font-style: italic;
+}
+
+.pub .description em {
+    font-style: normal;
+}
+
+.me-image {
+    float: right;
+    margin-left: 1em;
+}
+
+.me-image img {
+    max-width: 200px;
+    height: auto;
+}
+
+.comment-meta .comment-author .gravatar {
+    float: left;
+    border-radius: 50%;
+}
+
+.comment-meta .comment-author .fn {
+
+    display: block;
+    font-weight: normal;
+    text-transform: none;
+
+}
+
+.comment-meta .comment-metadata {
+    line-height: 2.09231em;
+    margin-bottom: 27px;
+    margin-left: 74px;
+    letter-spacing: 1px;
+}
+
+.comment-content {
+    -moz-hyphens: auto;
+    word-wrap: break-word;
+}
+
+.navbar .navbar-brand {
+    font-family: Source Sans Pro Black, sans-serif;
+}
+
+#contact li p {
+    margin: 0px;
+}
+
+#contact .category {
+    font-weight: bold;
+}
