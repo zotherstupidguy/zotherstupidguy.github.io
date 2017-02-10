@@ -13,7 +13,7 @@
 
 
 * Grit 
-aaaaaaaaaaaaaadddddstart1
+magit is awesome
 **  ss
    + item-1
      1. item-1.1
