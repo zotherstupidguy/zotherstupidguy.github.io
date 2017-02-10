@@ -5,15 +5,14 @@
 #+KEYWORDS:  emacs, mathematics, computer science, machine learning 
 #+LANGUAGE:  en
 #+STYLE:body {font-family: "Source Sans Pro Black",sans-serif;}
-
-* About
-  SHello, I am Mohamed Fouad a.k.a zotherstupidguy, and this is my all day-to-day activies b(log). 
-  I consider myself to be living the life of a Software Philosopher, a non stop curiosity and a never-ending learning journey.
-  I am available for hire, and you can find my resume here[link to google docs].  Each headline Grit, Universities, Studying Strategy, Sources, Practice.... is a post and the rest of its content is part of the post body  OR Only the subheadings of Sources  and Practice are Posts and their content are body of the posts
-
+  -----
+  Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher, and this is my day-to-day b(log). 
+  I am available for hire [link to google docs resume].  
+  
+  [[file:img/mo.jpg]]
+  -----
 
 * Grit 
-magit is awesome
 **  ss
    + item-1
      1. item-1.1
@@ -378,30 +377,14 @@ Print the number of candles Colleen blows out on a new line.
    - black alien
    - criolo
 ** Japanese Language 
-   
 I am dddmo a.k.a zotherstupidguy, and this is my log of everything!!
-#+caption: mo
-[[file:img/mo.jpg]]
------
-* Sources
-** Mathematics
-a lot of books about math
-*** Number Theory 
-a lot of books about Number Theory and its applications
-*** Proof Theory 
-Dig deeper into the history of Proof Theory via a lot of resources.
 
-** ComputerScience
-*** Theory of Computation 
-A lot of books about Turing, Church, Neuman
-*** Machine Learning
     The current trend here
           - [X] Checked.
           - [-] Half-checked.
           - [ ] Not checked.
           - Normal list item.
 
-* Travel, Languages, & Cultures
   a lot about life mainly yoga, and brasalian songs.
   - First term to define ::
        Definition of the first term. We add a few words to show the line wrapping,
@@ -414,3 +397,4 @@ A lot of books about Turing, Church, Neuman
 
   In many paragraphs.
 
+  

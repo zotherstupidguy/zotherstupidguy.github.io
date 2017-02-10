@@ -8,8 +8,8 @@ html {
 }
 
 body {
-    font-family: Source Pro;
-    font-size: 30px;
+    font-family: monospace;
+    font-size: 20px;
     line-height: 1.1;
     height: 100%;
     align-items: center;
