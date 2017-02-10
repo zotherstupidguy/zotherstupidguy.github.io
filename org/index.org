@@ -217,8 +217,8 @@ This is a very small font?????????????
    ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
    (autoload 'inf-ruby-minor-mode "inf-
 
-
-** HackerRank
+   
+** HackerRank [0/0]
 **** Practice
 ***** Core CS
 ****** Mathematics
@@ -274,25 +274,41 @@ This is a very small font?????????????
 ****** Functional Programming
 
 
-**** Compete
-***** RookieRank2
-****** Birthday Cake Candles     
-Colleen is turning  \(n\)  years old! 
-She has  \(n\)  candles of various heights on her cake, 
-and candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
+**** Contests 
+     + RookieRank2 
+       + Birthday Cake Candles     
+         * Predicates & Implications 
+           - Colleen is turning  \(n\)  years old! 
+           - She has  \(n\)  candles of various heights on her cake, 
+           - and candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
+           - Given the  for each individual candle, find and print the number of candles she can successfully blow out.
 
-Given the  for each individual candle, find and print the number of candles she can successfully blow out.
+         * Input Format
+           - The first line contains a single integer, , denoting the number of candles on the cake. 
+           - The second line contains  space-separated integers, where each integer  describes the height of candle .
 
-Input Format
+         * Constraints
+           - somthing
 
-The first line contains a single integer, , denoting the number of candles on the cake. 
-The second line contains  space-separated integers, where each integer  describes the height of candle .
+         * Output Format
+           - Print the number of candles Colleen blows out on a new line.
 
-Constraints
+         * Solution        
+           #+BEGIN_SRC ruby
+             def input
+               p "love emacs, because emacs is a philosphy of how yo all dealing with computer"
+             end
+             def output
+             end       
+             input
+           #+END_SRC
 
-Output Format
+           #+RESULTS:
+           : love emacs, because emacs is a philosphy of how yo all dealing with computer
 
-Print the number of candles Colleen blows out on a new line.
+         * References       
+           - https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
+           - http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/
 
 ** Codeforces
 *** Contests
