@@ -5,15 +5,17 @@
 #+KEYWORDS:  emacs, mathematics, computer science, machine learning 
 #+LANGUAGE:  en
 #+STYLE:body {font-family: "Source Sans Pro Black",sans-serif;}
-  -----
-  Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher, and this is my day-to-day b(log). 
-  I am available for hire [link to google docs resume].  
+-----
+
+Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher, and this is my day-to-day b(log). 
+I am available for hire [link to google docs resume].  
   
-  [[file:img/mo.jpg]]
-  -----
+[[file:img/mo.jpg]]
+
+-----
 
 * Grit 
-**  ss
+** ss
    + item-1
      1. item-1.1
      2. item-1.2
@@ -23,13 +25,16 @@
      - item-2.2
      - item-2.3
    + item-3  
-
-
+-----
 * Universities
-  Here I examine how each university offer its computer science programs and what kind of books they set as 
-  textbooks.
+  Once in a while, I examine how Top Universities offer their mathematics and computer science related programs. I try to find what kind of books they set as 
+  textbooks. And go read them on my own or purchase them from Amazon. My act is inspired by *“You wasted $150,000 on an education you coulda got for 
+  $1.50 in late fees at the public library.” ― Matt Damon, Good Will Hunting*. Ofcourse I worship Professors who offer their courses online for free!
 
-  
+
+
+-----
+
 * Studying Strategy 
   My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the 
   knowledge that I aquire into this file, and I organize it accordingly.
@@ -52,7 +57,6 @@
 *** TODO is ZPD 
 *** notag is I-can't
 
-
 ** Cronell Note Taking System
    trying to find a CornellNoteTakingSystem mode for Emacs.
 
@@ -63,7 +67,9 @@
    I can't add ZPT, can, and can't folders in the sources folders as it will make ./link difficult to know what already got downloaded.
 
 ** Emacs Tips
-   M- left arrow can make org elements go to sub
+   Must read http://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code as it explains literate programming could help me figure out how 
+   to write code in emacs and export it to external files and vice-versa.  
+ M- left arrow can make org elements go to sub
    Because I am using Evil-mode I can simply paste using P or p, same as vim's http://vim.wikia.com/wiki/Copy,_cut_and_paste
 *** TODO find a way to do org-plot
 ** Blog
@@ -110,6 +116,13 @@
     find somthing like org-ref http://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/ 
     this way we can provide citations for the things we have in Sources Directory
     
+
+-----
+
+** Calender 
+   - http://jameswilliams.be/blog/2016/01/11/Taming-Your-GCal.html
+   - http://cestlaz.github.io/posts/using-emacs-26-gcal/#.WJ48TSFNy00
+   - http://opensourceforu.com/2016/04/master-the-calendar-centering-macros-and-drawing-tools-in-gnu-emacs/
 
 * Sources
   This file contains links to all the material to study, :can:zpd:can't:anytag:
@@ -172,10 +185,10 @@
 
 *** Artificial Intellegence
 **** Machine Learning
-This is a very small font?????????????
-This is a very small font?????????????
-This is a very small font?????????????
-This is a very small font?????????????
+     This is a very small font?????????????
+     This is a very small font?????????????
+     This is a very small font?????????????
+     This is a very small font?????????????
 
 **** Deep Learning
 **** BigData
@@ -202,82 +215,80 @@ This is a very small font?????????????
 
 ** Puzzles
 
-
-* Practice
-** tips  
-   every solution is a finite state automata
-   use inf-ruby more often please
-   ;; inf-ruby
-   ;;Use C-c C-s to launch the inf-ruby process.
-   ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
-   ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
-   ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
-   ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
-   ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
-   ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
-   (autoload 'inf-ruby-minor-mode "inf-
-
    
+   -----
+
+* Practice  
+  - Tips:
+    - Whenever you solve some questions, try to ask yourself what if we *expand the question to a larger scale!*
+    - *Revisit old problems* and think about new techqinues, better ways, different contexts, different constrains, etc.  
+    - every solution is a finite state automata
+    - use inf-ruby more often please
+    ;; inf-ruby
+    ;;Use C-c C-s to launch the inf-ruby process.
+    ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
+    ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
+    ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
+    ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
+    ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
+    ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
+    (autoload 'inf-ruby-minor-mode "inf-
+
+
 ** HackerRank [0/0]
-**** Practice
-***** Core CS
-****** Mathematics
-******* Fundamentals 
-******* NumberTheory 
-******* Combinatorics 
-******* Algebra 
-******* Geometry 
-******* Probability 
-******* LinarAlgebraFoundations
+   - Practice
+     - Core CS
+       - Mathematics
+         - Fundamentals 
+         - NumberTheory 
+         - Combinatorics 
+         - Algebra 
+         - Geometry 
+         - Probability 
+         - LinarAlgebraFoundations
+       - DataStructres
+       - Algorithms
+         - Warmup 
+         - Implementation 
+         - ConstructiveAlgorithms 
+         - Strings
+         - Sorting
+         - Search
+         - GraphTheory
+         - Greedy
+         - DynamicProgramming
+         - BitManipulation
+         - Recursion
+         - GameTheory
+         - NPComplete 
 
-****** DataStructres
-
-****** Algorithms
-*******  Warmup 
-*******  Implementation 
-*******  ConstructiveAlgorithms 
-*******  Strings
-*******  Sorting
-*******  Search
-*******  GraphTheory
-*******  Greedy
-*******  DynamicProgramming
-*******  BitManipulation
-*******  Recursion
-*******  GameTheory
-*******  NPComplete 
-
-
-
-***** Tutorials 
-****** 30 Days of Code
-****** Cracking The Coding Interview
-****** 10 Days of Statistics
+   - Tutorials 
+     - 30 Days of Code
+     - Cracking The Coding Interview
+     - 10 Days of Statistics
 
 
-***** Specialized Skills
-****** Artificial Intelligence
-****** Distributed Systems
-****** Regex
-****** Security
-******* Functions
-******* Terminoloy and Concepts
-******* Cryptography
+   - Specialized Skills
+     - Artificial Intelligence
+     - Distributed Systems
+     - Regex
+     - Security
+     - Functions
+     - Terminoloy and Concepts
+     - Cryptography
+   
+   - Languages 
+     - C++
+     - Python
+     - Ruby 
+     - LinuxShell
+     - Functional Programming
 
 
-
-***** Languages 
-****** C++
-****** Python
-****** Ruby 
-****** LinuxShell
-****** Functional Programming
-
-
-**** Contests 
+   - Contests 
      + RookieRank2 
        + Birthday Cake Candles     
-         * Predicates & Implications 
+         * Problem (Predicates & Implications)
            - Colleen is turning  \(n\)  years old! 
            - She has  \(n\)  candles of various heights on her cake, 
            - and candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
@@ -293,10 +304,15 @@ This is a very small font?????????????
          * Output Format
            - Print the number of candles Colleen blows out on a new line.
 
-         * Solution        
+         * Solution (Questtions, Predicates & Implications) 
+           - the brute force solution gives O(N^2) via comparing each of two strings. 
+           - A common technique is the trade-off between time and space. 
+           - we want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
+           - The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
+           - If we store every element into a hash set, we can make it O(N) for both time and space complexity.
            #+BEGIN_SRC ruby
              def input
-               p "love emacs, because emacs is a philosphy of how yo all dealing with computer"
+               p "love emacs, because emacs is a philosphy of how yo all dealing with computer..."
              end
              def output
              end       
@@ -307,8 +323,9 @@ This is a very small font?????????????
            : love emacs, because emacs is a philosphy of how yo all dealing with computer
 
          * References       
-           - https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
-           - http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/
+           * https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
+           * http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/
+
 
 ** Codeforces
 *** Contests
@@ -321,7 +338,9 @@ This is a very small font?????????????
 ***** C
 **** 2
      
-     
+
+-----
+
 * Interviews
   keep log of all the interviews I made and schedules for upcoming interviews, as well as info for mastering the
   art of interviews. 
@@ -330,7 +349,9 @@ This is a very small font?????????????
   have a public profile photo on twitter and github, they require a fake skypename for that! You are too lazy for this :))
 *** Cracking the Coding Interview :book:zpd:
 
-    
+
+-----
+
 * Opensource
 ** Gitlapse
    + Improvments 
@@ -364,6 +385,8 @@ This is a very small font?????????????
 ** SSD
 
 
+-----
+
 * Work
 ** UpWork
 *** Rails
@@ -372,15 +395,22 @@ This is a very small font?????????????
 *** Django
 ** Penetration Testing
    
-   
+
+-----
+
 * Travel, Languages, & Culture
 ** Yoga
 *** The Yoga Warrior 
 **** Verstile Warrior
+     listen to the instructions a couple of times. then mute the video sound and choose your own music.
+     Also store the almost 6Giga videos on mobile SDcard or tablet.
+
 ** Aikido 
 ** Portougese Language 
 ** Samba Songs
 ** Sertanjijo Songs
+   Song lyrics and translations here.
+   
 ** Brasalian Funk Song
 ** Brazlian Rap
    - projota 
@@ -393,24 +423,31 @@ This is a very small font?????????????
    - black alien
    - criolo
 ** Japanese Language 
-I am dddmo a.k.a zotherstupidguy, and this is my log of everything!!
+   I am dddmo a.k.a zotherstupidguy, and this is my log of everything!!
 
-    The current trend here
-          - [X] Checked.
-          - [-] Half-checked.
-          - [ ] Not checked.
-          - Normal list item.
+   The current trend here
+   - [X] Checked.
+   - [-] Half-checked.
+   - [ ] Not checked.
+   - Normal list item.
 
-  a lot about life mainly yoga, and brasalian songs.
-  - First term to define ::
-       Definition of the first term. We add a few words to show the line wrapping,
-       to see what happens when you have long lines.
+   a lot about life mainly yoga, and brasalian songs.
+   - First term to define ::
+        Definition of the first term. We add a few words to show the line wrapping,
+        to see what happens when you have long lines.
 
-  - Second term ::
-                   Explication of the second term with *inline markup*.
-  | Cell in column 1, row 1 | Cell in column 2, row 1 |
-  | Cell in column 1, row 2 | Cell in column 2, row 2 |
+   - Second term ::
+                    Explication of the second term with *inline markup*.
+   | Cell in column 1, row 1 | Cell in column 2, row 1 |
+   | Cell in column 1, row 2 | Cell in column 2, row 2 |
 
-  In many paragraphs.
+   In many paragraphs.
 
-  
+** Brazlian Memes
+   I keep a collection of Brazlian Memes to funkup my comments with my brazlian friends on facebook, some of the content in this section are explicit in nature.
+   
+   [[file:img/memes/1.jpg][Amiga]] 
+   - Amiga, Cague Apenas dentro do vaso; 
+   Girlfriend, Shit Just inside the pot
+
+-----
