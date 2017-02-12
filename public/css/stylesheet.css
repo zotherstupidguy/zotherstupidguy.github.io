@@ -9,7 +9,7 @@ html {
 
 body {
     font-family: monospace;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.1;
     height: 100%;
     align-items: center;
@@ -20,9 +20,9 @@ body {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: "Source Sans Pro Black",sans-serif;
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 1.1;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 0.5;
     color: inherit;
 }
 
