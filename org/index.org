@@ -36,93 +36,134 @@ I am available for hire [link to google docs resume].
 -----
 
 * Studying Strategy 
-  My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the 
-  knowledge that I aquire into this file, and I organize it accordingly.
-  Naturally I could write a book or two from the notes I have written into this file. As a matter of fact, I belive that
-  the only way computer scientets are capable of writing so many powerful books is due to the fact that they use
-  emacs in a similar way to what i am doing here, I can collect information and tag it, search it easily and update it,
-  check cross referencing, etc. it is really awesome. I think i will keep taking notes in notebooks and as a reviesion I 
-  will transfer the notes to here. I expect to be able to have codeblocks, latex formulas and maybe some progress
-  graphs.
+** Synopsis  
+   My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the
 
-  Publish a series about computer science via https://leanpub.com, 
-  call it "hackspree computer science series", each volume is small 100pages book of notes and commentary. 
+   knowledge that I aquire into this file, and I organize it accordingly.
+   Naturally I could write a book or two from the notes I have written into this file. As a matter of fact, I belive that
+   the only way computer scientets are capable of writing so many powerful books is due to the fact that they use
+   emacs in a similar way to what i am doing here, I can collect information and tag it, search it easily and update it,
+   check cross referencing, etc. it is really awesome. I think i will keep taking notes in notebooks and as a reviesion I 
+   will transfer the notes to here. I expect to be able to have codeblocks, latex formulas and maybe some progress
+   graphs.
 
-  Make this log.org file my personal blog on zotherstupidguy.github.io, all in just one big huge page to get so many fucken hits.
-  This log is published via an autoback configuration from Emacs, meaning that some times drafts are included.
+   Publish a series about computer science via https://leanpub.com, 
+   call it "hackspree computer science series", each volume is small 100pages book of notes and commentary. 
 
-** Zone of Proximal Development [1/2]
-   If i am studying a book, I can label its chapters as Done, TODO, or without label.
-*** DONE is  I-can
-*** TODO is ZPD 
-*** notag is I-can't
+   Make this log.org file my personal blog on zotherstupidguy.github.io, all in just one big huge page to get so many fucken hits.
+   This log is published via an autoback configuration from Emacs, meaning that some times drafts are included.
 
-** Cronell Note Taking System
-   trying to find a CornellNoteTakingSystem mode for Emacs.
+*** Zone of Proximal Development [1/2]
+    If i am studying a book, I can label its chapters as Done, TODO, or without label.
+**** DONE is  I-can
+**** TODO is ZPD 
+**** notag is I-can't
 
-*** SQ3R
+*** Cronell Note Taking System
+    trying to find a CornellNoteTakingSystem mode for Emacs.
 
-** Finding Sources
-   using ./link to automatically download new youtube videos and generate an RSS of it and update log.org with a TODO for watching new things.
-   I can't add ZPT, can, and can't folders in the sources folders as it will make ./link difficult to know what already got downloaded.
+**** SQ3R
 
-** Emacs Tips
-   Must read http://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code as it explains literate programming could help me figure out how 
-   to write code in emacs and export it to external files and vice-versa.  
- M- left arrow can make org elements go to sub
-   Because I am using Evil-mode I can simply paste using P or p, same as vim's http://vim.wikia.com/wiki/Copy,_cut_and_paste
-*** TODO find a way to do org-plot
-** Blog
-   + TODO 
-     + making a blog from a single org document
-     + Theme
-       - use the font and theme from here http://www.davidchristiansen.dk/2014/07/16/implementing-an-emacs-programming-language-mode-beyond-the-basics/
-     + References 
-       -ref: http://endlessparentheses.com/how-i-blog-one-year-of-posts-in-a-single-org-file.html
-     + ref: http://orgmode.org/worg/org-web.html
-     + ref: https://ogbe.net/blog/blogging_with_org.html 
-     + reff: http://nicolas.petton.fr/blog/blogging-with-org-mode.html (prefered to start with!!!!!!!)
+*** Finding Sources
+    using ./link to automatically download new youtube videos and generate an RSS of it and update log.org with a TODO for watching new things.
+    I can't add ZPT, can, and can't folders in the sources folders as it will make ./link difficult to know what already got downloaded.
 
-** Email
-   access all emails from emacs for easy regex search
-** IRC [0/1]
-   access IRC from inside emacs to automatically log all important channels and always search them for answers before going online.
-   erc works awesome ;) 
-*** TODO
-    - find some nice configruations for erc
-    - Register username/password
-    - log all opened channels automatically everytime emacs starts
-    - back them up automatically somehow. 
+*** Emacs Tips
+    Must read http://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code as it explains literate programming could help me figure out how 
+    to write code in emacs and export it to external files and vice-versa.  
+    M- left arrow can make org elements go to sub
+    Because I am using Evil-mode I can simply paste using P or p, same as vim's http://vim.wikia.com/wiki/Copy,_cut_and_paste
+**** TODO find a way to do org-plot
+*** Email
+    access all emails from emacs for easy regex search
+*** IRC [0/1]
+    access IRC from inside emacs to automatically log all important channels and always search them for answers before going online.
+    erc works awesome ;) 
+**** TODO
+     - find some nice configruations for erc
+     - Register username/password
+     - log all opened channels automatically everytime emacs starts
+     - back them up automatically somehow. 
 
-** Backup
-   search for an emacs mode that would allow you to backup my files automatically somehow to googledrive/ github/ or server.
-   I prefer Github, that way I can auto publish everytime I make an edit on the file (maybe a job that runs every hour or so).
+*** Backup
+    search for an emacs mode that would allow you to backup my files automatically somehow to googledrive/ github/ or server.
+    I prefer Github, that way I can auto publish everytime I make an edit on the file (maybe a job that runs every hour or so).
 
-   https://github.com/ryuslash/git-auto-commit-mode
-** Time Management
-   using ClockWork app, I work only for 10mins to take 5mins break and a rest every 10x3. 
-   it is like this because to move slowly is better than being depressed and not moving at all.
+    https://github.com/ryuslash/git-auto-commit-mode
+*** Time Management
+    using ClockWork app, I work only for 10mins to take 5mins break and a rest every 10x3. 
+    it is like this because to move slowly is better than being depressed and not moving at all.
 
-** LaTex
-** RSS
-   upwork rss jobs and other stuff.
-   http://pragmaticemacs.com/category/elfeed/
+*** LaTex
+*** RSS
+    upwork rss jobs and other stuff.
+    http://pragmaticemacs.com/category/elfeed/
 
-** Git
-   need to use 'maget
+*** Git
+    need to use 'maget
 
-** Citations [0/1]
-*** TODO 
-    find somthing like org-ref http://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/ 
-    this way we can provide citations for the things we have in Sources Directory
+*** Citations [0/1]
+**** TODO 
+     find somthing like org-ref http://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/ 
+     this way we can provide citations for the things we have in Sources Directory
     
 
------
+     -----
 
-** Calender 
-   - http://jameswilliams.be/blog/2016/01/11/Taming-Your-GCal.html
-   - http://cestlaz.github.io/posts/using-emacs-26-gcal/#.WJ48TSFNy00
-   - http://opensourceforu.com/2016/04/master-the-calendar-centering-macros-and-drawing-tools-in-gnu-emacs/
+*** Calender 
+    - http://jameswilliams.be/blog/2016/01/11/Taming-Your-GCal.html
+    - http://cestlaz.github.io/posts/using-emacs-26-gcal/#.WJ48TSFNy00
+    - http://opensourceforu.com/2016/04/master-the-calendar-centering-macros-and-drawing-tools-in-gnu-emacs/
+
+
+** Vision of the Future
+   
+** Strategic Formulation and Implementation
+   - why is it worth the effort?
+   - what should be persued? 
+   - how it will be persued?
+   - Group problems according to 
+   
+   The 7 Pillars of Strategic Thinking:
+   1. Strategic Intent
+   2. Strategic Analysis and Gathering of Intelligence
+   3. Strategic Preparation of Resources
+   4. Concentration of Force
+   5. Disciplined Execution and Detailed Tactical Follow-Through 
+   6. Adaptability
+   7. The Study of General Principles﻿
+
+** Managerial Role in Strategy Making	
+
+** Control	
+   My most basic studytime unit  is t = 10mins, henceforth all my study and practice activites are divided up in units of 10mins.
+
+   I categorieze my incoming infromation into 3 categories: 
+   A. Can,    12 problems, total 12t(2hrs)
+   B. ZPD,    4 problems, total 12t(2hrs)
+   C. Can't.  1 problem, total 12t(2hrs)
+   
+   I start my day trying to attack category *C. Can't* to fail and study a bit, 
+   then go for the *B.ZPD* which is my zone of proximal development, 
+   with some effort I can succeed in solving a problem in 30mins.
+   then I end my day with the *A.can* somthing that I solved before or know I can solve. Simple Objectives results in Simple Delights makes me happy at the end of the day. 
+
+   After Studying or Practice, blog about it using the Feynman Technique,  
+
+   All problems are solved in C with emacs templates to save time.
+
+** Managerial Role in Implementation	
+
+** Strategy Making
+
+** Process and Outcome	
+
+   Refs: 
+   - Learn Faster with The Feynman Technique
+   https://www.youtube.com/watch?v=FrNqSLPaZLc
+
+   - How to Learn Faster with the Feynman Technique:  
+   https://www.youtube.com/watch?v=_f-qkGJBPts
 
 * Sources
   This file contains links to all the material to study, :can:zpd:can't:anytag:
@@ -236,80 +277,74 @@ I am available for hire [link to google docs resume].
 
 
 ** HackerRank [0/0]
-   - Practice
-     - Core CS
-       - Mathematics
-         - Fundamentals 
-         - NumberTheory 
-         - Combinatorics 
-         - Algebra 
-         - Geometry 
-         - Probability 
-         - LinarAlgebraFoundations
-       - DataStructres
-       - Algorithms
-         - Warmup 
-         - Implementation 
-         - ConstructiveAlgorithms 
-         - Strings
-         - Sorting
-         - Search
-         - GraphTheory
-         - Greedy
-         - DynamicProgramming
-         - BitManipulation
-         - Recursion
-         - GameTheory
-         - NPComplete 
-
-   - Tutorials 
-     - 30 Days of Code
-     - Cracking The Coding Interview
-     - 10 Days of Statistics
-
-
-   - Specialized Skills
-     - Artificial Intelligence
-     - Distributed Systems
-     - Regex
-     - Security
-     - Functions
-     - Terminoloy and Concepts
-     - Cryptography
-   
-   - Languages 
-     - C++
-     - Python
-     - Ruby 
-     - LinuxShell
-     - Functional Programming
+*** Practice
+**** Core CS
+***** Mathematics
+****** Fundamentals 
+****** NumberTheory 
+****** Combinatorics 
+****** Algebra 
+****** Geometry 
+****** Probability 
+****** LinarAlgebraFoundations
+***** DataStructres
+***** Algorithms
+****** Warmup 
+****** Implementation 
+****** ConstructiveAlgorithms 
+****** Strings
+****** Sorting
+****** Search
+****** GraphTheory
+****** Greedy
+****** DynamicProgramming
+****** BitManipulation
+****** Recursion
+****** GameTheory
+****** NPComplete 
+*** Tutorials 
+**** 30 Days of Code
+**** Cracking The Coding Interview
+**** 10 Days of Statistics
 
 
-   - Contests 
-     + RookieRank2 
-       + Birthday Cake Candles     
-         * Problem (Predicates & Implications)
-           - Colleen is turning  \(n\)  years old! 
-           - She has  \(n\)  candles of various heights on her cake, 
-           - and candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
-           - Given the  for each individual candle, find and print the number of candles she can successfully blow out.
+***** Specialized Skills
+****** Artificial Intelligence
+****** Distributed Systems
+****** Regex
+****** Security
+****** Functions
+****** Terminoloy and Concepts
+****** Cryptography
+***** Languages 
+****** C++
+****** Python
+****** Ruby 
+****** LinuxShell
+****** Functional Programming
 
-         * Input Format
-           - The first line contains a single integer, , denoting the number of candles on the cake. 
-           - The second line contains  space-separated integers, where each integer  describes the height of candle .
 
-         * Constraints
-           - somthing
-
-         * Output Format
-           - Print the number of candles Colleen blows out on a new line.
-
-         * Solution (Questtions, Predicates & Implications) 
-           - the brute force solution gives O(N^2) via comparing each of two strings. 
-           - A common technique is the trade-off between time and space. 
-           - we want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
-           - The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
-           - If we store every element into a hash set, we can make it O(N) for both time and space complexity.
+****** Contests 
+******* RookieRank2 
+******** Birthday Cake Candles     
+********** Problem (Predicates & Implications)
+           Colleen is turning  \(n\)  years old! 
+           She has  \(n\)  candles of various heights on her cake, 
+           and candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
+           Given the  for each individual candle, find and print the number of candles she can successfully blow out.
+********** Input Format
+           The first line contains a single integer, , denoting the number of candles on the cake. 
+           The second line contains  space-separated integers, where each integer  describes the height of candle .
+********** Constraints
+           somthing
+********** Output Format
+           Print the number of candles Colleen blows out on a new line.
+********** Solution (Questtions, Predicates & Implications) 
+           the brute force solution gives O(N^2) via comparing each of two strings. 
+           A common technique is the trade-off between time and space. 
+           we want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
+           The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
+           If we store every element into a hash set, we can make it O(N) for both time and space complexity.
            #+BEGIN_SRC ruby
              def input
                p "love emacs, because emacs is a philosphy of how yo all dealing with computer..."
@@ -319,12 +354,20 @@ I am available for hire [link to google docs resume].
              input
            #+END_SRC
 
-           #+RESULTS:
+           #+RESULTS: 
            : love emacs, because emacs is a philosphy of how yo all dealing with computer
-
-         * References       
-           * https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
-           * http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/
+********** References       
+*********** https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
+*********** http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/
+********  ProblemName KnightL on a Chessboard
+**********  ProblemStatment is a chess piece that moves in an L shape. We define the possible moves of  as any movement from some position  to some  satisfying either of the following:
+**********  Input Format dfddfafasfasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasasdfasdfasdfasfasfafasffffffffffi
+********** Constraints
+********** Out Format
+********** Solution 
+           dfdfdfasasdfasf
+           asdfasf
+           https://en.wikipedia.org/wiki/Knight's_tour
 
 
 ** Codeforces
