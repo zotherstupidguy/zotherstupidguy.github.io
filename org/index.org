@@ -6,35 +6,28 @@
 #+LANGUAGE:  en
 #+STYLE:body {font-family: "Source Sans Pro Black",sans-serif;}
 #+OPTIONS: H:3 num:0
-----
 
-Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher, and this is my day-to-day b(log). 
-I am available for hire [link to google docs resume].  
+Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher living in Alexandria, Egypt; and this is my day-to-day b(log). 
+I am available for [hire [link to google docs resume]]. This is an org-mode generated log (tag-based organization), use your regex at will. 
+
 [[file:img/mo.jpg]]
+----- 
+* Grit :: Perseverance and Passion for Long-term Goals 
+  + Courage
+    - understand that there are valuable lessons in defeat and that the vulnerability of perseverance is requisite for high achievement.  
+    - 
+    - 
+  + item-3  
+    - 
+    - 
 
------
-
-* Grit 
-** ss
-   + item-1
-     1. item-1.1
-     2. item-1.2
-     3. item-1.3
-   + item-2
-     - item-2.1
-     - item-2.2
-     - item-2.3
-   + item-3  
------
+  -----
 * Universities
   Once in a while, I examine how Top Universities offer their mathematics and computer science related programs. I try to find what kind of books they set as 
   textbooks. And go read them on my own or purchase them from Amazon. My act is inspired by *“You wasted $150,000 on an education you coulda got for 
   $1.50 in late fees at the public library.” ― Matt Damon, Good Will Hunting*. Ofcourse I worship Professors who offer their courses online for free!
 
-
-
------
-
+----- 
 * Studying Strategy 
 ** Synopsis  
    My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the
@@ -183,23 +176,22 @@ I am available for hire [link to google docs resume].
 
 
 ** Mathematics [0/2]
-*** Problem Solving
-**** TTC VIDEO - The Art and Craft of Mathematical Problem Solving  :problemsolving:
+* TTC VIDEO - The Art and Craft of Mathematical Problem Solving :problemsolving:
      - Diference between Problem and Exercise :: Scope doesn't work as expected, and messes everything up
           when loops mix variables up in recursive functions.
           - Namespaces :: You wish. 
           - Header Files :: Nope.
 
-*** Set Theory
+* Set Theory
 **** SourceA
      information about the source here, author, edition, date, who is using it in univ cources, etc.
 **** [#B] SourceB
      ssfsf
-*** Proof Theory
-*** Category Theory
-*** Single-Variable Calculas
-*** Multi-Variable Calculas 
-*** Number Theory
+* Proof Theory
+* Category Theory
+* Single-Variable Calculas
+* Multi-Variable Calculas 
+* Number Theory
 **** Elementry Number Theory - 6th Edition - Kenneth H. Rosen 
 ***** Chapter1
 ****** Introduction  :zpd:numbertheory:
@@ -211,13 +203,13 @@ I am available for hire [link to google docs resume].
       could be google drive linkk 
       [[file:3.Sources/NumberTheory/Books/Elementary%20Number%20Theory%20-%206th%20Edition%20-%20Kenneth%20H.%20Rosen.pdf][file:3.Sources/NumberTheory/Books/Elementary Number Theory - 6th Edition - Kenneth H. Rosen.pdf]]  
 
-*** Vedic Mathematics (Mental Math)
-*** Graph Theory
-*** TODO [#A] Discerete Mathematics
-*** TODO [#B] Concerete Mathematics
-*** Continous Mathematics
-*** Statistics
-*** Real Analysis
+* Vedic Mathematics (Mental Math)
+* Graph Theory
+* TODO [#A] Discerete Mathematics
+* TODO [#B] Concerete Mathematics
+* Continous Mathematics
+* Statistics
+* Real Analysis
 
 
 ** Computer Science
@@ -240,27 +232,37 @@ I am available for hire [link to google docs resume].
 **** Python
 
 
-** Competitive Programming
-*** C programming :course:
-**** VideoName                                                   :studentcan:
-     - dfdfd :studentcann't:
-     - dfdfddfdf :ZPD:
-
-*** hackerrank :youtube:
-*** arabic competitive programming :youtube:
-*** codejam :youtube:
-*** codemasrytube :youtube:
-*** mycodeschool :youtube:
-*** saurabhschool
-*** codinginterviewhub
-*** conor 
-*** geeksforgeeks
-
 
 ** Puzzles
 
    
    -----
+
+
+* Competitive Programming
+** C programming                                                     :course:
+*** VideoName                                                    :studentcan:
+          - dfdfd :studentcann't:
+          - dfdfddfdf :ZPD:
+
+* hackerrank                                :youtube:competitive_programming:
+-----
+* arabic competitive programming            :youtube:competitive_programming:
+-----
+* codejam                                   :youtube:competitive_programming:
+-----
+* codemasrytube                             :youtube:competitive_programming:
+-----
+* mycodeschool                              :youtube:competitive_programming:
+-----
+* saurabhschool                             :youtube:competitive_programming:
+-----
+* codinginterviewhub                        :youtube:competitive_programming:
+-----
+* conor                                     :youtube:competitive_programming:
+-----
+* geeksforgeeks                             :youtube:competitive_programming:
+-----
 
 * PracticeTips:
     - Whenever you solve some questions, try to ask yourself what if we *expand the question to a larger scale!*
@@ -279,14 +281,22 @@ I am available for hire [link to google docs resume].
 
 
 * HackerRank :hackerrank:practice:mathematics:
+----- 
 * HackerRank :hackerrank:practice:mathematics:fundamentals:
+----- 
 * HackerRank :hackerrank:practice:mathematics:numbertheory:
+----- 
 * HackerRank :hackerrank:practice:mathematics:combinatorics:
+----- 
 * HackerRank :hackerrank:practice:mathematics:algebra:
+----- 
 * HackerRank :hackerrank:practice:mathematics:geometry:
+----- 
 * HackerRank :hackerrank:practice:mathematics:probability:
+----- 
 * HackerRank :hackerrank:practice:mathematics:linaralgebra:
   ssdfdfddfdff
+----- 
 * DataStructres
 * Algorithms
 ** Warmup 
@@ -326,54 +336,60 @@ I am available for hire [link to google docs resume].
 
 ****** Contests 
 ******* RookieRank2 
-******** Birthday Cake Candles     
-********** Problem (Predicates & Implications)
-           Colleen is turning  \(n\)  years old! 
-           She has  \(n\)  candles of various heights on her cake, 
-           and candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
-           Given the  for each individual candle, find and print the number of candles she can successfully blow out.
-********** Input Format
-           The first line contains a single integer, , denoting the number of candles on the cake. 
-           The second line contains  space-separated integers, where each integer  describes the height of candle .
-********** Constraints
-           somthing
-********** Output Format
-           Print the number of candles Colleen blows out on a new line.
-********** Solution (Questtions, Predicates & Implications) 
-           the brute force solution gives O(N^2) via comparing each of two strings. 
-           A common technique is the trade-off between time and space. 
-           we want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
-           The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
-           If we store every element into a hash set, we can make it O(N) for both time and space complexity.
-           #+BEGIN_SRC ruby
-             def input
-               p "love emacs, because emacs is a philosphy of how yo all dealing with computer..."
-             end
-             def output
-             end       
-             input
-           #+END_SRC
 
-           #+RESULTS: 
-           : love emacs, because emacs is a philosphy of how yo all dealing with computer
-********** References       
-*********** https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
-*********** http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/
-********  ProblemName KnightL on a Chessboard
-**********  ProblemStatment is a chess piece that moves in an L shape. We define the possible moves of  as any movement from some position  to some  satisfying either of the following:
-**********  Input Format 
-********** Constraints
-********** Out Format
-********** Solution 
-           dfdfdfasdfasf
-           asdfasf
-           https://en.wikipedia.org/wiki/Knight's_tour
+* Birthday Cake Candles  :problem:hackerrank:contest:rookierank2:duplicates_in_array:zpd1  
+** Problem (Predicates & Implications)
+   Colleen is turning  \(n\)  years old! 
+   She has  \(n\)  candles of various heights on her cake, 
+   and candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
+   Given the  for each individual candle, find and print the number of candles she can successfully blow out.
+** Input Format
+   The first line contains a single integer, , denoting the number of candles on the cake. 
+   The second line contains  space-separated integers, where each integer  describes the height of candle .
+** Constraints
+   somthing
+** Output Format
+   Print the number of candles Colleen blows out on a new line.
+** Solution (Questtions, Predicates & Implications) 
+   the brute force solution gives O(N^2) via comparing each of two strings. 
+   A common technique is the trade-off between time and space. 
+   we want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
+   The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
+   If we store every element into a hash set, we can make it O(N) for both time and space complexity.
+   #+BEGIN_SRC ruby
+     def input
+       p "love emacs, because emacs is a philosphy of how yo all dealing with computer..."
+     end
+     def output
+     end       
+     input
+   #+END_SRC
 
+   #+RESULTS: 
+   : love emacs, because emacs is a philosphy of how yo all dealing with computer
 
+** References       
+   - source: https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
+   - ref: http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/
 
+   ----- 
+
+* ProblemName KnightL on a Chessboard
+** ProblemStatment 
+   is a chess piece that moves in an L shape. We define the possible moves of  as any movement from some position  to some  satisfying either of the following:
+** Input Format 
+** Constraints
+** Out Format
+** Solution 
+** References       
+   - not related to the problem but good to notice https://en.wikipedia.org/wiki/Knight's_tour
+     
+
+   ----- 
 * Theatre Square :website:codeforces:contest:
 
-source: http://codeforces.com/contest/1/problem/A
+  source: http://codeforces.com/contest/1/problem/A
+  ----- 
 
 * Cracking the Coding Interview  :book:zpd:interview:
   keep log of all the interviews I made and schedules for upcoming interviews, as well as info for mastering the
@@ -467,5 +483,50 @@ source: http://codeforces.com/contest/1/problem/A
    
   [[file:img/memes/1.jpg][Amiga]] 
       - Amiga, Cague Apenas dentro do vaso; 
-        Girlfriend, Shit Just inside the pot
+        Girlfriend, Shit Just inside the pot 
 
+* Companies I like
+- Thoughtbot
+- Github
+- Google
+- Amazon
+- Thoughtworks
+- Gitlab
+- Facebook
+- Twitter
+----- 
+
+
+* Tasks
+** TODO  
+   - I love football 
+   - I love basketball
+   #+BEGIN_SRC ruby
+     def love
+       p "love is all around"
+     end
+   #+END_SRC
+   [2017-02-13 Mon]
+
+* How to use emacs in my life?
+So the idea is that I while I want to code, I code in C or ruby file using its respective emacs-mode and its capabilities, but when i want to take notes and log it into my blog, 
+I use org-capture. as I am very neat and I know what kind of stuff I add into my single-page blog, I have created many templates to my various data contents, 
+example: if i am solving a hackerrank problem and i got it to pass, and now I want to add it to my blog, I just press C-cc followed by h or similar to start editing the hackerrank template, C-c C-c to finish 
+and have it saved to the end of my blog with all the correct tags that gets viewed via emacs agenda later on. 
+
+This is so powerful that I can create many powerful org-capture templates and save it in my .emacs and keep enhancing them to reflect my level of performance in study, practice and work. 
+
+* TODO 
+  - create templates for hackerrank problems, store in zotherstupidguy.github.io/org/templates/hackerrank.text
+  - codeforces problems, store in zotherstupidguy.github.io/org/templates/codeforces.text
+  - experiment with org-mode agenda to view my headings based on their tags? or a smiliar functionality from somthing else maybe! 
+  - use org-capture for saving common algorithms in C. eg. sorting.c shortestpath.c, etc.
+  - find the ability to query my huge org file.  
+  - on emacs open, make sure it opens scratch and also opens index.org and make index.org the active buffer to easily edit.
+  - org-capture template for Questions, Predicates, and Implications
+
+* ZotherZPD Index
+  - Can't is *0  =  ZPD0, thus I name respective headings with :zpd0:
+  - ZPD is *1    = ZPD1, thus I name respective headings with :zpd1;
+  - Can is *2    = ZPD2, thus I name respective headings with :zpd2:
+  According to this index I can *automatically* calculate (via emacs) a score * 0 or * 1 or * 2 / by the number of shit I am trying to accomplish.
