@@ -6,28 +6,71 @@
 #+LANGUAGE:  en
 #+STYLE:body {font-family: "Source Sans Pro Black",sans-serif;}
 #+OPTIONS: H:3 num:0
+#+TAGS: zpd0(0)  zpd1(1) zpd2(2)  number_theory set_theory proof_theory computational_theory problem_solving category_theory single_variable_calculas multi_variable_calculas vedic_mathematics graph_theory discerete_mathematics concerete_mathematics continous_mathematics statistics real_analysis grit top_universities studying_strategy data_structures algorithms artificial_intellegence machine_learning deep_learning bigdata R python puzzles { MOOC : coursera  stanford oxford MIT} { philosphy : socrates plato} book youtube blog competitive_programming C_programming  {algorithms : ConstructiveAlgorithms Strings Sorting Search GraphTheory Greedy  DynamicProgramming  BitManipulation  Recursion  GameTheory  NPComplete } 
+
+
+{ @read : @read_book  @read_ebook }
+
+*** VideoName                                                    :studentcan:
+          - dfdfd :studentcann't:
+          - dfdfddfdf :ZPD:
+
+
 
 Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher living in Alexandria, Egypt; and this is my day-to-day b(log). 
-I am available for [hire [link to google docs resume]]. This is an org-mode generated log (tag-based organization), use your regex at will. 
+I am available for [hire [link to google docs resume]]. 
+This is an org-mode generated log (Org-Agenda, Org-Capture, tag-based organization) via those [[https://github.com/zotherstupidguy/dotfiles][dotfiles]] 
+and acutal  [[https://github.com/zotherstupidguy/zotherstupidguy.github.io][source]] of this blog.
 
 [[file:img/mo.jpg]]
 ----- 
+* Tasks 
+** TOD                                             :category_theory:MOOC:joy:
+   - learn emacs M-x org-agenda
+   - remmber org-capture importance
+** TODO :work                         :number_theory:set_theory:proof_theory:
+   - somthing new
+** TODO :life:
+   - another thing on Wed
+** TODO Org-Agenda 
+   - understand A
+   - understand B
+** TODO Org-Agenda 
+   - understand C
+   - uderstand D
+
+   ----- 
+
 * Grit :: Perseverance and Passion for Long-term Goals 
+  :PROPERTIES:
+  :DESCRIPTION: Must have Personal Traits via continous conditioning
+  :CATEGORY: research
+  :ZPT:      0
+  :END:
   + Courage
     - understand that there are valuable lessons in defeat and that the vulnerability of perseverance is requisite for high achievement.  
     - 
     - 
-  + item-3  
-    - 
-    - 
 
-  -----
-* Universities
+    -----
+
+
+* Top Universities
+  :PROPERTIES:
+  :DESCRIPTION: Examining Top Universities
+  :CATEGORY: research
+  :ZPT:      0
+  :ORDERED:  t
+  :END:
   Once in a while, I examine how Top Universities offer their mathematics and computer science related programs. I try to find what kind of books they set as 
-  textbooks. And go read them on my own or purchase them from Amazon. My act is inspired by *“You wasted $150,000 on an education you coulda got for 
-  $1.50 in late fees at the public library.” ― Matt Damon, Good Will Hunting*. Ofcourse I worship Professors who offer their courses online for free!
+  textbooks, to go read them on my own, purchase them from Amazon (I only like *Hardcover* books!), or scout them in the cheap 2nd hand street book markets. 
+  My act is inspired by *“You wasted $150,000 on an education you coulda got for $1.50 in late fees at the public library.” ― Matt Damon, Good Will Hunting*. 
+  I worship those Professors who offer their courses online for free! If it is up to me I build them real-size human sculptures in my City. 
+  *Knoweldge belong to all mankind, not to copyright owners who suffer from financial insecurities!*
+  - ddf
+  - dfdf
+  ----- 
 
------ 
 * Studying Strategy 
 ** Synopsis  
    My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the
@@ -161,38 +204,31 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
    - How to Learn Faster with the Feynman Technique:  
    https://www.youtube.com/watch?v=_f-qkGJBPts
 
+
 * Sources
   This file contains links to all the material to study, :can:zpd:can't:anytag:
   *Six Thinking* Hats in solving ~competitive programming~ questions.
   *bold* /italics/ _underline_ ~verbatim~ +strike-through+
 
-** Philosphy
-*** Socrates
-**** Refrences
-     - SomeRefernce
-*** Plato
-**** Refrences
-     - TTC Video David Roochnik Platos Republic
+* TTC Video David Roochnik Platos Republic
 
 
-** Mathematics [0/2]
+
 * TTC VIDEO - The Art and Craft of Mathematical Problem Solving :problemsolving:
-     - Diference between Problem and Exercise :: Scope doesn't work as expected, and messes everything up
-          when loops mix variables up in recursive functions.
-          - Namespaces :: You wish. 
-          - Header Files :: Nope.
-
-* Set Theory
-**** SourceA
+  :PROPERTIES:
+  :ZPT: 0
+  :DESCRIPTION: This is an online course blahblah
+  :CATEGORY: problemsolving
+  :CUSTOM_ID: an-extra-special-headline
+  :END:
+  * Diference between Problem and Exercise :: Scope doesn't work as expected, and messes everything up
+       when loops mix variables up in recursive functions.
+       - Namespaces :: You wish. 
+       - Header Files :: Nope.
      information about the source here, author, edition, date, who is using it in univ cources, etc.
-**** [#B] SourceB
-     ssfsf
-* Proof Theory
-* Category Theory
-* Single-Variable Calculas
-* Multi-Variable Calculas 
-* Number Theory
-**** Elementry Number Theory - 6th Edition - Kenneth H. Rosen 
+     
+
+* Elementry Number Theory - 6th Edition - Kenneth H. Rosen 
 ***** Chapter1
 ****** Introduction  :zpd:numbertheory:
        (p) somthing is a predicate
@@ -203,47 +239,12 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
       could be google drive linkk 
       [[file:3.Sources/NumberTheory/Books/Elementary%20Number%20Theory%20-%206th%20Edition%20-%20Kenneth%20H.%20Rosen.pdf][file:3.Sources/NumberTheory/Books/Elementary Number Theory - 6th Edition - Kenneth H. Rosen.pdf]]  
 
-* Vedic Mathematics (Mental Math)
-* Graph Theory
-* TODO [#A] Discerete Mathematics
-* TODO [#B] Concerete Mathematics
-* Continous Mathematics
-* Statistics
-* Real Analysis
+      
 
-
-** Computer Science
-*** Theory of Computation
-**** Introduction to the Theory of Computation - 3rd - Spiser
-*** DataStructures
-*** Algorithms
-    you don't need to program to understand algorithms, only pen and paper. only in interviews and competitive programming you need to practice via code
-
-*** Artificial Intellegence
-**** Machine Learning
-     This is a very small font?????????????
-     This is a very small font?????????????
-     This is a very small font?????????????
-     This is a very small font?????????????
-
-**** Deep Learning
-**** BigData
-**** R
-**** Python
-
-
-
-** Puzzles
-
-   
+* Introduction to the Theory of Computation - 3rd - Spiser
+  
    -----
 
-
-* Competitive Programming
-** C programming                                                     :course:
-*** VideoName                                                    :studentcan:
-          - dfdfd :studentcann't:
-          - dfdfddfdf :ZPD:
 
 * hackerrank                                :youtube:competitive_programming:
 -----
@@ -263,21 +264,6 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
 -----
 * geeksforgeeks                             :youtube:competitive_programming:
 -----
-
-* PracticeTips:
-    - Whenever you solve some questions, try to ask yourself what if we *expand the question to a larger scale!*
-    - *Revisit old problems* and think about new techqinues, better ways, different contexts, different constrains, etc.  
-    - every solution is a finite state automata
-**  use inf-ruby more often please
-    ;; inf-ruby
-    ;;Use C-c C-s to launch the inf-ruby process.
-    ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
-    ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
-    ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
-    ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
-    ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
-    ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
-    (autoload 'inf-ruby-minor-mode "inf-
 
 
 * HackerRank :hackerrank:practice:mathematics:
@@ -300,18 +286,8 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
 * DataStructres
 * Algorithms
 ** Warmup 
+   
 ** Implementation 
-** ConstructiveAlgorithms 
-** Strings
-** Sorting
-** Search
-** GraphTheory
-** Greedy
-** DynamicProgramming
-** BitManipulation
-** Recursion
-** GameTheory
-** NPComplete 
 * Tutorials 
 ** 30 Days of Code
 ** Cracking The Coding Interview
@@ -337,7 +313,7 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
 ****** Contests 
 ******* RookieRank2 
 
-* Birthday Cake Candles  :problem:hackerrank:contest:rookierank2:duplicates_in_array:zpd1  
+* Birthday Cake Candles  :problem:hackerrank:contest:rookierank2:duplicates_in_array:zpd1:
 ** Problem (Predicates & Implications)
    Colleen is turning  \(n\)  years old! 
    She has  \(n\)  candles of various heights on her cake, 
@@ -350,7 +326,7 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
    somthing
 ** Output Format
    Print the number of candles Colleen blows out on a new line.
-** Solution (Questtions, Predicates & Implications) 
+** Solution (Questions, Predicates & Implications) 
    the brute force solution gives O(N^2) via comparing each of two strings. 
    A common technique is the trade-off between time and space. 
    we want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
@@ -403,31 +379,33 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
      - Use ElDoc-mode in emacs to identify what is going on while writing the code, and then text-to-speech the output of ElDoc mode and create a video out of it.
      - Create a Gitlapse-mode for doing all my stuff?? maybe not a great idea. But wasamasa can help and tehn Emacsers can do this gitlapse thing on their own machines.
 * Mushin :ruby:opensource:ddd:
-* Utter :ruby:microservices:
-   What are Microservices? they are hexagons
-   Hexagonal architecture (paper introduced by whom?)
-   autonmous
-   independent processes communicate over APIs high degree of autonomy- take one ser
-   small, focused on doing one thing well, unix philosphy
-   microservices is just an opinonated way of SOA.
-   small autonomous services that work together, independant processes communicating over APIs, focused on one thing and doing one thing well.
-   Better alignment with the organizsation.
-   exaptation
-   Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organizationâs communication structure.
-   Monolith application
-   target security concern enalbe segregation models
-   Adopt a balanced portfolio of risk around technology.
-   not locked into a single programming idiom
-   Principles of MicroServices
-   Modelled around business domain
-   Culture of Automation
-   Hide Implementation details
-   Decentralise all the things
-   Deploy independently
-   Consumer first
-   Modeling around Business Domain
-   Presentation - Business Logic - Data Access
-* SSD :ruby:datastore:
+* Utter :ruby:
+  **autonmous :ruby:
+  What are Microservices? they are hexagons
+  Hexagonal architecture (paper introduced by whom?)
+  independent processes communicate over APIs high degree of autonomy- take one ser
+  small, focused on doing one thing well, unix philosphy
+  microservices is just an opinonated way of SOA.
+  small autonomous services that work together, independant processes communicating over APIs, focused on one thing and doing one thing well.
+  Better alignment with the organizsation.
+  exaptation
+  Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organizationâs communication structure.
+  Monolith application
+  target security concern enalbe segregation models
+  Adopt a balanced portfolio of risk around technology.
+  not locked into a single programming idiom
+  Principles of MicroServices
+  Modelled around business domain
+  Culture of Automation
+  Hide Implementation details
+  Decentralise all the things
+  Deploy independently
+  Consumer first
+  Modeling around Business Domain
+  Presentation - Business Logic - Data Access
+* SSD                                                            :@work:ruby:
+** somthing                                                :@home:ruby:
+   SSD is a ruby datastore
 * UpWork :website:work:
 ** Rails
 ** Ruby
@@ -444,8 +422,8 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
 * Portougese Language :culture:
 * Samba Songs :culture:music:dance:
 * Sertanjijo Songs :culture:music:dance:
-   Song lyrics and translations here.
-   
+  Song lyrics and translations here.
+  
 * Brasalian Funk Songs :culture:music:dance:
 * Brazlian Rap :culture:music:
    - projota 
@@ -485,7 +463,7 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
       - Amiga, Cague Apenas dentro do vaso; 
         Girlfriend, Shit Just inside the pot 
 
-* Companies I like
+* Companies I like to work for
 - Thoughtbot
 - Github
 - Google
@@ -494,19 +472,9 @@ I am available for [hire [link to google docs resume]]. This is an org-mode gene
 - Gitlab
 - Facebook
 - Twitter
+- Hackerrank
 ----- 
 
-
-* Tasks
-** TODO  
-   - I love football 
-   - I love basketball
-   #+BEGIN_SRC ruby
-     def love
-       p "love is all around"
-     end
-   #+END_SRC
-   [2017-02-13 Mon]
 
 * How to use emacs in my life?
 So the idea is that I while I want to code, I code in C or ruby file using its respective emacs-mode and its capabilities, but when i want to take notes and log it into my blog, 
@@ -516,17 +484,73 @@ and have it saved to the end of my blog with all the correct tags that gets view
 
 This is so powerful that I can create many powerful org-capture templates and save it in my .emacs and keep enhancing them to reflect my level of performance in study, practice and work. 
 
-* TODO 
-  - create templates for hackerrank problems, store in zotherstupidguy.github.io/org/templates/hackerrank.text
-  - codeforces problems, store in zotherstupidguy.github.io/org/templates/codeforces.text
-  - experiment with org-mode agenda to view my headings based on their tags? or a smiliar functionality from somthing else maybe! 
-  - use org-capture for saving common algorithms in C. eg. sorting.c shortestpath.c, etc.
-  - find the ability to query my huge org file.  
-  - on emacs open, make sure it opens scratch and also opens index.org and make index.org the active buffer to easily edit.
-  - org-capture template for Questions, Predicates, and Implications
+*use C-c \* to search for zpd0, zpd1, zpd2 tags and find what you are trying to do that day, and C-c C-c to choose the tags
 
+** PracticeTips:
+    - Whenever you solve some questions, try to ask yourself what if we *expand the question to a larger scale!*
+    - *Revisit old problems* and think about new techqinues, better ways, different contexts, different constrains, etc.  
+    - every solution is a finite state automata
+**  use inf-ruby more often please
+    ;; inf-ruby
+    ;;Use C-c C-s to launch the inf-ruby process.
+    ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
+    ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
+    ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
+    ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
+    ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
+    ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
+    (autoload 'inf-ruby-minor-mode "inf-
+
+** TODO
+   - create templates for hackerrank problems, store in zotherstupidguy.github.io/org/templates/hackerrank.text
+   - codeforces problems, store in zotherstupidguy.github.io/org/templates/codeforces.text
+   - experiment with org-mode agenda to view my headings based on their tags? or a smiliar functionality from somthing else maybe! 
+   - use org-capture for saving common algorithms in C. eg. sorting.c shortestpath.c, etc.
+   - find the ability to query my huge org file.  
+   - on emacs open, make sure it opens scratch and also opens index.org and make index.org the active buffer to easily edit.
+   - org-capture template for Questions, Predicates, and Implications
+
+** Emacs Agenda :agenda:
+   The agenda allows you to create filtered views of the items in your 
+   *agenda files*("day-planner" views of your schedule, lists of your todos, and the results of queries (for tags, words, regular expressions, etc.)).
+
+   One use of the agenda is as a day planner system. If you prefer to schedule your tasks and to see a daily agenda of TODOs, you'll probably be pressing C-c a a a lot.
+   The agenda can also be used for a powerful GTD system. If you like to filter your "next actions" by context, 
+   then you'll probably make frequent use of C-c a t to see a list of all your active TODOs and to filter them by tag/context.
+   While the agenda is a powerful task management tool, it is also a fantastic research tool. If you keep a file full of reading notes, 
+   for instance, you can use the agenda to locate entries containing a particular word or labeled by a particular tag.
+
+   *Do you want quickly to filter for the item in the agenda view? If so, a tag is probably your best choice.*
+   Note, you can add a setting to your .emacs that automatically adds a tag whenever you assign a particular TODO keyword. Type "C-c v org-todo-state-tags-triggers" for more information.
+   An excellent way to implement labels and contexts for cross-correlating information is to assign tags to headlines. Org mode has extensive support for tags.
+
+   Every headline can contain a list of tags; they occur at the end of the headline. Tags are normal words containing letters, numbers, ‘_’, and ‘@’. Tags must be preceded and followed by a single colon, e.g., ‘:work:’. Several tags can be specified, as in ‘:work:urgent:’. Tags will by default be in bold face with the same color as the headline.
+
+   Tag inheritance: Tags use the tree structure of the outline
+   Setting tags: How to assign tags to a headline
+   Tag groups: Use one tag to search for several tags
+   Tag searches: Searching for combinations of tags
+   ref: http://orgmode.org/guide/Tags.html#Tags
+  
+* Hackertyper for reviewing practiced algorithms
+  I should use hackertyper to review practiced algorithms,
+  ref: http://www.hackertyper.com/
+
+  
 * ZotherZPD Index
   - Can't is *0  =  ZPD0, thus I name respective headings with :zpd0:
   - ZPD is *1    = ZPD1, thus I name respective headings with :zpd1;
   - Can is *2    = ZPD2, thus I name respective headings with :zpd2:
   According to this index I can *automatically* calculate (via emacs) a score * 0 or * 1 or * 2 / by the number of shit I am trying to accomplish.
+
+  
+* hackerrank api for my "emacsContest.el"
+  I want to create *emacsContest.el* to holdplace to where programmers can contribute to the API integration of CP websites.
+  https://www.hackerrank.com/api/docs provides an api that I want to use when a contest starts to:
+  - get a list of all the problems of the contest
+  - parse and map the statment, constraints, input, ouput, and sample data into an org-capture template that i will store into my blog.
+  - submit my sourcecode(C or Ruby) via the api via an emacs shortcut. 
+  - show a buffer with all status of who solved the problem and the percentage of it. 
+
+
+  
