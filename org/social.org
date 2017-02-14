@@ -1,0 +1,53 @@
+* Social
+** The Yoga Warrior                                             :yoga:spirit:
+*** Verstile Warrior
+      listen to the instructions a couple of times. then mute the video sound and choose your own music.
+      Also store the almost 6Giga videos on mobile SDcard or tablet.
+
+** Aikido                                                            :spirit: 
+** Portougese Language                                              :culture:
+** Samba Songs                                          :culture:music:dance:
+** Sertanjijo Songs                                     :culture:music:dance:
+   Song lyrics and translations here.
+  
+** Brasalian Funk Songs                                 :culture:music:dance:
+** Brazlian Rap                                               :culture:music:
+    - projota 
+    - Songname
+      - Lyrica
+      - Translation
+      - Important Words
+    - emicida 
+    - rodrigo ogi
+    - black alien
+    - criolo
+** Japanese Language 
+   I am dddmo a.k.a zotherstupidguy, and this is my log of everything!!
+
+   The current trend here
+       - [X] Checked.
+       - [-] Half-checked.
+       - [ ] Not checked.
+       - Normal list item.
+
+         a lot about life mainly yoga, and brasalian songs.
+         - First term to define ::
+              Definition of the first term. We add a few words to show the line wrapping,
+              to see what happens when you have long lines.
+
+         - Second term ::
+                          Explication of the second term with *inline markup*.
+         | Cell in column 1, row 1 | Cell in column 2, row 1 |
+         | Cell in column 1, row 2 | Cell in column 2, row 2 |
+
+         In many paragraphs.
+
+** Brazlian Memes                                         :fun:jokes:culture:
+   I keep a collection of Brazlian Memes to funkup my comments with my brazlian friends on facebook, some of the content in this section are explicit in nature.
+   
+   [[file:img/memes/1.jpg][Amiga]] 
+       - Amiga, Cague Apenas dentro do vaso; 
+         Girlfriend, Shit Just inside the pot 
+
+  
+nice
