@@ -6,182 +6,99 @@
 #+LANGUAGE:  en
 #+STYLE:body {font-family: "Source Sans Pro Black",sans-serif;}
 #+OPTIONS: H:3 num:0
-#+TAGS: zpd0(0)  zpd1(1) zpd2(2)  number_theory set_theory proof_theory computational_theory problem_solving category_theory single_variable_calculas multi_variable_calculas vedic_mathematics graph_theory discerete_mathematics concerete_mathematics continous_mathematics statistics real_analysis grit top_universities studying_strategy data_structures algorithms artificial_intellegence machine_learning deep_learning bigdata R python puzzles { MOOC : coursera  stanford oxford MIT} { philosphy : socrates plato} book youtube blog competitive_programming C_programming  {algorithms : ConstructiveAlgorithms Strings Sorting Search GraphTheory Greedy  DynamicProgramming  BitManipulation  Recursion  GameTheory  NPComplete } 
+#+TAGS: zpd0(0)  zpd1(1) zpd2(2)  problem solution predicate implication question fig mindmap number_theory set_theory proof_theory computational_theory problem_solving category_theory single_variable_calculas multi_variable_calculas vedic_mathematics graph_theory discerete_mathematics concerete_mathematics continous_mathematics statistics real_analysis grit top_universities studying_strategy data_structures algorithms artificial_intellegence machine_learning deep_learning bigdata R python puzzles { MOOC : coursera  stanford oxford MIT} { philosphy : socrates plato} book youtube blog competitive_programming C_programming  {algorithms : ConstructiveAlgorithms Strings Sorting Search GraphTheory Greedy  DynamicProgramming  BitManipulation  Recursion  GameTheory  NPComplete } DistributedSystems Regex Security Functions Cryptography
 
+  
+* About
+  Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher living in Alexandria, Egypt; and this is my day-to-day b(log). 
+  I am available for [hire [link to google docs resume]].
+  This is an org-mode generated log (Org-Agenda, Org-Capture, tag-based organization) via those [[https://github.com/zotherstupidguy/dotfiles][dotfiles]] 
+  and acutal [[https://github.com/zotherstupidguy/zotherstupidguy.github.io][source]] of this blog. 
 
-{ @read : @read_book  @read_ebook }
+  *As lazy as I am*, I plan using the notes here *to cheat at phone interviews*, 
+  Emacs got a nice regex search ;) IF YOU BELONG TO THE SET OF THE FEW PEOPLE 
+  ON EARTH WHO READ MY BLOG *AND* ACTUALLY PLAN TO HIRE ME, 
+  PLEASE LET ME KNOW IF YOU THINK I AM FUNNY.
 
-*** VideoName                                                    :studentcan:
-          - dfdfd :studentcann't:
-          - dfdfddfdf :ZPD:
-
-
-
-Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher living in Alexandria, Egypt; and this is my day-to-day b(log). 
-I am available for [hire [link to google docs resume]]. 
-This is an org-mode generated log (Org-Agenda, Org-Capture, tag-based organization) via those [[https://github.com/zotherstupidguy/dotfiles][dotfiles]] 
-and acutal  [[https://github.com/zotherstupidguy/zotherstupidguy.github.io][source]] of this blog.
-
-[[file:img/mo.jpg]]
------ 
-* Tasks 
-** TOD                                             :category_theory:MOOC:joy:
-   - learn emacs M-x org-agenda
-   - remmber org-capture importance
-** TODO :work                         :number_theory:set_theory:proof_theory:
-   - somthing new
-** TODO :life:
-   - another thing on Wed
-** TODO Org-Agenda 
-   - understand A
-   - understand B
-** TODO Org-Agenda 
-   - understand C
-   - uderstand D
-
-   ----- 
-
-* Grit :: Perseverance and Passion for Long-term Goals 
-  :PROPERTIES:
-  :DESCRIPTION: Must have Personal Traits via continous conditioning
-  :CATEGORY: research
-  :ZPT:      0
-  :END:
-  + Courage
-    - understand that there are valuable lessons in defeat and that the vulnerability of perseverance is requisite for high achievement.  
-    - 
-    - 
-
-    -----
-
-
-* Top Universities
-  :PROPERTIES:
-  :DESCRIPTION: Examining Top Universities
-  :CATEGORY: research
-  :ZPT:      0
-  :ORDERED:  t
-  :END:
+  -----
   Once in a while, I examine how Top Universities offer their mathematics and computer science related programs. I try to find what kind of books they set as 
   textbooks, to go read them on my own, purchase them from Amazon (I only like *Hardcover* books!), or scout them in the cheap 2nd hand street book markets. 
   My act is inspired by *“You wasted $150,000 on an education you coulda got for $1.50 in late fees at the public library.” ― Matt Damon, Good Will Hunting*. 
   I worship those Professors who offer their courses online for free! If it is up to me I build them real-size human sculptures in my City. 
   *Knoweldge belong to all mankind, not to copyright owners who suffer from financial insecurities!*
-  - ddf
-  - dfdf
   ----- 
 
-* Studying Strategy 
-** Synopsis  
-   My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the
+** Funny Thoughts
+   Ancient Egyptians had n gods, as each person was so focused into their profession that they created a God for this body of knoweldge to 
+   worship day and night. If computer science folks would do the same, they would create Knuth God, after Donald Knuth :D
 
-   knowledge that I aquire into this file, and I organize it accordingly.
+** Companies I would like to work for
+   - Thoughtbot
+   - Github
+   - Google
+   - Amazon
+   - Thoughtworks
+   - Gitlab
+   - Facebook
+   - Twitter
+   - Hackerrank
+   ----- 
 
-   Naturally I could write a book or two from the notes I have written into this file. As a matter of fact, I belive that
-   the only way computer scientets are capable of writing so many powerful books is due to the fact that they use
-   emacs in a similar way to what i am doing here, I can collect information and tag it, search it easily and update it,
-   check cross referencing, etc. it is really awesome. I think i will keep taking notes in notebooks and as a reviesion I 
-   will transfer the notes to here. I expect to be able to have codeblocks, latex formulas and maybe some progress
-   graphs.
+** Grit :: Perseverance and Passion for Long-term Goals 
+   :PROPERTIES:
+   :DESCRIPTION: Must have Personal Traits via continous conditioning
+   :CATEGORY: research
+   :ZPT:      0
+   :END:
+   + Courage
+     - understand that there are valuable lessons in defeat and that the vulnerability of perseverance is requisite for high achievement.  
+     - 
+     - 
+   -----
 
-   Publish a series about computer science via https://leanpub.com, 
-   call it "hackspree computer science series", each volume is small 100pages book of notes and commentary. 
+** Studying Strategy 
+   My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the 
+   knowledge that I aquire into this file, and I organize it accordingly to smallest possible domain of knowledge such as instead of having
+   a heading for Number Theory, I have multiple headings for topics such as Prime Numbers, that way when I read a book I don't read the chapters but
+   I explore the glossry and find where my objective topic exists and I write it down based on:  
+   - why is it worth the effort?
+   - what should be persued? 
+   - how it will be persued?
 
-   Make this log.org file my personal blog on zotherstupidguy.github.io, all in just one big huge page to get so many fucken hits.
-   This log is published via an autoback configuration from Emacs, meaning that some times drafts are included.
+*** Cornell Note Taking System & Feynman Technique
+    I employ the Feynman technique in the Reviewing stage of my SQ3R 
 
-*** Zone of Proximal Development [1/2]
-    If i am studying a book, I can label its chapters as Done, TODO, or without label.
-**** DONE is  I-can
-**** TODO is ZPD 
-**** notag is I-can't
+    Refs: 
+    - Learn Faster with The Feynman Technique
+    https://www.youtube.com/watch?v=FrNqSLPaZLc
 
-*** Cronell Note Taking System
-    trying to find a CornellNoteTakingSystem mode for Emacs.
+    - How to Learn Faster with the Feynman Technique:  
+    https://www.youtube.com/watch?v=_f-qkGJBPts
 
-**** SQ3R
 
 *** Finding Sources
     using ./link to automatically download new youtube videos and generate an RSS of it and update log.org with a TODO for watching new things.
     I can't add ZPT, can, and can't folders in the sources folders as it will make ./link difficult to know what already got downloaded.
 
-*** Emacs Tips
-    Must read http://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code as it explains literate programming could help me figure out how 
-    to write code in emacs and export it to external files and vice-versa.  
-    M- left arrow can make org elements go to sub
-    Because I am using Evil-mode I can simply paste using P or p, same as vim's http://vim.wikia.com/wiki/Copy,_cut_and_paste
-**** TODO find a way to do org-plot
-*** Email
-    access all emails from emacs for easy regex search
-*** IRC [0/1]
-    dfdfd
-    
-    access IRC from inside emacs to automatically log all important channels and always search them for answers before going online.
-    erc works awesome ;) 
-**** TODO
-     - find some nice configruations for erc
-     - Register username/password
-     - log all opened channels automatically everytime emacs starts
-     - back them up automatically somehow. 
 
-*** Backup
-    search for an emacs mode that would allow you to backup my files automatically somehow to googledrive/ github/ or server.
-    I prefer Github, that way I can auto publish everytime I make an edit on the file (maybe a job that runs every hour or so).
+    ----- 
 
-    https://github.com/ryuslash/git-auto-commit-mode
-*** Time Management
-    using ClockWork app, I work only for 10mins to take 5mins break and a rest every 10x3. 
-    it is like this because to move slowly is better than being depressed and not moving at all.
-
-*** LaTex
-*** RSS
-    upwork rss jobs and other stuff.
-    http://pragmaticemacs.com/category/elfeed/
-
-*** Git
-    need to use 'maget
-
-*** Citations [0/1]
-**** TODO 
-     find somthing like org-ref http://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/ 
-     this way we can provide citations for the things we have in Sources Directory
-    
-
-     -----
-
-*** Calender 
-    - http://jameswilliams.be/blog/2016/01/11/Taming-Your-GCal.html
-    - http://cestlaz.github.io/posts/using-emacs-26-gcal/#.WJ48TSFNy00
-    - http://opensourceforu.com/2016/04/master-the-calendar-centering-macros-and-drawing-tools-in-gnu-emacs/
-
-
-** Vision of the Future
-   
-** Strategic Formulation and Implementation
-   - why is it worth the effort?
-   - what should be persued? 
-   - how it will be persued?
-   - Group problems according to 
-   
-   The 7 Pillars of Strategic Thinking:
-   1. Strategic Intent
-   2. Strategic Analysis and Gathering of Intelligence
-   3. Strategic Preparation of Resources
-   4. Concentration of Force
-   5. Disciplined Execution and Detailed Tactical Follow-Through 
-   6. Adaptability
-   7. The Study of General Principles﻿
-
-** Managerial Role in Strategy Making	
-
-** Control	
-   My most basic studytime unit  is t = 10mins, henceforth all my study and practice activites are divided up in units of 10mins.
+** Training Strategy
+   The main idea of Competitive Programming Training is to solve any given problem in under 10minutes, thus the 
+   most basic studytime unit  is t = 10mins, henceforth all my study and practice activites are divided up in units of 10mins.
 
    I categorieze my incoming infromation into 3 categories: 
    A. Can,    12 problems, total 12t(2hrs)
    B. ZPD,    4 problems, total 12t(2hrs)
    C. Can't.  1 problem, total 12t(2hrs)
-   
+
+** ZotherZPD(Zone of Proximal Development) Index
+   - Can't is *0  =  ZPD0, thus I name respective headings with :zpd0:
+   - ZPD is *1    = ZPD1, thus I name respective headings with :zpd1;
+   - Can is *2    = ZPD2, thus I name respective headings with :zpd2:
+     According to this index I can *automatically* calculate (via emacs) a score * 0 or * 1 or * 2 / by the number of shit I am trying to accomplish.
+
+
    I start my day trying to attack category *C. Can't* to fail and study a bit, 
    then go for the *B.ZPD* which is my zone of proximal development, 
    with some effort I can succeed in solving a problem in 30mins.
@@ -191,158 +108,282 @@ and acutal  [[https://github.com/zotherstupidguy/zotherstupidguy.github.io][sour
 
    All problems are solved in C with emacs templates to save time.
 
-** Managerial Role in Implementation	
-
-** Strategy Making
-
-** Process and Outcome	
-
-   Refs: 
-   - Learn Faster with The Feynman Technique
-   https://www.youtube.com/watch?v=FrNqSLPaZLc
-
-   - How to Learn Faster with the Feynman Technique:  
-   https://www.youtube.com/watch?v=_f-qkGJBPts
+   In order to achieve that training is divided into 3 difficulity/time categories: ZPT0, ZPT1, ZPT2.
+   - 2hrs for *one* ZPT0 problem, this is a problem that are too difficult to solve and requires significant studying  to be familiar with the nessesary knowledge domain(s), 
+     the 2hours are dedicated for 
+     - Understanding the problem
+     - Identifying which knowledge domain(s) it belongs to.
+     - Reading about those knowledge domain(s).
+     - Attempt to provide a solution  
+   - 2hrs for *up to 4* ZPT1 problems, those are problems that their solutions depends on knowledge domain(s) that I am already familiar with. 
+   - 2hrs for *up to 12* ZPT2 problems, those are probems that I solved in the past one time or more and I need to enhance my speed in solving them.
 
 
-* Sources
-  This file contains links to all the material to study, :can:zpd:can't:anytag:
-  *Six Thinking* Hats in solving ~competitive programming~ questions.
-  *bold* /italics/ _underline_ ~verbatim~ +strike-through+
+   ----- 
 
-* TTC Video David Roochnik Platos Republic
+** Publish it! 
+   Naturally I could write a book or two from the notes I have written into this file. As a matter of fact, I belive that
+   *the only way* computer scientets are capable of writing so many powerful books is due to the fact that they use
+   emacs in a similar way to what I am doing here, I can collect information and tag it, search it easily and update it,
+   check cross references, etc. *It feels Awesome to be that Powerful!* I think i will keep taking notes in notebooks and as a review, I 
+   will transfer the notes to this org document. I expect to be able to have codeblocks, latex formulas and maybe even 
+   graphs. Eventually I shall publish a series about computer science via https://leanpub.com, call it "zotherstupidguy computer science notes" 
+   each volume is small 100pages book of notes and commentary. 
 
 
+* Knowledge 
+  (P) Any knowledge by definition is true otherwise it would be some kind of misinformation.
 
-* TTC VIDEO - The Art and Craft of Mathematical Problem Solving :problemsolving:
-  :PROPERTIES:
-  :ZPT: 0
-  :DESCRIPTION: This is an online course blahblah
-  :CATEGORY: problemsolving
-  :CUSTOM_ID: an-extra-special-headline
-  :END:
-  * Diference between Problem and Exercise :: Scope doesn't work as expected, and messes everything up
-       when loops mix variables up in recursive functions.
-       - Namespaces :: You wish. 
-       - Header Files :: Nope.
-     information about the source here, author, edition, date, who is using it in univ cources, etc.
-     
+** Declarative Knowledge 
+   (Q) What is Declarative Kknowledge?
+** Imperative Knowledge 
+   (Q) What is Imperative Kknowledge?
+** Primative Instructions
+   (P) Alan Turing said there are only 6 primative instructions needed to create any program.
+   (Q) What are Turing's 6 primative instructions.
 
-* Elementry Number Theory - 6th Edition - Kenneth H. Rosen 
-***** Chapter1
-****** Introduction  :zpd:numbertheory:
-       (p) somthing is a predicate
-       (i) somthing is impelied
-       (q)
-       tags for can, cannot, zpd
-*****  Source
-      could be google drive linkk 
-      [[file:3.Sources/NumberTheory/Books/Elementary%20Number%20Theory%20-%206th%20Edition%20-%20Kenneth%20H.%20Rosen.pdf][file:3.Sources/NumberTheory/Books/Elementary Number Theory - 6th Edition - Kenneth H. Rosen.pdf]]  
+** Memoization
+   - What is Memoization?
+     - Memoization is a very common techqiune, we use memoization to solve a lot of problems.
+     - In simple terms, we are just remmbering what we did before and just look it up.
+     - In summary,it is a fancy way to say we are going to use Table lookup.
 
-      
+   - When to use Memoization?
+     Thus in a situation where you remmber what the answer was and rather than recalculating it again, we just look it up.
 
-* Introduction to the Theory of Computation - 3rd - Spiser
+      The concept of memoization is at the heart of dynamic programming.
+
+      - References  
+        (r) MIT - Introduction to Computer Science and Programming (Python) ® vampiri6ka/HQ     
+
+** Dynamic Programming
+   What is Dynamic Programming?
+
+** Prime Numbers                                          :zpd:number_theory:
+   (p) somthing is a predicate
+   (i) somthing is impelied
+   (q) a question
+** Depth First Search
   
-   -----
-
-
-* hackerrank                                :youtube:competitive_programming:
------
-* arabic competitive programming            :youtube:competitive_programming:
------
-* codejam                                   :youtube:competitive_programming:
------
-* codemasrytube                             :youtube:competitive_programming:
------
-* mycodeschool                              :youtube:competitive_programming:
------
-* saurabhschool                             :youtube:competitive_programming:
------
-* codinginterviewhub                        :youtube:competitive_programming:
------
-* conor                                     :youtube:competitive_programming:
------
-* geeksforgeeks                             :youtube:competitive_programming:
------
-
-
-* HackerRank :hackerrank:practice:mathematics:
------ 
-* HackerRank :hackerrank:practice:mathematics:fundamentals:
------ 
-* HackerRank :hackerrank:practice:mathematics:numbertheory:
------ 
-* HackerRank :hackerrank:practice:mathematics:combinatorics:
------ 
-* HackerRank :hackerrank:practice:mathematics:algebra:
------ 
-* HackerRank :hackerrank:practice:mathematics:geometry:
------ 
-* HackerRank :hackerrank:practice:mathematics:probability:
------ 
-* HackerRank :hackerrank:practice:mathematics:linaralgebra:
-  ssdfdfddfdff
------ 
-* DataStructres
-* Algorithms
-** Warmup 
-   
-** Implementation 
-* Tutorials 
-** 30 Days of Code
-** Cracking The Coding Interview
-** 10 Days of Statistics
-
-
-*** Specialized Skills
-**** Artificial Intelligence
-**** Distributed Systems
-**** Regex
-**** Security
-**** Functions
-**** Terminoloy and Concepts
-**** Cryptography
-*** Languages 
-**** C++
-**** Python
-**** Ruby 
-**** LinuxShell
-**** Functional Programming
-
-
-****** Contests 
-******* RookieRank2 
-
-* Birthday Cake Candles  :problem:hackerrank:contest:rookierank2:duplicates_in_array:zpd1:
-** Problem (Predicates & Implications)
-   Colleen is turning  \(n\)  years old! 
-   She has  \(n\)  candles of various heights on her cake, 
-   and candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
-   Given the  for each individual candle, find and print the number of candles she can successfully blow out.
-** Input Format
-   The first line contains a single integer, , denoting the number of candles on the cake. 
-   The second line contains  space-separated integers, where each integer  describes the height of candle .
-** Constraints
-   somthing
-** Output Format
-   Print the number of candles Colleen blows out on a new line.
-** Solution (Questions, Predicates & Implications) 
-   the brute force solution gives O(N^2) via comparing each of two strings. 
-   A common technique is the trade-off between time and space. 
-   we want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
-   The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
-   If we store every element into a hash set, we can make it O(N) for both time and space complexity.
-   #+BEGIN_SRC ruby
-     def input
-       p "love emacs, because emacs is a philosphy of how yo all dealing with computer..."
-     end
-     def output
-     end       
-     input
+   #+BEGIN_SRC C
+     // void dfs(int a) // dfs on node a
+     void hello() 
+     {
+       int x =  1 + 2; 
+       printf("%i", x ); 
+       // printf("hello world");
+     }
+     hello();
    #+END_SRC
 
-   #+RESULTS: 
-   : love emacs, because emacs is a philosphy of how yo all dealing with computer
+   #+RESULTS:
+   : 3
+
+   - Refernces:
+     - icpc.pdf page 10 of 78 
+     - cp1.pdf page 70 of 152
+
+** Topological Sorting
+   Is a type of Depth First Search, 
+
+  
+   
+   ---------
+** Turing Complete
+   (Q) what is Turing Complete?
+** Python
+   - interperted langauge, (can also complie it)
+   - a variable is a name of an objective
+   - an assigment binds a name to an object.
+   - python forces indentation thus that the visual structure actually matchs the semantic structure. 
+
+** Machine Learning Introduction 
+   - Machine Learning is a class of algorithms which is data-driven, 
+   i.e. unlike "normal" algorithms it is the data that "tells" what the "good answer" is
+   - Example: a hypothetical non-machine learning algorithm for face detection in images 
+   would try to define what a face is (round skin-like-colored disk, with dark area where 
+   you expect the eyes etc). A machine learning algorithm would not have such coded 
+   definition, but would "learn-by-examples": you'll show several images of faces and 
+   not-faces and a good algorithm will eventually learn and be able to predict whether or not an unseen image is a face. 
+ 
+   - Machine Learning Types:
+   Supervised: All data is labeled and the algorithms learn to predict the output from the input data.
+   Unsupervised: All data is unlabeled and the algorithms learn to inherent structure from the input data.
+   Semi-supervised: Some data is labeled but most of it is unlabeled and a mixture of supervised and unsupervised techniques can be used. 
+** supervised learning
+   (Q) When to use supervised learning?
+   - Supervised learning is when the data you feed your algorithm is "tagged" to help your logic make decisions.
+   - Example: Bayes spam filtering, where you have to flag an item as spam to refine the results.
+   - Applications in which the training data comprises examples of the input vectors along with their 
+   corresponding target vectors are known as supervised learning problems.
+   - Approaches to supervised learning include:
+     - Classification(1R, Naive Bayes, Decision tree learning algorithm such as ID3 CART and so on)
+     - Numeric Value Prediction
+   - Supervised learning: It is the machine learning task of inferring a function from labeled training data.The training data consist of a set of training examples. In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples.
+   The computer is presented with example inputs and their desired outputs, given by a "teacher", and the goal is to learn a general rule that maps inputs to outputs.Specifically, a supervised learning algorithm takes a known set of input data and known responses to the data (output), and trains a model to generate reasonable predictions for the response to new data.
+   - The classification and regression supervised learning problems.
+
+** unsupervised learning
+   (Q) When to use unsupervised learning?
+   - You should use unsupervised learning methods when you need a large amount of data to train your models, and the willingness and ability to experiment and explore, and of course a challenge that isn’t well solved via more-established methods.With unsupervised learning it is possible to learn larger and more complex models than with supervised learning.Here is a good example on it
+   - Unsupervised learning are types of algorithms that try to find correlations without any external inputs other than the raw data.
+   - Example: datamining clustering algorithms.
+   - In other pattern recognition problems, the training data consists of a set of input vectors x without any corresponding target values.
+     The goal in such unsupervised learning problems may be to discover groups of similar examples within the data, where it is called clustering
+   - Approaches to unsupervised learning include:
+     - Clustering(K-mean,hierarchical clustering)
+     - Association Rule Learning
+   - Unsupervised learning: It is learning without a teacher. 
+   One basic thing that you might want to do with data is to visualize it. It is the machine learning task of inferring a function to describe hidden structure from unlabeled data. Since the examples given to the learner are unlabeled, there is no error or reward signal to evaluate a potential solution. This distinguishes unsupervised learning from supervised learning. Unsupervised learning uses procedures that attempt to find natural partitions of patterns.
+   - The clustering and association unsupervised learning problems.
+
+
+** semi-supervised learning  
+   - A problem that sits in between supervised and unsupervised learning called semi-supervised learning.
+   - Problems where you have a large amount of input data (X) and only some of the data is labeled (Y) 
+   are called semi-supervised learning problems.
+   - Semi-supervised learning problems sit in between both supervised and unsupervised learning.
+   - A good example is a photo archive where only some of the images are labeled, (e.g. dog, cat, person) and the majority are unlabeled.
+   - Many real world machine learning problems fall into this area. This is because it can be expensive or 
+     time-consuming to label data as it may require access to domain experts. Whereas unlabeled data is cheap and easy to collect and store.
+   - You can use unsupervised learning techniques to discover and learn the structure in the input variables.
+   - You can also use supervised learning techniques to make best guess predictions for the unlabeled data, 
+     feed that data back into the supervised learning algorithm as training data and use the model to make predictions on new unseen data.
+** active learning
+** Octave
+   (P) Always use octave for prototyping machine learning algorithms, and only after that migrate it in another language.
+   (P) if we use octave as our programming enviroment for machine learning, will learn much more faster than
+   using python, C++, or Java, as it is just functions.
+
+** Cocktail Party Problem 
+   - in only one line of code! in octave.
+
+** linear regression with one variable 
+
+
+** References  
+*** TODO TTC VIDEO - The Art and Craft of Mathematical Problem Solving :problemsolving:
+    :PROPERTIES:
+    :ZPT:      0
+    :DESCRIPTION: This is an online course blahblah
+    :CATEGORY: problemsolving
+    :CUSTOM_ID: an-extra-special-headline
+    :END:
+    * Diference between Problem and Exercise :: Scope doesn't work as expected, and messes everything up
+         when loops mix variables up in recursive functions.
+         - Namespaces :: You wish. 
+         - Header Files :: Nope.
+         information about the source here, author, edition, date, who is using it in univ cources, etc.
+
+*** TODO Cracking the Coding Interview                   :book:zpd:interview:
+    :PROPERTIES:
+    :BIB_AUTHOR: Walter Evensong
+    :BIB_TITLE: Mysteries of the Amazon
+    :BIB_PAGES: 1234
+    :BIB_PUBLISHER: Humbug University Press
+    :END:
+****** TODO Chapter1 
+******* TODO name of the heading in the chapter
+******* TODO name of the heading in the chapter
+****** DONE sfsf
+****** sfsfsfsf
+
+*** TODO arabic competitive programming     :youtube:competitive_programming:
+    - name of each eposide extracted via a script from Emacs and into a list here
+
+*** TODO Introduction to the Theory of Computation - 3rd - Spiser
+    :PROPERTIES:
+    :BIB_AUTHOR: Walter Evensong
+    :BIB_TITLE: Mysteries of the Amazon
+    :BIB_PAGES: 1234
+    :BIB_PUBLISHER: Humbug University Press
+    :END:
+    - name of each chapter a list here
+
+*** TODO hackerrank                         :youtube:competitive_programming:
+*** TODO codejam                            :youtube:competitive_programming:
+*** TODO codemasrytube                      :youtube:competitive_programming:
+*** TODO mycodeschool                       :youtube:competitive_programming:
+*** TODO saurabhschool                      :youtube:competitive_programming:
+*** TODO codinginterviewhub                 :youtube:competitive_programming:
+*** TODO conor                              :youtube:competitive_programming:
+*** TODO geeksforgeeks                      :youtube:competitive_programming:
+*** TODO Elementry Number Theory - 6th Edition - Kenneth H. Rosen 
+    [[file:3.Sources/NumberTheory/Books/Elementary%20Number%20Theory%20-%206th%20Edition%20-%20Kenneth%20H.%20Rosen.pdf][file:3.Sources/NumberTheory/Books/Elementary Number Theory - 6th Edition - Kenneth H. Rosen.pdf]]  
+
+
+
+    -----
+
+*** TODO MIT - Introduction to Computer Science and Programming (Python) ® vampiri6ka/HQ     
+**** DONE 01-Lecture 01_ Introduction to 6.00
+     CLOSED: [2017-02-24 Fri 17:37]
+**** DONE 02-Lecture 
+     CLOSED: [2017-02-24 Fri 17:37]
+**** DONE 03-Lecture 
+     CLOSED: [2017-02-25 Sat 05:45]
+**** TODO 04-Lecture 
+
+**** TODO 31-Lecture 21_ Using Graphs to Model Problems, Part 1
+
+**** TODO 32-Lecture 22_ Using Graphs to Model Problems, Part 2
+
+*** TODO Machine Learning - Stanford
+**** TODO 1
+**** TODO 2
+
+
+
+* Problems
+** Birthday Cake Candles  
+   :PROPERTIES:   
+   :SCHEDULED: <2017-02-19 Sun +2d/4d>
+   The repeat specification, .+2d/4d means:
+   Repeat as frequently as every two days, but
+   Never less frequently than every four days, and
+   When completed, start counting again from today. 
+   :DESCRIPTION: hackerrank problem, found in rookierank2 contest, its about dupilcates in an array
+   :Difficulty: easy  
+   :CATEGORY: search algorithms 
+   :Source:      https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
+   :ZPT:      1
+   :END:
+** :problem:
+   -  Colleen is turning  \(n\)  years old!                        
+   - She has  \(n\)  candles of various heights on her cake, 
+   - Candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
+   -  Given the  for each individual candle, find and print the number of candles she can successfully blow out.
+*** :input: 
+    - The first line contains a single integer, , denoting the number of candles on the cake. 
+    - The second line contains  space-separated integers, where each integer  describes the height of candle .
+*** :constraints:
+    none
+*** :output: 
+    - Print the number of candles Colleen blows out on a new line.
+*** :explanation:
+    - 1..
+    - 2.. 
+** :solution:
+*** :questions:
+    none
+*** :predicates:   
+    - the brute force solution gives O(N^2) via comparing each of two strings. 
+    - A common technique is the trade-off between time and space. 
+    - We want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
+    - The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
+*** :implications:
+    - If we store every element into a hash set, we can make it O(N) for both time and space complexity.
+    #+BEGIN_SRC ruby
+      def input
+        p "love emacs, because emacs is a philosphy of how yo all dealing with computer..."
+      end
+      def output
+      end       
+      input
+    #+END_SRC
+
+    #+RESULTS: 
+    : love emacs, because emacs is a philosphy of how yo all dealing with computer
 
 ** References       
    - source: https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
@@ -350,7 +391,63 @@ and acutal  [[https://github.com/zotherstupidguy/zotherstupidguy.github.io][sour
 
    ----- 
 
-* ProblemName KnightL on a Chessboard
+** TODO Somthing 
+   :PROPERTIES:   
+   :SCHEDULED: <2017-02-19 Sun +2d/4d>
+   :DESCRIPTON: hackerrank problem, found in....
+   :Difficulty: easy
+   :CATEGORY: none
+   :Source:   none
+   :ZPT:      1
+   :END:
+*** :problem:
+    -  something
+**** :input: 
+     - none 
+**** :constraints:
+     - none
+**** :output: 
+     - none
+**** :explanation:
+     - none
+*** :solution:
+**** :questions:
+     - none
+**** :predicates:   
+     - none
+**** :implications:
+     - none
+       #+BEGIN_SRC ruby
+       #+END_SRC
+       #+BEGIN_SRC C 
+       #+END_SRC
+*** References       
+    -  none
+
+      -----
+
+** TODO Journey to the moon                              :graphtheory:medium: 
+   :PROPERTIES:   
+   :SCHEDULED: <2017-03-13 Mon +2d/4d>
+   :DESCRIPTION: hackerrank problem, found in rookierank2 contest, its about dupilcates in an array
+   :Difficulty: medium
+   :CATEGORY: graphtheory
+   :Source:   https://www.hackerrank.com/challenges/journey-to-the-moon
+   :LAST_REPEAT: [2017-02-24 Fri 12:37]
+   :END:
+   - State "DONE"       from "TODO"       [2017-02-24 Fri 12:37]
+   - State "DONE"       from "TODO"       [2017-02-24 Fri 12:36]
+   - State "DONE"       from "TODO"       [2017-02-24 Fri 12:36]
+   - dfasf
+   asdffasf
+   asdfasdf
+   asdfasfafasf
+   asdfasfa
+
+** Battlecode
+   MIT AI game #battlecode@freenode.net
+
+** ProblemName KnightL on a Chessboard
 ** ProblemStatment 
    is a chess piece that moves in an L shape. We define the possible moves of  as any movement from some position  to some  satisfying either of the following:
 ** Input Format 
@@ -362,94 +459,64 @@ and acutal  [[https://github.com/zotherstupidguy/zotherstupidguy.github.io][sour
      
 
    ----- 
-* Theatre Square :website:codeforces:contest:
 
-  source: http://codeforces.com/contest/1/problem/A
-  ----- 
+** Theatre Square                                :website:codeforces:contest:
 
-* Cracking the Coding Interview  :book:zpd:interview:
-  keep log of all the interviews I made and schedules for upcoming interviews, as well as info for mastering the
-  art of interviews. 
+   source: http://codeforces.com/contest/1/problem/A
+   ----- 
+
+
   
-  Some people make multiple interviews with fake names, imporsnating someone who doens't
-  have a public profile photo on twitter and github, they require a fake skypename for that! You are too lazy for this :))
+   keep log of all the interviews I made and schedules for upcoming interviews, as well as info for mastering the
+   art of interviews. 
+  
+   Some people make multiple interviews with fake names, imporsnating someone who doens't
+   have a public profile photo on twitter and github, they require a fake skypename for that! You are too lazy for this :))
 
-* Gitlapse :ruby:startup:opensource:git:
-   + Improvments 
-     - Use ElDoc-mode in emacs to identify what is going on while writing the code, and then text-to-speech the output of ElDoc mode and create a video out of it.
-     - Create a Gitlapse-mode for doing all my stuff?? maybe not a great idea. But wasamasa can help and tehn Emacsers can do this gitlapse thing on their own machines.
-* Mushin :ruby:opensource:ddd:
-* Utter :ruby:
-  **autonmous :ruby:
-  What are Microservices? they are hexagons
-  Hexagonal architecture (paper introduced by whom?)
-  independent processes communicate over APIs high degree of autonomy- take one ser
-  small, focused on doing one thing well, unix philosphy
-  microservices is just an opinonated way of SOA.
-  small autonomous services that work together, independant processes communicating over APIs, focused on one thing and doing one thing well.
-  Better alignment with the organizsation.
-  exaptation
-  Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organizationâs communication structure.
-  Monolith application
-  target security concern enalbe segregation models
-  Adopt a balanced portfolio of risk around technology.
-  not locked into a single programming idiom
-  Principles of MicroServices
-  Modelled around business domain
-  Culture of Automation
-  Hide Implementation details
-  Decentralise all the things
-  Deploy independently
-  Consumer first
-  Modeling around Business Domain
-  Presentation - Business Logic - Data Access
-* SSD                                                            :@work:ruby:
-** somthing                                                :@home:ruby:
-   SSD is a ruby datastore
-* UpWork :website:work:
-** Rails
-** Ruby
-** Python
-** Django
+   
+* Distractions 
+  write down distractions here to focus on task at hand, good for the focus muscle, 
+  watch https://www.youtube.com/watch?v=H0k0TQfZGSc
+** TODO Index CodeJam website and collection all their problem sets and Answers!.
+** TODO Org-mode shortcuts for SQ3R
+   - If I press space-q then I get (Q) with color red
+   - If I press space-p then I get (P) with color blue
+   - If I press space-p then I get (I) with color green
+   - If I press space-p then I get (I) with color yellow
+** TODO how to get all the file names from a folder and write them in a ** Reference TODO
+** TODO how to do references between the * Knoweldge and ** References  
+** TODO ban facebook
+   bind facebook to local host or to some other website such as codeforces 
+   to make every browser request to facebook goes to this website instead.
 
-* Penetration Testing :security:hacking:
+** Hackertyper for reviewing practiced algorithms
+  I should use hackertyper to review practiced algorithms,
+  ref: http://www.hackertyper.com/
+  
+** How to use emacs in my life?
+   So the idea is that I while I want to code, I code in C or ruby file using its respective emacs-mode and its capabilities, but when i want to take notes and log it into my blog, 
+   I use org-capture. as I am very neat and I know what kind of stuff I add into my single-page blog, I have created many templates to my various data contents, 
+   example: if i am solving a hackerrank problem and i got it to pass, and now I want to add it to my blog, I just press C-cc followed by h or similar to start editing the hackerrank template, C-c C-c to finish 
+   and have it saved to the end of my blog with all the correct tags that gets viewed via emacs agenda later on. 
 
-* Companies I like to work for
-- Thoughtbot
-- Github
-- Google
-- Amazon
-- Thoughtworks
-- Gitlab
-- Facebook
-- Twitter
-- Hackerrank
------ 
+   This is so powerful that I can create many powerful org-capture templates and save it in my .emacs and keep enhancing them to reflect my level of performance in study, practice and work. 
 
-* How to use emacs in my life?
-So the idea is that I while I want to code, I code in C or ruby file using its respective emacs-mode and its capabilities, but when i want to take notes and log it into my blog, 
-I use org-capture. as I am very neat and I know what kind of stuff I add into my single-page blog, I have created many templates to my various data contents, 
-example: if i am solving a hackerrank problem and i got it to pass, and now I want to add it to my blog, I just press C-cc followed by h or similar to start editing the hackerrank template, C-c C-c to finish 
-and have it saved to the end of my blog with all the correct tags that gets viewed via emacs agenda later on. 
-
-This is so powerful that I can create many powerful org-capture templates and save it in my .emacs and keep enhancing them to reflect my level of performance in study, practice and work. 
-
-*use C-c \* to search for zpd0, zpd1, zpd2 tags and find what you are trying to do that day, and C-c C-c to choose the tags
-
+   *use C-c \* to search for zpd0, zpd1, zpd2 tags and find what you are trying to do that day, and C-c C-c to choose the tags
+   *use space-p* to add new empty line in org-mode
 ** PracticeTips:
-    - Whenever you solve some questions, try to ask yourself what if we *expand the question to a larger scale!*
-    - *Revisit old problems* and think about new techqinues, better ways, different contexts, different constrains, etc.  
-    - every solution is a finite state automata
+   - Whenever you solve some questions, try to ask yourself what if we *expand the question to a larger scale!*
+   - *Revisit old problems* and think about new techqinues, better ways, different contexts, different constrains, etc.  
+   - every solution is a finite state automata
 **  use inf-ruby more often please
-    ;; inf-ruby
-    ;;Use C-c C-s to launch the inf-ruby process.
-    ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
-    ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
-    ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
-    ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
-    ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
-    ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
-    (autoload 'inf-ruby-minor-mode "inf-
+   ;; inf-ruby
+   ;;Use C-c C-s to launch the inf-ruby process.
+   ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
+   ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
+   ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
+   ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
+   ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
+   ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
+   (autoload 'inf-ruby-minor-mode "inf-
 
 ** TODO
    - create templates for hackerrank problems, store in zotherstupidguy.github.io/org/templates/hackerrank.text
@@ -482,22 +549,6 @@ This is so powerful that I can create many powerful org-capture templates and sa
    Tag searches: Searching for combinations of tags
    ref: http://orgmode.org/guide/Tags.html#Tags
   
-* Hackertyper for reviewing practiced algorithms
-  I should use hackertyper to review practiced algorithms,
-  ref: http://www.hackertyper.com/
-
-* ZotherZPD Index
-  - Can't is *0  =  ZPD0, thus I name respective headings with :zpd0:
-  - ZPD is *1    = ZPD1, thus I name respective headings with :zpd1;
-  - Can is *2    = ZPD2, thus I name respective headings with :zpd2:
-  According to this index I can *automatically* calculate (via emacs) a score * 0 or * 1 or * 2 / by the number of shit I am trying to accomplish.
-
-* hackerrank api for my "emacsContest.el"
-  I want to create *emacsContest.el* to holdplace to where programmers can contribute to the API integration of CP websites.
-  https://www.hackerrank.com/api/docs provides an api that I want to use when a contest starts to:
-  - get a list of all the problems of the contest
-  - parse and map the statment, constraints, input, ouput, and sample data into an org-capture template that i will store into my blog.
-  - submit my sourcecode(C or Ruby) via the api via an emacs shortcut. 
-  - show a buffer with all status of who solved the problem and the percentage of it. 
-
-
+** C programs debugging via GDB in Emacs   
+  https://kb.iu.edu/d/aqsy
+  

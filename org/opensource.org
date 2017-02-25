@@ -1,0 +1,74 @@
+* hackerrank api for my "emacsContest.el"
+  I want to create *emacsContest.el* to holdplace to where programmers can contribute to the API integration of CP websites.
+  https://www.hackerrank.com/api/docs provides an api that I want to use when a contest starts to:
+  - get a list of all the problems of the contest
+  - parse and map the statment, constraints, input, ouput, and sample data into an org-capture template that i will store into my blog.
+  - submit my sourcecode(C or Ruby) via the api via an emacs shortcut. 
+  - show a buffer with all status of who solved the problem and the percentage of it. 
+
+
+* Gitlapse                                     :ruby:startup:opensource:git:
+  + Improvments 
+    - Use ElDoc-mode in emacs to identify what is going on while writing the code, and then text-to-speech the output of ElDoc mode and create a video out of it.
+    - Create a Gitlapse-mode for doing all my stuff?? maybe not a great idea. But wasamasa can help and tehn Emacsers can do this gitlapse thing on their own machines.
+
+* Mushin                                               :ruby:opensource:ddd:
+
+* Utter                                                               :ruby:
+  **autonmous :ruby:
+  What are Microservices? they are hexagons
+  Hexagonal architecture (paper introduced by whom?)
+  independent processes communicate over APIs high degree of autonomy- take one ser
+  small, focused on doing one thing well, unix philosphy
+  microservices is just an opinonated way of SOA.
+  small autonomous services that work together, independant processes communicating over APIs, focused on one thing and doing one thing well.
+  Better alignment with the organizsation.
+  exaptation
+  Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organizationâs communication structure.
+  Monolith application
+  target security concern enalbe segregation models
+  Adopt a balanced portfolio of risk around technology.
+  not locked into a single programming idiom
+  Principles of MicroServices
+  Modelled around business domain
+  Culture of Automation
+  Hide Implementation details
+  Decentralise all the things
+  Deploy independently
+  Consumer first
+  Modeling around Business Domain
+  Presentation - Business Logic - Data Access
+
+* SSD                                                            
+
+
+* Hackspree
+   
+  hackspree.com is a search engine for competitive programmers. problems, solutions, study logs, science needed.
+   
+  Hackspree is a competitive programming search engine.
+  Hackspree is a competitive programming problems and solutions search engine.
+  Hackspree is a search engine for competitive programming problems and solutions.
+  Hackspree is a meta competitive programming solutions.
+  Hackspree is a metasearch engine for competitive programming problems.
+  Hackspree interface is elgant (similar but simpler than hackerrank). 
+  Hackspree provides an API for finding a problem based on scraping data.
+  Hackspree scrapes popular websites and displays the problem related to it nicely, it even provides relevant links to popular tags.    
+  It uses gitlapse api to display contestants submissions, and allows the user to display as many as they like from them.
+  Hackspree provides ads to make revenue.
+
+** Finding information by crawling
+
+
+** Organizing information by indexing
+   - Index design factors:
+     - Merge Factors
+     - Storage Techniques
+     - Index size
+     - Lookup speed
+     - Maintenance 
+     - Fault Tolerance
+   - Index Data Structures 
+     -    
+   - References    
+       * https://en.wikipedia.org/wiki/Search_engine_indexing 

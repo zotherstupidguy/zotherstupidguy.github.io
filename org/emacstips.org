@@ -1,0 +1,50 @@
+*** Emacs Tips
+    Must read http://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code as it explains literate programming could help me figure out how 
+    to write code in emacs and export it to external files and vice-versa.  
+    M- left arrow can make org elements go to sub
+    Because I am using Evil-mode I can simply paste using P or p, same as vim's http://vim.wikia.com/wiki/Copy,_cut_and_paste
+**** TODO find a way to do org-plot
+*** Email
+    access all emails from emacs for easy regex search
+*** IRC [0/1]
+    dfdfd
+    
+    access IRC from inside emacs to automatically log all important channels and always search them for answers before going online.
+    erc works awesome ;) 
+**** TODO
+     - find some nice configruations for erc
+     - Register username/password
+     - log all opened channels automatically everytime emacs starts
+     - back them up automatically somehow. 
+
+*** Backup
+    search for an emacs mode that would allow you to backup my files automatically somehow to googledrive/ github/ or server.
+    I prefer Github, that way I can auto publish everytime I make an edit on the file (maybe a job that runs every hour or so).
+
+    https://github.com/ryuslash/git-auto-commit-mode
+*** Time Management
+    using ClockWork app, I work only for 10mins to take 5mins break and a rest every 10x3. 
+    it is like this because to move slowly is better than being depressed and not moving at all.
+
+*** LaTex
+*** RSS
+    upwork rss jobs and other stuff.
+    http://pragmaticemacs.com/category/elfeed/
+
+*** Git
+    need to use 'maget
+
+*** Citations [0/1]
+**** TODO 
+     find somthing like org-ref http://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/ 
+     this way we can provide citations for the things we have in Sources Directory
+    
+
+     -----
+
+*** Calender 
+    - http://jameswilliams.be/blog/2016/01/11/Taming-Your-GCal.html
+    - http://cestlaz.github.io/posts/using-emacs-26-gcal/#.WJ48TSFNy00
+    - http://opensourceforu.com/2016/04/master-the-calendar-centering-macros-and-drawing-tools-in-gnu-emacs/
+
+

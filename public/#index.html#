@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- 2017-02-15 Wed 00:30 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>zotherstupidguy log</title>
+    <meta name="generator" content="Org mode" />
+    <meta name="author" content="Mohamed Fouad" />
+    <meta name="description" content="daily log of zotherstupidguy life"
+          />
+    <meta name="keywords" content="emacs, mathematics, computer science, machine learning" />
+    <style type="text/css">
+      <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+    </style>
+    <link href= "css/stylesheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+      /*
+      @licstart  The following is the entire license notice for the
+      JavaScript code in this tag.
+
+      Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+      The JavaScript code in this tag is free software: you can
+      redistribute it and/or modify it under the terms of the GNU
+      General Public License (GNU GPL) as published by the Free Software
+      Foundation, either version 3 of the License, or (at your option)
+      any later version.  The code is distributed WITHOUT ANY WARRANTY;
+      without even the implied warranty of MERCHANTABILITY or FITNESS
+      FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+      As additional permission under GNU GPL version 3 section 7, you
+      may distribute non-source (e.g., minimized or compacted) forms of
+      that code without the copy of the GNU GPL normally required by
+      section 4, provided you include this license notice and a URL
+      through which recipients can access the Corresponding Source.
+
+
+      @licend  The above is the entire license notice
+      for the JavaScript code in this tag.
+      */
+      <!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      displayAlign: "center",
+      displayIndent: "0em",
+
+      "HTML-CSS": { scale: 100,
+      linebreaks: { automatic: "false" },
+      webFont: "TeX"
+      },
+      SVG: {scale: 100,
+      linebreaks: { automatic: "false" },
+      font: "TeX"},
+      NativeMML: {scale: 100},
+      TeX: { equationNumbers: {autoNumber: "AMS"},
+      MultLineWidth: "85%",
+      TagSide: "right",
+      TagIndent: ".8em"
+      }
+      });
+    </script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  </head>
+  <body>
+    <div id="content">
+      <h1 class="title">zotherstupidguy log</h1>
+      <p>
+        Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher living in Alexandria, Egypt; and this is my day-to-day b(log). 
+        I am available for [hire [link to google docs resume]]. 
+        This is an org-mode generated log (Org-Agenda, Org-Capture, tag-based organization) via those <a href="https://github.com/zotherstupidguy/dotfiles">dotfiles</a> 
+        and acutal  <a href="https://github.com/zotherstupidguy/zotherstupidguy.github.io">source</a> of this blog. 
+      </p>
+
+      <hr />
+      <p>
+        Once in a while, I examine how Top Universities offer their mathematics and computer science related programs. I try to find what kind of books they set as 
+        textbooks, to go read them on my own, purchase them from Amazon (I only like <b>Hardcover</b> books!), or scout them in the cheap 2nd hand street book markets. 
+        My act is inspired by <b>“You wasted $150,000 on an education you coulda got for $1.50 in late fees at the public library.” ― Matt Damon, Good Will Hunting</b>. 
+        I worship those Professors who offer their courses online for free! If it is up to me I build them real-size human sculptures in my City. 
+        <b>Knoweldge belong to all mankind, not to copyright owners who suffer from financial insecurities!</b>
+      </p>
+      <hr />
+
+      <div id="outline-container-org86cdd69" class="outline-2">
+        <h2 id="org86cdd69">Tasks</h2>
+        <div class="outline-text-2" id="text-org86cdd69">
+        </div><div id="outline-container-org46e0903" class="outline-3">
+          <h3 id="org46e0903">TOD&#xa0;&#xa0;&#xa0;<span class="tag"><span class="category_theory">category_theory</span>&#xa0;<span class="MOOC">MOOC</span>&#xa0;<span class="joy">joy</span></span></h3>
+          <div class="outline-text-3" id="text-org46e0903">
+            <ul class="org-ul">
+              <li>learn emacs M-x org-agenda</li>
+              <li>remmber org-capture importance</li>
+            </ul>
+          </div>
+        </div>
+        <div id="outline-container-orge80b134" class="outline-3">
+          <h3 id="orge80b134"><span class="todo TODO">TODO</span> :work&#xa0;&#xa0;&#xa0;<span class="tag"><span class="number_theory">number_theory</span>&#xa0;<span class="set_theory">set_theory</span>&#xa0;<span class="proof_theory">proof_theory</span></span></h3>
+          <div class="outline-text-3" id="text-orge80b134">
+            <ul class="org-ul">
+              <li>somthing new</li>
+            </ul>
+          </div>
+        </div>
+        <div id="outline-container-orgeb46a96" class="outline-3">
+          <h3 id="orgeb46a96"><span class="todo TODO">TODO</span> :life:</h3>
+          <div class="outline-text-3" id="text-orgeb46a96">
+            <ul class="org-ul">
+              <li>another thing on Wed</li>
+            </ul>
+          </div>
+        </div>
+        <div id="outline-container-org5c015aa" class="outline-3">
+          <h3 id="org5c015aa"><span class="todo TODO">TODO</span> Org-Agenda</h3>
+          <div class="outline-text-3" id="text-org5c015aa">
+            <ul class="org-ul">
+              <li>understand A</li>
+              <li>understand B</li>
+            </ul>
+          </div>
+        </div>
+        <div id="outline-container-orgd8fc749" class="outline-3">
+          <h3 id="orgd8fc749"><span class="todo TODO">TODO</span> Org-Agenda</h3>
+          <div class="outline-text-3" id="text-orgd8fc749">
+            <ul class="org-ul">
+              <li>understand C</li>
+              <li>uderstand D</li>
+            </ul>
+
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <div id="outline-container-org22d85db" class="outline-2">
+        <h2 id="org22d85db">Grit :: Perseverance and Passion for Long-term Goals</h2>
+        <div class="outline-text-2" id="text-org22d85db">
+          <ul class="org-ul">
+            <li><p>
+                Courage
+              </p>
+              <ul class="org-ul">
+                <li>understand that there are valuable lessons in defeat and that the vulnerability of perseverance is requisite for high achievement.</li>
+                <li></li>
+
+                <li></li>
+              </ul>
+              <hr /></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div id="outline-container-org2b9efee" class="outline-2">
+        <h2 id="org2b9efee">Studying Strategy</h2>
+        <div class="outline-text-2" id="text-org2b9efee">
+        </div><div id="outline-container-org33ce284" class="outline-3">
+          <h3 id="org33ce284">Synopsis</h3>
+          <div class="outline-text-3" id="text-org33ce284">
+            <p>
+              My study strategy says that each book, videocourse, etc. is in one direcotry. This is my study log, I keep all the
+            </p>
+
+            <p>
+              knowledge that I aquire into this file, and I organize it accordingly.
+            </p>
+
+            <p>
+              Naturally I could write a book or two from the notes I have written into this file. As a matter of fact, I belive that
+              the only way computer scientets are capable of writing so many powerful books is due to the fact that they use
+              emacs in a similar way to what i am doing here, I can collect information and tag it, search it easily and update it,
+              check cross referencing, etc. it is really awesome. I think i will keep taking notes in notebooks and as a reviesion I 
+              will transfer the notes to here. I expect to be able to have codeblocks, latex formulas and maybe some progress
+              graphs.
+            </p>
+
+            <p>
+              Publish a series about computer science via <a href="https://leanpub.com">https://leanpub.com</a>, 
+              call it "hackspree computer science series", each volume is small 100pages book of notes and commentary. 
+            </p>
+
+            <p>
+              Make this log.org file my personal blog on zotherstupidguy.github.io, all in just one big huge page to get so many fucken hits.
+              This log is published via an autoback configuration from Emacs, meaning that some times drafts are included.
+            </p>
+          </div>
+
+          <div id="outline-container-org2ed21ef" class="outline-4">
+            <h4 id="org2ed21ef">Zone of Proximal Development <code>[1/2]</code></h4>
+            <div class="outline-text-4" id="text-org2ed21ef">
+              <p>
+                If i am studying a book, I can label its chapters as Done, TODO, or without label.
+              </p>
+            </div>
+            <ul class="org-ul"><li><a id="orgd04f4f3"></a><span class="done DONE">DONE</span> is  I-can<br /></li>
+              <li><a id="org5571a01"></a><span class="todo TODO">TODO</span> is ZPD<br /></li>
+              <li><a id="org0c376cb"></a>notag is I-can't<br /></li></ul>
+          </div>
+
+          <div id="outline-container-orge5b5767" class="outline-4">
+            <h4 id="orge5b5767">Cronell Note Taking System</h4>
+            <div class="outline-text-4" id="text-orge5b5767">
+              <p>
+                trying to find a CornellNoteTakingSystem mode for Emacs.
+              </p>
+            </div>
+
+            <ul class="org-ul"><li><a id="org92d3c2e"></a>SQ3R<br /></li></ul>
+          </div>
+
+          <div id="outline-container-org78c2f65" class="outline-4">
+            <h4 id="org78c2f65">Finding Sources</h4>
+            <div class="outline-text-4" id="text-org78c2f65">
+              <p>
+                using ./link to automatically download new youtube videos and generate an RSS of it and update log.org with a TODO for watching new things.
+                I can't add ZPT, can, and can't folders in the sources folders as it will make ./link difficult to know what already got downloaded.
+              </p>
+            </div>
+          </div>
+
+          <div id="outline-container-org78709f9" class="outline-4">
+            <h4 id="org78709f9">Emacs Tips</h4>
+            <div class="outline-text-4" id="text-org78709f9">
+              <p>
+                Must read <a href="http://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code">http://orgmode.org/manual/Working-with-source-code.html#Working-with-source-code</a> as it explains literate programming could help me figure out how 
+                to write code in emacs and export it to external files and vice-versa.  
+                M- left arrow can make org elements go to sub
+                Because I am using Evil-mode I can simply paste using P or p, same as vim's <a href="http://vim.wikia.com/wiki/Copy,_cut_and_paste">http://vim.wikia.com/wiki/Copy,_cut_and_paste</a>
+              </p>
+            </div>
+            <ul class="org-ul"><li><a id="org43690a8"></a><span class="todo TODO">TODO</span> find a way to do org-plot<br /></li></ul>
+          </div>
+          <div id="outline-container-orgd23d08e" class="outline-4">
+            <h4 id="orgd23d08e">Email</h4>
+            <div class="outline-text-4" id="text-orgd23d08e">
+              <p>
+                access all emails from emacs for easy regex search
+              </p>
+            </div>
+          </div>
+          <div id="outline-container-orgeab138b" class="outline-4">
+            <h4 id="orgeab138b">IRC <code>[0/1]</code></h4>
+            <div class="outline-text-4" id="text-orgeab138b">
+              <p>
+                dfdfd
+              </p>
+
+              <p>
+                access IRC from inside emacs to automatically log all important channels and always search them for answers before going online.
+                erc works awesome ;) 
+              </p>
+            </div>
+            <ul class="org-ul"><li><a id="org1cd15b1"></a><span class="todo TODO">TODO</span> <br /><div class="outline-text-5" id="text-org1cd15b1">
+                  <ul class="org-ul">
+                    <li>find some nice configruations for erc</li>
+                    <li>Register username/password</li>
+                    <li>log all opened channels automatically everytime emacs starts</li>
+                    <li>back them up automatically somehow.</li>
+                  </ul>
+            </div></li></ul>
+          </div>
+
+          <div id="outline-container-orgdf141ee" class="outline-4">
+            <h4 id="orgdf141ee">Backup</h4>
+            <div class="outline-text-4" id="text-orgdf141ee">
+              <p>
+                search for an emacs mode that would allow you to backup my files automatically somehow to googledrive/ github/ or server.
+                I prefer Github, that way I can auto publish everytime I make an edit on the file (maybe a job that runs every hour or so).
+              </p>
+
+              <p>
+                <a href="https://github.com/ryuslash/git-auto-commit-mode">https://github.com/ryuslash/git-auto-commit-mode</a>
+              </p>
+            </div>
+          </div>
+          <div id="outline-container-org4e16179" class="outline-4">
+            <h4 id="org4e16179">Time Management</h4>
+            <div class="outline-text-4" id="text-org4e16179">
+              <p>
+                using ClockWork app, I work only for 10mins to take 5mins break and a rest every 10x3. 
+                it is like this because to move slowly is better than being depressed and not moving at all.
+              </p>
+            </div>
+          </div>
+
+          <div id="outline-container-org4ca639a" class="outline-4">
+            <h4 id="org4ca639a">LaTex</h4>
+          </div>
+          <div id="outline-container-orgb262bd6" class="outline-4">
+            <h4 id="orgb262bd6">RSS</h4>
+            <div class="outline-text-4" id="text-orgb262bd6">
+              <p>
+                upwork rss jobs and other stuff.
+                <a href="http://pragmaticemacs.com/category/elfeed/">http://pragmaticemacs.com/category/elfeed/</a>
+              </p>
+            </div>
+          </div>
+
+          <div id="outline-container-orgffca390" class="outline-4">
+            <h4 id="orgffca390">Git</h4>
+            <div class="outline-text-4" id="text-orgffca390">
+              <p>
+                need to use 'maget
+              </p>
+            </div>
+          </div>
+
+          <div id="outline-container-orga5a4886" class="outline-4">
+            <h4 id="orga5a4886">Citations <code>[0/1]</code></h4>
+            <div class="outline-text-4" id="text-orga5a4886">
+            </div><ul class="org-ul"><li><a id="org65f166c"></a><span class="todo TODO">TODO</span> <br /><div class="outline-text-5" id="text-org65f166c">
+                  <p>
+                    find somthing like org-ref <a href="http://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/">http://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/</a> 
+                    this way we can provide citations for the things we have in Sources Directory
+                  </p>
+
+
+                  <hr />
+            </div></li></ul>
+          </div>
+
+          <div id="outline-container-org5a34efd" class="outline-4">
+            <h4 id="org5a34efd">Calender</h4>
+            <div class="outline-text-4" id="text-org5a34efd">
+              <ul class="org-ul">
+                <li><a href="http://jameswilliams.be/blog/2016/01/11/Taming-Your-GCal.html">http://jameswilliams.be/blog/2016/01/11/Taming-Your-GCal.html</a></li>
+                <li><a href="http://cestlaz.github.io/posts/using-emacs-26-gcal/#.WJ48TSFNy00">http://cestlaz.github.io/posts/using-emacs-26-gcal/#.WJ48TSFNy00</a></li>
+                <li><a href="http://opensourceforu.com/2016/04/master-the-calendar-centering-macros-and-drawing-tools-in-gnu-emacs/">http://opensourceforu.com/2016/04/master-the-calendar-centering-macros-and-drawing-tools-in-gnu-emacs/</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="outline-container-org44f6e4e" class="outline-3">
+          <h3 id="org44f6e4e">Vision of the Future</h3>
+        </div>
+
+        <div id="outline-container-orgd84f06b" class="outline-3">
+          <h3 id="orgd84f06b">Strategic Formulation and Implementation</h3>
+          <div class="outline-text-3" id="text-orgd84f06b">
+            <ul class="org-ul">
+              <li>why is it worth the effort?</li>
+              <li>what should be persued?</li>
+              <li>how it will be persued?</li>
+              <li>Group problems according to</li>
+            </ul>
+
+            <p>
+              The 7 Pillars of Strategic Thinking:
+            </p>
+            <ol class="org-ol">
+              <li>Strategic Intent</li>
+              <li>Strategic Analysis and Gathering of Intelligence</li>
+              <li>Strategic Preparation of Resources</li>
+              <li>Concentration of Force</li>
+              <li>Disciplined Execution and Detailed Tactical Follow-Through</li>
+              <li>Adaptability</li>
+              <li>The Study of General Principles﻿</li>
+            </ol>
+          </div>
+        </div>
+
+        <div id="outline-container-org9fa626c" class="outline-3">
+          <h3 id="org9fa626c">Managerial Role in Strategy Making</h3>
+        </div>
+
+        <div id="outline-container-org726dab3" class="outline-3">
+          <h3 id="org726dab3">Control</h3>
+          <div class="outline-text-3" id="text-org726dab3">
+            <p>
+              My most basic studytime unit  is t = 10mins, henceforth all my study and practice activites are divided up in units of 10mins.
+            </p>
+
+            <p>
+              I categorieze my incoming infromation into 3 categories: 
+              A. Can,    12 problems, total 12t(2hrs)
+              B. ZPD,    4 problems, total 12t(2hrs)
+              C. Can't.  1 problem, total 12t(2hrs)
+            </p>
+
+            <p>
+              I start my day trying to attack category <b>C. Can't</b> to fail and study a bit, 
+              then go for the <b>B.ZPD</b> which is my zone of proximal development, 
+              with some effort I can succeed in solving a problem in 30mins.
+              then I end my day with the <b>A.can</b> somthing that I solved before or know I can solve. Simple Objectives results in Simple Delights makes me happy at the end of the day. 
+            </p>
+
+            <p>
+              After Studying or Practice, blog about it using the Feynman Technique,  
+            </p>
+
+            <p>
+              All problems are solved in C with emacs templates to save time.
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-org3f9128d" class="outline-3">
+          <h3 id="org3f9128d">Managerial Role in Implementation</h3>
+        </div>
+
+        <div id="outline-container-org71e7eab" class="outline-3">
+          <h3 id="org71e7eab">Strategy Making</h3>
+        </div>
+
+        <div id="outline-container-org64309a7" class="outline-3">
+          <h3 id="org64309a7">Process and Outcome</h3>
+          <div class="outline-text-3" id="text-org64309a7">
+            <p>
+              Refs: 
+            </p>
+            <ul class="org-ul">
+              <li>Learn Faster with The Feynman Technique</li>
+            </ul>
+            <p>
+              <a href="https://www.youtube.com/watch?v=FrNqSLPaZLc">https://www.youtube.com/watch?v=FrNqSLPaZLc</a>
+            </p>
+
+            <ul class="org-ul">
+              <li>How to Learn Faster with the Feynman Technique:</li>
+            </ul>
+            <p>
+              <a href="https://www.youtube.com/watch?v=_f-qkGJBPts">https://www.youtube.com/watch?v=_f-qkGJBPts</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="outline-container-org0f8cdf8" class="outline-2">
+        <h2 id="org0f8cdf8">Sources</h2>
+        <div class="outline-text-2" id="text-org0f8cdf8">
+          <p>
+            This file contains links to all the material to study, :can:zpd:can't:anytag:
+            <b>Six Thinking</b> Hats in solving <code>competitive programming</code> questions.
+            <b>bold</b> <i>italics</i> <span class="underline">underline</span> <code>verbatim</code> <del>strike-through</del>
+          </p>
+        </div>
+      </div>
+
+      <div id="outline-container-org7322c95" class="outline-2">
+        <h2 id="org7322c95">TTC Video David Roochnik Platos Republic&#xa0;&#xa0;&#xa0;<span class="tag"><span class="philosphy">philosphy</span></span></h2>
+      </div>
+      <div id="outline-container-orgf2f22b3" class="outline-2">
+        <h2 id="an-extra-special-headline"><a id="orgf2f22b3"></a>TTC VIDEO - The Art and Craft of Mathematical Problem Solving&#xa0;&#xa0;&#xa0;<span class="tag"><span class="problemsolving">problemsolving</span></span></h2>
+        <div class="outline-text-2" id="text-an-extra-special-headline">
+          <dl class="org-dl">
+            <dt>Diference between Problem and Exercise</dt><dd><p>
+                Scope doesn't work as expected, and messes everything up
+                when loops mix variables up in recursive functions.
+              </p>
+              <dl class="org-dl">
+                <dt>Namespaces</dt><dd>You wish.</dd>
+                <dt>Header Files</dt><dd>Nope.</dd>
+              </dl>
+              <p>
+                information about the source here, author, edition, date, who is using it in univ cources, etc.
+            </p></dd>
+          </dl>
+        </div>
+      </div>
+
+
+      <div id="outline-container-org0c3d8b9" class="outline-2">
+        <h2 id="org0c3d8b9">Elementry Number Theory - 6th Edition - Kenneth H. Rosen</h2>
+        <div class="outline-text-2" id="text-org0c3d8b9">
+        </div><ul class="org-ul"><li><a id="org67e730e"></a>Chapter1<br /><ul class="org-ul"><li><a id="org1a72961"></a>Introduction&#xa0;&#xa0;&#xa0;<span class="tag"><span class="zpd">zpd</span>&#xa0;<span class="number_theory">number_theory</span></span><br /><div class="outline-text-7" id="text-org1a72961">
+                  <p>
+                    (p) somthing is a predicate
+                    (i) somthing is impelied
+                    (q)
+                    tags for can, cannot, zpd
+                  </p>
+          </div></li></ul></li>
+          <li><a id="orgdbfed63"></a>Source<br /><div class="outline-text-6" id="text-orgdbfed63">
+              <p>
+                could be google drive linkk 
+                <a href="3.Sources/NumberTheory/Books/Elementary%20Number%20Theory%20-%206th%20Edition%20-%20Kenneth%20H.%20Rosen.pdf"><a href="3.Sources/NumberTheory/Books/Elementary">3.Sources/NumberTheory/Books/Elementary</a> Number Theory - 6th Edition - Kenneth H. Rosen.pdf</a>  
+              </p>
+        </div></li></ul>
+      </div>
+
+
+
+      <div id="outline-container-org0fc0a10" class="outline-2">
+        <h2 id="org0fc0a10">Introduction to the Theory of Computation - 3rd - Spiser</h2>
+        <div class="outline-text-2" id="text-org0fc0a10">
+          <hr />
+        </div>
+      </div>
+
+
+      <div id="outline-container-org2d1cc7a" class="outline-2">
+        <h2 id="org2d1cc7a">hackerrank&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-org2d1cc7a">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org633281d" class="outline-2">
+        <h2 id="org633281d">arabic competitive programming&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-org633281d">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-orga04322b" class="outline-2">
+        <h2 id="orga04322b">codejam&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-orga04322b">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org367d41b" class="outline-2">
+        <h2 id="org367d41b">codemasrytube&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-org367d41b">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org5b9e271" class="outline-2">
+        <h2 id="org5b9e271">mycodeschool&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-org5b9e271">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org154655d" class="outline-2">
+        <h2 id="org154655d">saurabhschool&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-org154655d">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org2f9e38d" class="outline-2">
+        <h2 id="org2f9e38d">codinginterviewhub&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-org2f9e38d">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-orgaed7be7" class="outline-2">
+        <h2 id="orgaed7be7">conor&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-orgaed7be7">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-orgd5cde3d" class="outline-2">
+        <h2 id="orgd5cde3d">geeksforgeeks&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h2>
+        <div class="outline-text-2" id="text-orgd5cde3d">
+          <hr />
+
+
+
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-orga365896" class="outline-2">
+        <h2 id="orga365896">HackerRank&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hackerrank">hackerrank</span>&#xa0;<span class="practice">practice</span>&#xa0;<span class="mathematics">mathematics</span>&#xa0;<span class="fundamentals">fundamentals</span></span></h2>
+        <div class="outline-text-2" id="text-orga365896">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-orgb6cdbe7" class="outline-2">
+        <h2 id="orgb6cdbe7">HackerRank&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hackerrank">hackerrank</span>&#xa0;<span class="practice">practice</span>&#xa0;<span class="mathematics">mathematics</span>&#xa0;<span class="number_theory">number_theory</span></span></h2>
+        <div class="outline-text-2" id="text-orgb6cdbe7">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org6292323" class="outline-2">
+        <h2 id="org6292323">HackerRank&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hackerrank">hackerrank</span>&#xa0;<span class="practice">practice</span>&#xa0;<span class="mathematics">mathematics</span>&#xa0;<span class="combinatorics">combinatorics</span></span></h2>
+        <div class="outline-text-2" id="text-org6292323">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org59babb7" class="outline-2">
+        <h2 id="org59babb7">HackerRank&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hackerrank">hackerrank</span>&#xa0;<span class="practice">practice</span>&#xa0;<span class="mathematics">mathematics</span>&#xa0;<span class="algebra">algebra</span></span></h2>
+        <div class="outline-text-2" id="text-org59babb7">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-orgdb93bbc" class="outline-2">
+        <h2 id="orgdb93bbc">HackerRank&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hackerrank">hackerrank</span>&#xa0;<span class="practice">practice</span>&#xa0;<span class="mathematics">mathematics</span>&#xa0;<span class="geometry">geometry</span></span></h2>
+        <div class="outline-text-2" id="text-orgdb93bbc">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-orgf0f0a08" class="outline-2">
+        <h2 id="orgf0f0a08">HackerRank&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hackerrank">hackerrank</span>&#xa0;<span class="practice">practice</span>&#xa0;<span class="mathematics">mathematics</span>&#xa0;<span class="probability">probability</span></span></h2>
+        <div class="outline-text-2" id="text-orgf0f0a08">
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org675ccc1" class="outline-2">
+        <h2 id="org675ccc1">HackerRank&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hackerrank">hackerrank</span>&#xa0;<span class="practice">practice</span>&#xa0;<span class="mathematics">mathematics</span>&#xa0;<span class="linaralgebra">linaralgebra</span></span></h2>
+        <div class="outline-text-2" id="text-org675ccc1">
+          <p>
+            ssdfdfddfdff
+          </p>
+          <hr />
+        </div>
+      </div>
+      <div id="outline-container-org467887c" class="outline-2">
+        <h2 id="org467887c">DataStructres</h2>
+      </div>
+      <div id="outline-container-org2b1130c" class="outline-2">
+        <h2 id="org2b1130c">30 Days of Code</h2>
+      </div>
+      <div id="outline-container-org4cb8ab4" class="outline-2">
+        <h2 id="org4cb8ab4">Cracking The Coding Interview</h2>
+      </div>
+      <div id="outline-container-org9aec3b3" class="outline-2">
+        <h2 id="org9aec3b3">10 Days of Statistics</h2>
+        <div class="outline-text-2" id="text-org9aec3b3">
+        </div><div id="outline-container-orgc482799" class="outline-4">
+          <h4 id="orgc482799">Languages</h4>
+          <div class="outline-text-4" id="text-orgc482799">
+          </div><ul class="org-ul"><li><a id="org2f08a3f"></a>C++<br /></li>
+            <li><a id="orgeb3f47b"></a>Python<br /></li>
+            <li><a id="org312df55"></a>Ruby<br /></li>
+            <li><a id="orga1363b6"></a>LinuxShell<br /></li>
+            <li><a id="org4373f63"></a>Functional Programming<br /></li></ul>
+        </div>
+      </div>
+
+      <div id="outline-container-org79114d5" class="outline-2">
+        <h2 id="org79114d5">Birthday Cake Candles&#xa0;&#xa0;&#xa0;<span class="tag"><span class="problem">problem</span>&#xa0;<span class="hackerrank">hackerrank</span>&#xa0;<span class="contest">contest</span>&#xa0;<span class="rookierank2">rookierank2</span>&#xa0;<span class="duplicates_in_array">duplicates_in_array</span>&#xa0;<span class="zpd1">zpd1</span></span></h2>
+        <div class="outline-text-2" id="text-org79114d5">
+        </div>
+        <div id="outline-container-orgc9f283e" class="outline-3">
+          <h3 id="orgc9f283e">:problem:</h3>
+          <div class="outline-text-3" id="text-orgc9f283e">
+            <p>
+              :predicate:  Colleen is turning  \(n\)  years old!                        
+              :predicate: She has  \(n\)  candles of various heights on her cake, 
+              :predicate: Candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
+              :question:  Given the  for each individual candle, find and print the number of candles she can successfully blow out.
+            </p>
+          </div>
+          <ul class="org-ul"><li><a id="orgc13aa17"></a>Input Format :: The first line contains a single integer, , denoting the number of candles on the cake. The second line contains  space-separated integers, where each integer  describes the height of candle .<br /></li>
+            <div id="outline-container-org1790481" class="outline-4">
+              <h4 id="org1790481">Constraints</h4>
+              <div class="outline-text-4" id="text-org1790481">
+                <p>
+                  somthing
+                </p>
+              </div>
+            </div>
+            <div id="outline-container-orgb44508d" class="outline-4">
+              <h4 id="orgb44508d">Output Format</h4>
+              <div class="outline-text-4" id="text-orgb44508d">
+                <p>
+                  Print the number of candles Colleen blows out on a new line.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="outline-container-org878a1e0" class="outline-3">
+            <h3 id="org878a1e0">:solution:</h3>
+            <div class="outline-text-3" id="text-org878a1e0">
+              <p>
+                the brute force solution gives O(N<sup>2</sup>) via comparing each of two strings. 
+                A common technique is the trade-off between time and space. 
+                we want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
+                The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
+                If we store every element into a hash set, we can make it O(N) for both time and space complexity.
+              </p>
+              <div class="org-src-container">
+                <pre class="src src-ruby"><span style="color: #00bfff;">def</span> <span style="color: #daa520;">input</span>
+                  <span style="color: #f08080;">p</span> <span style="color: #00fa9a;">"love emacs, because emacs is a philosphy of how yo all dealing with computer..."</span>
+                  <span style="color: #00bfff;">end</span>
+                  <span style="color: #00bfff;">def</span> <span style="color: #daa520;">output</span>
+                  <span style="color: #00bfff;">end</span>       
+                  input
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div id="outline-container-orgfa89d06" class="outline-3">
+            <h3 id="orgfa89d06">References</h3>
+            <div class="outline-text-3" id="text-orgfa89d06">
+              <ul class="org-ul">
+                <li>source: <a href="https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles">https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles</a></li>
+                <li>ref: <a href="http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/">http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/</a></li>
+              </ul>
+
+              <hr />
+            </div>
+          </div>
+        </div>
+
+        <div id="outline-container-orge60fbea" class="outline-2">
+          <h2 id="orge60fbea">ProblemName KnightL on a Chessboard</h2>
+          <div class="outline-text-2" id="text-orge60fbea">
+          </div><div id="outline-container-org31454e3" class="outline-3">
+            <h3 id="org31454e3">ProblemStatment</h3>
+            <div class="outline-text-3" id="text-org31454e3">
+              <p>
+                is a chess piece that moves in an L shape. We define the possible moves of  as any movement from some position  to some  satisfying either of the following:
+              </p>
+            </div>
+          </div>
+          <div id="outline-container-org96a2510" class="outline-3">
+            <h3 id="org96a2510">Input Format</h3>
+          </div>
+          <div id="outline-container-org7163fb4" class="outline-3">
+            <h3 id="org7163fb4">Constraints</h3>
+          </div>
+          <div id="outline-container-org48cd72a" class="outline-3">
+            <h3 id="org48cd72a">Out Format</h3>
+          </div>
+          <div id="outline-container-org53199d2" class="outline-3">
+            <h3 id="org53199d2">Solution</h3>
+          </div>
+          <div id="outline-container-orgc683add" class="outline-3">
+            <h3 id="orgc683add">References</h3>
+            <div class="outline-text-3" id="text-orgc683add">
+              <ul class="org-ul">
+                <li>not related to the problem but good to notice <a href="https://en.wikipedia.org/wiki/Knight's_tour">https://en.wikipedia.org/wiki/Knight's_tour</a></li>
+              </ul>
+
+
+              <hr />
+            </div>
+          </div>
+        </div>
+        <div id="outline-container-org18cfa00" class="outline-2">
+          <h2 id="org18cfa00">Theatre Square&#xa0;&#xa0;&#xa0;<span class="tag"><span class="website">website</span>&#xa0;<span class="codeforces">codeforces</span>&#xa0;<span class="contest">contest</span></span></h2>
+          <div class="outline-text-2" id="text-org18cfa00">
+            <p>
+              source: <a href="http://codeforces.com/contest/1/problem/A">http://codeforces.com/contest/1/problem/A</a>
+            </p>
+            <hr />
+          </div>
+        </div>
+
+        <div id="outline-container-org5d369b7" class="outline-2">
+          <h2 id="org5d369b7">Cracking the Coding Interview&#xa0;&#xa0;&#xa0;<span class="tag"><span class="book">book</span>&#xa0;<span class="zpd">zpd</span>&#xa0;<span class="interview">interview</span></span></h2>
+          <div class="outline-text-2" id="text-org5d369b7">
+            <p>
+              keep log of all the interviews I made and schedules for upcoming interviews, as well as info for mastering the
+              art of interviews. 
+            </p>
+
+            <p>
+              Some people make multiple interviews with fake names, imporsnating someone who doens't
+              have a public profile photo on twitter and github, they require a fake skypename for that! You are too lazy for this :))
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-org9430d10" class="outline-2">
+          <h2 id="org9430d10">Gitlapse&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ruby">ruby</span>&#xa0;<span class="startup">startup</span>&#xa0;<span class="opensource">opensource</span>&#xa0;<span class="git">git</span></span></h2>
+          <div class="outline-text-2" id="text-org9430d10">
+            <ul class="org-ul">
+              <li>Improvments 
+                <ul class="org-ul">
+                  <li>Use ElDoc-mode in emacs to identify what is going on while writing the code, and then text-to-speech the output of ElDoc mode and create a video out of it.</li>
+                  <li>Create a Gitlapse-mode for doing all my stuff?? maybe not a great idea. But wasamasa can help and tehn Emacsers can do this gitlapse thing on their own machines.</li>
+              </ul></li>
+            </ul>
+          </div>
+        </div>
+        <div id="outline-container-orgf00971c" class="outline-2">
+          <h2 id="orgf00971c">Mushin&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ruby">ruby</span>&#xa0;<span class="opensource">opensource</span>&#xa0;<span class="ddd">ddd</span></span></h2>
+        </div>
+        <div id="outline-container-orga1203fc" class="outline-2">
+          <h2 id="orga1203fc">Utter&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ruby">ruby</span></span></h2>
+          <div class="outline-text-2" id="text-orga1203fc">
+            <p>
+              **autonmous :ruby:
+              What are Microservices? they are hexagons
+              Hexagonal architecture (paper introduced by whom?)
+              independent processes communicate over APIs high degree of autonomy- take one ser
+              small, focused on doing one thing well, unix philosphy
+              microservices is just an opinonated way of SOA.
+              small autonomous services that work together, independant processes communicating over APIs, focused on one thing and doing one thing well.
+              Better alignment with the organizsation.
+              exaptation
+              Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organizationâs communication structure.
+              Monolith application
+              target security concern enalbe segregation models
+              Adopt a balanced portfolio of risk around technology.
+              not locked into a single programming idiom
+              Principles of MicroServices
+              Modelled around business domain
+              Culture of Automation
+              Hide Implementation details
+              Decentralise all the things
+              Deploy independently
+              Consumer first
+              Modeling around Business Domain
+              Presentation - Business Logic - Data Access
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org40a4dca" class="outline-2">
+          <h2 id="org40a4dca">SSD&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_work">@work</span>&#xa0;<span class="ruby">ruby</span></span></h2>
+          <div class="outline-text-2" id="text-org40a4dca">
+          </div><div id="outline-container-org8374db9" class="outline-3">
+            <h3 id="org8374db9">somthing&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_home">@home</span>&#xa0;<span class="ruby">ruby</span></span></h3>
+            <div class="outline-text-3" id="text-org8374db9">
+              <p>
+                SSD is a ruby datastore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="outline-container-org78bd6d5" class="outline-2">
+          <h2 id="org78bd6d5">UpWork&#xa0;&#xa0;&#xa0;<span class="tag"><span class="website">website</span>&#xa0;<span class="work">work</span></span></h2>
+          <div class="outline-text-2" id="text-org78bd6d5">
+          </div><div id="outline-container-orgf9ad93b" class="outline-3">
+            <h3 id="orgf9ad93b">Rails</h3>
+          </div>
+          <div id="outline-container-org0027a2e" class="outline-3">
+            <h3 id="org0027a2e">Ruby</h3>
+          </div>
+          <div id="outline-container-org38b96ea" class="outline-3">
+            <h3 id="org38b96ea">Python</h3>
+          </div>
+          <div id="outline-container-orgad616f7" class="outline-3">
+            <h3 id="orgad616f7">Django</h3>
+          </div>
+        </div>
+
+        <div id="outline-container-org71e7221" class="outline-2">
+          <h2 id="org71e7221">Penetration Testing&#xa0;&#xa0;&#xa0;<span class="tag"><span class="security">security</span>&#xa0;<span class="hacking">hacking</span></span></h2>
+        </div>
+
+        <div id="outline-container-orgadb879e" class="outline-2">
+          <h2 id="orgadb879e">Companies I like to work for</h2>
+          <div class="outline-text-2" id="text-orgadb879e">
+            <ul class="org-ul">
+              <li>Thoughtbot</li>
+              <li>Github</li>
+              <li>Google</li>
+              <li>Amazon</li>
+              <li>Thoughtworks</li>
+              <li>Gitlab</li>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Hackerrank</li>
+            </ul>
+            <hr />
+          </div>
+        </div>
+
+        <div id="outline-container-org85fda4b" class="outline-2">
+          <h2 id="org85fda4b">How to use emacs in my life?</h2>
+          <div class="outline-text-2" id="text-org85fda4b">
+            <p>
+              So the idea is that I while I want to code, I code in C or ruby file using its respective emacs-mode and its capabilities, but when i want to take notes and log it into my blog, 
+              I use org-capture. as I am very neat and I know what kind of stuff I add into my single-page blog, I have created many templates to my various data contents, 
+              example: if i am solving a hackerrank problem and i got it to pass, and now I want to add it to my blog, I just press C-cc followed by h or similar to start editing the hackerrank template, C-c C-c to finish 
+              and have it saved to the end of my blog with all the correct tags that gets viewed via emacs agenda later on. 
+            </p>
+
+            <p>
+              This is so powerful that I can create many powerful org-capture templates and save it in my .emacs and keep enhancing them to reflect my level of performance in study, practice and work. 
+            </p>
+
+            <p>
+              <b>use C-c \</b> to search for zpd0, zpd1, zpd2 tags and find what you are trying to do that day, and C-c C-c to choose the tags
+            </p>
+          </div>
+
+          <div id="outline-container-org3385382" class="outline-3">
+            <h3 id="org3385382">PracticeTips:</h3>
+            <div class="outline-text-3" id="text-org3385382">
+              <ul class="org-ul">
+                <li>Whenever you solve some questions, try to ask yourself what if we <b>expand the question to a larger scale!</b></li>
+                <li><b>Revisit old problems</b> and think about new techqinues, better ways, different contexts, different constrains, etc.</li>
+                <li>every solution is a finite state automata</li>
+              </ul>
+            </div>
+          </div>
+          <div id="outline-container-org2c8018d" class="outline-3">
+            <h3 id="org2c8018d">use inf-ruby more often please</h3>
+            <div class="outline-text-3" id="text-org2c8018d">
+              <p>
+                ;; inf-ruby
+                ;;Use C-c C-s to launch the inf-ruby process.
+                ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
+                ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
+                ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
+                ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
+                ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
+                ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
+                (autoload 'inf-ruby-minor-mode "inf-
+              </p>
+            </div>
+          </div>
+
+          <div id="outline-container-org8a588d7" class="outline-3">
+            <h3 id="org8a588d7"><span class="todo TODO">TODO</span> </h3>
+            <div class="outline-text-3" id="text-org8a588d7">
+              <ul class="org-ul">
+                <li>create templates for hackerrank problems, store in zotherstupidguy.github.io/org/templates/hackerrank.text</li>
+                <li>codeforces problems, store in zotherstupidguy.github.io/org/templates/codeforces.text</li>
+                <li>experiment with org-mode agenda to view my headings based on their tags? or a smiliar functionality from somthing else maybe!</li>
+                <li>use org-capture for saving common algorithms in C. eg. sorting.c shortestpath.c, etc.</li>
+                <li>find the ability to query my huge org file.</li>
+                <li>on emacs open, make sure it opens scratch and also opens index.org and make index.org the active buffer to easily edit.</li>
+                <li>org-capture template for Questions, Predicates, and Implications</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="outline-container-org7edcd3e" class="outline-3">
+            <h3 id="org7edcd3e">Emacs Agenda&#xa0;&#xa0;&#xa0;<span class="tag"><span class="agenda">agenda</span></span></h3>
+            <div class="outline-text-3" id="text-org7edcd3e">
+              <p>
+                The agenda allows you to create filtered views of the items in your 
+                *agenda files*("day-planner" views of your schedule, lists of your todos, and the results of queries (for tags, words, regular expressions, etc.)).
+              </p>
+
+              <p>
+                One use of the agenda is as a day planner system. If you prefer to schedule your tasks and to see a daily agenda of TODOs, you'll probably be pressing C-c a a a lot.
+                The agenda can also be used for a powerful GTD system. If you like to filter your "next actions" by context, 
+                then you'll probably make frequent use of C-c a t to see a list of all your active TODOs and to filter them by tag/context.
+                While the agenda is a powerful task management tool, it is also a fantastic research tool. If you keep a file full of reading notes, 
+                for instance, you can use the agenda to locate entries containing a particular word or labeled by a particular tag.
+              </p>
+
+              <p>
+                <b>Do you want quickly to filter for the item in the agenda view? If so, a tag is probably your best choice.</b>
+                Note, you can add a setting to your .emacs that automatically adds a tag whenever you assign a particular TODO keyword. Type "C-c v org-todo-state-tags-triggers" for more information.
+                An excellent way to implement labels and contexts for cross-correlating information is to assign tags to headlines. Org mode has extensive support for tags.
+              </p>
+
+              <p>
+                Every headline can contain a list of tags; they occur at the end of the headline. Tags are normal words containing letters, numbers, ‘_’, and ‘@’. Tags must be preceded and followed by a single colon, e.g., ‘:work:’. Several tags can be specified, as in ‘:work:urgent:’. Tags will by default be in bold face with the same color as the headline.
+              </p>
+
+              <p>
+                Tag inheritance: Tags use the tree structure of the outline
+                Setting tags: How to assign tags to a headline
+                Tag groups: Use one tag to search for several tags
+                Tag searches: Searching for combinations of tags
+                ref: <a href="http://orgmode.org/guide/Tags.html#Tags">http://orgmode.org/guide/Tags.html#Tags</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="outline-container-org7469def" class="outline-2">
+          <h2 id="org7469def">Hackertyper for reviewing practiced algorithms</h2>
+          <div class="outline-text-2" id="text-org7469def">
+            <p>
+              I should use hackertyper to review practiced algorithms,
+              ref: <a href="http://www.hackertyper.com/">http://www.hackertyper.com/</a>
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-org558b5e3" class="outline-2">
+          <h2 id="org558b5e3">ZotherZPD Index</h2>
+          <div class="outline-text-2" id="text-org558b5e3">
+            <ul class="org-ul">
+              <li>Can't is *0  =  ZPD0, thus I name respective headings with :zpd0:</li>
+              <li>ZPD is *1    = ZPD1, thus I name respective headings with :zpd1;</li>
+              <li>Can is *2    = ZPD2, thus I name respective headings with :zpd2:</li>
+            </ul>
+            <p>
+              According to this index I can <b>automatically</b> calculate (via emacs) a score * 0 or * 1 or * 2 / by the number of shit I am trying to accomplish.
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-org3b3b7aa" class="outline-2">
+          <h2 id="org3b3b7aa">hackerrank api for my "emacsContest.el"</h2>
+          <div class="outline-text-2" id="text-org3b3b7aa">
+            <p>
+              I want to create <b>emacsContest.el</b> to holdplace to where programmers can contribute to the API integration of CP websites.
+              <a href="https://www.hackerrank.com/api/docs">https://www.hackerrank.com/api/docs</a> provides an api that I want to use when a contest starts to:
+            </p>
+            <ul class="org-ul">
+              <li>get a list of all the problems of the contest</li>
+              <li>parse and map the statment, constraints, input, ouput, and sample data into an org-capture template that i will store into my blog.</li>
+              <li>submit my sourcecode(C or Ruby) via the api via an emacs shortcut.</li>
+              <li>show a buffer with all status of who solved the problem and the percentage of it.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="postamble" class="status">
+        <p class="author">Author: Mohamed Fouad</p>
+        <p class="date">Created: 2017-02-15 Wed 00:30</p>
+        <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+      </div>
+    </body>
+  </html>

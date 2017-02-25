@@ -1,0 +1,8 @@
+* Work
+** UpWork                                                      :website:work:
+** Rails
+** Ruby
+** Python
+** Django
+
+** Penetration Testing                                     :security:hacking:

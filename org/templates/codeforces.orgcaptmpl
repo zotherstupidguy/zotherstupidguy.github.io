@@ -1,0 +1,33 @@
+* TODO %? 
+:PROPERTIES:   
+:SCHEDULED: <2017-02-19 Sun +2d/4d>
+:DESCRIPTON: codeforces problem, found at...
+:Difficulty: easy  
+:CATEGORY: none 
+:Source:    none 
+:ZPT:      1
+:END:
+** :problem:
+-  something
+*** :input: 
+- none 
+*** :constraints:
+- none
+*** :output: 
+- none
+*** :explanation:
+- none
+** :solution:
+*** :questions:
+- none
+*** :predicates:   
+- none
+*** :implications:
+- none
+#+BEGIN_SRC ruby
+#+END_SRC
+#+BEGIN_SRC C 
+#+END_SRC
+** References       
+-  none
+
