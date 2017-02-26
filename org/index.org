@@ -14,7 +14,15 @@
   I am available for [hire [link to google docs resume]].
   This is an org-mode generated log (Org-Agenda, Org-Capture, tag-based organization) via those [[https://github.com/zotherstupidguy/dotfiles][dotfiles]] 
   and acutal [[https://github.com/zotherstupidguy/zotherstupidguy.github.io][source]] of this blog. 
+  
+  -----
 
+  Why zotherstupidguy nick? it is a joke and a reminder that being smart is totally relevant to my current knowledge circles,
+  and I must always seek ideas outside of my regular knowledge circles, anything that I am already familair with probably wouldn't breed me 
+  an *orginal* idea, I must seek doctrine depth through skeptic breadths!
+
+  -----
+  
   *As lazy as I am*, I plan using the notes here *to cheat at phone interviews*, 
   Emacs got a nice regex search ;) IF YOU BELONG TO THE SET OF THE FEW PEOPLE 
   ON EARTH WHO READ MY BLOG *AND* ACTUALLY PLAN TO HIRE ME, 
@@ -26,6 +34,9 @@
   My act is inspired by *“You wasted $150,000 on an education you coulda got for $1.50 in late fees at the public library.” ― Matt Damon, Good Will Hunting*. 
   I worship those Professors who offer their courses online for free! If it is up to me I build them real-size human sculptures in my City. 
   *Knoweldge belong to all mankind, not to copyright owners who suffer from financial insecurities!*
+  ----- 
+  Public keys(if you wish to communicate with me securely)
+  
   ----- 
 
 ** Funny Thoughts
@@ -130,7 +141,7 @@
    graphs. Eventually I shall publish a series about computer science via https://leanpub.com, call it "zotherstupidguy computer science notes" 
    each volume is small 100pages book of notes and commentary. 
 
-
+   
 * Knowledge 
   (P) Any knowledge by definition is true otherwise it would be some kind of misinformation.
 
@@ -262,6 +273,15 @@
 
 
 ** References  
+   #+begin_src sh :results output :exports results
+     echo "Directory structure:" 
+     tree /home/zotherstupidguy/Study/3.Sources/Machine\ Learning\ -\ Stanford 
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   #+end_example
+
 *** TODO TTC VIDEO - The Art and Craft of Mathematical Problem Solving :problemsolving:
     :PROPERTIES:
     :ZPT:      0
@@ -315,7 +335,7 @@
 
     -----
 
-*** TODO MIT - Introduction to Computer Science and Programming (Python) ® vampiri6ka/HQ     
+*** TODO MIT - Introduction to Computer Science and Programming (Python) ® vampiri6ka/HQ [3/6]    
 **** DONE 01-Lecture 01_ Introduction to 6.00
      CLOSED: [2017-02-24 Fri 17:37]
 **** DONE 02-Lecture 
@@ -323,7 +343,6 @@
 **** DONE 03-Lecture 
      CLOSED: [2017-02-25 Sat 05:45]
 **** TODO 04-Lecture 
-
 **** TODO 31-Lecture 21_ Using Graphs to Model Problems, Part 1
 
 **** TODO 32-Lecture 22_ Using Graphs to Model Problems, Part 2
@@ -332,6 +351,120 @@
 **** TODO 1
 **** TODO 2
 
+
+   /home/zotherstupidguy/Study/3.Sources/Machine Learning - Stanford
+   ├── 01.2-V2-Introduction-WhatIsMachineLearning.mp4
+   ├── 01.3-V2-Introduction-SupervisedLearning.mp4
+   ├── 01.4-V2-Introduction-UnsupervisedLearning.mp4
+   ├── 02.1-V2-LinearRegressionWithOneVariable-ModelRepresentation.mp4
+   ├── 02.2-V2-LinearRegressionWithOneVariable-CostFunction.mp4
+   ├── 02.3-V2-LinearRegressionWithOneVariable-CostFunctionIntuitionI.mp4
+   ├── 02.4-V2-LinearRegressionWithOneVariable-CostFunctionIntuitionII.mp4
+   ├── 02.5-V2-LinearRegressionWithOneVariable-GradientDescent.mp4
+   ├── 02.6-V2-LinearRegressionWithOneVariable-GradientDescentIntuition.mp4
+   ├── 02.7-V2-LinearRegressionWithOneVariable-GradientDescentForLinearRegression.mp4
+   ├── 02.8-V2-What'sNext.mp4
+   ├── 03.1-V2-LinearAlgebraReview(Optional)-MatricesAndVectors.mp4
+   ├── 03.2-V2-LinearAlgebraReview(Optional)-AdditionAndScalarMultiplication.mp4
+   ├── 03.3-V2-LinearAlgebraReview(Optional)-MatrixVectorMultiplication.mp4
+   ├── 03.4-V2-LinearAlgebraReview(Optional)-MatrixMatrixMultiplication.mp4
+   ├── 03.5-V2-LinearAlgebraReview(Optional)-MatrixMultiplicationProperties.mp4
+   ├── 03.6-V2-LinearAlgebraReview(Optional)-InverseAndTranspose.mp4
+   ├── 04.1-LinearRegressionWithMultipleVariables-MultipleFeatures.mp4
+   ├── 04.2-LinearRegressionWithMultipleVariables-GradientDescentForMultipleVariables.mp4
+   ├── 04.3-LinearRegressionWithMultipleVariables-GradientDescentInPracticeIFeatureScaling.mp4
+   ├── 04.4-LinearRegressionWithMultipleVariables-GradientDescentInPracticeIILearningRate.mp4
+   ├── 04.5-LinearRegressionWithMultipleVariables-FeaturesAndPolynomialRegression.mp4
+   ├── 04.6-V2-LinearRegressionWithMultipleVariables-NormalEquation.mp4
+   ├── 04.7-LinearRegressionWithMultipleVariables-NormalEquationNonInvertibility(Optional).mp4
+   ├── 05.1-OctaveTutorial-BasicOperations.mp4
+   ├── 05.2-OctaveTutorial-MovingDataAround.mp4
+   ├── 05.3-OctaveTutorial-ComputingOnData.mp4
+   ├── 05.4-OctaveTutorial-PlottingData.mp4
+   ├── 05.5-OctaveTutorial-ForWhileIfStatementsAndFunctions.mp4
+   ├── 05.6-OctaveTutorial-Vectorization.mp4
+   ├── 05.7-OctaveTutorial-WorkingOnAndSubmittingProgrammingExercises.mp4
+   ├── 06.1-LogisticRegression-Classification.mp4
+   ├── 06.2-LogisticRegression-HypothesisRepresentation.mp4
+   ├── 06.3-LogisticRegression-DecisionBoundary.mp4
+   ├── 06.4-LogisticRegression-CostFunction.mp4
+   ├── 06.5-LogisticRegression-SimplifiedCostFunctionAndGradientDescent.mp4
+   ├── 06.6-LogisticRegression-AdvancedOptimization.mp4
+   ├── 06.7-LogisticRegression-MultiClassClassificationOneVsAll.mp4
+   ├── 07.1-Regularization-TheProblemOfOverfitting.mp4
+   ├── 07.2-Regularization-CostFunction.mp4
+   ├── 07.3-Regularization-RegularizedLinearRegression.mp4
+   ├── 07.4-Regularization-RegularizedLogisticRegression.mp4
+   ├── 08.1-NeuralNetworksRepresentation-NonLinearHypotheses.mp4
+   ├── 08.2-NeuralNetworksRepresentation-NeuronsAndTheBrain.mp4
+   ├── 08.3-NeuralNetworksRepresentation-ModelRepresentationI.mp4
+   ├── 08.4-NeuralNetworksRepresentation-ModelRepresentationII.mp4
+   ├── 08.5-NeuralNetworksRepresentation-ExamplesAndIntuitionsI.mp4
+   ├── 08.6-NeuralNetworksRepresentation-ExamplesAndIntuitionsII.mp4
+   ├── 08.7-NeuralNetworksRepresentation-MultiClassClassification.mp4
+   ├── 09.1-NeuralNetworksLearning-CostFunction.mp4
+   ├── 09.2-NeuralNetworksLearning-BackpropagationAlgorithm.mp4
+   ├── 09.3-NeuralNetworksLearning-BackpropagationIntuition.mp4
+   ├── 09.3-NeuralNetworksLearning-ImplementationNoteUnrollingParameters.mp4
+   ├── 09.4-NeuralNetworksLearning-GradientChecking.mp4
+   ├── 09.5-NeuralNetworksLearning-RandomInitialization.mp4
+   ├── 09.7-NeuralNetworksLearning-PuttingItTogether.mp4
+   ├── 09.8-NeuralNetworksLearning-AutonomousDrivingExample.mp4
+   ├── 10.1-AdviceForApplyingMachineLearning-DecidingWhatToTryNext.mp4
+   ├── 10.2-AdviceForApplyingMachineLearning-EvaluatingAHypothesis.mp4
+   ├── 10.3-AdviceForApplyingMachineLearning-ModelSelectionAndTrainValidationTestSets.mp4
+   ├── 10.4-AdviceForApplyingMachineLearning-DiagnosingBiasVsVariance.mp4
+   ├── 10.5-AdviceForApplyingMachineLearning-RegularizationAndBiasVariance.mp4
+   ├── 10.6-AdviceForApplyingMachineLearning-LearningCurves.mp4
+   ├── 10.7-AdviceForApplyingMachineLearning-DecidingWhatToDoNextRevisited.mp4
+   ├── 11.1-MachineLearningSystemDesign-PrioritizingWhatToWorkOn.mp4
+   ├── 11.2-MachineLearningSystemDesign-ErrorAnalysis.mp4
+   ├── 11.3-MachineLearningSystemDesign-ErrorMetricsForSkewedClasses.mp4
+   ├── 11.4-MachineLearningSystemDesign-TradingOffPrecisionAndRecall.mp4
+   ├── 11.5-MachineLearningSystemDesign-DataForMachineLearning.mp4
+   ├── 12.1-SupportVectorMachines-OptimizationObjective.mp4
+   ├── 12.2-SupportVectorMachines-LargeMarginIntuition.mp4
+   ├── 12.3-SupportVectorMachines-MathematicsBehindLargeMarginClassificationOptional.mp4
+   ├── 12.4-SupportVectorMachines-KernelsI.mp4
+   ├── 12.5-SupportVectorMachines-KernelsII.mp4
+   ├── 12.6-SupportVectorMachines-UsingAnSVM.mp4
+   ├── 14.1-Clustering-UnsupervisedLearningIntroduction.mp4
+   ├── 14.2-Clustering-KMeansAlgorithm.mp4
+   ├── 14.3-Clustering-OptimizationObjective.mp4
+   ├── 14.4-Clustering-RandomInitialization.mp4
+   ├── 14.5-Clustering-ChoosingTheNumberOfClusters.mp4
+   ├── 15.1-DimensionalityReduction-MotivationIDataCompression.mp4
+   ├── 15.2-DimensionalityReduction-MotivationIIVisualization.mp4
+   ├── 15.3-DimensionalityReduction-PrincipalComponentAnalysisProblemFormulation.mp4
+   ├── 15.4-DimensionalityReduction-PrincipalComponentAnalysisAlgorithm.mp4
+   ├── 15.5-DimensionalityReduction-ChoosingTheNumberOfPrincipalComponents.mp4
+   ├── 15.6-DimensionalityReduction-ReconstructionFromCompressedRepresentation.mp4
+   ├── 15.7-DimensionalityReduction-AdviceForApplyingPCA.mp4
+   ├── 16.1-AnomalyDetection-ProblemMotivation-V1.mp4
+   ├── 16.2-AnomalyDetection-GaussianDistribution.mp4
+   ├── 16.3-AnomalyDetection-Algorithm.mp4
+   ├── 16.4-AnomalyDetection-DevelopingAndEvaluatingAnAnomalyDetectionSystem.mp4
+   ├── 16.5-AnomalyDetection-AnomalyDetectionVsSupervisedLearning-V1.mp4
+   ├── 16.6-AnomalyDetection-ChoosingWhatFeaturesToUse.mp4
+   ├── 16.7-AnomalyDetection-MultivariateGaussianDistribution-OPTIONAL.mp4
+   ├── 16.8-AnomalyDetection-AnomalyDetectionUsingTheMultivariateGaussianDistribution-OPTIONAL.mp4
+   ├── 17.1-RecommenderSystems-ProblemFormulation.mp4
+   ├── 17.2-RecommenderSystems-ContentBasedRecommendations.mp4
+   ├── 17.3-RecommenderSystems-CollaborativeFiltering-V1.mp4
+   ├── 17.4-RecommenderSystems-CollaborativeFilteringAlgorithm.mp4
+   ├── 17.5-RecommenderSystems-VectorizationLowRankMatrixFactorization.mp4
+   ├── 17.6-RecommenderSystems-ImplementationalDetailMeanNormalization.mp4
+   ├── 18.1-LargeScaleMachineLearning-LearningWithLargeDatasets.mp4
+   ├── 18.2-LargeScaleMachineLearning-StochasticGradientDescent.mp4
+   ├── 18.3-LargeScaleMachineLearning-MiniBatchGradientDescent.mp4
+   ├── 18.4-LargeScaleMachineLearning-StochasticGradientDescentConvergence.mp4
+   ├── 18.5-LargeScaleMachineLearning-OnlineLearning.mp4
+   ├── 18.6-LargeScaleMachineLearning-MapReduceAndDataParallelism.mp4
+   ├── 19.1-ApplicationExamplePhotoOCR-ProblemDescriptionAndPipeline.mp4
+   ├── 19.2-ApplicationExamplePhotoOCR-SlidingWindows.mp4
+   ├── 19.3-ApplicationExamplePhotoOCR-GettingLotsOfDataArtificialDataSynthesis.mp4
+   ├── 19.4-ApplicationExamplePhotoOCR-CeilingAnalysisWhatPartOfThePipelineToWorkOnNext.mp4
+   ├── 20.1-Conclusion-SummaryAndThankYou.mp4
 
 
 * Problems
@@ -454,12 +587,6 @@
 ** Constraints
 ** Out Format
 ** Solution 
-** References       
-   - not related to the problem but good to notice https://en.wikipedia.org/wiki/Knight's_tour
-     
-
-   ----- 
-
 ** Theatre Square                                :website:codeforces:contest:
 
    source: http://codeforces.com/contest/1/problem/A
@@ -472,6 +599,12 @@
   
    Some people make multiple interviews with fake names, imporsnating someone who doens't
    have a public profile photo on twitter and github, they require a fake skypename for that! You are too lazy for this :))
+
+** References       
+   - not related to the problem but good to notice https://en.wikipedia.org/wiki/Knight's_tour
+     
+
+   ----- 
 
    
 * Distractions 
@@ -552,3 +685,5 @@
 ** C programs debugging via GDB in Emacs   
   https://kb.iu.edu/d/aqsy
   
+
+
