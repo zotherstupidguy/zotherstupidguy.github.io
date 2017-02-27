@@ -72,3 +72,18 @@
      -    
    - References    
        * https://en.wikipedia.org/wiki/Search_engine_indexing 
+
+** Descion Trees
+   - Store every tag of an algorithm and invert index its problem statment to find keywords that have high occarunce to the
+   choice of the algorithm(s) used in the solutions, then via Descion Trees predict what a given problem would require to 
+   be solved? 
+
+** Build a search engine 
+   - find data (crawler) units 1-3
+   - build an index units 4-5 
+   - rank pages unit 6; in my case should be node rank(node weight) as its a graph not nodes
+   
+   - pick a righ corpse of data, for our purposes that competitive programming 
+
+   - extracting first link (seed page)
+

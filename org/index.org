@@ -8,7 +8,7 @@
 #+OPTIONS: H:3 num:0
 #+TAGS: zpd0(0)  zpd1(1) zpd2(2)  problem solution predicate implication question fig mindmap number_theory set_theory proof_theory computational_theory problem_solving category_theory single_variable_calculas multi_variable_calculas vedic_mathematics graph_theory discerete_mathematics concerete_mathematics continous_mathematics statistics real_analysis grit top_universities studying_strategy data_structures algorithms artificial_intellegence machine_learning deep_learning bigdata R python puzzles { MOOC : coursera  stanford oxford MIT} { philosphy : socrates plato} book youtube blog competitive_programming C_programming  {algorithms : ConstructiveAlgorithms Strings Sorting Search GraphTheory Greedy  DynamicProgramming  BitManipulation  Recursion  GameTheory  NPComplete } DistributedSystems Regex Security Functions Cryptography
 
-  
+
 * About
   Hello, I am Mohamed Fouad a.k.a zotherstupidguy, a Software Philosopher living in Alexandria, Egypt; and this is my day-to-day b(log). 
   I am available for [hire [link to google docs resume]].
@@ -38,6 +38,9 @@
   Public keys(if you wish to communicate with me securely)
   
   ----- 
+  scrape answers from http://cs.stackexchange.com/
+  ----- 
+
 
 ** Funny Thoughts
    Ancient Egyptians had n gods, as each person was so focused into their profession that they created a God for this body of knoweldge to 
@@ -54,7 +57,8 @@
    - Twitter
    - Hackerrank
    ----- 
-
+** Why should we hire you?
+   Because AI is not that good "yet", and you and I still need other humans to survive!
 ** Grit :: Perseverance and Passion for Long-term Goals 
    :PROPERTIES:
    :DESCRIPTION: Must have Personal Traits via continous conditioning
@@ -141,40 +145,165 @@
    graphs. Eventually I shall publish a series about computer science via https://leanpub.com, call it "zotherstupidguy computer science notes" 
    each volume is small 100pages book of notes and commentary. 
 
-   
+** Brain Waves
+   Each of us can use brainwave entrainment to achieve a variety of results. 
+   You may want to target a specific brainwave frequency range to help you relax,. 
+   On the other hand you may want to increase you creative energy, improve your memory, 
+   deepen your sleep or get better results when playing a sport.
+*** Beta brainwaves
+    (14 to 32 Hz alert, focused)
+    Beta is the most common brain wave pattern: Beta brainwaves are produced when we are wide awake, alert, 
+    active and engaged in mental activity, usually involving more the rational, reality-oriented left hemisphere of our brain. 
+    When beta wave activity becomes very intense, our brain hemispheres become less synchronized. 
+    Beta state is required to function properly in your everyday life.
+**** Features and Benefits of a Beta State
+     - This is the brainwave for the fight-flight response
+     - Increased concentration and alertness
+     - Improved logic, reasoning and critical thinking
+     - Feelings of anxiety, stress, scatty unfocused thought
+     NOTE: Excessive Beta brainwaves are also a feature of insomnia
+ 
+*** Alpha brainwaves
+    (7 to 14 Hz relaxed yet aware, meditative)
+    These are lower frequency waves: The state is generated when our thoughts are really not concentrated and our minds wonder freely, 
+    or we are in a relaxed state such as meditating or daydreaming. We also experience Alpha Brainwaves when we are gently busy i
+    with routine tasks like pottering in the garden, taking a shower, putting on makeup, doing light housework. 
+    Alpha is considered to be the bridge between the conscious mind and the subconscious mind.
+
+**** Features and Benefits of an Alpha State
+     - Our brain hemispheres become naturally synchronized, or in-phase with each other.
+     - Relaxed detached (absent-minded) awareness and daydreaming mind.
+     - Enables us to remember our dreams and meditative states.
+     - Link between conscious and subconscious mind, gateway to meditation.
+     - Receptive to casual and auto – suggestions (hypnosis state)
+     - Increased vividness benefits creative visualization and triggers imagination
+     - Increased  memory retention , concentration & focus for super learning
+**** Health benefits include:
+     - Reduced anxiety
+     - Alleviates stress and depression
+     - Reduces chronic pain
+     - Reduction of high blood pressure
+     - Increases athletic performance
+     - Increased  cerebral blood flow
+     - Increased motivation, energy, and happiness
+
+*** Theta brainwaves
+    (3.5 to 7 Hz deep relaxation, twilight state)
+    Theta brainwave states have been used in meditation for centuries: It is common for people to feel as if they are in a trance, 
+    where the mind feels as though it may have gone to sleep although it is conscious of what is happening around it. 
+    Theta induces a capacity for prolonged daydreaming, where a loss of time may be experienced.
+    Theta waves are also conducive to visualization and creativity and the mind in this very relaxed state is highly receptive to direct suggestion under hypnosis. As with Alpha, in Theta our brain hemispheres are synchronized and we experience whole brain functioning.
+
+**** Features and benefits of Theta brainwaves
+     - Increased sense of inner peace and emotional stability
+     - Deep relaxation
+     - Improved memory
+     - Heightened intuition and inspiration
+     - Calms the chatter of your mind
+     - Increased psychic abilities and sense of spiritual connection
+     - Health benefits of Theta brainwaves
+     - Speed healing, improved physical healing
+     - Sleep onset and better more restful sleep
+     - Release beneficial hormones related to health and longevity
+     - Reduce mental fatigue
+     - Reduction of anxiety and stress
+     NOTE: Research has proven thirty minutes a day of Theta meditation can dramatically improve a person’s overall health and well-being. Theta meditation has also been known to result in a reduced need for sleep.
+ 
+*** Delta brainwaves
+    (0.1 to 3.5 Hz deep sleep )
+    This is the slowest band of waves that our brains produce and they occur when we are in deep, dreamless sleep. 
+    These waves are very beneficial for the body which restores and heals itself when in this state. 
+    The delta state releases anti-aging hormones, including melatonin and DHEA. 
+    Human growth hormone (HGH) is another anti-aging hormone that is increased when delta brainwaves are occurring inside the brain, 
+    due to the stimulation of the pituitary gland. HGH maintains the skin, bone density, cartilage, and the joints in your body as 
+    well as speeds up the healing process of joint and cartilage injuries. HGH can also help heal physical pain.
+
+    In healthy amounts, delta brainwaves can also cause a person to have an advanced state of empathy, understanding, and compassion for others.
+    Delta is the place of deepest relaxation, deepest healing, deepest spiritual connection and deepest connection with the subconscious mind. 
+    It is considered to be the gateway to the unconscious mind and the collective unconscious, bringing access to the universal psyche or mind.
+ 
+*** Gamma brainwaves
+    (40Hz or higher: zen mind mastery)
+    Gamma brainwave states are the most rapid in frequency. 
+    Gamma hase long been considered the the brainwave that is able to link and process information from all parts of the brain. 
+    It is the frequency that brings with it the ability to process large amounts of information in relatively small amounts of time. 
+    Think of generating more Gamma activity as getting a processor upgrade for your brain.
+
+    Unfortunately Gamma brainwaves have received the least attention and research, although more attention is currently being paid to them.
+    Having high amounts of Gamma Brainwave activity has been associated with:
+    - Having high levels of intelligence
+    - Being compassionate
+    - Having high amounts of self-control
+    - Having greater than average feelings of natural happiness.
+    - Increased awareness through your five senses
+    - Research has indicated at moments when bursts of precognition or high-level information processing occur, 
+    your brainwaves briefly reach the Gamma state.
+
+** IRC
+   #emacs ##algorithms ##puzzles #gcj #hackerrank  
+   if using weechat `/set irc.server.freenode.autojoin "##algorithms #emacs #gcj"`
+   but usually use emacs's irc erc
+
+** The Role of a Teacher (supervised learning)
+   The purpose of a teacher is to raise the *right* questions for the student. 
+   The role of a student is to seek answers.
+   A question needs to be answered.
+   Any question creates an empty space in the mind of the student that needs to be filled by answers.
+
 * Knowledge 
   (P) Any knowledge by definition is true otherwise it would be some kind of misinformation.
+** What are the Greek Letters?
+   1. Αα (alpha)
+   2. Ββ (beta)
+   3. Γγ (gamma)
+   4. Δδ (delta)
+   5. Εε (epsilon)
+   6. Ϝϝ (digamma)
+   7. Ζζ (zeta)
+   8. Ηη (eta)
+   9. Θθ (theta)
+   10. Ιι (iota)
+   11. Κκ (kappa)
+   12. Λλ (lambda)
+   13. Μμ (mu)
+   14. Νν (nu)
+   15. Ξξ (xi)
+   16. Οο (omicron)
+   17. Ππ (pi)
+   18. Ρρ (rho)
+   19. Σσς (sigma)
+   20. Ττ (tau)
+   21. Υυ (upsilon)
+   22. Φφ (phi)
+   23. Χχ (chi)
+   24. Ψψ (psi)
+   25. Ωω (omega)
 
-** Declarative Knowledge 
-   (Q) What is Declarative Kknowledge?
-** Imperative Knowledge 
-   (Q) What is Imperative Kknowledge?
-** Primative Instructions
+** What is Declarative Kknowledge?
+** What is Imperative Kknowledge?
+** What are Turing's 6 primative instructions?
    (P) Alan Turing said there are only 6 primative instructions needed to create any program.
-   (Q) What are Turing's 6 primative instructions.
 
-** Memoization
-   - What is Memoization?
-     - Memoization is a very common techqiune, we use memoization to solve a lot of problems.
-     - In simple terms, we are just remmbering what we did before and just look it up.
-     - In summary,it is a fancy way to say we are going to use Table lookup.
+** What is Memoization?
+   - Memoization is a very common techqiune, we use memoization to solve a lot of problems.
+   - In simple terms, we are just remmbering what we did before and just look it up.
+   - In summary,it is a fancy way to say we are going to use Table lookup.
 
-   - When to use Memoization?
-     Thus in a situation where you remmber what the answer was and rather than recalculating it again, we just look it up.
+** When to use Memoization?
+   Thus in a situation where you remmber what the answer was and rather than recalculating it again, we just look it up.
 
-      The concept of memoization is at the heart of dynamic programming.
+   The concept of memoization is at the heart of dynamic programming.
 
-      - References  
-        (r) MIT - Introduction to Computer Science and Programming (Python) ® vampiri6ka/HQ     
+   - References  
+     (r) MIT - Introduction to Computer Science and Programming (Python) ® vampiri6ka/HQ     
 
-** Dynamic Programming
-   What is Dynamic Programming?
+** What is Dynamic Programming?
 
-** Prime Numbers                                          :zpd:number_theory:
+** What are Prime Numbers?                                :zpd:number_theory:
    (p) somthing is a predicate
    (i) somthing is impelied
    (q) a question
-** Depth First Search
+** What is Depth First Search?
   
    #+BEGIN_SRC C
      // void dfs(int a) // dfs on node a
@@ -194,21 +323,28 @@
      - icpc.pdf page 10 of 78 
      - cp1.pdf page 70 of 152
 
-** Topological Sorting
+** What is Topological Sorting?
    Is a type of Depth First Search, 
 
   
    
    ---------
-** Turing Complete
-   (Q) what is Turing Complete?
-** Python
+
+** What is Turing Complete?
+   - In computability theory, a system of data-manipulation rules (such as a computer's instruction set, 
+   a programming language, or a cellular automaton) is said to be Turing complete or computationally 
+   universal if it can be used to simulate any single-taped Turing machine. 
+   The concept is named after English mathematician Alan Turing. A classic example is lambda calculus.
+   
+** What is Turing Equivalence?
+
+** What is Python?
    - interperted langauge, (can also complie it)
    - a variable is a name of an objective
    - an assigment binds a name to an object.
    - python forces indentation thus that the visual structure actually matchs the semantic structure. 
 
-** Machine Learning Introduction 
+** What is Machine Learning? 
    - Machine Learning is a class of algorithms which is data-driven, 
    i.e. unlike "normal" algorithms it is the data that "tells" what the "good answer" is
    - Example: a hypothetical non-machine learning algorithm for face detection in images 
@@ -221,8 +357,8 @@
    Supervised: All data is labeled and the algorithms learn to predict the output from the input data.
    Unsupervised: All data is unlabeled and the algorithms learn to inherent structure from the input data.
    Semi-supervised: Some data is labeled but most of it is unlabeled and a mixture of supervised and unsupervised techniques can be used. 
-** supervised learning
-   (Q) When to use supervised learning?
+
+** What is Supervised Learning?
    - Supervised learning is when the data you feed your algorithm is "tagged" to help your logic make decisions.
    - Example: Bayes spam filtering, where you have to flag an item as spam to refine the results.
    - Applications in which the training data comprises examples of the input vectors along with their 
@@ -233,9 +369,9 @@
    - Supervised learning: It is the machine learning task of inferring a function from labeled training data.The training data consist of a set of training examples. In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples.
    The computer is presented with example inputs and their desired outputs, given by a "teacher", and the goal is to learn a general rule that maps inputs to outputs.Specifically, a supervised learning algorithm takes a known set of input data and known responses to the data (output), and trains a model to generate reasonable predictions for the response to new data.
    - The classification and regression supervised learning problems.
+** When to use supervised learning?
 
-** unsupervised learning
-   (Q) When to use unsupervised learning?
+** Unsupervised Learning
    - You should use unsupervised learning methods when you need a large amount of data to train your models, and the willingness and ability to experiment and explore, and of course a challenge that isn’t well solved via more-established methods.With unsupervised learning it is possible to learn larger and more complex models than with supervised learning.Here is a good example on it
    - Unsupervised learning are types of algorithms that try to find correlations without any external inputs other than the raw data.
    - Example: datamining clustering algorithms.
@@ -247,9 +383,20 @@
    - Unsupervised learning: It is learning without a teacher. 
    One basic thing that you might want to do with data is to visualize it. It is the machine learning task of inferring a function to describe hidden structure from unlabeled data. Since the examples given to the learner are unlabeled, there is no error or reward signal to evaluate a potential solution. This distinguishes unsupervised learning from supervised learning. Unsupervised learning uses procedures that attempt to find natural partitions of patterns.
    - The clustering and association unsupervised learning problems.
+** When to use unsupervised learning?
 
+** What is DeepCoder?
+   * We develop a first line of attack for solving programming competition-style prob-
+   lems from input-output examples using deep learning. The approach is to train a
+   neural network to predict properties of the program that generated the outputs from
+   the inputs. We use the neural network’s predictions to augment search techniques
+   from the programming languages community, including enumerative search and
+   an SMT-based solver. Empirically, we show that our approach leads to an order
+   of magnitude speedup over the strong non-augmented baselines and a Recurrent
+   Neural Network approach, and that we are able to solve problems of difficulty
+   comparable to the simplest problems on programming competition websites.
 
-** semi-supervised learning  
+** What is Semi-supervised Learning?
    - A problem that sits in between supervised and unsupervised learning called semi-supervised learning.
    - Problems where you have a large amount of input data (X) and only some of the data is labeled (Y) 
    are called semi-supervised learning problems.
@@ -260,16 +407,63 @@
    - You can use unsupervised learning techniques to discover and learn the structure in the input variables.
    - You can also use supervised learning techniques to make best guess predictions for the unlabeled data, 
      feed that data back into the supervised learning algorithm as training data and use the model to make predictions on new unseen data.
-** active learning
-** Octave
+** What is active learning?
+** When to use Octave?
    (P) Always use octave for prototyping machine learning algorithms, and only after that migrate it in another language.
    (P) if we use octave as our programming enviroment for machine learning, will learn much more faster than
    using python, C++, or Java, as it is just functions.
 
-** Cocktail Party Problem 
+** What is the Cocktail Party Problem?
    - in only one line of code! in octave.
 
-** linear regression with one variable 
+** What is Linear Regression?
+   - Regression means " انحسار"
+
+   In statistics, linear regression is an approach for modeling the relationship between a scalar 
+   dependent variable y and one or more explanatory variables (or independent variables) denoted X. 
+ 
+   The case of one explanatory variable is called simple linear regression. 
+   For more than one explanatory variable, the process is called multiple linear regression. 
+   (This term is distinct from multivariate linear regression, where multiple correlated dependent 
+   variables are predicted, rather than a single scalar variable.)
+
+** What is Linear Regression with one variable (Univariate Linear Regression)?
+*** Model Representation
+    We have data that is plotted on a graph.
+    This is supervised learning as we are given the "right answer" for each example in the data.
+    This is a type of a Regression problem where we predict real-valued output. 
+
+    m = Number of training examples
+    x's = "input" variable/ features
+    y's = "output" variable / "target" variable
+
+    (          training set       )
+    \Downarrow     
+    (        learning algorithms  )
+    \Downarrow     
+    size of house \rightarrow  h   \rightarrow estimated price
+
+
+
+*** Cost Function
+    \ \odot = \theta + \Theta1 x 
+**** Cost Function Intuition
+
+*** Gardient Descent
+**** Gardient Descent Intuition
+**** Gardient Descent for Linear Regression
+
+** What is Focused Crawling?
+   A focused crawler is a web crawler that collects Web pages that satisfy some specific property, 
+   by carefully prioritizing the crawl frontier and managing the hyperlink exploration process. 
+   Some predicates may be based on simple, deterministic and surface properties. 
+   For example, a crawler's mission may be to crawl pages from only the .jp domain. 
+   Other predicates may be softer or comparative, e.g., "crawl pages with large PageRank", 
+   or "crawl pages about baseball". An important page property pertains to topics, leading to 
+   topical crawlers. For example, a topical crawler may be deployed to collect pages about solar power, 
+   or swine flu, while minimizing resources spent fetching pages on other topics. Crawl frontier 
+   management may not be the only device used by focused crawlers; they may use a Web directory, 
+   a Web text index, backlinks, or any other Web artifact.
 
 
 ** References  
@@ -466,6 +660,8 @@
    ├── 19.4-ApplicationExamplePhotoOCR-CeilingAnalysisWhatPartOfThePipelineToWorkOnNext.mp4
    ├── 20.1-Conclusion-SummaryAndThankYou.mp4
 
+*** TODO MIT 6.042J Mathematics for Computer Science, Spring 2015
+    source: https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ
 
 * Problems
 ** Birthday Cake Candles  
