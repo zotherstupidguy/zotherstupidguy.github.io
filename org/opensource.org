@@ -87,3 +87,12 @@
 
    - extracting first link (seed page)
 
+** TODO Automatic Copy Search Result Link to Clipboard 
+   when open a problem, automatically copy a link to clipboard for it to be pasted,
+   example: search "chess", will result on all the problems that contains chess,
+   if a user opens the accordion result a link i.e. www.hackspree.com/problem/kingpath will be copied to clipboard
+   to open in a new tab or paste to irc and similar.
+** TODO scrape answers from http://cs.stackexchange.com/
+** TODO scrape http://www.geeksforgeeks.org  
+   ----- 
+
