@@ -11,7 +11,7 @@
 
 
 * Knowledge 
-  (P) Any knowledge by definition is true otherwise it would be some kind of misinformation.
+(P) Any knowledge by definition is true otherwise it would be some kind of misinformation.
 
 ** What is *British Museum search algorithm*? :search_algorithm:
    backtracking: false
@@ -66,7 +66,6 @@
      - cp1.pdf page 70 of 152
 
 ** What is *backtracking*?
-
 
 ** Are all men created equal? 
    Yes, but then some learn science and become the *MASTERS* of the other.
