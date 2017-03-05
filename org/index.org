@@ -11,8 +11,18 @@
 
 
 * Knowledge 
-(P) Any knowledge by definition is true otherwise it would be some kind of misinformation....
-
+  (P) Any knowledge by definition is true otherwise it would be some kind of misinformation....
+** What is a *bipartite graph*?
+   In the mathematical field of graph theory, a bipartite graph (or
+   bigraph) is a graph 
+   whose vertices can be divided into two disjoint 
+   sets {\displaystyle U} U and {\displaystyle V} V (that is,
+   {\displaystyle U} U and {\displaystyle V} V 
+   are each independent sets) such that every edge connects a vertex 
+   in {\displaystyle U} U to one in {\displaystyle V} V. 
+   Vertex sets {\displaystyle U} U and {\displaystyle V} V are usually 
+   called the parts of the graph. Equivalently, a bipartite graph is a 
+   graph that does not contain any odd-length cycles.
 ** What is *British Museum search algorithm*? :search_algorithm:
    backtracking: false
    use enqued list: false
