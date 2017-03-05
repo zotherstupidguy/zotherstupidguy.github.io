@@ -11,7 +11,7 @@
 
 
 * Knowledge 
-(P) Any knowledge by definition is true otherwise it would be some kind of misinformation.
+(P) Any knowledge by definition is true otherwise it would be some kind of misinformation....
 
 ** What is *British Museum search algorithm*? :search_algorithm:
    backtracking: false
@@ -23,7 +23,6 @@
    use enqued list: true 
    informed: true 
 
-   
 ** What is *beam search algorithm*?
    backtracking: 
    use enqued list: 
