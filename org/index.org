@@ -5,7 +5,7 @@
 #+KEYWORDS:  emacs, mathematics, computer science, machine learning 
 #+LANGUAGE:  en
 #+STYLE:body {font-family: "Source Sans Pro Black",sans-serif;}
-#+OPTIONS: H:3 num:0
+#+OPTIONS: H:3 num:4
 #+TAGS: zpd0(0)  zpd1(1) zpd2(2)  problem solution predicate implication question fig mindmap number_theory set_theory proof_theory computational_theory problem_solving category_theory single_variable_calculas multi_variable_calculas vedic_mathematics graph_theory discerete_mathematics concerete_mathematics continous_mathematics statistics real_analysis grit top_universities studying_strategy data_structures algorithms artificial_intellegence machine_learning deep_learning bigdata R python puzzles { MOOC : coursera  stanford oxford MIT} { philosphy : socrates plato} book youtube blog competitive_programming C_programming {algorithms : ConstructiveAlgorithms Strings Sorting Search GraphTheory  Greedy DynamicProgramming  BitManipulation  Recursion GameTheory  NPComplete } DistributedSystems Regex Security Functions Cryptography
 #+STARTUP: latexpreview
 
