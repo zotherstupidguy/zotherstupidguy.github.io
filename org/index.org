@@ -11,7 +11,48 @@
 
 
 * Knowledge 
-  (P) Any knowledge by definition is true otherwise it would be some kind of misinformation....
+  (P) Any knowledge by definition is true & concise otherwise it would
+  be some kind of misinformation.
+  ...
+** What are the ... in 1 + r + r^2 + ... + r^n called?
+   - "..." is an ellipsis.
+   - it is used when the writer trying to tell the reader that there is an
+     obvious pattern.
+
+** What is an uncomputable function?
+   https://web.stanford.edu/class/cs54n/handouts/15-UncomputableFunctions.pdf
+
+** (idea) applying game theory in genetic algorithms?
+   http://www.iitk.ac.in/nicee/wcee/article/11_1503.PDF
+** what is *perfect randomness* ?
+** (idea) What if the world doesn't have any *perfect randomness*(not pesuedorandomness)?
+   I would define *randomness* as the inability of the beholder to
+   identify patterns. In contradiction that the world is determinstic.
+  
+   thus, for the world to lack randomness, means that the beholder is
+   capable of identifying patterns in everything! Is there a universal
+   patten finding alogirhtm?
+  
+   Gemotric Algorithms (origami algorithms) shows that we can use
+   diminsions to levelup our understanding of a subject. The more
+   diminsions you can identify about a subject the more depth you
+   develop with its understanding.
+
+   Can we use the ability to construct diminsions regarding a subject
+   to gain the ability to find a pattern matching algorithm in that
+   that subject that would elimanite randomness and therefore makes
+   finding the solution easy (P=NP)!  
+ 
+   godel incompletness may 
+
+** What is the difference between Big-O notation O(n) and Little-O notation o(n)? :time_complexity:
+
+
+
+** What is a Walk? :graphtheory:
+   a walk is a sequence of vertices connected by edges.
+
+
 ** What is a *bipartite graph*?
    In the mathematical field of graph theory, a bipartite graph (or
    bigraph) is a graph 
@@ -405,7 +446,7 @@ distinguish it from the ideal target function V.
    The concept is named after English mathematician Alan Turing. A classic example is lambda calculus.
    
 ** What is Turing Equivalence?
-
+   
 ** What is Python?
    - interperted langauge, (can also complie it)
    - a variable is a name of an objective
