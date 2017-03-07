@@ -13,6 +13,26 @@
   (P) Any knowledge by definition is true & concise otherwise it would
   be some kind of misinformation.
   ...
+** What is a *baud rate*? 
+   The baud rate is the rate at which information is transferred in a
+   communication channel. In the serial port context, "9600 baud" means 
+   that the serial port is capable of transferring a maximum of 9600 
+   bits per second.
+
+** What is *Proof by Induction* ?
+
+   - The idea is that if you want to show that someone can climb to the
+   nth floor of a fire escape, you need only show that you can climb 
+   the ladder up to the fire escape (n=1) and then show that you know 
+   how to climb the stairs from any level of the fire escape (n=k) to 
+   the next level (n=k+1).
+   
+   http://comet.lehman.cuny.edu/sormani/teaching/induction.html
+
+** What is an *Approximation algorithm*?
+
+** What is the *minimax algorithm*?
+
 ** What are the ... in 1 + r + r^2 + ... + r^n called?
    - "..." is an ellipsis.
    - it is used when the writer trying to tell the reader that there is an
@@ -117,7 +137,7 @@
 ** What is *backtracking*?
 
 ** Are all men created equal? 
-   Yes, but then some learn science and become the *MASTERS* of the other.
+   Yes, but then some learn science and become the *MASTERS* of others.
 
 ** Is Search is about Maps?
    No, *Search is about choice*, but for illustrations search uses maps.
@@ -223,9 +243,9 @@
 
 ** What is an alphabet?
    An alphabet is any finite set of symbols.
-     - Examples: 
-       - ASCII, Unicode,
-       - {0,1} (binary alphabet) 
+   - Examples: 
+     - ASCII, Unicode,
+     - {0,1} (binary alphabet) 
 ** What is a *string* over an alphabet \Sigma ?
    A string over an alphabet \Sigma is a list, each element of 
    which is a member of \[ \Sigma \] 
@@ -322,48 +342,48 @@
     lar targetfunction such as ChooseMove. The choice of the target function will
     therefore be a key design choice
 
-Although ChooseMove is an obvious choice for the target function in our
-example, this function will turn out to be very difficult to learn given the kind of in-
-direct training experience available to our system. An alternative target function-
-and one that will turn out to be easier to learn in this setting-is an evaluation
-function that assigns a numerical score to any given board state. Let us call this
-target function V and again use the notation V : B + 8 to denote that V maps
-any legal board state from the set B to some real value (we use 8 to denote the set
-of real numbers). We intend for this target function V to assign higher scores to
-better board states. If the system can successfully learn such a target function V ,
-then it can easily use it to select the best move from any current board position.
-This can be accomplished by generating the successor board state produced by
-every legal move, then using V to choose the best successor state and therefore
-the best legal move.
-What exactly should be the value of the target function V for any given
-board state? Of course any evaluation function that assigns higher scores to better
-board states will do. Nevertheless, we will find it useful to define one particular
-target function V among the many that produce optimal play. As we shall see,
-this will make it easier to design a training algorithm. Let us therefore define the
-target value V ( b ) for an arbitrary board state b in B , as follows:
-1. if b is a final board state that is won, then V ( b ) = 100
-2. if b is a final board state that is lost, then V ( b ) = -100
-3. if b is a final board state that is drawn, then V ( b ) = 04. if b is a not a final state in the game, then V(b) = V(bl), where b' is the best
-final board state that can be achieved starting from b and playing optimally
-until the end of the game (assuming the opponent plays optimally, as well).
-While this recursive definition specifies a value of V(b) for every board
-state b, this definition is not usable by our checkers player because it is not
-efficiently computable. Except for the trivial cases (cases 1-3) in which the game
-has already ended, determining the value of V(b) for a particular board state
-requires (case 4) searching ahead for the optimal line of play, all the way to
-the end of the game! Because this definition is not efficiently computable by our
-checkers playing program, we say that it is a nonoperational definition. The goal
-of learning in this case is to discover an operational description of V ; that is, a
-description that can be used by the checkers-playing program to evaluate states
-and select moves within realistic time bounds.
-Thus, we have reduced the learning task in this case to the problem of
-discovering an operational description of the ideal targetfunction V. It may be
-very difficult in general to learn such an operational form of V perfectly. In fact,
-we often expect learning algorithms to acquire only some approximation to the
-target function, and for this reason the process of learning the target function
-is often called function approximation. In the current discussion we will use the
-symbol ? to refer to the function that is actually learned by our program, to
-distinguish it from the ideal target function V.
+    Although ChooseMove is an obvious choice for the target function in our
+    example, this function will turn out to be very difficult to learn given the kind of in-
+    direct training experience available to our system. An alternative target function-
+    and one that will turn out to be easier to learn in this setting-is an evaluation
+    function that assigns a numerical score to any given board state. Let us call this
+    target function V and again use the notation V : B + 8 to denote that V maps
+    any legal board state from the set B to some real value (we use 8 to denote the set
+    of real numbers). We intend for this target function V to assign higher scores to
+    better board states. If the system can successfully learn such a target function V ,
+    then it can easily use it to select the best move from any current board position.
+    This can be accomplished by generating the successor board state produced by
+    every legal move, then using V to choose the best successor state and therefore
+    the best legal move.
+    What exactly should be the value of the target function V for any given
+    board state? Of course any evaluation function that assigns higher scores to better
+    board states will do. Nevertheless, we will find it useful to define one particular
+    target function V among the many that produce optimal play. As we shall see,
+    this will make it easier to design a training algorithm. Let us therefore define the
+    target value V ( b ) for an arbitrary board state b in B , as follows:
+    1. if b is a final board state that is won, then V ( b ) = 100
+    2. if b is a final board state that is lost, then V ( b ) = -100
+    3. if b is a final board state that is drawn, then V ( b ) = 04. if b is a not a final state in the game, then V(b) = V(bl), where b' is the best
+    final board state that can be achieved starting from b and playing optimally
+    until the end of the game (assuming the opponent plays optimally, as well).
+    While this recursive definition specifies a value of V(b) for every board
+    state b, this definition is not usable by our checkers player because it is not
+    efficiently computable. Except for the trivial cases (cases 1-3) in which the game
+    has already ended, determining the value of V(b) for a particular board state
+    requires (case 4) searching ahead for the optimal line of play, all the way to
+    the end of the game! Because this definition is not efficiently computable by our
+    checkers playing program, we say that it is a nonoperational definition. The goal
+    of learning in this case is to discover an operational description of V ; that is, a
+    description that can be used by the checkers-playing program to evaluate states
+    and select moves within realistic time bounds.
+    Thus, we have reduced the learning task in this case to the problem of
+    discovering an operational description of the ideal targetfunction V. It may be
+    very difficult in general to learn such an operational form of V perfectly. In fact,
+    we often expect learning algorithms to acquire only some approximation to the
+    target function, and for this reason the process of learning the target function
+    is often called function approximation. In the current discussion we will use the
+    symbol ? to refer to the function that is actually learned by our program, to
+    distinguish it from the ideal target function V.
 
 *** Choosing a Representation for the Target Function
 *** Choosing a Function Approximation Algorithm
@@ -546,10 +566,10 @@ distinguish it from the ideal target function V.
     y's = "output" variable / "target" variable
 
     (          training set       )
-    			\Downarrow     
+    \Downarrow     
     (        learning algorithms  )
-    			\Downarrow     
-    	size of house \rightarrow  h   \rightarrow estimated price
+    \Downarrow     
+    size of house \rightarrow  h   \rightarrow estimated price
 
 
 
@@ -913,6 +933,55 @@ distinguish it from the ideal target function V.
 
     
 * Problems
+** TODO Spaceship Defence
+   https://code.google.com/codejam/contest/2924486/dashboard#s=p4
+   
+   - *Teleporters*: 
+     - (P) Teleporters allow your soldiers to move instantly between rooms.
+     - (P) Every room contains a teleporter, and rooms are color-coded.
+     - (I) *if* a soldier is in a room with some color, 
+       *then* the solider can use the teleporter in that room to immediately move to any other room with the same color. 
+
+   - *Turbolifts*:
+     - (P) Turbolifts allow your soldiers to move between rooms more slowly.
+     - (P) A turbolift is like an elevator that moves in many directions.
+     - (P) Each turbolift moves from one room to one other room.
+     - (P) it takes a certain amount of time *t* to travel. 
+     - (I) Turbolifts are not two-way: 
+       *if* a turbolift moves soldiers from room a to room b, 
+       *then* the same turbolift cannot move soldiers from room b
+       to room a, 
+       *although* there might be another turbolift that does that.
+     - (P) More than one soldier can use the same turbolift, and they do not interfere with each other in any way.
+
+   - *Given*
+     - *locations* and *destinations* of several soliders 
+   - *Required*
+     - For each soldier, *output the minimum amount of time* it could take that soldier to travel from his location to his destination.
+*** Input
+    The first line of the input gives the number of test cases, T; T
+    test cases follow. For every test case:
+    - *rooms* 
+      - The first line of every test case contains an integer N, which
+        is the number of rooms in your spaceship. 
+      - The rooms are numbered from 1 to N. 
+      - The following N lines each contain a string telling the color of the rooms, from room 1 to room N. 
+      - The strings only contain characters a-z (the lower-case
+        English letters) and 0-9 (the number 0 to 9), and the length of each string will be less than or equal to 2.
+
+    - *turbolifts* 
+      - The next line in the test case is an integer M, 
+        which indicates the number of turbolifts in your spaceship. 
+      - The following M lines each contain 3 space-separated integers ai,
+        bi, ti, telling us that there is a turbolift that can transport 
+        soldiers from room ai to room bi in ti seconds.
+
+    - *Soliders* 
+      - The next line in the test case contains an integer S, which is the number of soldiers at your command. 
+      - The following S lines each contain two integers: the location and destination of one soldier, pj and qj.
+
+
+
 ** TODO Journey to the moon                              :graphtheory:medium: 
    :PROPERTIES:   
    :SCHEDULED: <2017-03-13 Mon +2d/4d>
@@ -923,26 +992,26 @@ distinguish it from the ideal target function V.
    :LAST_REPEAT: [2017-02-24 Fri 12:37]
    :END:
    
-The member states of the UN are planning to send  people to the Moon. 
-But there is a problem. 
-In line with their principles of global unity, 
-they want to pair astronauts of 2 different countries.
+   The member states of the UN are planning to send  people to the Moon. 
+   But there is a problem. 
+   In line with their principles of global unity, 
+   they want to pair astronauts of 2 different countries.
 
-There are N trained astronauts numbered from 0 to N - 1. 
-But those in charge of the mission did not receive information about the 
-citizenship of each astronaut. 
+   There are N trained astronauts numbered from 0 to N - 1. 
+   But those in charge of the mission did not receive information about the 
+   citizenship of each astronaut. 
 
-The only information they have is that some particular pairs of 
-astronauts belong to the same country.
+   The only information they have is that some particular pairs of 
+   astronauts belong to the same country.
 
-Your task is to compute in how many ways they can pick a pair of 
-astronauts belonging to different countries. 
-Assume that you are provided enough pairs to let you identify the 
-groups of astronauts even though you might not know their country directly. 
+   Your task is to compute in how many ways they can pick a pair of 
+   astronauts belonging to different countries. 
+   Assume that you are provided enough pairs to let you identify the 
+   groups of astronauts even though you might not know their country directly. 
 
-For instance, if  are astronauts from the same country; 
-it is sufficient to mention that  and  are pairs of astronauts from 
-the same country without providing information about a third pair . 
+   For instance, if  are astronauts from the same country; 
+   it is sufficient to mention that  and  are pairs of astronauts from 
+   the same country without providing information about a third pair . 
 
 ** Birthday Cake Candles  
    :PROPERTIES:   
