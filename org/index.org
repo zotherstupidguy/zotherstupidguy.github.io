@@ -13,6 +13,17 @@
   (P) Any knowledge by definition is true & concise otherwise it would
   be some kind of misinformation.
   ...
+
+** What is the history of C?
+   - C is a by-prodcut of the UNIX operating system.
+   - When Ken Thompson wrote the original verision of UNIX on an 8k words
+     of main memory minicomputer in assembly langauge, he decided that a
+     higher level language is required for the further development of
+     UNIX, thus he designed B, based on BCPL.
+   - Ritchie joined the UNIX project and used B at first then when he
+     needed an extended version of B, he created *C*!
+
+
 ** What is a *baud rate*? 
    The baud rate is the rate at which information is transferred in a
    communication channel. In the serial port context, "9600 baud" means 
@@ -41,10 +52,10 @@
 ** What is an uncomputable function?
    https://web.stanford.edu/class/cs54n/handouts/15-UncomputableFunctions.pdf
 
-** (idea) applying game theory in genetic algorithms?
+** applying game theory in genetic algorithms?                         :idea:
    http://www.iitk.ac.in/nicee/wcee/article/11_1503.PDF
 ** what is *perfect randomness* ?
-** (idea) What if the world doesn't have any *perfect randomness*(not pesuedorandomness)?
+** What if the world doesn't have any *perfect randomness*(not pesuedorandomness)? :idea:
    I would define *randomness* as the inability of the beholder to
    identify patterns. In contradiction that the world is determinstic.
   
@@ -271,7 +282,7 @@
      2. a representation for this target knowledge
      3. a learning mechanism
 
-** How to analog Professor-students passing on of knowledge to Machine Learning?
+** How to analog Professor-students passing on of knowledge to Machine Learning? :idea:
    Prof. Automaton Probem :D 
  
    (idea) I was thinking that a Human(Professor) lives his life in stages, 
@@ -981,7 +992,6 @@
       - The following S lines each contain two integers: the location and destination of one soldier, pj and qj.
 
 
-
 ** TODO Journey to the moon                              :graphtheory:medium: 
    :PROPERTIES:   
    :SCHEDULED: <2017-03-13 Mon +2d/4d>
@@ -1104,7 +1114,6 @@
 
       -----
 
-
 ** Battlecode
    MIT AI game #battlecode@freenode.net
 
@@ -1137,7 +1146,7 @@
  **** TODO add vjudge owner on whatsapp and wechat and talkk
 **** TODO use a tiled window manager instead of openbox to watch videos and emacs at teh same time
 
-  
+     
 * Distractions 
   write down distractions here to focus on task at hand, good for the focus muscle, 
   watch https://www.youtube.com/watch?v=H0k0TQfZGSc
