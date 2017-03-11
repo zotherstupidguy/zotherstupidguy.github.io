@@ -55,6 +55,7 @@
      automatically when the program is executed.
    - statments: commands to be performed when the program is run.
 
+
 ** What is a variable in a C program? :c_lang:
    - A variable is a labelled place to store some data.
    A variable is a temporarily storage location for data during C program
@@ -62,16 +63,65 @@
    - Every variable must have a *type*, that specifies what kind of data
    it will hold.
    - C has a wide variety of types, how many in C99??? 
+
+
 ** What is a C pointer? :c_lang:
    A pointer is a *variable* containing the *address of another variable*.
+
+
 ** How a C pointer operates? :c_lang:
 
-** What is C's dereference operator '*'? :c_lang:
+** What are C's "address of &"  and "dereferencing *" operators?     :c_lang:
+   "&" (address of) and "*" dereferencing operators.*
+   - *' & '* translates to *'give me the address of'*
+   - *' * '* translates to *'give me whatever is that the address'*.
+   - Example:  
+
+     The dereference operator or indirection operator, denoted by "*" 
+     (i.e. an asterisk), is a unary operator found in C-like languages 
+     that include pointer variables.
+
+     It operates on a pointer variable, and returns an l-value equivalent
+     to the value at the pointer address. This is called "dereferencing"
+     the pointer. 
+
+     #+BEGIN_SRC C
+       int x;
+
+       // * is used in the declaration:
+       // p is a pointer to an integer, 
+       // since (after dereferencing),
+       // *p is an integer
+       int *p;  
+
+       x = 0;
+       // now x == 0
+       p = &x;  // & takes the address of x
+       // now p == &x, so *p == x
+       ,*p = 1;  // equivalent to x = 1, since *p == x
+       // now *p == 1 and *p == x, so x == 1
+     #+END_SRC
+
 
 ** What is C's l-value? :c_lang:
-
+   
 ** Why C has Pointers? :c_lang:
 
+** What is C's *Segmentation Violations/Faults*? :c_lang:
+   "segmentation violation" or "segmentation fault" means your program
+   has attempted to access an area of memory that it is not allowed to
+   access. In other words, it attempted to stomp on memory ground that
+   is beyond the limits that the operating system (e.g., Unix) has
+   allocated for your program.
+
+** What are the causes of C's *Segmentation Violations/Faults*?      :c_lang:
+- Improper format control string in printf or scanf statements
+- Forgetting to use "&" on the arguments to scanf
+- Accessing beyond the bounds of an array
+- Failure to initialize a ointer before accessing it
+- *Incorrect use of the "&" (address of) and "*" dereferencing operators.*
+ 
+ref: http://web.mit.edu/10.001/Web/Tips/tips_on_segmentation.html
 
 ** What is Endianness?
    Endianness refers to the sequential order used to numerically

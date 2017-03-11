@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-03-11 Sat 15:03 -->
+<!-- 2017-03-11 Sat 21:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>zotherstupidguy log</title>
@@ -346,6 +346,7 @@ automatically when the program is executed.
 </div>
 </div>
 
+
 <div id="outline-container-org8fca360" class="outline-3">
 <h3 id="org8fca360"><span class="section-number-3">1.6</span> What is a variable in a C program?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
 <div class="outline-text-3" id="text-1-6">
@@ -367,6 +368,8 @@ it will hold.
 </ul>
 </div>
 </div>
+
+
 <div id="outline-container-org93caa1b" class="outline-3">
 <h3 id="org93caa1b"><span class="section-number-3">1.7</span> What is a C pointer?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
 <div class="outline-text-3" id="text-1-7">
@@ -375,13 +378,58 @@ A pointer is a <b>variable</b> containing the <b>address of another variable</b>
 </p>
 </div>
 </div>
+
+
 <div id="outline-container-org44af29f" class="outline-3">
 <h3 id="org44af29f"><span class="section-number-3">1.8</span> How a C pointer operates?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
 </div>
 
-<div id="outline-container-org621e7da" class="outline-3">
-<h3 id="org621e7da"><span class="section-number-3">1.9</span> What is C's dereference operator '*'?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div id="outline-container-org57c2ee4" class="outline-3">
+<h3 id="org57c2ee4"><span class="section-number-3">1.9</span> What are C's "address of &amp;"  and "dereferencing *" operators?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+"&amp;" (address of) and "<b>" dereferencing operators.</b>
+</p>
+<ul class="org-ul">
+<li><b>' &amp; '</b> translates to <b>'give me the address of'</b></li>
+<li><b>' * '</b> translates to <b>'give me whatever is that the address'</b>.</li>
+<li><p>
+Example:  
+</p>
+
+<p>
+The dereference operator or indirection operator, denoted by "*" 
+(i.e. an asterisk), is a unary operator found in C-like languages 
+that include pointer variables.
+</p>
+
+<p>
+It operates on a pointer variable, and returns an l-value equivalent
+to the value at the pointer address. This is called "dereferencing"
+the pointer. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #b58900;">int</span> <span style="color: #268bd2;">x</span>;
+
+<span style="color: #586e75;">// </span><span style="color: #586e75;">* is used in the declaration:</span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">p is a pointer to an integer, </span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">since (after dereferencing),</span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">*p is an integer</span>
+<span style="color: #b58900;">int</span> *<span style="color: #268bd2;">p</span>;  
+
+x = 0;
+<span style="color: #586e75;">// </span><span style="color: #586e75;">now x == 0</span>
+p = &amp;x;  <span style="color: #586e75;">// </span><span style="color: #586e75;">&amp; takes the address of x</span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">now p == &amp;x, so *p == x</span>
+*p = 1;  <span style="color: #586e75;">// </span><span style="color: #586e75;">equivalent to x = 1, since *p == x</span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">now *p == 1 and *p == x, so x == 1</span>
+</pre>
+</div></li>
+</ul>
 </div>
+</div>
+
 
 <div id="outline-container-orgc6d0df1" class="outline-3">
 <h3 id="orgc6d0df1"><span class="section-number-3">1.10</span> What is C's l-value?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
@@ -391,10 +439,39 @@ A pointer is a <b>variable</b> containing the <b>address of another variable</b>
 <h3 id="org9459221"><span class="section-number-3">1.11</span> Why C has Pointers?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
 </div>
 
+<div id="outline-container-org4c91570" class="outline-3">
+<h3 id="org4c91570"><span class="section-number-3">1.12</span> What is C's <b>Segmentation Violations/Faults</b>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+"segmentation violation" or "segmentation fault" means your program
+has attempted to access an area of memory that it is not allowed to
+access. In other words, it attempted to stomp on memory ground that
+is beyond the limits that the operating system (e.g., Unix) has
+allocated for your program.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf23b051" class="outline-3">
+<h3 id="orgf23b051"><span class="section-number-3">1.13</span> What are the causes of C's <b>Segmentation Violations/Faults</b>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-13">
+<ul class="org-ul">
+<li>Improper format control string in printf or scanf statements</li>
+<li>Forgetting to use "&amp;" on the arguments to scanf</li>
+<li>Accessing beyond the bounds of an array</li>
+<li>Failure to initialize a ointer before accessing it</li>
+<li><b>Incorrect use of the "&amp;" (address of) and "</b>" dereferencing operators.*</li>
+</ul>
+
+<p>
+ref: <a href="http://web.mit.edu/10.001/Web/Tips/tips_on_segmentation.html">http://web.mit.edu/10.001/Web/Tips/tips_on_segmentation.html</a>
+</p>
+</div>
+</div>
 
 <div id="outline-container-org361613e" class="outline-3">
-<h3 id="org361613e"><span class="section-number-3">1.12</span> What is Endianness?</h3>
-<div class="outline-text-3" id="text-1-12">
+<h3 id="org361613e"><span class="section-number-3">1.14</span> What is Endianness?</h3>
+<div class="outline-text-3" id="text-1-14">
 <p>
 Endianness refers to the sequential order used to numerically
 interpret a range of bytes in computer memory as a larger, 
@@ -404,8 +481,8 @@ composed word value.
 </div>
 
 <div id="outline-container-org5be2780" class="outline-3">
-<h3 id="org5be2780"><span class="section-number-3">1.13</span> What is a <b>baud rate</b>?</h3>
-<div class="outline-text-3" id="text-1-13">
+<h3 id="org5be2780"><span class="section-number-3">1.15</span> What is a <b>baud rate</b>?</h3>
+<div class="outline-text-3" id="text-1-15">
 <p>
 The baud rate is the rate at which information is transferred in a
 communication channel. In the serial port context, "9600 baud" means 
@@ -416,8 +493,8 @@ bits per second.
 </div>
 
 <div id="outline-container-orgdf5d757" class="outline-3">
-<h3 id="orgdf5d757"><span class="section-number-3">1.14</span> What is <b>Proof by Induction</b> ?</h3>
-<div class="outline-text-3" id="text-1-14">
+<h3 id="orgdf5d757"><span class="section-number-3">1.16</span> What is <b>Proof by Induction</b> ?</h3>
+<div class="outline-text-3" id="text-1-16">
 <ul class="org-ul">
 <li>The idea is that if you want to show that someone can climb to the</li>
 </ul>
@@ -435,16 +512,16 @@ the next level (n=k+1).
 </div>
 
 <div id="outline-container-org83fd989" class="outline-3">
-<h3 id="org83fd989"><span class="section-number-3">1.15</span> What is an <b>Approximation algorithm</b>?</h3>
+<h3 id="org83fd989"><span class="section-number-3">1.17</span> What is an <b>Approximation algorithm</b>?</h3>
 </div>
 
 <div id="outline-container-org890f278" class="outline-3">
-<h3 id="org890f278"><span class="section-number-3">1.16</span> What is the <b>minimax algorithm</b>?</h3>
+<h3 id="org890f278"><span class="section-number-3">1.18</span> What is the <b>minimax algorithm</b>?</h3>
 </div>
 
 <div id="outline-container-orge72cc5d" class="outline-3">
-<h3 id="orge72cc5d"><span class="section-number-3">1.17</span> What are the &#x2026; in 1 + r + r<sup>2</sup> + &#x2026; + r<sup>n</sup> called?</h3>
-<div class="outline-text-3" id="text-1-17">
+<h3 id="orge72cc5d"><span class="section-number-3">1.19</span> What are the &#x2026; in 1 + r + r<sup>2</sup> + &#x2026; + r<sup>n</sup> called?</h3>
+<div class="outline-text-3" id="text-1-19">
 <ul class="org-ul">
 <li>"&#x2026;" is an ellipsis.</li>
 <li>it is used when the writer trying to tell the reader that there is an
@@ -454,8 +531,8 @@ obvious pattern.</li>
 </div>
 
 <div id="outline-container-org885df9d" class="outline-3">
-<h3 id="org885df9d"><span class="section-number-3">1.18</span> What is an uncomputable function?</h3>
-<div class="outline-text-3" id="text-1-18">
+<h3 id="org885df9d"><span class="section-number-3">1.20</span> What is an uncomputable function?</h3>
+<div class="outline-text-3" id="text-1-20">
 <p>
 <a href="https://web.stanford.edu/class/cs54n/handouts/15-UncomputableFunctions.pdf">https://web.stanford.edu/class/cs54n/handouts/15-UncomputableFunctions.pdf</a>
 </p>
@@ -463,19 +540,19 @@ obvious pattern.</li>
 </div>
 
 <div id="outline-container-org18727ec" class="outline-3">
-<h3 id="org18727ec"><span class="section-number-3">1.19</span> applying game theory in genetic algorithms?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
-<div class="outline-text-3" id="text-1-19">
+<h3 id="org18727ec"><span class="section-number-3">1.21</span> applying game theory in genetic algorithms?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
+<div class="outline-text-3" id="text-1-21">
 <p>
 <a href="http://www.iitk.ac.in/nicee/wcee/article/11_1503.PDF">http://www.iitk.ac.in/nicee/wcee/article/11_1503.PDF</a>
 </p>
 </div>
 </div>
 <div id="outline-container-org5a2a392" class="outline-3">
-<h3 id="org5a2a392"><span class="section-number-3">1.20</span> what is <b>perfect randomness</b> ?</h3>
+<h3 id="org5a2a392"><span class="section-number-3">1.22</span> what is <b>perfect randomness</b> ?</h3>
 </div>
 <div id="outline-container-orgc7d9e44" class="outline-3">
-<h3 id="orgc7d9e44"><span class="section-number-3">1.21</span> What if the world doesn't have any *perfect randomness*(not pesuedorandomness)?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
-<div class="outline-text-3" id="text-1-21">
+<h3 id="orgc7d9e44"><span class="section-number-3">1.23</span> What if the world doesn't have any *perfect randomness*(not pesuedorandomness)?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
+<div class="outline-text-3" id="text-1-23">
 <p>
 I would define <b>randomness</b> as the inability of the beholder to
 identify patterns. In contradiction that the world is determinstic.
@@ -508,14 +585,14 @@ godel incompletness may
 </div>
 
 <div id="outline-container-orgf1c0175" class="outline-3">
-<h3 id="orgf1c0175"><span class="section-number-3">1.22</span> What is the difference between Big-O notation O(n) and Little-O notation o(n)?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="time_complexity">time_complexity</span></span></h3>
+<h3 id="orgf1c0175"><span class="section-number-3">1.24</span> What is the difference between Big-O notation O(n) and Little-O notation o(n)?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="time_complexity">time_complexity</span></span></h3>
 </div>
 
 
 
 <div id="outline-container-org0379a84" class="outline-3">
-<h3 id="org0379a84"><span class="section-number-3">1.23</span> What is a Walk?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="graphtheory">graphtheory</span></span></h3>
-<div class="outline-text-3" id="text-1-23">
+<h3 id="org0379a84"><span class="section-number-3">1.25</span> What is a Walk?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="graphtheory">graphtheory</span></span></h3>
+<div class="outline-text-3" id="text-1-25">
 <p>
 a walk is a sequence of vertices connected by edges.
 </p>
@@ -524,8 +601,8 @@ a walk is a sequence of vertices connected by edges.
 
 
 <div id="outline-container-org71e84bf" class="outline-3">
-<h3 id="org71e84bf"><span class="section-number-3">1.24</span> What is a <b>bipartite graph</b>?</h3>
-<div class="outline-text-3" id="text-1-24">
+<h3 id="org71e84bf"><span class="section-number-3">1.26</span> What is a <b>bipartite graph</b>?</h3>
+<div class="outline-text-3" id="text-1-26">
 <p>
 In the mathematical field of graph theory, a bipartite graph (or
 bigraph) is a graph 
@@ -541,8 +618,8 @@ graph that does not contain any odd-length cycles.
 </div>
 </div>
 <div id="outline-container-org1ddaa34" class="outline-3">
-<h3 id="org1ddaa34"><span class="section-number-3">1.25</span> What is <b>British Museum search algorithm</b>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="search_algorithm">search_algorithm</span></span></h3>
-<div class="outline-text-3" id="text-1-25">
+<h3 id="org1ddaa34"><span class="section-number-3">1.27</span> What is <b>British Museum search algorithm</b>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="search_algorithm">search_algorithm</span></span></h3>
+<div class="outline-text-3" id="text-1-27">
 <p>
 backtracking: false
 use enqued list: false
@@ -552,8 +629,8 @@ informed: false
 </div>
 
 <div id="outline-container-orgb9a45c8" class="outline-3">
-<h3 id="orgb9a45c8"><span class="section-number-3">1.26</span> What is <b>Hill Climbing search algorithm</b>?</h3>
-<div class="outline-text-3" id="text-1-26">
+<h3 id="orgb9a45c8"><span class="section-number-3">1.28</span> What is <b>Hill Climbing search algorithm</b>?</h3>
+<div class="outline-text-3" id="text-1-28">
 <p>
 backtracking: true 
 use enqued list: true 
@@ -563,8 +640,8 @@ informed: true
 </div>
 
 <div id="outline-container-org467fc6e" class="outline-3">
-<h3 id="org467fc6e"><span class="section-number-3">1.27</span> What is <b>beam search algorithm</b>?</h3>
-<div class="outline-text-3" id="text-1-27">
+<h3 id="org467fc6e"><span class="section-number-3">1.29</span> What is <b>beam search algorithm</b>?</h3>
+<div class="outline-text-3" id="text-1-29">
 <p>
 backtracking: 
 use enqued list: 
@@ -580,8 +657,8 @@ solution (goal state). But in beam search, only a predetermined number of best p
 </div>
 
 <div id="outline-container-org751cbfb" class="outline-3">
-<h3 id="org751cbfb"><span class="section-number-3">1.28</span> What is Breadth First Search (BFS)?</h3>
-<div class="outline-text-3" id="text-1-28">
+<h3 id="org751cbfb"><span class="section-number-3">1.30</span> What is Breadth First Search (BFS)?</h3>
+<div class="outline-text-3" id="text-1-30">
 <p>
 backtracking: false 
 use enqued list: true 
@@ -592,8 +669,8 @@ informed: false
 
 
 <div id="outline-container-org41e25f5" class="outline-3">
-<h3 id="org41e25f5"><span class="section-number-3">1.29</span> What is Depth First Search (DFS)?</h3>
-<div class="outline-text-3" id="text-1-29">
+<h3 id="org41e25f5"><span class="section-number-3">1.31</span> What is Depth First Search (DFS)?</h3>
+<div class="outline-text-3" id="text-1-31">
 <p>
 backtracking: true 
 use enqued list: true 
@@ -624,12 +701,12 @@ hello();
 </div>
 
 <div id="outline-container-orgc9671c4" class="outline-3">
-<h3 id="orgc9671c4"><span class="section-number-3">1.30</span> What is <b>backtracking</b>?</h3>
+<h3 id="orgc9671c4"><span class="section-number-3">1.32</span> What is <b>backtracking</b>?</h3>
 </div>
 
 <div id="outline-container-org46d4586" class="outline-3">
-<h3 id="org46d4586"><span class="section-number-3">1.31</span> Are all men created equal?</h3>
-<div class="outline-text-3" id="text-1-31">
+<h3 id="org46d4586"><span class="section-number-3">1.33</span> Are all men created equal?</h3>
+<div class="outline-text-3" id="text-1-33">
 <p>
 Yes, but then some learn science and become the <b>MASTERS</b> of others.
 </p>
@@ -637,8 +714,8 @@ Yes, but then some learn science and become the <b>MASTERS</b> of others.
 </div>
 
 <div id="outline-container-org7feb578" class="outline-3">
-<h3 id="org7feb578"><span class="section-number-3">1.32</span> Search is about Maps?</h3>
-<div class="outline-text-3" id="text-1-32">
+<h3 id="org7feb578"><span class="section-number-3">1.34</span> Search is about Maps?</h3>
+<div class="outline-text-3" id="text-1-34">
 <p>
 No, <b>Search is about choice</b>, but for illustrations search uses maps.
 </p>
@@ -646,8 +723,8 @@ No, <b>Search is about choice</b>, but for illustrations search uses maps.
 </div>
 
 <div id="outline-container-org5114494" class="outline-3">
-<h3 id="org5114494"><span class="section-number-3">1.33</span> What is Educational Philsophy?</h3>
-<div class="outline-text-3" id="text-1-33">
+<h3 id="org5114494"><span class="section-number-3">1.35</span> What is Educational Philsophy?</h3>
+<div class="outline-text-3" id="text-1-35">
 <p>
 To solve problem we require transformation from one form into another(modeling skills).
 </p>
@@ -675,8 +752,8 @@ What is an <b>AND NODE</b>?
 </div>
 
 <div id="outline-container-orgd45cc46" class="outline-3">
-<h3 id="orgd45cc46"><span class="section-number-3">1.34</span> What does *herustic function*(herusticارشادي) mean?</h3>
-<div class="outline-text-3" id="text-1-34">
+<h3 id="orgd45cc46"><span class="section-number-3">1.36</span> What does *herustic function*(herusticارشادي) mean?</h3>
+<div class="outline-text-3" id="text-1-36">
 <p>
 (Some kind of trick of substitions)
 In computer science, artificial intelligence, and mathematical optimization, 
@@ -699,11 +776,11 @@ branch to follow. For example, it may approximate the exact solution.
 </div>
 
 <div id="outline-container-org7986b71" class="outline-3">
-<h3 id="org7986b71"><span class="section-number-3">1.35</span> Why <b>knowledge about knowledge is Power!</b> ?</h3>
+<h3 id="org7986b71"><span class="section-number-3">1.37</span> Why <b>knowledge about knowledge is Power!</b> ?</h3>
 </div>
 <div id="outline-container-orgdbaff71" class="outline-3">
-<h3 id="orgdbaff71"><span class="section-number-3">1.36</span> What is the story of <b>Bertrand Russell being the Pope</b></h3>
-<div class="outline-text-3" id="text-1-36">
+<h3 id="orgdbaff71"><span class="section-number-3">1.38</span> What is the story of <b>Bertrand Russell being the Pope</b></h3>
+<div class="outline-text-3" id="text-1-38">
 <p>
 The story goes that Bertrand Russell, in a lecture on logic, 
 mentioned that in the sense of material implication, <b>a false proposition implies any proposition.</b>
@@ -717,8 +794,8 @@ The set containing just me and the Pope has 2 members. But 2 = 1, so it has only
 </div>
 </div>
 <div id="outline-container-org23515dd" class="outline-3">
-<h3 id="org23515dd"><span class="section-number-3">1.37</span> What is Proof by Contradiction?</h3>
-<div class="outline-text-3" id="text-1-37">
+<h3 id="org23515dd"><span class="section-number-3">1.39</span> What is Proof by Contradiction?</h3>
+<div class="outline-text-3" id="text-1-39">
 <p>
 If an assertion implies somthing false then the assertion itself must be false!
 </p>
@@ -726,14 +803,14 @@ If an assertion implies somthing false then the assertion itself must be false!
 </div>
 
 <div id="outline-container-org51435d1" class="outline-3">
-<h3 id="org51435d1"><span class="section-number-3">1.38</span> What is a Proof?</h3>
+<h3 id="org51435d1"><span class="section-number-3">1.40</span> What is a Proof?</h3>
 </div>
 <div id="outline-container-orgc8b1413" class="outline-3">
-<h3 id="orgc8b1413"><span class="section-number-3">1.39</span> What is the Six Thinking Hats methdology?</h3>
+<h3 id="orgc8b1413"><span class="section-number-3">1.41</span> What is the Six Thinking Hats methdology?</h3>
 </div>
 <div id="outline-container-orgb6492ce" class="outline-3">
-<h3 id="orgb6492ce"><span class="section-number-3">1.40</span> AI and Six Thinking Hats?</h3>
-<div class="outline-text-3" id="text-1-40">
+<h3 id="orgb6492ce"><span class="section-number-3">1.42</span> AI and Six Thinking Hats?</h3>
+<div class="outline-text-3" id="text-1-42">
 <p>
 six thinking hats says arguments are not good, 
 how about we use that to make computers solve problems more
@@ -743,8 +820,8 @@ humanly!
 </div>
 
 <div id="outline-container-orgd1fa552" class="outline-3">
-<h3 id="orgd1fa552"><span class="section-number-3">1.41</span> What is Proof by Cases?</h3>
-<div class="outline-text-3" id="text-1-41">
+<h3 id="orgd1fa552"><span class="section-number-3">1.43</span> What is Proof by Cases?</h3>
+<div class="outline-text-3" id="text-1-43">
 <p>
 Reasoning by cases breaks a complicated problem into easier subproblems.
 Some philosphers* think that reasoning by cases is worrisome.
@@ -753,8 +830,8 @@ Some philosphers* think that reasoning by cases is worrisome.
 </div>
 
 <div id="outline-container-org0e27f43" class="outline-3">
-<h3 id="org0e27f43"><span class="section-number-3">1.42</span> What is P = NP</h3>
-<div class="outline-text-3" id="text-1-42">
+<h3 id="org0e27f43"><span class="section-number-3">1.44</span> What is P = NP</h3>
+<div class="outline-text-3" id="text-1-44">
 <p>
 P stands for polynomial time, NP stands for non-determinstic Polynomial time
 </p>
@@ -762,8 +839,8 @@ P stands for polynomial time, NP stands for non-determinstic Polynomial time
 </div>
 
 <div id="outline-container-orgedc098c" class="outline-3">
-<h3 id="orgedc098c"><span class="section-number-3">1.43</span> What is Polynomial Time?</h3>
-<div class="outline-text-3" id="text-1-43">
+<h3 id="orgedc098c"><span class="section-number-3">1.45</span> What is Polynomial Time?</h3>
+<div class="outline-text-3" id="text-1-45">
 <p>
 The time required for a computer to solve a problem,  
 where this time is a simple polynomial function of the size of the input.
@@ -779,8 +856,8 @@ a polynomial amount of computation time, or polynomial time.
 </div>
 
 <div id="outline-container-org49d0ee1" class="outline-3">
-<h3 id="org49d0ee1"><span class="section-number-3">1.44</span> What is a Polynomial Function?</h3>
-<div class="outline-text-3" id="text-1-44">
+<h3 id="org49d0ee1"><span class="section-number-3">1.46</span> What is a Polynomial Function?</h3>
+<div class="outline-text-3" id="text-1-46">
 <p>
 A polynomial function is a function such as a quadratic, a cubic, a quartic, and so on, involving
 only non-negative integer powers of x.
@@ -801,8 +878,8 @@ An example in three variables is x3 + 2xyz2 − yz + 1.
 </div>
 
 <div id="outline-container-org4361187" class="outline-3">
-<h3 id="org4361187"><span class="section-number-3">1.45</span> What is an Automaton?</h3>
-<div class="outline-text-3" id="text-1-45">
+<h3 id="org4361187"><span class="section-number-3">1.47</span> What is an Automaton?</h3>
+<div class="outline-text-3" id="text-1-47">
 <p>
 An automaton is a self-operating machine, or a machine or control mechanism designed to automatically 
 follow a predetermined sequence of operations, or respond to predetermined instructions.
@@ -811,8 +888,8 @@ follow a predetermined sequence of operations, or respond to predetermined instr
 </div>
 
 <div id="outline-container-org87904e1" class="outline-3">
-<h3 id="org87904e1"><span class="section-number-3">1.46</span> Whats the difference between Automaton and automata?</h3>
-<div class="outline-text-3" id="text-1-46">
+<h3 id="org87904e1"><span class="section-number-3">1.48</span> Whats the difference between Automaton and automata?</h3>
+<div class="outline-text-3" id="text-1-48">
 <p>
 <b>Automaton</b> is singular and <b>automata</b> is plural    
 </p>
@@ -820,8 +897,8 @@ follow a predetermined sequence of operations, or respond to predetermined instr
 </div>
 
 <div id="outline-container-orgf09f9e3" class="outline-3">
-<h3 id="orgf09f9e3"><span class="section-number-3">1.47</span> What is Finite Automaton?</h3>
-<div class="outline-text-3" id="text-1-47">
+<h3 id="orgf09f9e3"><span class="section-number-3">1.49</span> What is Finite Automaton?</h3>
+<div class="outline-text-3" id="text-1-49">
 <ul class="org-ul">
 <li>A Formal System</li>
 <li>Remembers only a finite amount of infromation.</li>
@@ -835,8 +912,8 @@ transitions.
 </div>
 </div>
 <div id="outline-container-org63591ca" class="outline-3">
-<h3 id="org63591ca"><span class="section-number-3">1.48</span> Whats the importance of Finite Automata?</h3>
-<div class="outline-text-3" id="text-1-48">
+<h3 id="org63591ca"><span class="section-number-3">1.50</span> Whats the importance of Finite Automata?</h3>
+<div class="outline-text-3" id="text-1-50">
 <ul class="org-ul">
 <li>Used for boh design and verification of circuits and communication protocols</li>
 <li>Used for many text-processing applications.</li>
@@ -847,8 +924,8 @@ transitions.
 </div>
 
 <div id="outline-container-org9131680" class="outline-3">
-<h3 id="org9131680"><span class="section-number-3">1.49</span> What is a language of an Automaton?</h3>
-<div class="outline-text-3" id="text-1-49">
+<h3 id="org9131680"><span class="section-number-3">1.51</span> What is a language of an Automaton?</h3>
+<div class="outline-text-3" id="text-1-51">
 <ul class="org-ul">
 <li>The set of strings accepted by an automaton A is the langauge of A.</li>
 <li>Denoted L(A).</li>
@@ -859,8 +936,8 @@ transitions.
 </div>
 
 <div id="outline-container-org3d507a2" class="outline-3">
-<h3 id="org3d507a2"><span class="section-number-3">1.50</span> What is an alphabet?</h3>
-<div class="outline-text-3" id="text-1-50">
+<h3 id="org3d507a2"><span class="section-number-3">1.52</span> What is an alphabet?</h3>
+<div class="outline-text-3" id="text-1-52">
 <p>
 An alphabet is any finite set of symbols.
 </p>
@@ -874,8 +951,8 @@ An alphabet is any finite set of symbols.
 </div>
 </div>
 <div id="outline-container-org1d9dbf2" class="outline-3">
-<h3 id="org1d9dbf2"><span class="section-number-3">1.51</span> What is a <b>string</b> over an alphabet &Sigma; ?</h3>
-<div class="outline-text-3" id="text-1-51">
+<h3 id="org1d9dbf2"><span class="section-number-3">1.53</span> What is a <b>string</b> over an alphabet &Sigma; ?</h3>
+<div class="outline-text-3" id="text-1-53">
 <p>
 A string over an alphabet &Sigma; is a list, each element of 
 which is a member of \[ \Sigma \] 
@@ -886,8 +963,8 @@ which is a member of \[ \Sigma \]
 </div>
 
 <div id="outline-container-orgba41532" class="outline-3">
-<h3 id="orgba41532"><span class="section-number-3">1.52</span> How can a computer program(finite automata) learn from experiance?</h3>
-<div class="outline-text-3" id="text-1-52">
+<h3 id="orgba41532"><span class="section-number-3">1.54</span> How can a computer program(finite automata) learn from experiance?</h3>
+<div class="outline-text-3" id="text-1-54">
 <p>
 A computer program is said to learn from experience E with respect
 to some class of tasks T and performance measure P, if its performance at tasks in
@@ -919,8 +996,8 @@ In order to complete the design of the learning system, we must now choose
 </div>
 
 <div id="outline-container-orgbc45198" class="outline-3">
-<h3 id="orgbc45198"><span class="section-number-3">1.53</span> How to analog Professor-students passing on of knowledge to Machine Learning?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
-<div class="outline-text-3" id="text-1-53">
+<h3 id="orgbc45198"><span class="section-number-3">1.55</span> How to analog Professor-students passing on of knowledge to Machine Learning?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
+<div class="outline-text-3" id="text-1-55">
 <p>
 Prof. Automaton Probem :D 
 </p>
@@ -940,15 +1017,15 @@ machines could be more capable of coperating towards an evolution.
 </div>
 
 <div id="outline-container-org00b15e3" class="outline-3">
-<h3 id="org00b15e3"><span class="section-number-3">1.54</span> How to design a machine learning system?</h3>
-<div class="outline-text-3" id="text-1-54">
+<h3 id="org00b15e3"><span class="section-number-3">1.56</span> How to design a machine learning system?</h3>
+<div class="outline-text-3" id="text-1-56">
 <p>
 (idea) if we apply genetic algorithms on these design choices, programs create other programs?
 </p>
 </div>
 <div id="outline-container-org9d7cc4a" class="outline-4">
-<h4 id="org9d7cc4a"><span class="section-number-4">1.54.1</span> Choosing the training experiance:</h4>
-<div class="outline-text-4" id="text-1-54-1">
+<h4 id="org9d7cc4a"><span class="section-number-4">1.56.1</span> Choosing the training experiance:</h4>
+<div class="outline-text-4" id="text-1-56-1">
 <ol class="org-ol">
 <li>Does the training experience provides direct or indirect feedback regarding the choices</li>
 </ol>
@@ -987,8 +1064,8 @@ it is important to keep in mind that this assumption must often be violated in p
 </div>
 
 <div id="outline-container-orga16768e" class="outline-4">
-<h4 id="orga16768e"><span class="section-number-4">1.54.2</span> Choosing the Target function</h4>
-<div class="outline-text-4" id="text-1-54-2">
+<h4 id="orga16768e"><span class="section-number-4">1.56.2</span> Choosing the Target function</h4>
+<div class="outline-text-4" id="text-1-56-2">
 <ol class="org-ol">
 <li>How to determine what type of knowledge will be learned?</li>
 <li><p>
@@ -1088,25 +1165,25 @@ distinguish it from the ideal target function V.
 </div>
 
 <div id="outline-container-org54c4172" class="outline-4">
-<h4 id="org54c4172"><span class="section-number-4">1.54.3</span> Choosing a Representation for the Target Function</h4>
+<h4 id="org54c4172"><span class="section-number-4">1.56.3</span> Choosing a Representation for the Target Function</h4>
 </div>
 <div id="outline-container-org81a6602" class="outline-4">
-<h4 id="org81a6602"><span class="section-number-4">1.54.4</span> Choosing a Function Approximation Algorithm</h4>
+<h4 id="org81a6602"><span class="section-number-4">1.56.4</span> Choosing a Function Approximation Algorithm</h4>
 </div>
 </div>
 
 <div id="outline-container-orge8bc354" class="outline-3">
-<h3 id="orge8bc354"><span class="section-number-3">1.55</span> What are Karp's 21 NP-complete problems?</h3>
+<h3 id="orge8bc354"><span class="section-number-3">1.57</span> What are Karp's 21 NP-complete problems?</h3>
 </div>
 <div id="outline-container-org3a258c6" class="outline-3">
-<h3 id="org3a258c6"><span class="section-number-3">1.56</span> What are Sudoku solving algorithms?</h3>
+<h3 id="org3a258c6"><span class="section-number-3">1.58</span> What are Sudoku solving algorithms?</h3>
 </div>
 <div id="outline-container-org2a4904d" class="outline-3">
-<h3 id="org2a4904d"><span class="section-number-3">1.57</span> How to visualize Eleven Dimensions?</h3>
+<h3 id="org2a4904d"><span class="section-number-3">1.59</span> How to visualize Eleven Dimensions?</h3>
 </div>
 <div id="outline-container-org59cbb96" class="outline-3">
-<h3 id="org59cbb96"><span class="section-number-3">1.58</span> What is Donald Knuth's Dancing Links technique?</h3>
-<div class="outline-text-3" id="text-1-58">
+<h3 id="org59cbb96"><span class="section-number-3">1.60</span> What is Donald Knuth's Dancing Links technique?</h3>
+<div class="outline-text-3" id="text-1-60">
 <p>
 In computer science, dancing links is the technique suggested by Donald Knuth to efficiently implement his Algorithm X.
 </p>
@@ -1114,8 +1191,8 @@ In computer science, dancing links is the technique suggested by Donald Knuth to
 </div>
 
 <div id="outline-container-org5ec6345" class="outline-3">
-<h3 id="org5ec6345"><span class="section-number-3">1.59</span> What is Donad Knuth's Algorithm X?</h3>
-<div class="outline-text-3" id="text-1-59">
+<h3 id="org5ec6345"><span class="section-number-3">1.61</span> What is Donad Knuth's Algorithm X?</h3>
+<div class="outline-text-3" id="text-1-61">
 <p>
 Algorithm X is a recursive, nondeterministic, depth-first, backtracking algorithm that finds all solutions to the exact cover problem. 
 Some of the better-known exact cover problems include tiling, the n queens problem, and Sudoku.
@@ -1124,8 +1201,8 @@ Some of the better-known exact cover problems include tiling, the n queens probl
 </div>
 
 <div id="outline-container-org02e5be4" class="outline-3">
-<h3 id="org02e5be4"><span class="section-number-3">1.60</span> What AI is about?</h3>
-<div class="outline-text-3" id="text-1-60">
+<h3 id="org02e5be4"><span class="section-number-3">1.62</span> What AI is about?</h3>
+<div class="outline-text-3" id="text-1-62">
 <p>
 AI is about Algorithms enabled by constrains, exposed by representations, 
 that support the making of Models that facilitate an understanding of 
@@ -1135,8 +1212,8 @@ thinking, preception, and actions.
 </div>
 
 <div id="outline-container-org8588b97" class="outline-3">
-<h3 id="org8588b97"><span class="section-number-3">1.61</span> What are the Greek Letters?</h3>
-<div class="outline-text-3" id="text-1-61">
+<h3 id="org8588b97"><span class="section-number-3">1.63</span> What are the Greek Letters?</h3>
+<div class="outline-text-3" id="text-1-63">
 <ol class="org-ol">
 <li>Α α (alpha)</li>
 <li>Β β (beta)</li>
@@ -1168,14 +1245,14 @@ thinking, preception, and actions.
 </div>
 
 <div id="outline-container-org57d18d8" class="outline-3">
-<h3 id="org57d18d8"><span class="section-number-3">1.62</span> What is Declarative Kknowledge?</h3>
+<h3 id="org57d18d8"><span class="section-number-3">1.64</span> What is Declarative Kknowledge?</h3>
 </div>
 <div id="outline-container-org46abd7d" class="outline-3">
-<h3 id="org46abd7d"><span class="section-number-3">1.63</span> What is Imperative Kknowledge?</h3>
+<h3 id="org46abd7d"><span class="section-number-3">1.65</span> What is Imperative Kknowledge?</h3>
 </div>
 <div id="outline-container-org92b6ca4" class="outline-3">
-<h3 id="org92b6ca4"><span class="section-number-3">1.64</span> What are Turing's 6 primative instructions?</h3>
-<div class="outline-text-3" id="text-1-64">
+<h3 id="org92b6ca4"><span class="section-number-3">1.66</span> What are Turing's 6 primative instructions?</h3>
+<div class="outline-text-3" id="text-1-66">
 <p>
 (P) Alan Turing said there are only 6 primative instructions needed to create any program.
 </p>
@@ -1183,8 +1260,8 @@ thinking, preception, and actions.
 </div>
 
 <div id="outline-container-org9c50a1a" class="outline-3">
-<h3 id="org9c50a1a"><span class="section-number-3">1.65</span> What is Memoization?</h3>
-<div class="outline-text-3" id="text-1-65">
+<h3 id="org9c50a1a"><span class="section-number-3">1.67</span> What is Memoization?</h3>
+<div class="outline-text-3" id="text-1-67">
 <ul class="org-ul">
 <li>Memoization is a very common techqiune, we use memoization to solve a lot of problems.</li>
 <li>In simple terms, we are just remmbering what we did before and just look it up.</li>
@@ -1194,8 +1271,8 @@ thinking, preception, and actions.
 </div>
 
 <div id="outline-container-org36dc231" class="outline-3">
-<h3 id="org36dc231"><span class="section-number-3">1.66</span> When to use Memoization?</h3>
-<div class="outline-text-3" id="text-1-66">
+<h3 id="org36dc231"><span class="section-number-3">1.68</span> When to use Memoization?</h3>
+<div class="outline-text-3" id="text-1-68">
 <p>
 Thus in a situation where you remmber what the answer was and rather than recalculating it again, we just look it up.
 The concept of memoization is at the heart of dynamic programming.
@@ -1208,11 +1285,11 @@ The concept of memoization is at the heart of dynamic programming.
 </div>
 
 <div id="outline-container-orgf8cc740" class="outline-3">
-<h3 id="orgf8cc740"><span class="section-number-3">1.67</span> What is Dynamic Programming?</h3>
+<h3 id="orgf8cc740"><span class="section-number-3">1.69</span> What is Dynamic Programming?</h3>
 </div>
 <div id="outline-container-orgfbbe711" class="outline-3">
-<h3 id="orgfbbe711"><span class="section-number-3">1.68</span> What are Prime Numbers?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="zpd">zpd</span>&#xa0;<span class="number_theory">number_theory</span></span></h3>
-<div class="outline-text-3" id="text-1-68">
+<h3 id="orgfbbe711"><span class="section-number-3">1.70</span> What are Prime Numbers?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="zpd">zpd</span>&#xa0;<span class="number_theory">number_theory</span></span></h3>
+<div class="outline-text-3" id="text-1-70">
 <p>
 (p) somthing is a predicate
 (i) somthing is impelied
@@ -1221,8 +1298,8 @@ The concept of memoization is at the heart of dynamic programming.
 </div>
 </div>
 <div id="outline-container-org6e04083" class="outline-3">
-<h3 id="org6e04083"><span class="section-number-3">1.69</span> What is Topological Sorting?</h3>
-<div class="outline-text-3" id="text-1-69">
+<h3 id="org6e04083"><span class="section-number-3">1.71</span> What is Topological Sorting?</h3>
+<div class="outline-text-3" id="text-1-71">
 <p>
 Is a type of Depth First Search, 
 </p>
@@ -1234,8 +1311,8 @@ Is a type of Depth First Search,
 </div>
 
 <div id="outline-container-org6221b92" class="outline-3">
-<h3 id="org6221b92"><span class="section-number-3">1.70</span> What is Turing Complete?</h3>
-<div class="outline-text-3" id="text-1-70">
+<h3 id="org6221b92"><span class="section-number-3">1.72</span> What is Turing Complete?</h3>
+<div class="outline-text-3" id="text-1-72">
 <ul class="org-ul">
 <li>In computability theory, a system of data-manipulation rules (such as a computer's instruction set,</li>
 </ul>
@@ -1248,12 +1325,12 @@ The concept is named after English mathematician Alan Turing. A classic example 
 </div>
 
 <div id="outline-container-orgeeb0db9" class="outline-3">
-<h3 id="orgeeb0db9"><span class="section-number-3">1.71</span> What is Turing Equivalence?</h3>
+<h3 id="orgeeb0db9"><span class="section-number-3">1.73</span> What is Turing Equivalence?</h3>
 </div>
 
 <div id="outline-container-org38ef0ca" class="outline-3">
-<h3 id="org38ef0ca"><span class="section-number-3">1.72</span> What is Python?</h3>
-<div class="outline-text-3" id="text-1-72">
+<h3 id="org38ef0ca"><span class="section-number-3">1.74</span> What is Python?</h3>
+<div class="outline-text-3" id="text-1-74">
 <ul class="org-ul">
 <li>interperted langauge, (can also complie it)</li>
 <li>a variable is a name of an objective</li>
@@ -1264,8 +1341,8 @@ The concept is named after English mathematician Alan Turing. A classic example 
 </div>
 
 <div id="outline-container-org4a8310c" class="outline-3">
-<h3 id="org4a8310c"><span class="section-number-3">1.73</span> What is Machine Learning?</h3>
-<div class="outline-text-3" id="text-1-73">
+<h3 id="org4a8310c"><span class="section-number-3">1.75</span> What is Machine Learning?</h3>
+<div class="outline-text-3" id="text-1-75">
 <ul class="org-ul">
 <li>Machine Learning is a class of algorithms which is data-driven,</li>
 </ul>
@@ -1294,8 +1371,8 @@ Semi-supervised: Some data is labeled but most of it is unlabeled and a mixture 
 </div>
 
 <div id="outline-container-org6f486c9" class="outline-3">
-<h3 id="org6f486c9"><span class="section-number-3">1.74</span> What is Supervised Learning?</h3>
-<div class="outline-text-3" id="text-1-74">
+<h3 id="org6f486c9"><span class="section-number-3">1.76</span> What is Supervised Learning?</h3>
+<div class="outline-text-3" id="text-1-76">
 <ul class="org-ul">
 <li>Supervised learning is when the data you feed your algorithm is "tagged" to help your logic make decisions.</li>
 <li>Example: Bayes spam filtering, where you have to flag an item as spam to refine the results.</li>
@@ -1321,12 +1398,12 @@ The computer is presented with example inputs and their desired outputs, given b
 </div>
 </div>
 <div id="outline-container-orgbb21ea3" class="outline-3">
-<h3 id="orgbb21ea3"><span class="section-number-3">1.75</span> When to use supervised learning?</h3>
+<h3 id="orgbb21ea3"><span class="section-number-3">1.77</span> When to use supervised learning?</h3>
 </div>
 
 <div id="outline-container-orge814c9c" class="outline-3">
-<h3 id="orge814c9c"><span class="section-number-3">1.76</span> What is Unsupervised Learning?</h3>
-<div class="outline-text-3" id="text-1-76">
+<h3 id="orge814c9c"><span class="section-number-3">1.78</span> What is Unsupervised Learning?</h3>
+<div class="outline-text-3" id="text-1-78">
 <ul class="org-ul">
 <li>You should use unsupervised learning methods when you need a large amount of data to train your models, and the willingness and ability to experiment and explore, and of course a challenge that isn’t well solved via more-established methods.With unsupervised learning it is possible to learn larger and more complex models than with supervised learning.Here is a good example on it</li>
 <li>Unsupervised learning are types of algorithms that try to find correlations without any external inputs other than the raw data.</li>
@@ -1349,11 +1426,11 @@ One basic thing that you might want to do with data is to visualize it. It is th
 </div>
 </div>
 <div id="outline-container-orgbb3d037" class="outline-3">
-<h3 id="orgbb3d037"><span class="section-number-3">1.77</span> When to use unsupervised learning?</h3>
+<h3 id="orgbb3d037"><span class="section-number-3">1.79</span> When to use unsupervised learning?</h3>
 </div>
 <div id="outline-container-org3dcf95c" class="outline-3">
-<h3 id="org3dcf95c"><span class="section-number-3">1.78</span> What is DeepCoder?</h3>
-<div class="outline-text-3" id="text-1-78">
+<h3 id="org3dcf95c"><span class="section-number-3">1.80</span> What is DeepCoder?</h3>
+<div class="outline-text-3" id="text-1-80">
 <ul class="org-ul">
 <li>We develop a first line of attack for solving programming competition-style prob-</li>
 </ul>
@@ -1371,8 +1448,8 @@ comparable to the simplest problems on programming competition websites.
 </div>
 
 <div id="outline-container-org8664e8f" class="outline-3">
-<h3 id="org8664e8f"><span class="section-number-3">1.79</span> What is Semi-supervised Learning?</h3>
-<div class="outline-text-3" id="text-1-79">
+<h3 id="org8664e8f"><span class="section-number-3">1.81</span> What is Semi-supervised Learning?</h3>
+<div class="outline-text-3" id="text-1-81">
 <ul class="org-ul">
 <li>A problem that sits in between supervised and unsupervised learning called semi-supervised learning.</li>
 <li>Problems where you have a large amount of input data (X) and only some of the data is labeled (Y)</li>
@@ -1392,14 +1469,14 @@ feed that data back into the supervised learning algorithm as training data and 
 </div>
 </div>
 <div id="outline-container-org79529c8" class="outline-3">
-<h3 id="org79529c8"><span class="section-number-3">1.80</span> What is active learning?</h3>
+<h3 id="org79529c8"><span class="section-number-3">1.82</span> What is active learning?</h3>
 </div>
 <div id="outline-container-orga0b2398" class="outline-3">
-<h3 id="orga0b2398"><span class="section-number-3">1.81</span> What is PageRank?</h3>
+<h3 id="orga0b2398"><span class="section-number-3">1.83</span> What is PageRank?</h3>
 </div>
 <div id="outline-container-org2b30b6f" class="outline-3">
-<h3 id="org2b30b6f"><span class="section-number-3">1.82</span> When to use Octave?</h3>
-<div class="outline-text-3" id="text-1-82">
+<h3 id="org2b30b6f"><span class="section-number-3">1.84</span> When to use Octave?</h3>
+<div class="outline-text-3" id="text-1-84">
 <p>
 (P) Always use octave for prototyping machine learning algorithms, and only after that migrate it in another language.
 (P) if we use octave as our programming enviroment for machine learning, will learn much more faster than
@@ -1409,8 +1486,8 @@ using python, C++, or Java, as it is just functions.
 </div>
 
 <div id="outline-container-org32bec3c" class="outline-3">
-<h3 id="org32bec3c"><span class="section-number-3">1.83</span> What is the Cocktail Party Problem?</h3>
-<div class="outline-text-3" id="text-1-83">
+<h3 id="org32bec3c"><span class="section-number-3">1.85</span> What is the Cocktail Party Problem?</h3>
+<div class="outline-text-3" id="text-1-85">
 <ul class="org-ul">
 <li>in only one line of code! in octave.</li>
 </ul>
@@ -1418,8 +1495,8 @@ using python, C++, or Java, as it is just functions.
 </div>
 
 <div id="outline-container-org77af926" class="outline-3">
-<h3 id="org77af926"><span class="section-number-3">1.84</span> What is Linear Regression?</h3>
-<div class="outline-text-3" id="text-1-84">
+<h3 id="org77af926"><span class="section-number-3">1.86</span> What is Linear Regression?</h3>
+<div class="outline-text-3" id="text-1-86">
 <ul class="org-ul">
 <li>Regression means " انحسار"</li>
 </ul>
@@ -1439,11 +1516,11 @@ variables are predicted, rather than a single scalar variable.)
 </div>
 
 <div id="outline-container-org5222563" class="outline-3">
-<h3 id="org5222563"><span class="section-number-3">1.85</span> What is Linear Regression with one variable (Univariate Linear Regression)?</h3>
-<div class="outline-text-3" id="text-1-85">
+<h3 id="org5222563"><span class="section-number-3">1.87</span> What is Linear Regression with one variable (Univariate Linear Regression)?</h3>
+<div class="outline-text-3" id="text-1-87">
 </div><div id="outline-container-org9486039" class="outline-4">
-<h4 id="org9486039"><span class="section-number-4">1.85.1</span> Model Representation</h4>
-<div class="outline-text-4" id="text-1-85-1">
+<h4 id="org9486039"><span class="section-number-4">1.87.1</span> Model Representation</h4>
+<div class="outline-text-4" id="text-1-87-1">
 <p>
 We have data that is plotted on a graph.
 This is supervised learning as we are given the "right answer" for each example in the data.
@@ -1469,8 +1546,8 @@ size of house &rarr;  h   &rarr; estimated price
 
 
 <div id="outline-container-org1dd1d32" class="outline-4">
-<h4 id="org1dd1d32"><span class="section-number-4">1.85.2</span> Cost Function</h4>
-<div class="outline-text-4" id="text-1-85-2">
+<h4 id="org1dd1d32"><span class="section-number-4">1.87.2</span> Cost Function</h4>
+<div class="outline-text-4" id="text-1-87-2">
 <p>
 \ o = &theta; + &Theta;1 x 
 </p>
@@ -1479,16 +1556,16 @@ size of house &rarr;  h   &rarr; estimated price
 </div>
 
 <div id="outline-container-orgb1169c8" class="outline-4">
-<h4 id="orgb1169c8"><span class="section-number-4">1.85.3</span> Gardient Descent</h4>
-<div class="outline-text-4" id="text-1-85-3">
+<h4 id="orgb1169c8"><span class="section-number-4">1.87.3</span> Gardient Descent</h4>
+<div class="outline-text-4" id="text-1-87-3">
 </div><ol class="org-ol"><li><a id="org9067266"></a>Gardient Descent Intuition<br /></li>
 <li><a id="orgaa4413c"></a>Gardient Descent for Linear Regression<br /></li></ol>
 </div>
 </div>
 
 <div id="outline-container-orgb1bfab8" class="outline-3">
-<h3 id="orgb1bfab8"><span class="section-number-3">1.86</span> What is Focused Crawling?</h3>
-<div class="outline-text-3" id="text-1-86">
+<h3 id="orgb1bfab8"><span class="section-number-3">1.88</span> What is Focused Crawling?</h3>
+<div class="outline-text-3" id="text-1-88">
 <p>
 A focused crawler is a web crawler that collects Web pages that satisfy some specific property, 
 by carefully prioritizing the crawl frontier and managing the hyperlink exploration process. 
@@ -1505,8 +1582,8 @@ a Web text index, backlinks, or any other Web artifact.
 </div>
 
 <div id="outline-container-org80d63dc" class="outline-3">
-<h3 id="org80d63dc"><span class="section-number-3">1.87</span> What is Radix Sort?</h3>
-<div class="outline-text-3" id="text-1-87">
+<h3 id="org80d63dc"><span class="section-number-3">1.89</span> What is Radix Sort?</h3>
+<div class="outline-text-3" id="text-1-89">
 <p>
 <a href="http://www.geeksforgeeks.org/radix-sort/">http://www.geeksforgeeks.org/radix-sort/</a> 
 </p>
@@ -1514,23 +1591,23 @@ a Web text index, backlinks, or any other Web artifact.
 </div>
 
 <div id="outline-container-org6919658" class="outline-3">
-<h3 id="org6919658"><span class="section-number-3">1.88</span> What is an Order Statistic Tree?</h3>
+<h3 id="org6919658"><span class="section-number-3">1.90</span> What is an Order Statistic Tree?</h3>
 </div>
 <div id="outline-container-org9fc1bd2" class="outline-3">
-<h3 id="org9fc1bd2"><span class="section-number-3">1.89</span> What is a B-tree?</h3>
+<h3 id="org9fc1bd2"><span class="section-number-3">1.91</span> What is a B-tree?</h3>
 </div>
 <div id="outline-container-orgce7be01" class="outline-3">
-<h3 id="orgce7be01"><span class="section-number-3">1.90</span> What is Binary Search Tree (BST)?</h3>
+<h3 id="orgce7be01"><span class="section-number-3">1.92</span> What is Binary Search Tree (BST)?</h3>
 </div>
 
 
 <div id="outline-container-org6407d17" class="outline-3">
-<h3 id="org6407d17"><span class="section-number-3">1.91</span> What is <b>release the prisoners topology</b> ?</h3>
+<h3 id="org6407d17"><span class="section-number-3">1.93</span> What is <b>release the prisoners topology</b> ?</h3>
 </div>
 
-<div id="outline-container-org5ed2f3a" class="outline-3">
-<h3 id="org5ed2f3a"><span class="section-number-3">1.92</span> References</h3>
-<div class="outline-text-3" id="text-1-92">
+<div id="outline-container-org112115a" class="outline-3">
+<h3 id="org112115a"><span class="section-number-3">1.94</span> References</h3>
+<div class="outline-text-3" id="text-1-94">
 <p>
 +begin<sub>src</sub> sh :results output :exports results
 ls /home/zotherstupidguy/Study/3.Sources/MIT6.042JMathematicsforComputerScienceSpring2015/*.mp4 | sort -n
@@ -1546,13 +1623,13 @@ ls /home/zotherstupidguy/Study/3.Sources/MIT6.042JMathematicsforComputerScienceS
 </div>
 
 <div id="outline-container-org4629282" class="outline-4">
-<h4 id="org4629282"><span class="section-number-4">1.92.1</span> <span class="todo TODO">TODO</span> MITIntroductiontoComputerScienceandProgramming(Python) <code>[%]</code></h4>
-<div class="outline-text-4" id="text-1-92-1">
-</div><ol class="org-ol"><li><a id="org2dfa4ee"></a><span class="done DONE">DONE</span> 01-Lecture 01_ Introduction to 6.00<br /><div class="outline-text-5" id="text-1-92-1-1">
+<h4 id="org4629282"><span class="section-number-4">1.94.1</span> <span class="todo TODO">TODO</span> MITIntroductiontoComputerScienceandProgramming(Python) <code>[%]</code></h4>
+<div class="outline-text-4" id="text-1-94-1">
+</div><ol class="org-ol"><li><a id="org2dfa4ee"></a><span class="done DONE">DONE</span> 01-Lecture 01_ Introduction to 6.00<br /><div class="outline-text-5" id="text-1-94-1-1">
 </div></li>
-<li><a id="orge767e2d"></a><span class="done DONE">DONE</span> 02-Lecture<br /><div class="outline-text-5" id="text-1-92-1-2">
+<li><a id="orge767e2d"></a><span class="done DONE">DONE</span> 02-Lecture<br /><div class="outline-text-5" id="text-1-94-1-2">
 </div></li>
-<li><a id="org13a6bb0"></a><span class="done DONE">DONE</span> 03-Lecture<br /><div class="outline-text-5" id="text-1-92-1-3">
+<li><a id="org13a6bb0"></a><span class="done DONE">DONE</span> 03-Lecture<br /><div class="outline-text-5" id="text-1-94-1-3">
 </div></li>
 <li><a id="org9dc7d15"></a><span class="todo TODO">TODO</span> 04-Lecture<br /></li>
 <li><a id="orgb54b49f"></a><span class="todo TODO">TODO</span> 31-Lecture 21_ Using Graphs to Model Problems, Part 1<br /></li>
@@ -1561,7 +1638,7 @@ ls /home/zotherstupidguy/Study/3.Sources/MIT6.042JMathematicsforComputerScienceS
 </div>
 
 <div id="outline-container-orgf2f22b3" class="outline-4">
-<h4 id="an-extra-special-headline"><a id="orgf2f22b3"></a><span class="section-number-4">1.92.2</span> <span class="todo TODO">TODO</span> TTC VIDEO - The Art and Craft of Mathematical Problem Solving <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="problemsolving">problemsolving</span></span></h4>
+<h4 id="an-extra-special-headline"><a id="orgf2f22b3"></a><span class="section-number-4">1.94.2</span> <span class="todo TODO">TODO</span> TTC VIDEO - The Art and Craft of Mathematical Problem Solving <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="problemsolving">problemsolving</span></span></h4>
 <div class="outline-text-4" id="text-an-extra-special-headline">
 <dl class="org-dl">
 <dt>Diference between Problem and Exercise</dt><dd><p>
@@ -1580,18 +1657,18 @@ information about the source here, author, edition, date, who is using it in uni
 </div>
 
 <div id="outline-container-org53a0ed1" class="outline-4">
-<h4 id="org53a0ed1"><span class="section-number-4">1.92.3</span> <span class="todo TODO">TODO</span> Cracking the Coding Interview      <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="book">book</span>&#xa0;<span class="zpd">zpd</span>&#xa0;<span class="interview">interview</span></span></h4>
-<div class="outline-text-4" id="text-1-92-3">
+<h4 id="org53a0ed1"><span class="section-number-4">1.94.3</span> <span class="todo TODO">TODO</span> Cracking the Coding Interview      <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="book">book</span>&#xa0;<span class="zpd">zpd</span>&#xa0;<span class="interview">interview</span></span></h4>
+<div class="outline-text-4" id="text-1-94-3">
 </div>
-<ul class="org-ul"><li><a id="org9cd5d04"></a><span class="todo TODO">TODO</span> Chapter1<br /><ul class="org-ul"><li><a id="orgcd9c8a0"></a><span class="todo TODO">TODO</span> name of the heading in the chapter<br /></li>
-<li><a id="org9a0914a"></a><span class="todo TODO">TODO</span> name of the heading in the chapter<br /></li></ul></li>
+<ul class="org-ul"><li><a id="org9cd5d04"></a><span class="todo TODO">TODO</span> Chapter1<br /><ul class="org-ul"><li><a id="orgd59c477"></a><span class="todo TODO">TODO</span> name of the heading in the chapter<br /></li>
+<li><a id="org486d54a"></a><span class="todo TODO">TODO</span> name of the heading in the chapter<br /></li></ul></li>
 <li><a id="orgc617368"></a><span class="done DONE">DONE</span> sfsf<br /></li>
 <li><a id="org8d6924c"></a>sfsfsfsf<br /></li></ul>
 </div>
 
 <div id="outline-container-orgc623618" class="outline-4">
-<h4 id="orgc623618"><span class="section-number-4">1.92.4</span> <span class="todo TODO">TODO</span> arabic competitive programming   <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
-<div class="outline-text-4" id="text-1-92-4">
+<h4 id="orgc623618"><span class="section-number-4">1.94.4</span> <span class="todo TODO">TODO</span> arabic competitive programming   <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<div class="outline-text-4" id="text-1-94-4">
 <ul class="org-ul">
 <li>name of each eposide extracted via a script from Emacs and into a list here</li>
 </ul>
@@ -1599,8 +1676,8 @@ information about the source here, author, edition, date, who is using it in uni
 </div>
 
 <div id="outline-container-org2be35cf" class="outline-4">
-<h4 id="org2be35cf"><span class="section-number-4">1.92.5</span> <span class="todo TODO">TODO</span> Introduction to the Theory of Computation - 3rd - Spiser <code>[%]</code></h4>
-<div class="outline-text-4" id="text-1-92-5">
+<h4 id="org2be35cf"><span class="section-number-4">1.94.5</span> <span class="todo TODO">TODO</span> Introduction to the Theory of Computation - 3rd - Spiser <code>[%]</code></h4>
+<div class="outline-text-4" id="text-1-94-5">
 <ul class="org-ul">
 <li>name of each chapter a list here</li>
 </ul>
@@ -1608,32 +1685,32 @@ information about the source here, author, edition, date, who is using it in uni
 </div>
 
 <div id="outline-container-orgcfcce29" class="outline-4">
-<h4 id="orgcfcce29"><span class="section-number-4">1.92.6</span> <span class="todo TODO">TODO</span> hackerrank                 <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<h4 id="orgcfcce29"><span class="section-number-4">1.94.6</span> <span class="todo TODO">TODO</span> hackerrank                 <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
 </div>
 <div id="outline-container-orgd4a3986" class="outline-4">
-<h4 id="orgd4a3986"><span class="section-number-4">1.92.7</span> <span class="todo TODO">TODO</span> codejam                    <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<h4 id="orgd4a3986"><span class="section-number-4">1.94.7</span> <span class="todo TODO">TODO</span> codejam                    <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
 </div>
 <div id="outline-container-org0b80069" class="outline-4">
-<h4 id="org0b80069"><span class="section-number-4">1.92.8</span> <span class="todo TODO">TODO</span> codemasrytube                <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<h4 id="org0b80069"><span class="section-number-4">1.94.8</span> <span class="todo TODO">TODO</span> codemasrytube                <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
 </div>
 <div id="outline-container-org5520a47" class="outline-4">
-<h4 id="org5520a47"><span class="section-number-4">1.92.9</span> <span class="todo TODO">TODO</span> mycodeschool                  <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<h4 id="org5520a47"><span class="section-number-4">1.94.9</span> <span class="todo TODO">TODO</span> mycodeschool                  <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
 </div>
 <div id="outline-container-org607537f" class="outline-4">
-<h4 id="org607537f"><span class="section-number-4">1.92.10</span> <span class="todo TODO">TODO</span> saurabhschool              <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<h4 id="org607537f"><span class="section-number-4">1.94.10</span> <span class="todo TODO">TODO</span> saurabhschool              <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
 </div>
 <div id="outline-container-org1e07679" class="outline-4">
-<h4 id="org1e07679"><span class="section-number-4">1.92.11</span> <span class="todo TODO">TODO</span> codinginterviewhub      <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<h4 id="org1e07679"><span class="section-number-4">1.94.11</span> <span class="todo TODO">TODO</span> codinginterviewhub      <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
 </div>
 <div id="outline-container-orgabf00fa" class="outline-4">
-<h4 id="orgabf00fa"><span class="section-number-4">1.92.12</span> <span class="todo TODO">TODO</span> conor                <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<h4 id="orgabf00fa"><span class="section-number-4">1.94.12</span> <span class="todo TODO">TODO</span> conor                <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
 </div>
 <div id="outline-container-org6386c1d" class="outline-4">
-<h4 id="org6386c1d"><span class="section-number-4">1.92.13</span> <span class="todo TODO">TODO</span> geeksforgeeks <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<h4 id="org6386c1d"><span class="section-number-4">1.94.13</span> <span class="todo TODO">TODO</span> geeksforgeeks <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
 </div>
 <div id="outline-container-org881bdd6" class="outline-4">
-<h4 id="org881bdd6"><span class="section-number-4">1.92.14</span> <span class="todo TODO">TODO</span> Elementry Number Theory - 6th Edition - Kenneth H. Rosen <code>[%]</code></h4>
-<div class="outline-text-4" id="text-1-92-14">
+<h4 id="org881bdd6"><span class="section-number-4">1.94.14</span> <span class="todo TODO">TODO</span> Elementry Number Theory - 6th Edition - Kenneth H. Rosen <code>[%]</code></h4>
+<div class="outline-text-4" id="text-1-94-14">
 <p>
 <a href="3.Sources/NumberTheory/Books/Elementary%20Number%20Theory%20-%206th%20Edition%20-%20Kenneth%20H.%20Rosen.pdf"><a href="3.Sources/NumberTheory/Books/Elementary">3.Sources/NumberTheory/Books/Elementary</a> Number Theory - 6th Edition - Kenneth H. Rosen.pdf</a>  
 </p>
@@ -1645,8 +1722,8 @@ information about the source here, author, edition, date, who is using it in uni
 </div>
 
 <div id="outline-container-org750a9e1" class="outline-4">
-<h4 id="org750a9e1"><span class="section-number-4">1.92.15</span> <span class="todo TODO">TODO</span> Machine Learning - Stanford <code>[%]</code></h4>
-<div class="outline-text-4" id="text-1-92-15">
+<h4 id="org750a9e1"><span class="section-number-4">1.94.15</span> <span class="todo TODO">TODO</span> Machine Learning - Stanford <code>[%]</code></h4>
+<div class="outline-text-4" id="text-1-94-15">
 </div><ol class="org-ol"><li><a id="orgdc3d23e"></a>01.2-V2-Introduction-WhatIsMachineLearning.mp4<br /></li>
 <li><a id="org1cc9dfa"></a>01.3-V2-Introduction-SupervisedLearning.mp4<br /></li>
 <li><a id="orgca6ad46"></a>01.4-V2-Introduction-UnsupervisedLearning.mp4<br /></li>
@@ -1762,21 +1839,21 @@ information about the source here, author, edition, date, who is using it in uni
 </div>
 
 <div id="outline-container-org54ce278" class="outline-4">
-<h4 id="org54ce278"><span class="section-number-4">1.92.16</span> <span class="todo TODO">TODO</span> MIT 6.042J Mathematics for Computer Science, Spring 2015 <code>[4%]</code></h4>
-<div class="outline-text-4" id="text-1-92-16">
+<h4 id="org54ce278"><span class="section-number-4">1.94.16</span> <span class="todo TODO">TODO</span> MIT 6.042J Mathematics for Computer Science, Spring 2015 <code>[4%]</code></h4>
+<div class="outline-text-4" id="text-1-94-16">
 <p>
 source: <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ">https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ</a>
 </p>
 </div>
-<ol class="org-ol"><li><a id="orgf255ef6"></a><span class="done DONE">DONE</span> 1.1.1 Welcome to 6.042-wIq4CssPoO0.mp4<br /><div class="outline-text-5" id="text-1-92-16-1">
+<ol class="org-ol"><li><a id="orgf255ef6"></a><span class="done DONE">DONE</span> 1.1.1 Welcome to 6.042-wIq4CssPoO0.mp4<br /><div class="outline-text-5" id="text-1-94-16-1">
 </div></li>
-<li><a id="orgc65d527"></a><span class="done DONE">DONE</span> 1.1.2 Intro to Proofs - Part 1-GyFVgJZ0hIs.mp4<br /><div class="outline-text-5" id="text-1-92-16-2">
+<li><a id="orgc65d527"></a><span class="done DONE">DONE</span> 1.1.2 Intro to Proofs - Part 1-GyFVgJZ0hIs.mp4<br /><div class="outline-text-5" id="text-1-94-16-2">
 </div></li>
-<li><a id="org116af21"></a><span class="done DONE">DONE</span> 1.1.3 Intro to Proofs - Part 2-wfr4XbR5VP8.mp4<br /><div class="outline-text-5" id="text-1-92-16-3">
+<li><a id="org116af21"></a><span class="done DONE">DONE</span> 1.1.3 Intro to Proofs - Part 2-wfr4XbR5VP8.mp4<br /><div class="outline-text-5" id="text-1-94-16-3">
 </div></li>
-<li><a id="org06662df"></a><span class="done DONE">DONE</span> 1.2.1 Proof by Contradiction-CpW0ZJ7i0oc.mp4<br /><div class="outline-text-5" id="text-1-92-16-4">
+<li><a id="org06662df"></a><span class="done DONE">DONE</span> 1.2.1 Proof by Contradiction-CpW0ZJ7i0oc.mp4<br /><div class="outline-text-5" id="text-1-94-16-4">
 </div></li>
-<li><a id="org5d4ec4a"></a><span class="done DONE">DONE</span> 1.2.3 Proof by Cases-vzpFQ3uNyPo.mp4<br /><div class="outline-text-5" id="text-1-92-16-5">
+<li><a id="org5d4ec4a"></a><span class="done DONE">DONE</span> 1.2.3 Proof by Cases-vzpFQ3uNyPo.mp4<br /><div class="outline-text-5" id="text-1-94-16-5">
 </div></li>
 <li><a id="org8cbd371"></a><span class="todo TODO">TODO</span> 1.3.1 Well Ordering Principle 1 - Video-fV3v6qQ3w4A.mp4<br /></li>
 <li><a id="org4f9633e"></a><span class="todo TODO">TODO</span> 1.3.3 Well Ordering Principle 2 - Video-I1HpgnWQI7I.mp4<br /></li>
@@ -1889,8 +1966,8 @@ source: <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuo
 </div>
 
 <div id="outline-container-org5649ba2" class="outline-4">
-<h4 id="org5649ba2"><span class="section-number-4">1.92.17</span> <span class="todo TODO">TODO</span> Machine Learning, 1997 by Tom M. Mitchell <code>[0%]</code></h4>
-<div class="outline-text-4" id="text-1-92-17">
+<h4 id="org5649ba2"><span class="section-number-4">1.94.17</span> <span class="todo TODO">TODO</span> Machine Learning, 1997 by Tom M. Mitchell <code>[0%]</code></h4>
+<div class="outline-text-4" id="text-1-94-17">
 </div><ol class="org-ol"><li><a id="org0b5d61d"></a><span class="todo TODO">TODO</span> Introduction<br /></li>
 <li><a id="orge879074"></a><span class="todo TODO">TODO</span> Concept Learning and the General-to-Specific Ordering<br /></li>
 <li><a id="orgd5f3411"></a><span class="todo TODO">TODO</span> Decision Tree Learning<br /></li>
@@ -1907,8 +1984,8 @@ source: <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuo
 </div>
 
 <div id="outline-container-org560f4af" class="outline-4">
-<h4 id="org560f4af"><span class="section-number-4">1.92.18</span> <span class="todo TODO">TODO</span> MIT6.034ArtificialIntelligenceFall2010 <code>[0%]</code></h4>
-<div class="outline-text-4" id="text-1-92-18">
+<h4 id="org560f4af"><span class="section-number-4">1.94.18</span> <span class="todo TODO">TODO</span> MIT6.034ArtificialIntelligenceFall2010 <code>[0%]</code></h4>
+<div class="outline-text-4" id="text-1-94-18">
 <p>
 done 1,2,3,4, still downloading the rest&#x2026;
 </p>
@@ -2052,8 +2129,8 @@ When completed, start counting again from today.
 </p>
 </div>
 </div>
-<div id="outline-container-org7a7c76a" class="outline-3">
-<h3 id="org7a7c76a"><span class="section-number-3">2.4</span> :problem:</h3>
+<div id="outline-container-orgf74505a" class="outline-3">
+<h3 id="orgf74505a"><span class="section-number-3">2.4</span> :problem:</h3>
 <div class="outline-text-3" id="text-2-4">
 <ul class="org-ul">
 <li>Colleen is turning  \(n\)  years old!</li>
@@ -2062,8 +2139,8 @@ When completed, start counting again from today.
 <li>Given the  for each individual candle, find and print the number of candles she can successfully blow out.</li>
 </ul>
 </div>
-<div id="outline-container-orgbde99ab" class="outline-4">
-<h4 id="orgbde99ab"><span class="section-number-4">2.4.1</span> :input:</h4>
+<div id="outline-container-org2838957" class="outline-4">
+<h4 id="org2838957"><span class="section-number-4">2.4.1</span> :input:</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <ul class="org-ul">
 <li>The first line contains a single integer, , denoting the number of candles on the cake.</li>
@@ -2071,24 +2148,24 @@ When completed, start counting again from today.
 </ul>
 </div>
 </div>
-<div id="outline-container-org8d45c8b" class="outline-4">
-<h4 id="org8d45c8b"><span class="section-number-4">2.4.2</span> :constraints:</h4>
+<div id="outline-container-org73bf134" class="outline-4">
+<h4 id="org73bf134"><span class="section-number-4">2.4.2</span> :constraints:</h4>
 <div class="outline-text-4" id="text-2-4-2">
 <p>
 none
 </p>
 </div>
 </div>
-<div id="outline-container-orgf527c22" class="outline-4">
-<h4 id="orgf527c22"><span class="section-number-4">2.4.3</span> :output:</h4>
+<div id="outline-container-orged9ea7a" class="outline-4">
+<h4 id="orged9ea7a"><span class="section-number-4">2.4.3</span> :output:</h4>
 <div class="outline-text-4" id="text-2-4-3">
 <ul class="org-ul">
 <li>Print the number of candles Colleen blows out on a new line.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org564cf8f" class="outline-4">
-<h4 id="org564cf8f"><span class="section-number-4">2.4.4</span> :explanation:</h4>
+<div id="outline-container-orgd6dc1bd" class="outline-4">
+<h4 id="orgd6dc1bd"><span class="section-number-4">2.4.4</span> :explanation:</h4>
 <div class="outline-text-4" id="text-2-4-4">
 <ul class="org-ul">
 <li>1..</li>
@@ -2097,19 +2174,19 @@ none
 </div>
 </div>
 </div>
-<div id="outline-container-org7cced2b" class="outline-3">
-<h3 id="org7cced2b"><span class="section-number-3">2.5</span> :solution:</h3>
+<div id="outline-container-org111671f" class="outline-3">
+<h3 id="org111671f"><span class="section-number-3">2.5</span> :solution:</h3>
 <div class="outline-text-3" id="text-2-5">
-</div><div id="outline-container-org6cc8ad8" class="outline-4">
-<h4 id="org6cc8ad8"><span class="section-number-4">2.5.1</span> :questions:</h4>
+</div><div id="outline-container-org128bf3e" class="outline-4">
+<h4 id="org128bf3e"><span class="section-number-4">2.5.1</span> :questions:</h4>
 <div class="outline-text-4" id="text-2-5-1">
 <p>
 none
 </p>
 </div>
 </div>
-<div id="outline-container-org6785d74" class="outline-4">
-<h4 id="org6785d74"><span class="section-number-4">2.5.2</span> :predicates:</h4>
+<div id="outline-container-org04bb5c7" class="outline-4">
+<h4 id="org04bb5c7"><span class="section-number-4">2.5.2</span> :predicates:</h4>
 <div class="outline-text-4" id="text-2-5-2">
 <ul class="org-ul">
 <li>the brute force solution gives O(N<sup>2</sup>) via comparing each of two strings.</li>
@@ -2119,8 +2196,8 @@ none
 </ul>
 </div>
 </div>
-<div id="outline-container-orgae643fe" class="outline-4">
-<h4 id="orgae643fe"><span class="section-number-4">2.5.3</span> :implications:</h4>
+<div id="outline-container-orgfac3bba" class="outline-4">
+<h4 id="orgfac3bba"><span class="section-number-4">2.5.3</span> :implications:</h4>
 <div class="outline-text-4" id="text-2-5-3">
 <ul class="org-ul">
 <li>If we store every element into a hash set, we can make it O(N) for both time and space complexity.</li>
@@ -2138,8 +2215,8 @@ input
 </div>
 </div>
 
-<div id="outline-container-orgf464bdf" class="outline-3">
-<h3 id="orgf464bdf"><span class="section-number-3">2.6</span> References</h3>
+<div id="outline-container-org2880110" class="outline-3">
+<h3 id="org2880110"><span class="section-number-3">2.6</span> References</h3>
 <div class="outline-text-3" id="text-2-6">
 <ul class="org-ul">
 <li>source: <a href="https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles">https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles</a></li>
@@ -2154,48 +2231,48 @@ input
 <h3 id="org2c381f0"><span class="section-number-3">2.7</span> <span class="todo TODO">TODO</span> Somthing</h3>
 <div class="outline-text-3" id="text-2-7">
 </div>
-<div id="outline-container-org782c13f" class="outline-4">
-<h4 id="org782c13f"><span class="section-number-4">2.7.1</span> :problem:</h4>
+<div id="outline-container-org792e7f9" class="outline-4">
+<h4 id="org792e7f9"><span class="section-number-4">2.7.1</span> :problem:</h4>
 <div class="outline-text-4" id="text-2-7-1">
 <ul class="org-ul">
 <li>something</li>
 </ul>
 </div>
-<ol class="org-ol"><li><a id="org710e61c"></a>:input:<br /><div class="outline-text-5" id="text-2-7-1-1">
+<ol class="org-ol"><li><a id="org2996c69"></a>:input:<br /><div class="outline-text-5" id="text-2-7-1-1">
 <ul class="org-ul">
 <li>none</li>
 </ul>
 </div></li>
-<li><a id="org84a3f6a"></a>:constraints:<br /><div class="outline-text-5" id="text-2-7-1-2">
+<li><a id="org1667fe9"></a>:constraints:<br /><div class="outline-text-5" id="text-2-7-1-2">
 <ul class="org-ul">
 <li>none</li>
 </ul>
 </div></li>
-<li><a id="orgb12376e"></a>:output:<br /><div class="outline-text-5" id="text-2-7-1-3">
+<li><a id="org8639784"></a>:output:<br /><div class="outline-text-5" id="text-2-7-1-3">
 <ul class="org-ul">
 <li>none</li>
 </ul>
 </div></li>
-<li><a id="org5e01834"></a>:explanation:<br /><div class="outline-text-5" id="text-2-7-1-4">
+<li><a id="org5b47f1c"></a>:explanation:<br /><div class="outline-text-5" id="text-2-7-1-4">
 <ul class="org-ul">
 <li>none</li>
 </ul>
 </div></li></ol>
 </div>
-<div id="outline-container-org0e0319c" class="outline-4">
-<h4 id="org0e0319c"><span class="section-number-4">2.7.2</span> :solution:</h4>
+<div id="outline-container-org242a1d3" class="outline-4">
+<h4 id="org242a1d3"><span class="section-number-4">2.7.2</span> :solution:</h4>
 <div class="outline-text-4" id="text-2-7-2">
-</div><ol class="org-ol"><li><a id="org44b76b8"></a>:questions:<br /><div class="outline-text-5" id="text-2-7-2-1">
+</div><ol class="org-ol"><li><a id="org1817e5b"></a>:questions:<br /><div class="outline-text-5" id="text-2-7-2-1">
 <ul class="org-ul">
 <li>none</li>
 </ul>
 </div></li>
-<li><a id="org9fc2c78"></a>:predicates:<br /><div class="outline-text-5" id="text-2-7-2-2">
+<li><a id="org92367d6"></a>:predicates:<br /><div class="outline-text-5" id="text-2-7-2-2">
 <ul class="org-ul">
 <li>none</li>
 </ul>
 </div></li>
-<li><a id="orga881707"></a>:implications:<br /><div class="outline-text-5" id="text-2-7-2-3">
+<li><a id="orgee03277"></a>:implications:<br /><div class="outline-text-5" id="text-2-7-2-3">
 <ul class="org-ul">
 <li><p>
 none
@@ -2209,8 +2286,8 @@ none
 </ul>
 </div></li></ol>
 </div>
-<div id="outline-container-org35a496c" class="outline-4">
-<h4 id="org35a496c"><span class="section-number-4">2.7.3</span> References</h4>
+<div id="outline-container-org7b76aa8" class="outline-4">
+<h4 id="org7b76aa8"><span class="section-number-4">2.7.3</span> References</h4>
 <div class="outline-text-4" id="text-2-7-3">
 <ul class="org-ul">
 <li><p>
@@ -2277,8 +2354,8 @@ have a public profile photo on twitter and github, they require a fake skypename
 </div>
 </div>
 
-<div id="outline-container-org3394ad7" class="outline-3">
-<h3 id="org3394ad7"><span class="section-number-3">2.16</span> References</h3>
+<div id="outline-container-org254c7fe" class="outline-3">
+<h3 id="org254c7fe"><span class="section-number-3">2.16</span> References</h3>
 <div class="outline-text-3" id="text-2-16">
 <ul class="org-ul">
 <li>not related to the problem but good to notice <a href="https://en.wikipedia.org/wiki/Knight's_tour">https://en.wikipedia.org/wiki/Knight's_tour</a></li>
@@ -2291,7 +2368,7 @@ have a public profile photo on twitter and github, they require a fake skypename
 <b>**</b> TODO add vjudge owner on whatsapp and wechat and talkk
 </p>
 </div>
-<ol class="org-ol"><li><a id="orgd376c1f"></a><span class="todo TODO">TODO</span> use a tiled window manager instead of openbox to watch videos and emacs at teh same time<br /></li></ol>
+<ol class="org-ol"><li><a id="org7a18dab"></a><span class="todo TODO">TODO</span> use a tiled window manager instead of openbox to watch videos and emacs at teh same time<br /></li></ol>
 </div>
 </div>
 
@@ -2460,14 +2537,14 @@ ref: <a href="http://orgmode.org/guide/Tags.html#Tags">http://orgmode.org/guide/
 <div id="outline-container-org2bbbe38" class="outline-3">
 <h3 id="org2bbbe38"><span class="section-number-3">3.14</span> <span class="todo TODO">TODO</span> add vjudge owner on whatsapp and wechat and talkk</h3>
 </div>
-<div id="outline-container-org28614f3" class="outline-3">
-<h3 id="org28614f3"><span class="section-number-3">3.15</span> <span class="todo TODO">TODO</span> use a tiled window manager instead of openbox to watch videos and emacs at teh same time</h3>
+<div id="outline-container-orgcfc30ae" class="outline-3">
+<h3 id="orgcfc30ae"><span class="section-number-3">3.15</span> <span class="todo TODO">TODO</span> use a tiled window manager instead of openbox to watch videos and emacs at teh same time</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mohamed Fouad</p>
-<p class="date">Created: 2017-03-11 Sat 15:03</p>
+<p class="date">Created: 2017-03-11 Sat 21:28</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
