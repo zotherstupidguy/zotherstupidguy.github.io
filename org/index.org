@@ -13,8 +13,11 @@
   (P) Any knowledge by definition is true & concise otherwise it would
   be some kind of misinformation.
   ...
+** What is a String? :c_lang:
+   A string is a contiguous sequence of code units terminated by the
+   first zero code (\0, corresponding to the null character).
 
-** What is the history of C?
+** What is the history of C? :c_lang:
    - C is a by-prodcut of the UNIX operating system.
    - When Ken Thompson wrote the original verision of UNIX on an 8k words
      of main memory minicomputer in assembly langauge, he decided that a
@@ -22,7 +25,58 @@
      UNIX, thus he designed B, based on BCPL.
    - Ritchie joined the UNIX project and used B at first then when he
      needed an extended version of B, he created *C*!
+  - The development of a U.S. standard for C began in 1983 under the
+    uspices of the *American National Standards Institude (ANSI)*, later
+    formally approvedin Dec 1989.
+** What is the current stanadrd for C? :c_lang:
+   C11 (C standard revision)
+** What is POSIX?
+   The Portable Operating System Interface (POSIX) is a family of
+   standards specified by the IEEE Computer Society for maintaining
+   compatibility between operating systems. POSIX defines the
+   application programming interface (API), along with command line
+   shells and utility interfaces, for software compatibility with
+   variants of Unix and other operating systems.
 
+** What are the nessesary language features for a C program?        :c_lang:
+   Even The simplest C programs rely on three key language features:
+   - directives: editing commands that modify the program prior to
+     complications. i.e. *#include*, #include <stdio.h>, where stdio.h
+     is a *header*. This directive states that the information in
+     <stdio.h> is to be "included" into the program before it is complied.
+   - functions: named blocks of executable code, of which main is an
+     example. A C program is a collection of functions. functions fall
+     into two categories: those written by the programmer and those
+     provided as part of the C implementation (*library functions*).
+     The term "function" comes from mathematics, where a function is
+     a rule for computing a value when given one or more arguments.
+
+     Only the main function is mandatory and it gets called
+     automatically when the program is executed.
+   - statments: commands to be performed when the program is run.
+
+** What is a variable in a C program? :c_lang:
+   - A variable is a labelled place to store some data.
+   A variable is a temporarily storage location for data during C program
+   execution.
+   - Every variable must have a *type*, that specifies what kind of data
+   it will hold.
+   - C has a wide variety of types, how many in C99??? 
+** What is a C pointer? :c_lang:
+   A pointer is a *variable* containing the *address of another variable*.
+** How a C pointer operates? :c_lang:
+
+** What is C's dereference operator '*'? :c_lang:
+
+** What is C's l-value? :c_lang:
+
+** Why C has Pointers? :c_lang:
+
+
+** What is Endianness?
+   Endianness refers to the sequential order used to numerically
+   interpret a range of bytes in computer memory as a larger, 
+   composed word value.
 
 ** What is a *baud rate*? 
    The baud rate is the rate at which information is transferred in a
