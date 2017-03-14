@@ -102,6 +102,9 @@ Search, Dijkstra, Bellman-Ford, Floyd-Warshall.
   (P) Any knowledge by definition is true & concise otherwise it would
   be some kind of misinformation.
   ...
+
+** What is *Art Gallery Problem*? :np:
+
 ** What is a String? :c_lang:
    A string is a contiguous sequence of code units terminated by the
    first zero code (\0, corresponding to the null character).
