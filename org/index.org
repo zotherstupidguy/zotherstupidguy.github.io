@@ -37,6 +37,8 @@ To earn a certificate for this course, you need an overall score of at
 least 65%. This means you have to solve at least one problem on the
 exam, so get prepared!
 
+course url: https://courses.edx.org/courses/course-v1%3AITMOx%2BI2CPx%2B1T2017/
+
 *** TODO Week 1: Welcome to competitive programming
     Explore different kinds of programming competitions and benefits
     of participating,  as well as typical rules and challenges. An
