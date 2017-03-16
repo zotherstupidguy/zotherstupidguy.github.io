@@ -26,18 +26,18 @@
 *** 
   
 ** TODO ITMOx Competitive Programing Course [%]
-Weeks 1 to 4 have eight problems each, and every solved problem brings
-you 2%, which adds up to 64% for all these weeks.
+   Weeks 1 to 4 have eight problems each, and every solved problem brings
+   you 2%, which adds up to 64% for all these weeks.
 
-Week 5 is the final exam week. On the final exam, you will have 5
-hours to solve 8 problems – just like on the ACM ICPC World Finals! 
-Every solved problem brings you 4% or 5%, for a total 36% on the exam.
+   Week 5 is the final exam week. On the final exam, you will have 5
+   hours to solve 8 problems – just like on the ACM ICPC World Finals! 
+   Every solved problem brings you 4% or 5%, for a total 36% on the exam.
 
-To earn a certificate for this course, you need an overall score of at
-least 65%. This means you have to solve at least one problem on the
-exam, so get prepared!
+   To earn a certificate for this course, you need an overall score of at
+   least 65%. This means you have to solve at least one problem on the
+   exam, so get prepared!
 
-course url: https://courses.edx.org/courses/course-v1%3AITMOx%2BI2CPx%2B1T2017/
+   course url: https://courses.edx.org/courses/course-v1%3AITMOx%2BI2CPx%2B1T2017/
 
 *** TODO Week 1: Welcome to competitive programming
     Explore different kinds of programming competitions and benefits
@@ -68,10 +68,10 @@ course url: https://courses.edx.org/courses/course-v1%3AITMOx%2BI2CPx%2B1T2017/
 
 
 *** TODO Week 3: Sorting and search algorithms
-Binary search (implementation and examples). 
-An overview of sorting algorithms (insertion sort, quicksort, merge
-sort), including theoretical analysis and examples of use. Linear
-sorting algorithms for integers.
+    Binary search (implementation and examples). 
+    An overview of sorting algorithms (insertion sort, quicksort, merge
+    sort), including theoretical analysis and examples of use. Linear
+    sorting algorithms for integers.
 **** TODO problem 1
 **** TODO problem 2
 **** TODO problem 3
@@ -82,11 +82,11 @@ sorting algorithms for integers.
 **** TODO problem 8
 
 *** TODO Week 4: Graph theory
-Definition of graphs and examples of graph problems. 
-Various ways of storing graphs in memory. Bitmask optimization. 
-Depth First Search and related topics: connected components, detecting
-cycles, detecting bipartite graphs. Shortest paths: Breadth First
-Search, Dijkstra, Bellman-Ford, Floyd-Warshall.
+    Definition of graphs and examples of graph problems. 
+    Various ways of storing graphs in memory. Bitmask optimization. 
+    Depth First Search and related topics: connected components, detecting
+    cycles, detecting bipartite graphs. Shortest paths: Breadth First
+    Search, Dijkstra, Bellman-Ford, Floyd-Warshall.
 **** TODO problem 1
 **** TODO problem 2
 **** TODO problem 3
@@ -118,7 +118,43 @@ Search, Dijkstra, Bellman-Ford, Floyd-Warshall.
 
 ** What are the *Fibonacci Numbers*?
    #+BEGIN_SRC 
-    /* Program to calculate the first 20 Fibonacci numbers. */
+//Exponential time Fibonacci number calculator
+int fib1(int n)
+{
+        if (n <= 2) return 1;
+ 
+        return fib1(n-1) + fib1(n-2);
+}
+ 
+//Linear time DP Fibonacci number calculator
+int fib2(int n)
+{
+        int memo[n + 1];
+ 
+        memo[1] = memo[2] = 1;
+ 
+        for (size_t c = 3; c <= n; ++c)
+                memo[c] = memo[c-1] + memo[c-2];
+ 
+        return memo[n];
+}
+ 
+//Linear time, low memory Fibonacci number calculator
+int fib3(int n)
+{
+        int a = 1, b = 1;
+ 
+        for (int c = 3; c <= n; ++c)
+        {
+                int tmp = a;
+                a = b;
+                b = tmp + a;
+        }
+ 
+        return b;
+}
+
+    /* other Program to calculate the first 20 Fibonacci numbers. */
         
         #include <stdlib.h>
         #include <stdio.h> 
