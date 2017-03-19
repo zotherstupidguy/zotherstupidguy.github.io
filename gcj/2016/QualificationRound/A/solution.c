@@ -29,15 +29,10 @@ int cansleep ( long n );
 
 int cansleep(long n)
 {
-  // static - initialised to 0
-  // = {0,1,2,3,4,5,6,7,8,9};
-  static int digits[10];
-  bool foundzero = false;
-  bool found1to9 = false;
-  // pointer to store the last digit
-  long *lastdigit;
-  long temp = -1;
-  lastdigit = &temp;
+  static long digits[10];
+  bool foundzero  = false;
+  bool found1to9  = false;
+  int lastdigit   = -1;
 
   while(n)
     {
@@ -49,23 +44,23 @@ int cansleep(long n)
         {
           //not needed! digits[0] = 0;
           foundzero = true;
-          if (lastdigit == &temp)
+          printf("temp %d\n", lastdigit);
+          if (lastdigit == -1)
             {
               lastdigit = 0;
             }
         }
       else
         {
-          printf("lastdigit %ld\n", *lastdigit);
           digits[n%10] = n%10;
-          if (lastdigit == &temp)
+          printf("temp %d\n", lastdigit);
+          if (lastdigit == -1)
             {
-              long temp = (n%10);
-              lastdigit = &temp;
+              lastdigit = digits[n%10];
             }
         }
 
-      printf("lastdigit %ld\n", *lastdigit);
+      printf("lastdigit %d\n", lastdigit);
 
       printf("print n mod 10: %ld\n", n%10);
       n /= 10; 
@@ -100,7 +95,7 @@ int cansleep(long n)
 int main() {
   // she picks a number N. 
   // somekind of scanf here to get the N
-  long n = 9876123450;
+  long n = 9876180002229;
 
   /* 
      she starts naming N, 2 × N, 3 × N, and so on. 
