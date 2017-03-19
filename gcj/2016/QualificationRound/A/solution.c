@@ -12,6 +12,21 @@
    for simplifications and as I know that the size of the array is 8 now counting from 1..9 then (sizeof(digits)/ sizeof(digits[0])) - (sizeof(digits[0]));
    would be replaced with 8
 
+Input 
+5 (5 testcases)
+0
+1
+2
+11
+1692
+
+Output 
+Case #1: INSOMNIA
+Case #2: 10
+Case #3: 90
+Case #4: 110
+Case #5: 5076
+
 */
 
 #include <stdio.h>
@@ -74,7 +89,6 @@ int cansleep(long n)
   */
   for( int i=1; i <= 9; i++ )
     {
-      // 
       if ( digits[i] == 0 )
         {
           found1to9 = false;
