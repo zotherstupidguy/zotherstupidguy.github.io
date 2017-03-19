@@ -44,7 +44,7 @@ int cansleep(long n)
         {
           //not needed! digits[0] = 0;
           foundzero = true;
-          printf("temp %d\n", lastdigit);
+          //printf("last digit %d\n", lastdigit);
           if (lastdigit == -1)
             {
               lastdigit = 0;
@@ -53,16 +53,16 @@ int cansleep(long n)
       else
         {
           digits[n%10] = n%10;
-          printf("temp %d\n", lastdigit);
+          // printf("lastdigit %d\n", lastdigit);
           if (lastdigit == -1)
             {
               lastdigit = digits[n%10];
             }
         }
 
-      printf("lastdigit %d\n", lastdigit);
+      // printf("lastdigit %d\n", lastdigit);
 
-      printf("print n mod 10: %ld\n", n%10);
+      // printf("print n mod 10: %ld\n", n%10);
       n /= 10; 
     }
 
@@ -72,30 +72,32 @@ int cansleep(long n)
      if any positions between 1 to 9 contains a zero the while loop will break the look and cansleep function return 0
      else it sets the found1to9 to true
   */
-  for(int i=1; i <= 9; i++)
+  for( int i=1; i <= 9; i++ )
     {
       // 
       if ( digits[i] == 0 )
         {
-          break;
+          found1to9 = false;
         }
-      found1to9 = true;
+      else
+        {
+          found1to9 = true;
+        }
     }
 
   // if foundzero and found1to9 then return success
-  if (foundzero && found1to9)
+  if (foundzero == true && found1to9 == true)
     {
+      printf("cansleep will return 1, and last digit is %i \n", lastdigit);
       return 1;
     }
-
-    
   return 0;
 }
 
 int main() {
   // she picks a number N. 
   // somekind of scanf here to get the N
-  long n = 9876180002229;
+  long n = 98765432122222202;
 
   /* 
      she starts naming N, 2 × N, 3 × N, and so on. 
@@ -113,11 +115,11 @@ int main() {
      n = 122043;
   */
   
+  printf("N: %ld \n", n);
   // can sleep
   if (cansleep(n))
     {
       printf("sleep\n");
-      printf("last number she counted is.....");
     }
   else
     {
