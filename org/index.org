@@ -98,6 +98,7 @@
 
 *** TODO Exam Contest
 
+
 * Knowledge 
   (P) Any knowledge by definition is true & concise otherwise it would
   be some kind of misinformation.
@@ -242,7 +243,7 @@ int fib3(int n)
 
 ** How a C pointer operates? :c_lang:
 
-** What are C's "address of &"  and "dereferencing *" operators?     :c_lang:
+** What are C's Pointers "address of &"  and "dereferencing *" operators? :c_lang:
    "&" (address of) and "*" dereferencing operators.*
    - *' & '* translates to *'give me the address of'*
    - *' * '* translates to *'give me whatever is that the address'*.
@@ -287,6 +288,9 @@ C pointers are used to create
 - C arrays
 - C strings
 - C 
+
+- "*" dereferencing.
+- "&" (address of) 
 
 
 ** What is C's *Segmentation Violations/Faults*? :c_lang:
