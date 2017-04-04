@@ -1,0 +1,2234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-04-01 Sat 20:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>zotherstupidguy log</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Mohamed Fouad" />
+<meta name="description" content="daily log of zotherstupidguy life"
+ />
+<meta name="keywords" content="emacs, mathematics, computer science, machine learning" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+
+<link href= "css/stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">zotherstupidguy log</h1>
+
+<div id="outline-container-orge1132a3" class="outline-2">
+<h2 id="orge1132a3"><span class="section-number-2">1</span> Knowledge</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+(P) Any knowledge by definition is true &amp; concise otherwise it would
+be some kind of misinformation.
+&#x2026;
+</p>
+</div>
+
+<div id="outline-container-orgd94d2b2" class="outline-3">
+<h3 id="orgd94d2b2"><span class="section-number-3">1.1</span> Whats the shortcut for org-mode codeblocks?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Org mode supports insertion of empty structural elements (like
+‘#+BEGIN<sub>SRC</sub>’ and ‘#+END<sub>SRC</sub>’ pairs)  with just a few key strokes.
+This is achieved through a native template expansion mechanism.
+Note that Emacs has several other template mechanisms which could
+be used in a similar way, for example ‘yasnippet’.
+</p>
+
+<p>
+To insert a structural element, type a ‘&lt;’, followed by a template
+selector and ‘TAB’. Completion takes effect only when the above
+keystrokes are typed on a line by itself.
+</p>
+
+<p>
+for codeblocks  &lt;s then TAB. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca36475" class="outline-3">
+<h3 id="orgca36475"><span class="section-number-3">1.2</span> What are the <b>Fibonacci Numbers</b>?</h3>
+<div class="outline-text-3" id="text-1-2">
+<pre class="example">
+//Exponential time Fibonacci number calculator
+int fib1(int n)
+{
+        if (n &lt;= 2) return 1;
+
+        return fib1(n-1) + fib1(n-2);
+}
+
+//Linear time DP Fibonacci number calculator
+int fib2(int n)
+{
+        int memo[n + 1];
+
+        memo[1] = memo[2] = 1;
+
+        for (size_t c = 3; c &lt;= n; ++c)
+                memo[c] = memo[c-1] + memo[c-2];
+
+        return memo[n];
+}
+
+//Linear time, low memory Fibonacci number calculator
+int fib3(int n)
+{
+        int a = 1, b = 1;
+
+        for (int c = 3; c &lt;= n; ++c)
+        {
+                int tmp = a;
+                a = b;
+                b = tmp + a;
+        }
+
+        return b;
+}
+
+    /* other Program to calculate the first 20 Fibonacci numbers. */
+
+        #include &lt;stdlib.h&gt;
+        #include &lt;stdio.h&gt; 
+
+        int main( void ) {
+
+            int i, fibonacci[ 20 ];
+
+            fibonacci[ 0 ] = 0;
+            fibonacci[ 1 ] = 1;
+
+            for( i = 2; i &lt; 20; i++ )
+                fibonacci[ i ] = fibonacci[ i - 2 ] + fibonacci[ i - 1 ];
+
+            for( i = 0; i &lt; 20; i++ )
+                printf( "Fibonacci[ %d ] = %f\n", i, fibonacci[ i ] );
+
+        } /* End of sample program to calculate Fibonacci numbers */
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org1dd3ba8" class="outline-3">
+<h3 id="org1dd3ba8"><span class="section-number-3">1.3</span> What is <b>Art Gallery Problem</b>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="np">np</span></span></h3>
+</div>
+
+<div id="outline-container-org2e206ac" class="outline-3">
+<h3 id="org2e206ac"><span class="section-number-3">1.4</span> What is a String?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+A string is a contiguous sequence of code units terminated by the
+first zero code (\0, corresponding to the null character).
+</p>
+
+<p>
+A string in C is merely an array of characters. 
+The length of a string is determined by a terminating null
+character:  '\0'. So, a string with the contents, say, "abc" has
+four characters: 'a', 'b', 'c', and the terminating null character.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org2a7907e" class="outline-3">
+<h3 id="org2a7907e"><span class="section-number-3">1.5</span> What is the history of C?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>C is a by-prodcut of the UNIX operating system.</li>
+<li>When Ken Thompson wrote the original verision of UNIX on an 8k words
+of main memory minicomputer in assembly langauge, he decided that a
+higher level language is required for the further development of
+UNIX, thus he designed B, based on BCPL.</li>
+<li>Ritchie joined the UNIX project and used B at first then when he
+needed an extended version of B, he created <b>C</b>!</li>
+<li>The development of a U.S. standard for C began in 1983 under the
+uspices of the <b>American National Standards Institude (ANSI)</b>, later
+formally approvedin Dec 1989.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org64fac23" class="outline-3">
+<h3 id="org64fac23"><span class="section-number-3">1.6</span> What is the current stanadrd for C?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+C11 (C standard revision)
+</p>
+</div>
+</div>
+<div id="outline-container-org83f3332" class="outline-3">
+<h3 id="org83f3332"><span class="section-number-3">1.7</span> What is POSIX?</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+The Portable Operating System Interface (POSIX) is a family of
+standards specified by the IEEE Computer Society for maintaining
+compatibility between operating systems. POSIX defines the
+application programming interface (API), along with command line
+shells and utility interfaces, for software compatibility with
+variants of Unix and other operating systems.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7d76713" class="outline-3">
+<h3 id="org7d76713"><span class="section-number-3">1.8</span> What are the nessesary language features for a C program?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+Even The simplest C programs rely on three key language features:
+</p>
+<ul class="org-ul">
+<li>directives: editing commands that modify the program prior to
+complications. i.e. <b>#include</b>, #include &lt;stdio.h&gt;, where stdio.h
+is a <b>header</b>. This directive states that the information in
+&lt;stdio.h&gt; is to be "included" into the program before it is complied.</li>
+<li><p>
+functions: named blocks of executable code, of which main is an
+example. A C program is a collection of functions. functions fall
+into two categories: those written by the programmer and those
+provided as part of the C implementation (<b>library functions</b>).
+The term "function" comes from mathematics, where a function is
+a rule for computing a value when given one or more arguments.
+</p>
+
+<p>
+Only the main function is mandatory and it gets called
+automatically when the program is executed.
+</p></li>
+<li>statments: commands to be performed when the program is run.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgc9f7cbd" class="outline-3">
+<h3 id="orgc9f7cbd"><span class="section-number-3">1.9</span> What is a variable in a C program?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li>A variable is a labelled place to store some data.</li>
+</ul>
+<p>
+A variable is a temporarily storage location for data during C program
+execution.
+</p>
+<ul class="org-ul">
+<li>Every variable must have a <b>type</b>, that specifies what kind of data</li>
+</ul>
+<p>
+it will hold.
+</p>
+<ul class="org-ul">
+<li>C has a wide variety of types, how many in C99???</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org8fedb9c" class="outline-3">
+<h3 id="org8fedb9c"><span class="section-number-3">1.10</span> What is a C pointer?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+A pointer is a <b>variable</b> containing the <b>address of another variable</b>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orged11d79" class="outline-3">
+<h3 id="orged11d79"><span class="section-number-3">1.11</span> How a C pointer operates?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+</div>
+
+<div id="outline-container-orgafbe7cf" class="outline-3">
+<h3 id="orgafbe7cf"><span class="section-number-3">1.12</span> What are C's Pointers "address of &amp;"  and "dereferencing *" operators?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+"&amp;" (address of) and "<b>" dereferencing operators.</b>
+</p>
+<ul class="org-ul">
+<li><b>' &amp; '</b> translates to <b>'give me the address of'</b></li>
+<li><b>' * '</b> translates to <b>'give me whatever is that the address'</b>.</li>
+<li><p>
+Example:  
+</p>
+
+<p>
+The dereference operator or indirection operator, denoted by "*" 
+(i.e. an asterisk), is a unary operator found in C-like languages 
+that include pointer variables.
+</p>
+
+<p>
+It operates on a pointer variable, and returns an l-value equivalent
+to the value at the pointer address. This is called "dereferencing"
+the pointer. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #b58900;">int</span> <span style="color: #268bd2;">x</span>;
+
+<span style="color: #586e75;">// </span><span style="color: #586e75;">* is used in the declaration:</span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">p is a pointer to an integer, </span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">since (after dereferencing),</span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">*p is an integer</span>
+<span style="color: #b58900;">int</span> *<span style="color: #268bd2;">p</span>;  
+
+x = 0;
+<span style="color: #586e75;">// </span><span style="color: #586e75;">now x == 0</span>
+p = &amp;x;  <span style="color: #586e75;">// </span><span style="color: #586e75;">&amp; takes the address of x</span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">now p == &amp;x, so *p == x</span>
+*p = 1;  <span style="color: #586e75;">// </span><span style="color: #586e75;">equivalent to x = 1, since *p == x</span>
+<span style="color: #586e75;">// </span><span style="color: #586e75;">now *p == 1 and *p == x, so x == 1</span>
+</pre>
+</div></li>
+</ul>
+
+
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #b58900;">int</span> <span style="color: #268bd2;">x</span>;
+<span style="color: #586e75;">//</span><span style="color: #586e75;">returns null if %s, 0 if %i, 0 if %d, 0.000000 if %f and a random address</span>
+printf(<span style="color: #2aa198;">"value: %s at address: %04x"</span>,x, &amp;x);
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc29fc93" class="outline-3">
+<h3 id="orgc29fc93"><span class="section-number-3">1.13</span> What is C's l-value?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+</div>
+
+<div id="outline-container-org1adbf2c" class="outline-3">
+<h3 id="org1adbf2c"><span class="section-number-3">1.14</span> Why C has Pointers?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-14">
+<p>
+C pointers are used to create
+</p>
+<ul class="org-ul">
+<li>C arrays</li>
+<li>C strings</li>
+<li>C</li>
+
+<li>"*" dereferencing.</li>
+<li>"&amp;" (address of)</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org50df633" class="outline-3">
+<h3 id="org50df633"><span class="section-number-3">1.15</span> What is C's <b>Segmentation Violations/Faults</b>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+"segmentation violation" or "segmentation fault" means your program
+has attempted to access an area of memory that it is not allowed to
+access. In other words, it attempted to stomp on memory ground that
+is beyond the limits that the operating system (e.g., Unix) has
+allocated for your program.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org616d335" class="outline-3">
+<h3 id="org616d335"><span class="section-number-3">1.16</span> What are the causes of C's <b>Segmentation Violations/Faults</b>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="c_lang">c_lang</span></span></h3>
+<div class="outline-text-3" id="text-1-16">
+<ul class="org-ul">
+<li>Improper format control string in printf or scanf statements</li>
+<li>Forgetting to use "&amp;" on the arguments to scanf</li>
+<li>Accessing beyond the bounds of an array</li>
+<li>Failure to initialize a ointer before accessing it</li>
+<li><b>Incorrect use of the "&amp;" (address of) and "</b>" dereferencing operators.*</li>
+</ul>
+
+<p>
+ref: <a href="http://web.mit.edu/10.001/Web/Tips/tips_on_segmentation.html">http://web.mit.edu/10.001/Web/Tips/tips_on_segmentation.html</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7383028" class="outline-3">
+<h3 id="org7383028"><span class="section-number-3">1.17</span> What is Endianness?</h3>
+<div class="outline-text-3" id="text-1-17">
+<p>
+Endianness refers to the sequential order used to numerically
+interpret a range of bytes in computer memory as a larger, 
+composed word value.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga52feac" class="outline-3">
+<h3 id="orga52feac"><span class="section-number-3">1.18</span> What is a <b>baud rate</b>?</h3>
+<div class="outline-text-3" id="text-1-18">
+<p>
+The baud rate is the rate at which information is transferred in a
+communication channel. In the serial port context, "9600 baud" means 
+that the serial port is capable of transferring a maximum of 9600 
+bits per second.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbc8ed0c" class="outline-3">
+<h3 id="orgbc8ed0c"><span class="section-number-3">1.19</span> What is <b>Proof by Induction</b> ?</h3>
+<div class="outline-text-3" id="text-1-19">
+<ul class="org-ul">
+<li>The idea is that if you want to show that someone can climb to the</li>
+</ul>
+<p>
+nth floor of a fire escape, you need only show that you can climb 
+the ladder up to the fire escape (n=1) and then show that you know 
+how to climb the stairs from any level of the fire escape (n=k) to 
+the next level (n=k+1).
+</p>
+
+<p>
+<a href="http://comet.lehman.cuny.edu/sormani/teaching/induction.html">http://comet.lehman.cuny.edu/sormani/teaching/induction.html</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb02a6b2" class="outline-3">
+<h3 id="orgb02a6b2"><span class="section-number-3">1.20</span> What is an <b>Approximation algorithm</b>?</h3>
+</div>
+
+<div id="outline-container-orgf2581ff" class="outline-3">
+<h3 id="orgf2581ff"><span class="section-number-3">1.21</span> What is the <b>minimax algorithm</b>?</h3>
+</div>
+
+<div id="outline-container-orge04617b" class="outline-3">
+<h3 id="orge04617b"><span class="section-number-3">1.22</span> What are the &#x2026; in 1 + r + r<sup>2</sup> + &#x2026; + r<sup>n</sup> called?</h3>
+<div class="outline-text-3" id="text-1-22">
+<ul class="org-ul">
+<li>"&#x2026;" is an ellipsis.</li>
+<li>it is used when the writer trying to tell the reader that there is an
+obvious pattern.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org17baa6f" class="outline-3">
+<h3 id="org17baa6f"><span class="section-number-3">1.23</span> What is an uncomputable function?</h3>
+<div class="outline-text-3" id="text-1-23">
+<p>
+<a href="https://web.stanford.edu/class/cs54n/handouts/15-UncomputableFunctions.pdf">https://web.stanford.edu/class/cs54n/handouts/15-UncomputableFunctions.pdf</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org066651e" class="outline-3">
+<h3 id="org066651e"><span class="section-number-3">1.24</span> applying game theory in genetic algorithms?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
+<div class="outline-text-3" id="text-1-24">
+<p>
+<a href="http://www.iitk.ac.in/nicee/wcee/article/11_1503.PDF">http://www.iitk.ac.in/nicee/wcee/article/11_1503.PDF</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org74e2387" class="outline-3">
+<h3 id="org74e2387"><span class="section-number-3">1.25</span> what is <b>perfect randomness</b> ?</h3>
+</div>
+<div id="outline-container-org260f479" class="outline-3">
+<h3 id="org260f479"><span class="section-number-3">1.26</span> What if the world doesn't have any *perfect randomness*(not pesuedorandomness)?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
+<div class="outline-text-3" id="text-1-26">
+<p>
+I would define <b>randomness</b> as the inability of the beholder to
+identify patterns. In contradiction that the world is determinstic.
+</p>
+
+<p>
+thus, for the world to lack randomness, means that the beholder is
+capable of identifying patterns in everything! Is there a universal
+patten finding alogirhtm?
+</p>
+
+<p>
+Gemotric Algorithms (origami algorithms) shows that we can use
+diminsions to levelup our understanding of a subject. The more
+diminsions you can identify about a subject the more depth you
+develop with its understanding.
+</p>
+
+<p>
+Can we use the ability to construct diminsions regarding a subject
+to gain the ability to find a pattern matching algorithm in that
+that subject that would elimanite randomness and therefore makes
+finding the solution easy (P=NP)!  
+</p>
+
+<p>
+godel incompletness may 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged43224" class="outline-3">
+<h3 id="orged43224"><span class="section-number-3">1.27</span> What is the difference between Big-O notation O(n) and Little-O notation o(n)?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="time_complexity">time_complexity</span></span></h3>
+</div>
+
+
+
+<div id="outline-container-orgfc5553a" class="outline-3">
+<h3 id="orgfc5553a"><span class="section-number-3">1.28</span> What is a Walk?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="graphtheory">graphtheory</span></span></h3>
+<div class="outline-text-3" id="text-1-28">
+<p>
+a walk is a sequence of vertices connected by edges.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org4a12d56" class="outline-3">
+<h3 id="org4a12d56"><span class="section-number-3">1.29</span> What is a <b>bipartite graph</b>?</h3>
+<div class="outline-text-3" id="text-1-29">
+<p>
+In the mathematical field of graph theory, a bipartite graph (or
+bigraph) is a graph 
+whose vertices can be divided into two disjoint 
+sets {\displaystyle U} U and {\displaystyle V} V (that is,
+{\displaystyle U} U and {\displaystyle V} V 
+are each independent sets) such that every edge connects a vertex 
+in {\displaystyle U} U to one in {\displaystyle V} V. 
+Vertex sets {\displaystyle U} U and {\displaystyle V} V are usually 
+called the parts of the graph. Equivalently, a bipartite graph is a 
+graph that does not contain any odd-length cycles.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf55b3b4" class="outline-3">
+<h3 id="orgf55b3b4"><span class="section-number-3">1.30</span> What is <b>British Museum search algorithm</b>?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="search_algorithm">search_algorithm</span></span></h3>
+<div class="outline-text-3" id="text-1-30">
+<p>
+backtracking: false
+use enqued list: false
+informed: false
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06a80e8" class="outline-3">
+<h3 id="org06a80e8"><span class="section-number-3">1.31</span> What is <b>Hill Climbing search algorithm</b>?</h3>
+<div class="outline-text-3" id="text-1-31">
+<p>
+backtracking: true 
+use enqued list: true 
+informed: true 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf1d0bce" class="outline-3">
+<h3 id="orgf1d0bce"><span class="section-number-3">1.32</span> What is <b>beam search algorithm</b>?</h3>
+<div class="outline-text-3" id="text-1-32">
+<p>
+backtracking: 
+use enqued list: 
+informed: 
+In computer science, beam search is a heuristic search algorithm that explores a graph 
+by expanding the most promising node in a limited set. 
+Beam search is an optimization of best-first search that reduces its memory requirements. 
+Best-first search is a graph search which orders all partial solutions (states) according 
+to some heuristic which attempts to predict how close a partial solution is to a complete 
+solution (goal state). But in beam search, only a predetermined number of best partial solutions are kept as candidates.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge87f4aa" class="outline-3">
+<h3 id="orge87f4aa"><span class="section-number-3">1.33</span> What is Breadth First Search (BFS)?</h3>
+<div class="outline-text-3" id="text-1-33">
+<p>
+backtracking: false 
+use enqued list: true 
+informed: false 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org1f2acf0" class="outline-3">
+<h3 id="org1f2acf0"><span class="section-number-3">1.34</span> What is Depth First Search (DFS)?</h3>
+<div class="outline-text-3" id="text-1-34">
+<p>
+backtracking: true 
+use enqued list: true 
+informed: false 
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #586e75;">// </span><span style="color: #586e75;">void dfs(int a) // dfs on node a</span>
+<span style="color: #b58900;">void</span> <span style="color: #268bd2;">hello</span>() 
+{
+  <span style="color: #b58900;">int</span> <span style="color: #268bd2;">x</span> =  1 + 2; 
+  printf(<span style="color: #2aa198;">"%i"</span>, x ); 
+  <span style="color: #586e75;">// </span><span style="color: #586e75;">printf("hello world");</span>
+}
+hello();
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Refernces:
+<ul class="org-ul">
+<li>icpc.pdf page 10 of 78</li>
+<li>cp1.pdf page 70 of 152</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org474e83a" class="outline-3">
+<h3 id="org474e83a"><span class="section-number-3">1.35</span> What is <b>backtracking</b>?</h3>
+</div>
+
+<div id="outline-container-orgbb577b9" class="outline-3">
+<h3 id="orgbb577b9"><span class="section-number-3">1.36</span> Are all men created equal?</h3>
+<div class="outline-text-3" id="text-1-36">
+<p>
+Yes, but then some learn science and become the <b>MASTERS</b> of others.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfacf374" class="outline-3">
+<h3 id="orgfacf374"><span class="section-number-3">1.37</span> Search is about Maps?</h3>
+<div class="outline-text-3" id="text-1-37">
+<p>
+No, <b>Search is about choice</b>, but for illustrations search uses maps.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge56b88c" class="outline-3">
+<h3 id="orge56b88c"><span class="section-number-3">1.38</span> What is Educational Philsophy?</h3>
+<div class="outline-text-3" id="text-1-38">
+<p>
+To solve problem we require transformation from one form into another(modeling skills).
+</p>
+<ul class="org-ul">
+<li>modeling Skill &rarr; require that we understand the skill, inorder to understand it, we need to witness on a level lower</li>
+</ul>
+
+<p>
+In 1960, he wrote it.
+</p>
+
+<p>
+Herustic Transformations
+</p>
+
+<p>
+apply all safe transforms -&gt; look at the table -&gt; done 
+</p>
+
+
+<p>
+What is an <b>AND NODE</b>?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org830d24f" class="outline-3">
+<h3 id="org830d24f"><span class="section-number-3">1.39</span> What does *herustic function*(herusticارشادي) mean?</h3>
+<div class="outline-text-3" id="text-1-39">
+<p>
+(Some kind of trick of substitions)
+In computer science, artificial intelligence, and mathematical optimization, 
+a heuristic is a technique designed for solving a problem more quickly when 
+classic methods are too slow, or for finding an approximate solution when 
+classic methods fail to find any exact solution. 
+</p>
+
+<p>
+This is achieved by trading optimality, completeness, accuracy, or precision for speed. 
+In a way, it can be considered a shortcut.
+</p>
+
+<p>
+A heuristic function, also called simply a heuristic, is a function that ranks alternatives 
+in search algorithms at each branching step based on available information to decide which 
+branch to follow. For example, it may approximate the exact solution.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd332e8e" class="outline-3">
+<h3 id="orgd332e8e"><span class="section-number-3">1.40</span> Why <b>knowledge about knowledge is Power!</b> ?</h3>
+</div>
+<div id="outline-container-org7d54934" class="outline-3">
+<h3 id="org7d54934"><span class="section-number-3">1.41</span> What is the story of <b>Bertrand Russell being the Pope</b></h3>
+<div class="outline-text-3" id="text-1-41">
+<p>
+The story goes that Bertrand Russell, in a lecture on logic, 
+mentioned that in the sense of material implication, <b>a false proposition implies any proposition.</b>
+</p>
+
+<p>
+A student raised his hand and said "In that case, given that 1 = 0, prove that you are the Pope."
+Russell immediately replied, "Add 1 to both sides of the equation: then we have 2 = 1. 
+The set containing just me and the Pope has 2 members. But 2 = 1, so it has only 1 member; therefore, I am the Pope." 
+</p>
+</div>
+</div>
+<div id="outline-container-orgec7e597" class="outline-3">
+<h3 id="orgec7e597"><span class="section-number-3">1.42</span> What is Proof by Contradiction?</h3>
+<div class="outline-text-3" id="text-1-42">
+<p>
+If an assertion implies somthing false then the assertion itself must be false!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org326afc9" class="outline-3">
+<h3 id="org326afc9"><span class="section-number-3">1.43</span> What is a Proof?</h3>
+</div>
+<div id="outline-container-org1fd4b14" class="outline-3">
+<h3 id="org1fd4b14"><span class="section-number-3">1.44</span> What is the Six Thinking Hats methdology?</h3>
+</div>
+<div id="outline-container-org7745143" class="outline-3">
+<h3 id="org7745143"><span class="section-number-3">1.45</span> AI and Six Thinking Hats?</h3>
+<div class="outline-text-3" id="text-1-45">
+<p>
+six thinking hats says arguments are not good, 
+how about we use that to make computers solve problems more
+humanly! 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2dba897" class="outline-3">
+<h3 id="org2dba897"><span class="section-number-3">1.46</span> What is Proof by Cases?</h3>
+<div class="outline-text-3" id="text-1-46">
+<p>
+Reasoning by cases breaks a complicated problem into easier subproblems.
+Some philosphers* think that reasoning by cases is worrisome.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc1beca" class="outline-3">
+<h3 id="orgfc1beca"><span class="section-number-3">1.47</span> What is P = NP</h3>
+<div class="outline-text-3" id="text-1-47">
+<p>
+P stands for polynomial time, NP stands for non-determinstic Polynomial time
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e1c3bc" class="outline-3">
+<h3 id="org0e1c3bc"><span class="section-number-3">1.48</span> What is Polynomial Time?</h3>
+<div class="outline-text-3" id="text-1-48">
+<p>
+The time required for a computer to solve a problem,  
+where this time is a simple polynomial function of the size of the input.
+</p>
+
+<p>
+In computational complexity theory, P, also known as PTIME or DTIME(nO(1)), 
+is a fundamental complexity class. It contains all decision
+problems that can be solved by a deterministic Turing machine using
+a polynomial amount of computation time, or polynomial time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b215b8" class="outline-3">
+<h3 id="org6b215b8"><span class="section-number-3">1.49</span> What is a Polynomial Function?</h3>
+<div class="outline-text-3" id="text-1-49">
+<p>
+A polynomial function is a function such as a quadratic, a cubic, a quartic, and so on, involving
+only non-negative integer powers of x.
+</p>
+
+<p>
+In mathematics, a polynomial is an expression consisting of variables
+(or indeterminates) and coefficients, that involves only the
+operations of addition, subtraction, multiplication, and non-negative
+integer exponents. 
+</p>
+
+<p>
+An example of a polynomial of a single indeterminate x is x2 − 4x + 7. 
+An example in three variables is x3 + 2xyz2 − yz + 1.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org58cbd18" class="outline-3">
+<h3 id="org58cbd18"><span class="section-number-3">1.50</span> What is an Automaton?</h3>
+<div class="outline-text-3" id="text-1-50">
+<p>
+An automaton is a self-operating machine, or a machine or control mechanism designed to automatically 
+follow a predetermined sequence of operations, or respond to predetermined instructions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99e1757" class="outline-3">
+<h3 id="org99e1757"><span class="section-number-3">1.51</span> Whats the difference between Automaton and automata?</h3>
+<div class="outline-text-3" id="text-1-51">
+<p>
+<b>Automaton</b> is singular and <b>automata</b> is plural    
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70bcda8" class="outline-3">
+<h3 id="org70bcda8"><span class="section-number-3">1.52</span> What is Finite Automaton?</h3>
+<div class="outline-text-3" id="text-1-52">
+<ul class="org-ul">
+<li>A Formal System</li>
+<li>Remembers only a finite amount of infromation.</li>
+<li>Information represented by its state.</li>
+<li>State changes in response to its inputs.</li>
+<li>Rules that tell how the state changes in response to inputs are called</li>
+</ul>
+<p>
+transitions. 
+</p>
+</div>
+</div>
+<div id="outline-container-orge22cbc6" class="outline-3">
+<h3 id="orge22cbc6"><span class="section-number-3">1.53</span> Whats the importance of Finite Automata?</h3>
+<div class="outline-text-3" id="text-1-53">
+<ul class="org-ul">
+<li>Used for boh design and verification of circuits and communication protocols</li>
+<li>Used for many text-processing applications.</li>
+<li>An important component of compilers.</li>
+<li>Describes simple patterns of events, etc.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfbdccdf" class="outline-3">
+<h3 id="orgfbdccdf"><span class="section-number-3">1.54</span> What is a language of an Automaton?</h3>
+<div class="outline-text-3" id="text-1-54">
+<ul class="org-ul">
+<li>The set of strings accepted by an automaton A is the langauge of A.</li>
+<li>Denoted L(A).</li>
+<li>Different sets of final states implies different languages got inserted into the Automaton.</li>
+<li>Example: As designed, L(Tennis) = strings that determine the winner.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4d8f1a2" class="outline-3">
+<h3 id="org4d8f1a2"><span class="section-number-3">1.55</span> What is an alphabet?</h3>
+<div class="outline-text-3" id="text-1-55">
+<p>
+An alphabet is any finite set of symbols.
+</p>
+<ul class="org-ul">
+<li>Examples: 
+<ul class="org-ul">
+<li>ASCII, Unicode,</li>
+<li>{0,1} (binary alphabet)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org480cfbd" class="outline-3">
+<h3 id="org480cfbd"><span class="section-number-3">1.56</span> What is a <b>string</b> over an alphabet &Sigma; ?</h3>
+<div class="outline-text-3" id="text-1-56">
+<p>
+A string over an alphabet &Sigma; is a list, each element of 
+which is a member of \[ \Sigma \] 
+ε(epsilon) is an empty string.
+&Sigma;  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b2be33" class="outline-3">
+<h3 id="org6b2be33"><span class="section-number-3">1.57</span> How can a computer program(finite automata) learn from experiance?</h3>
+<div class="outline-text-3" id="text-1-57">
+<p>
+A computer program is said to learn from experience E with respect
+to some class of tasks T and performance measure P, if its performance at tasks in
+T, as measured by P, improves with experience E.
+</p>
+
+<p>
+(i) A computer program that learns to play checkers might improve
+its performance as measured by its abiliry to win at the class of tasks involving
+playing checkers games, through experience obtained by playing games against
+itself.
+</p>
+
+<p>
+A checkers learning problem:
+</p>
+<ul class="org-ul">
+<li>Task T: playing checkers</li>
+<li>Performance measure P: percent of games won in the world tournament</li>
+<li>Training experience E: games played against itself
+In order to complete the design of the learning system, we must now choose
+<ol class="org-ol">
+<li>the exact type of knowledge to be,learned</li>
+<li>a representation for this target knowledge</li>
+<li>a learning mechanism</li>
+</ol></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org70b54ed" class="outline-3">
+<h3 id="org70b54ed"><span class="section-number-3">1.58</span> How to analog Professor-students passing on of knowledge to Machine Learning?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="idea">idea</span></span></h3>
+<div class="outline-text-3" id="text-1-58">
+<p>
+Prof. Automaton Probem :D 
+</p>
+
+<p>
+(idea) I was thinking that a Human(Professor) lives his life in stages, 
+stage1 his objective is to asks a lot of questions and gets a lot of answers, 
+stage2 his objective is to reflects on this knowledge and try to find new knowledge of his own.
+stage3 his objective is to teach all his knowledge to stage1 and stage2 humans 
+</p>
+
+<p>
+if we represent those stages(objectives of each stage) this into machine learning approaches,
+machines could be more capable of coperating towards an evolution.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9765c9c" class="outline-3">
+<h3 id="org9765c9c"><span class="section-number-3">1.59</span> How to design a machine learning system?</h3>
+<div class="outline-text-3" id="text-1-59">
+<p>
+(idea) if we apply genetic algorithms on these design choices, programs create other programs?
+</p>
+</div>
+<div id="outline-container-org8c9cea7" class="outline-4">
+<h4 id="org8c9cea7"><span class="section-number-4">1.59.1</span> Choosing the training experiance:</h4>
+<div class="outline-text-4" id="text-1-59-1">
+<ol class="org-ol">
+<li>Does the training experience provides direct or indirect feedback regarding the choices</li>
+</ol>
+<p>
+made by the performance system?
+For example, in learning to play checkers, the system might learn from direct training 
+examples consisting of individual checkers board states and the correct move for each. 
+Alternatively, it might have available only indirect information consisting of the move 
+sequences and final outcomes of various games played. In this later case, information 
+about the correctness of specific moves early in the game must be inferred indirectly 
+from the fact that the game was eventually won or lost. Here the learner faces an additional
+problem of credit assignment, or determining the degree to which each move in
+the sequence deserves credit or blame for the final outcome. Credit assignment can
+be a particularly difficult problem because the game can be lost even when early
+moves are optimal, if these are followed later by poor moves. Hence, learning from
+direct training feedback is typically easier than learning from indirect feedback.
+</p>
+
+
+<ol class="org-ol">
+<li>To what degree does the learner controls the sequence of training examples?</li>
+
+<li>How well it represents the distribution of examples over which the final system</li>
+</ol>
+<p>
+performance P must be measured?
+</p>
+
+<p>
+Most current theory of machine learning rests on the crucial assumption that the distribution of 
+training examples is identical to the distribution of test examples. 
+Despite our need to make this assumption in order to obtain theoretical results, 
+it is important to keep in mind that this assumption must often be violated in practice.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49e0c7c" class="outline-4">
+<h4 id="org49e0c7c"><span class="section-number-4">1.59.2</span> Choosing the Target function</h4>
+<div class="outline-text-4" id="text-1-59-2">
+<ol class="org-ol">
+<li>How to determine what type of knowledge will be learned?</li>
+<li><p>
+How this type of knowledge will be used by the performance program?
+</p>
+
+<p>
+The next design choice is to determine exactly what type of knowledge will be
+learned and how this will be used by the performance program.
+</p></li>
+</ol>
+
+
+<p>
+Let us begin with a checkers-playing program that can generate the legal moves from any board
+state. 
+</p>
+
+<p>
+The program needs only to learn how to choose the best move from among these legal moves. 
+</p>
+
+<p>
+This learning task is representative of a large class of tasks for which the legal moves that define 
+some large search space are known a priori, but for which the best search strategy is not known. 
+</p>
+
+<p>
+Many optimization problems fall into this class, such as the problems of scheduling 
+and controlling manufacturing processes where the available manufacturing steps are 
+well understood, but the best strategy for sequencing them is not.
+</p>
+
+
+<p>
+Given this setting where we must learn to choose among the legal moves,
+the most obvious choice for the type of information to be learned is a program,
+or function, that chooses the best move for any given board state. Let us call this
+function ChooseMove and use the notation ChooseMove : B -+ M to indicate
+that this function accepts as input any board from the set of legal board states B
+and produces as output some move from the set of legal moves M. Throughout
+our discussion of machine learning we will find it useful to reduce the problem
+of improving performance P at task T to the problem of learning some particu-
+lar targetfunction such as ChooseMove. The choice of the target function will
+therefore be a key design choice
+</p>
+
+<p>
+Although ChooseMove is an obvious choice for the target function in our
+example, this function will turn out to be very difficult to learn given the kind of in-
+direct training experience available to our system. An alternative target function-
+and one that will turn out to be easier to learn in this setting-is an evaluation
+function that assigns a numerical score to any given board state. Let us call this
+target function V and again use the notation V : B + 8 to denote that V maps
+any legal board state from the set B to some real value (we use 8 to denote the set
+of real numbers). We intend for this target function V to assign higher scores to
+better board states. If the system can successfully learn such a target function V ,
+then it can easily use it to select the best move from any current board position.
+This can be accomplished by generating the successor board state produced by
+every legal move, then using V to choose the best successor state and therefore
+the best legal move.
+What exactly should be the value of the target function V for any given
+board state? Of course any evaluation function that assigns higher scores to better
+board states will do. Nevertheless, we will find it useful to define one particular
+target function V among the many that produce optimal play. As we shall see,
+this will make it easier to design a training algorithm. Let us therefore define the
+target value V ( b ) for an arbitrary board state b in B , as follows:
+</p>
+<ol class="org-ol">
+<li>if b is a final board state that is won, then V ( b ) = 100</li>
+<li>if b is a final board state that is lost, then V ( b ) = -100</li>
+<li>if b is a final board state that is drawn, then V ( b ) = 04. if b is a not a final state in the game, then V(b) = V(bl), where b' is the best</li>
+</ol>
+<p>
+final board state that can be achieved starting from b and playing optimally
+until the end of the game (assuming the opponent plays optimally, as well).
+While this recursive definition specifies a value of V(b) for every board
+state b, this definition is not usable by our checkers player because it is not
+efficiently computable. Except for the trivial cases (cases 1-3) in which the game
+has already ended, determining the value of V(b) for a particular board state
+requires (case 4) searching ahead for the optimal line of play, all the way to
+the end of the game! Because this definition is not efficiently computable by our
+checkers playing program, we say that it is a nonoperational definition. The goal
+of learning in this case is to discover an operational description of V ; that is, a
+description that can be used by the checkers-playing program to evaluate states
+and select moves within realistic time bounds.
+Thus, we have reduced the learning task in this case to the problem of
+discovering an operational description of the ideal targetfunction V. It may be
+very difficult in general to learn such an operational form of V perfectly. In fact,
+we often expect learning algorithms to acquire only some approximation to the
+target function, and for this reason the process of learning the target function
+is often called function approximation. In the current discussion we will use the
+symbol ? to refer to the function that is actually learned by our program, to
+distinguish it from the ideal target function V.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3090be9" class="outline-4">
+<h4 id="org3090be9"><span class="section-number-4">1.59.3</span> Choosing a Representation for the Target Function</h4>
+</div>
+<div id="outline-container-org648228a" class="outline-4">
+<h4 id="org648228a"><span class="section-number-4">1.59.4</span> Choosing a Function Approximation Algorithm</h4>
+</div>
+</div>
+
+<div id="outline-container-orga0c68fb" class="outline-3">
+<h3 id="orga0c68fb"><span class="section-number-3">1.60</span> What are Karp's 21 NP-complete problems?</h3>
+</div>
+<div id="outline-container-org9345641" class="outline-3">
+<h3 id="org9345641"><span class="section-number-3">1.61</span> What are Sudoku solving algorithms?</h3>
+</div>
+<div id="outline-container-org746668a" class="outline-3">
+<h3 id="org746668a"><span class="section-number-3">1.62</span> How to visualize Eleven Dimensions?</h3>
+</div>
+<div id="outline-container-orgcf39f85" class="outline-3">
+<h3 id="orgcf39f85"><span class="section-number-3">1.63</span> What is Donald Knuth's Dancing Links technique?</h3>
+<div class="outline-text-3" id="text-1-63">
+<p>
+In computer science, dancing links is the technique suggested by Donald Knuth to efficiently implement his Algorithm X.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a47d7e" class="outline-3">
+<h3 id="org0a47d7e"><span class="section-number-3">1.64</span> What is Donad Knuth's Algorithm X?</h3>
+<div class="outline-text-3" id="text-1-64">
+<p>
+Algorithm X is a recursive, nondeterministic, depth-first, backtracking algorithm that finds all solutions to the exact cover problem. 
+Some of the better-known exact cover problems include tiling, the n queens problem, and Sudoku.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org526454e" class="outline-3">
+<h3 id="org526454e"><span class="section-number-3">1.65</span> What AI is about?</h3>
+<div class="outline-text-3" id="text-1-65">
+<p>
+AI is about Algorithms enabled by constrains, exposed by representations, 
+that support the making of Models that facilitate an understanding of 
+thinking, preception, and actions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org986dbf7" class="outline-3">
+<h3 id="org986dbf7"><span class="section-number-3">1.66</span> What are the Greek Letters?</h3>
+<div class="outline-text-3" id="text-1-66">
+<ol class="org-ol">
+<li>Α α (alpha)</li>
+<li>Β β (beta)</li>
+<li>Γ γ (gamma)</li>
+<li>Δ δ (delta)</li>
+<li>Ε ε (epsilon)</li>
+<li>Ϝ ϝ (digamma)</li>
+<li>Ζ ζ (zeta)</li>
+<li>Η η (eta)</li>
+<li>Θ θ (theta)</li>
+<li>Ι ι (iota)</li>
+<li>Κ κ (kappa)</li>
+<li>Λ λ (lambda)</li>
+<li>Μ μ (mu)</li>
+<li>Ν ν (nu)</li>
+<li>Ξ ξ (xi)</li>
+<li>Ο ο (omicron)</li>
+<li>Π π (pi)</li>
+<li>Ρ ρ (rho)</li>
+<li>Σ σ/ς (sigma)The letter sigma ⟨Σ⟩ has two different lowercase forms, ⟨σ⟩ and ⟨ς⟩, with ⟨ς⟩ being used in word-final position and ⟨σ⟩ elsewhere.</li>
+<li>Τ τ (tau)</li>
+<li>Υ υ (upsilon)</li>
+<li>Φ φ (phi)</li>
+<li>Χ χ (chi)</li>
+<li>Ψ ψ (psi)</li>
+<li>Ω ω (omega)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge49996c" class="outline-3">
+<h3 id="orge49996c"><span class="section-number-3">1.67</span> What is Declarative Kknowledge?</h3>
+</div>
+<div id="outline-container-orgba6f5df" class="outline-3">
+<h3 id="orgba6f5df"><span class="section-number-3">1.68</span> What is Imperative Kknowledge?</h3>
+</div>
+<div id="outline-container-org5451573" class="outline-3">
+<h3 id="org5451573"><span class="section-number-3">1.69</span> What are Turing's 6 primative instructions?</h3>
+<div class="outline-text-3" id="text-1-69">
+<p>
+(P) Alan Turing said there are only 6 primative instructions needed to create any program.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga5980fc" class="outline-3">
+<h3 id="orga5980fc"><span class="section-number-3">1.70</span> What is Memoization?</h3>
+<div class="outline-text-3" id="text-1-70">
+<ul class="org-ul">
+<li>Memoization is a very common techqiune, we use memoization to solve a lot of problems.</li>
+<li>In simple terms, we are just remmbering what we did before and just look it up.</li>
+<li>In summary,it is a fancy way to say we are going to use Table lookup.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2d8576f" class="outline-3">
+<h3 id="org2d8576f"><span class="section-number-3">1.71</span> When to use Memoization?</h3>
+<div class="outline-text-3" id="text-1-71">
+<p>
+Thus in a situation where you remmber what the answer was and rather than recalculating it again, we just look it up.
+The concept of memoization is at the heart of dynamic programming.
+</p>
+<ul class="org-ul">
+<li>References  
+(r) MIT - Introduction to Computer Science and Programming (Python) ® vampiri6ka/HQ</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6bca115" class="outline-3">
+<h3 id="org6bca115"><span class="section-number-3">1.72</span> What is Dynamic Programming?</h3>
+</div>
+<div id="outline-container-org772015b" class="outline-3">
+<h3 id="org772015b"><span class="section-number-3">1.73</span> What are Prime Numbers?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="zpd">zpd</span>&#xa0;<span class="number_theory">number_theory</span></span></h3>
+<div class="outline-text-3" id="text-1-73">
+<p>
+(p) somthing is a predicate
+(i) somthing is impelied
+(q) a question
+</p>
+</div>
+</div>
+<div id="outline-container-orgca67ea2" class="outline-3">
+<h3 id="orgca67ea2"><span class="section-number-3">1.74</span> What is Topological Sorting?</h3>
+<div class="outline-text-3" id="text-1-74">
+<p>
+Is a type of Depth First Search, 
+</p>
+
+
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org63527bc" class="outline-3">
+<h3 id="org63527bc"><span class="section-number-3">1.75</span> What is Turing Complete?</h3>
+<div class="outline-text-3" id="text-1-75">
+<ul class="org-ul">
+<li>In computability theory, a system of data-manipulation rules (such as a computer's instruction set,</li>
+</ul>
+<p>
+a programming language, or a cellular automaton) is said to be Turing complete or computationally 
+universal if it can be used to simulate any single-taped Turing machine. 
+The concept is named after English mathematician Alan Turing. A classic example is lambda calculus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd04aa56" class="outline-3">
+<h3 id="orgd04aa56"><span class="section-number-3">1.76</span> What is Turing Equivalence?</h3>
+</div>
+
+<div id="outline-container-orgecf587d" class="outline-3">
+<h3 id="orgecf587d"><span class="section-number-3">1.77</span> What is Python?</h3>
+<div class="outline-text-3" id="text-1-77">
+<ul class="org-ul">
+<li>interperted langauge, (can also complie it)</li>
+<li>a variable is a name of an objective</li>
+<li>an assigment binds a name to an object.</li>
+<li>python forces indentation thus that the visual structure actually matchs the semantic structure.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4548fde" class="outline-3">
+<h3 id="org4548fde"><span class="section-number-3">1.78</span> What is Machine Learning?</h3>
+<div class="outline-text-3" id="text-1-78">
+<ul class="org-ul">
+<li>Machine Learning is a class of algorithms which is data-driven,</li>
+</ul>
+<p>
+i.e. unlike "normal" algorithms it is the data that "tells" what the "good answer" is
+</p>
+<ul class="org-ul">
+<li>Example: a hypothetical non-machine learning algorithm for face detection in images</li>
+</ul>
+<p>
+would try to define what a face is (round skin-like-colored disk, with dark area where 
+you expect the eyes etc). A machine learning algorithm would not have such coded 
+definition, but would "learn-by-examples": you'll show several images of faces and 
+not-faces and a good algorithm will eventually learn and be able to predict whether or not an unseen image is a face. 
+</p>
+
+<ul class="org-ul">
+<li>Machine Learning Types:</li>
+</ul>
+<p>
+Supervised: All data is labeled and the algorithms learn to predict the output from the input data.
+Unsupervised: All data is unlabeled and the algorithms learn to inherent structure from the input data.
+Semi-supervised: Some data is labeled but most of it is unlabeled and a mixture of supervised and unsupervised techniques can be used. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org88024db" class="outline-3">
+<h3 id="org88024db"><span class="section-number-3">1.79</span> What is Supervised Learning?</h3>
+<div class="outline-text-3" id="text-1-79">
+<ul class="org-ul">
+<li>Supervised learning is when the data you feed your algorithm is "tagged" to help your logic make decisions.</li>
+<li>Example: Bayes spam filtering, where you have to flag an item as spam to refine the results.</li>
+<li>Applications in which the training data comprises examples of the input vectors along with their</li>
+</ul>
+<p>
+corresponding target vectors are known as supervised learning problems.
+</p>
+<ul class="org-ul">
+<li>Approaches to supervised learning include:
+<ul class="org-ul">
+<li>Classification(1R, Naive Bayes, Decision tree learning algorithm such as ID3 CART and so on)</li>
+<li>Numeric Value Prediction</li>
+</ul></li>
+<li>Supervised learning: It is the machine learning task of inferring a function from labeled training data.The training data consist of a set of training examples. In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples.</li>
+</ul>
+<p>
+The computer is presented with example inputs and their desired outputs, given by a "teacher", and the goal is to learn a general rule that maps inputs to outputs.Specifically, a supervised learning algorithm takes a known set of input data and known responses to the data (output), and trains a model to generate reasonable predictions for the response to new data.
+</p>
+<ul class="org-ul">
+<li>The classification and regression supervised learning problems.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c5db9c" class="outline-3">
+<h3 id="org0c5db9c"><span class="section-number-3">1.80</span> When to use supervised learning?</h3>
+</div>
+
+<div id="outline-container-org49947ff" class="outline-3">
+<h3 id="org49947ff"><span class="section-number-3">1.81</span> What is Unsupervised Learning?</h3>
+<div class="outline-text-3" id="text-1-81">
+<ul class="org-ul">
+<li>You should use unsupervised learning methods when you need a large amount of data to train your models, and the willingness and ability to experiment and explore, and of course a challenge that isn’t well solved via more-established methods.With unsupervised learning it is possible to learn larger and more complex models than with supervised learning.Here is a good example on it</li>
+<li>Unsupervised learning are types of algorithms that try to find correlations without any external inputs other than the raw data.</li>
+<li>Example: datamining clustering algorithms.</li>
+<li>In other pattern recognition problems, the training data consists of a set of input vectors x without any corresponding target values.
+The goal in such unsupervised learning problems may be to discover groups of similar examples within the data, where it is called clustering</li>
+<li>Approaches to unsupervised learning include:
+<ul class="org-ul">
+<li>Clustering(K-mean,hierarchical clustering)</li>
+<li>Association Rule Learning</li>
+</ul></li>
+<li>Unsupervised learning: It is learning without a teacher.</li>
+</ul>
+<p>
+One basic thing that you might want to do with data is to visualize it. It is the machine learning task of inferring a function to describe hidden structure from unlabeled data. Since the examples given to the learner are unlabeled, there is no error or reward signal to evaluate a potential solution. This distinguishes unsupervised learning from supervised learning. Unsupervised learning uses procedures that attempt to find natural partitions of patterns.
+</p>
+<ul class="org-ul">
+<li>The clustering and association unsupervised learning problems.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org90f8660" class="outline-3">
+<h3 id="org90f8660"><span class="section-number-3">1.82</span> When to use unsupervised learning?</h3>
+</div>
+<div id="outline-container-orgd42a3f2" class="outline-3">
+<h3 id="orgd42a3f2"><span class="section-number-3">1.83</span> What is DeepCoder?</h3>
+<div class="outline-text-3" id="text-1-83">
+<ul class="org-ul">
+<li>We develop a first line of attack for solving programming competition-style prob-</li>
+</ul>
+<p>
+lems from input-output examples using deep learning. The approach is to train a
+neural network to predict properties of the program that generated the outputs from
+the inputs. We use the neural network’s predictions to augment search techniques
+from the programming languages community, including enumerative search and
+an SMT-based solver. Empirically, we show that our approach leads to an order
+of magnitude speedup over the strong non-augmented baselines and a Recurrent
+Neural Network approach, and that we are able to solve problems of difficulty
+comparable to the simplest problems on programming competition websites.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeb89a5e" class="outline-3">
+<h3 id="orgeb89a5e"><span class="section-number-3">1.84</span> What is Semi-supervised Learning?</h3>
+<div class="outline-text-3" id="text-1-84">
+<ul class="org-ul">
+<li>A problem that sits in between supervised and unsupervised learning called semi-supervised learning.</li>
+<li>Problems where you have a large amount of input data (X) and only some of the data is labeled (Y)</li>
+</ul>
+<p>
+are called semi-supervised learning problems.
+</p>
+<ul class="org-ul">
+<li>Semi-supervised learning problems sit in between both supervised and unsupervised learning.</li>
+<li>A good example is a photo archive where only some of the images are labeled, (e.g. dog, cat, person) and the majority are unlabeled.</li>
+<li>Many real world machine learning problems fall into this area. This is because it can be expensive or 
+time-consuming to label data as it may require access to domain experts. Whereas unlabeled data is cheap and easy to collect and store.</li>
+<li>You can use unsupervised learning techniques to discover and learn the structure in the input variables.</li>
+<li>You can also use supervised learning techniques to make best guess predictions for the unlabeled data, 
+feed that data back into the supervised learning algorithm as training data and use the model to make predictions on new unseen data.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6d53928" class="outline-3">
+<h3 id="org6d53928"><span class="section-number-3">1.85</span> What is active learning?</h3>
+</div>
+<div id="outline-container-orga0d41b3" class="outline-3">
+<h3 id="orga0d41b3"><span class="section-number-3">1.86</span> What is PageRank?</h3>
+</div>
+<div id="outline-container-org3ddbada" class="outline-3">
+<h3 id="org3ddbada"><span class="section-number-3">1.87</span> When to use Octave?</h3>
+<div class="outline-text-3" id="text-1-87">
+<p>
+(P) Always use octave for prototyping machine learning algorithms, and only after that migrate it in another language.
+(P) if we use octave as our programming enviroment for machine learning, will learn much more faster than
+using python, C++, or Java, as it is just functions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org126a0c2" class="outline-3">
+<h3 id="org126a0c2"><span class="section-number-3">1.88</span> What is the Cocktail Party Problem?</h3>
+<div class="outline-text-3" id="text-1-88">
+<ul class="org-ul">
+<li>in only one line of code! in octave.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdfc2e2b" class="outline-3">
+<h3 id="orgdfc2e2b"><span class="section-number-3">1.89</span> What is Linear Regression?</h3>
+<div class="outline-text-3" id="text-1-89">
+<ul class="org-ul">
+<li>Regression means " انحسار"</li>
+</ul>
+
+<p>
+In statistics, linear regression is an approach for modeling the relationship between a scalar 
+dependent variable y and one or more explanatory variables (or independent variables) denoted X. 
+</p>
+
+<p>
+The case of one explanatory variable is called simple linear regression. 
+For more than one explanatory variable, the process is called multiple linear regression. 
+(This term is distinct from multivariate linear regression, where multiple correlated dependent 
+variables are predicted, rather than a single scalar variable.)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf109824" class="outline-3">
+<h3 id="orgf109824"><span class="section-number-3">1.90</span> What is Linear Regression with one variable (Univariate Linear Regression)?</h3>
+<div class="outline-text-3" id="text-1-90">
+</div><div id="outline-container-orgea1d8fc" class="outline-4">
+<h4 id="orgea1d8fc"><span class="section-number-4">1.90.1</span> Model Representation</h4>
+<div class="outline-text-4" id="text-1-90-1">
+<p>
+We have data that is plotted on a graph.
+This is supervised learning as we are given the "right answer" for each example in the data.
+This is a type of a Regression problem where we predict real-valued output. 
+</p>
+
+<p>
+m = Number of training examples
+x's = "input" variable/ features
+y's = "output" variable / "target" variable
+</p>
+
+<p>
+(          training set       )
+&dArr;     
+(        learning algorithms  )
+&dArr;     
+size of house &rarr;  h   &rarr; estimated price
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org9ad8a61" class="outline-4">
+<h4 id="org9ad8a61"><span class="section-number-4">1.90.2</span> Cost Function</h4>
+<div class="outline-text-4" id="text-1-90-2">
+<p>
+\ o = &theta; + &Theta;1 x 
+</p>
+</div>
+<ol class="org-ol"><li><a id="orgce62e7a"></a>Cost Function Intuition<br /></li></ol>
+</div>
+
+<div id="outline-container-org1bdd29f" class="outline-4">
+<h4 id="org1bdd29f"><span class="section-number-4">1.90.3</span> Gardient Descent</h4>
+<div class="outline-text-4" id="text-1-90-3">
+</div><ol class="org-ol"><li><a id="orgbeea7c2"></a>Gardient Descent Intuition<br /></li>
+<li><a id="orgdf0a0e4"></a>Gardient Descent for Linear Regression<br /></li></ol>
+</div>
+</div>
+
+<div id="outline-container-orgdb489a6" class="outline-3">
+<h3 id="orgdb489a6"><span class="section-number-3">1.91</span> What is Focused Crawling?</h3>
+<div class="outline-text-3" id="text-1-91">
+<p>
+A focused crawler is a web crawler that collects Web pages that satisfy some specific property, 
+by carefully prioritizing the crawl frontier and managing the hyperlink exploration process. 
+Some predicates may be based on simple, deterministic and surface properties. 
+For example, a crawler's mission may be to crawl pages from only the .jp domain. 
+Other predicates may be softer or comparative, e.g., "crawl pages with large PageRank", 
+or "crawl pages about baseball". An important page property pertains to topics, leading to 
+topical crawlers. For example, a topical crawler may be deployed to collect pages about solar power, 
+or swine flu, while minimizing resources spent fetching pages on other topics. Crawl frontier 
+management may not be the only device used by focused crawlers; they may use a Web directory, 
+a Web text index, backlinks, or any other Web artifact.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f3542f" class="outline-3">
+<h3 id="org6f3542f"><span class="section-number-3">1.92</span> What is Radix Sort?</h3>
+<div class="outline-text-3" id="text-1-92">
+<p>
+<a href="http://www.geeksforgeeks.org/radix-sort/">http://www.geeksforgeeks.org/radix-sort/</a> 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5caba59" class="outline-3">
+<h3 id="org5caba59"><span class="section-number-3">1.93</span> What is an Order Statistic Tree?</h3>
+</div>
+<div id="outline-container-orgb35689c" class="outline-3">
+<h3 id="orgb35689c"><span class="section-number-3">1.94</span> What is a B-tree?</h3>
+</div>
+<div id="outline-container-orgf0fb8ea" class="outline-3">
+<h3 id="orgf0fb8ea"><span class="section-number-3">1.95</span> What is Binary Search Tree (BST)?</h3>
+</div>
+
+
+<div id="outline-container-org4fcf70f" class="outline-3">
+<h3 id="org4fcf70f"><span class="section-number-3">1.96</span> What is <b>release the prisoners topology</b> ?</h3>
+</div>
+
+<div id="outline-container-orga3210bd" class="outline-3">
+<h3 id="orga3210bd"><span class="section-number-3">1.97</span> References</h3>
+<div class="outline-text-3" id="text-1-97">
+<p>
++begin<sub>src</sub> sh :results output :exports results
+ls /home/zotherstupidguy/Study/3.Sources/MIT6.042JMathematicsforComputerScienceSpring2015/*.mp4 | sort -n
+#ls /home/zotherstupidguy/Study/3.Sources/MITIntroductiontoComputerScienceandProgramming(Python)/HQ
++end<sub>src</sub>
+</p>
+
+<p>
++RESULTS:
++begin<sub>example</sub>
++end<sub>example</sub>
+</p>
+</div>
+
+<div id="outline-container-orgd59cf3f" class="outline-4">
+<h4 id="orgd59cf3f"><span class="section-number-4">1.97.1</span> <span class="todo TODO">TODO</span> MITIntroductiontoComputerScienceandProgramming(Python) <code>[%]</code></h4>
+<div class="outline-text-4" id="text-1-97-1">
+</div><ol class="org-ol"><li><a id="org7964f4a"></a><span class="done DONE">DONE</span> 01-Lecture 01_ Introduction to 6.00<br /><div class="outline-text-5" id="text-1-97-1-1">
+</div></li>
+<li><a id="org101bdfd"></a><span class="done DONE">DONE</span> 02-Lecture<br /><div class="outline-text-5" id="text-1-97-1-2">
+</div></li>
+<li><a id="orga03396a"></a><span class="done DONE">DONE</span> 03-Lecture<br /><div class="outline-text-5" id="text-1-97-1-3">
+</div></li>
+<li><a id="org269609e"></a><span class="todo TODO">TODO</span> 04-Lecture<br /></li>
+<li><a id="org146a198"></a><span class="todo TODO">TODO</span> 31-Lecture 21_ Using Graphs to Model Problems, Part 1<br /></li>
+
+<li><a id="orgb8e7c07"></a><span class="todo TODO">TODO</span> 32-Lecture 22_ Using Graphs to Model Problems, Part 2<br /></li></ol>
+</div>
+
+<div id="outline-container-org9ab8792" class="outline-4">
+<h4 id="an-extra-special-headline"><a id="org9ab8792"></a><span class="section-number-4">1.97.2</span> <span class="todo TODO">TODO</span> TTC VIDEO - The Art and Craft of Mathematical Problem Solving <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="problemsolving">problemsolving</span></span></h4>
+<div class="outline-text-4" id="text-an-extra-special-headline">
+<dl class="org-dl">
+<dt>Diference between Problem and Exercise</dt><dd><p>
+Scope doesn't work as expected, and messes everything up
+when loops mix variables up in recursive functions.
+</p>
+<dl class="org-dl">
+<dt>Namespaces</dt><dd>You wish.</dd>
+<dt>Header Files</dt><dd>Nope.</dd>
+</dl>
+<p>
+information about the source here, author, edition, date, who is using it in univ cources, etc.
+</p></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org2837f8c" class="outline-4">
+<h4 id="org2837f8c"><span class="section-number-4">1.97.3</span> <span class="todo TODO">TODO</span> Cracking the Coding Interview      <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="book">book</span>&#xa0;<span class="zpd">zpd</span>&#xa0;<span class="interview">interview</span></span></h4>
+<div class="outline-text-4" id="text-1-97-3">
+</div>
+<ul class="org-ul"><li><a id="org2434f28"></a><span class="todo TODO">TODO</span> Chapter1<br /><ul class="org-ul"><li><a id="org2fff27d"></a><span class="todo TODO">TODO</span> name of the heading in the chapter<br /></li>
+<li><a id="org104d95b"></a><span class="todo TODO">TODO</span> name of the heading in the chapter<br /></li></ul></li>
+<li><a id="org5430dd3"></a><span class="done DONE">DONE</span> sfsf<br /></li>
+<li><a id="org325fcba"></a>sfsfsfsf<br /></li></ul>
+</div>
+
+<div id="outline-container-org991145a" class="outline-4">
+<h4 id="org991145a"><span class="section-number-4">1.97.4</span> <span class="todo TODO">TODO</span> arabic competitive programming   <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+<div class="outline-text-4" id="text-1-97-4">
+<ul class="org-ul">
+<li>name of each eposide extracted via a script from Emacs and into a list here</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdd73415" class="outline-4">
+<h4 id="orgdd73415"><span class="section-number-4">1.97.5</span> <span class="todo TODO">TODO</span> Introduction to the Theory of Computation - 3rd - Spiser <code>[%]</code></h4>
+<div class="outline-text-4" id="text-1-97-5">
+<ul class="org-ul">
+<li>name of each chapter a list here</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgafcec54" class="outline-4">
+<h4 id="orgafcec54"><span class="section-number-4">1.97.6</span> <span class="todo TODO">TODO</span> hackerrank                 <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+</div>
+<div id="outline-container-org33ac5a4" class="outline-4">
+<h4 id="org33ac5a4"><span class="section-number-4">1.97.7</span> <span class="todo TODO">TODO</span> codejam                    <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+</div>
+<div id="outline-container-org32d230c" class="outline-4">
+<h4 id="org32d230c"><span class="section-number-4">1.97.8</span> <span class="todo TODO">TODO</span> codemasrytube                <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+</div>
+<div id="outline-container-org34535e6" class="outline-4">
+<h4 id="org34535e6"><span class="section-number-4">1.97.9</span> <span class="todo TODO">TODO</span> mycodeschool                  <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+</div>
+<div id="outline-container-org191843a" class="outline-4">
+<h4 id="org191843a"><span class="section-number-4">1.97.10</span> <span class="todo TODO">TODO</span> saurabhschool              <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+</div>
+<div id="outline-container-org84dd985" class="outline-4">
+<h4 id="org84dd985"><span class="section-number-4">1.97.11</span> <span class="todo TODO">TODO</span> codinginterviewhub      <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+</div>
+<div id="outline-container-orgc499cf1" class="outline-4">
+<h4 id="orgc499cf1"><span class="section-number-4">1.97.12</span> <span class="todo TODO">TODO</span> conor                <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+</div>
+<div id="outline-container-orgf5c401b" class="outline-4">
+<h4 id="orgf5c401b"><span class="section-number-4">1.97.13</span> <span class="todo TODO">TODO</span> geeksforgeeks <code>[%]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="youtube">youtube</span>&#xa0;<span class="competitive_programming">competitive_programming</span></span></h4>
+</div>
+<div id="outline-container-org2306687" class="outline-4">
+<h4 id="org2306687"><span class="section-number-4">1.97.14</span> <span class="todo TODO">TODO</span> Elementry Number Theory - 6th Edition - Kenneth H. Rosen <code>[%]</code></h4>
+<div class="outline-text-4" id="text-1-97-14">
+<p>
+<a href="3.Sources/NumberTheory/Books/Elementary%20Number%20Theory%20-%206th%20Edition%20-%20Kenneth%20H.%20Rosen.pdf"><a href="3.Sources/NumberTheory/Books/Elementary">3.Sources/NumberTheory/Books/Elementary</a> Number Theory - 6th Edition - Kenneth H. Rosen.pdf</a>  
+</p>
+
+
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orgc3f5bc7" class="outline-4">
+<h4 id="orgc3f5bc7"><span class="section-number-4">1.97.15</span> <span class="todo TODO">TODO</span> Machine Learning - Stanford <code>[%]</code></h4>
+<div class="outline-text-4" id="text-1-97-15">
+</div><ol class="org-ol"><li><a id="org2002412"></a>01.2-V2-Introduction-WhatIsMachineLearning.mp4<br /></li>
+<li><a id="orgfa7a84c"></a>01.3-V2-Introduction-SupervisedLearning.mp4<br /></li>
+<li><a id="orgdd95e60"></a>01.4-V2-Introduction-UnsupervisedLearning.mp4<br /></li>
+<li><a id="orge778f7c"></a>02.1-V2-LinearRegressionWithOneVariable-ModelRepresentation.mp4<br /></li>
+<li><a id="org7b41aef"></a>02.2-V2-LinearRegressionWithOneVariable-CostFunction.mp4<br /></li>
+<li><a id="org7209676"></a>02.3-V2-LinearRegressionWithOneVariable-CostFunctionIntuitionI.mp4<br /></li>
+<li><a id="org842ad87"></a>02.4-V2-LinearRegressionWithOneVariable-CostFunctionIntuitionII.mp4<br /></li>
+<li><a id="orgd05faba"></a>02.5-V2-LinearRegressionWithOneVariable-GradientDescent.mp4<br /></li>
+<li><a id="org27863ba"></a>02.6-V2-LinearRegressionWithOneVariable-GradientDescentIntuition.mp4<br /></li>
+<li><a id="org035023d"></a>02.7-V2-LinearRegressionWithOneVariable-GradientDescentForLinearRegression.mp4<br /></li>
+<li><a id="org4731106"></a>02.8-V2-What'sNext.mp4<br /></li>
+<li><a id="org85863bc"></a>03.1-V2-LinearAlgebraReview(Optional)-MatricesAndVectors.mp4<br /></li>
+<li><a id="org61fc574"></a>03.2-V2-LinearAlgebraReview(Optional)-AdditionAndScalarMultiplication.mp4<br /></li>
+<li><a id="orge250295"></a>03.3-V2-LinearAlgebraReview(Optional)-MatrixVectorMultiplication.mp4<br /></li>
+<li><a id="org2e43089"></a>03.4-V2-LinearAlgebraReview(Optional)-MatrixMatrixMultiplication.mp4<br /></li>
+<li><a id="org224f2ce"></a>03.5-V2-LinearAlgebraReview(Optional)-MatrixMultiplicationProperties.mp4<br /></li>
+<li><a id="org804059b"></a>03.6-V2-LinearAlgebraReview(Optional)-InverseAndTranspose.mp4<br /></li>
+<li><a id="orgf2fd43a"></a>04.1-LinearRegressionWithMultipleVariables-MultipleFeatures.mp4<br /></li>
+<li><a id="org001acd4"></a>04.2-LinearRegressionWithMultipleVariables-GradientDescentForMultipleVariables.mp4<br /></li>
+<li><a id="org70f6539"></a>04.3-LinearRegressionWithMultipleVariables-GradientDescentInPracticeIFeatureScaling.mp4<br /></li>
+<li><a id="org4095e0f"></a>04.4-LinearRegressionWithMultipleVariables-GradientDescentInPracticeIILearningRate.mp4<br /></li>
+<li><a id="org86224f2"></a>04.5-LinearRegressionWithMultipleVariables-FeaturesAndPolynomialRegression.mp4<br /></li>
+<li><a id="orgba6a59d"></a>04.6-V2-LinearRegressionWithMultipleVariables-NormalEquation.mp4<br /></li>
+<li><a id="org3a47dfb"></a>04.7-LinearRegressionWithMultipleVariables-NormalEquationNonInvertibility(Optional).mp4<br /></li>
+<li><a id="org173df69"></a>05.1-OctaveTutorial-BasicOperations.mp4<br /></li>
+<li><a id="org9e93a51"></a>05.2-OctaveTutorial-MovingDataAround.mp4<br /></li>
+<li><a id="org672fdc8"></a>05.3-OctaveTutorial-ComputingOnData.mp4<br /></li>
+<li><a id="org0f38cd0"></a>05.4-OctaveTutorial-PlottingData.mp4<br /></li>
+<li><a id="org5106b2f"></a>05.5-OctaveTutorial-ForWhileIfStatementsAndFunctions.mp4<br /></li>
+<li><a id="org94f9d38"></a>05.6-OctaveTutorial-Vectorization.mp4<br /></li>
+<li><a id="orgf6fa22d"></a>05.7-OctaveTutorial-WorkingOnAndSubmittingProgrammingExercises.mp4<br /></li>
+<li><a id="orged82e5a"></a>06.1-LogisticRegression-Classification.mp4<br /></li>
+<li><a id="org2a64b49"></a>06.2-LogisticRegression-HypothesisRepresentation.mp4<br /></li>
+<li><a id="org87c25e6"></a>06.3-LogisticRegression-DecisionBoundary.mp4<br /></li>
+<li><a id="orgef00945"></a>06.4-LogisticRegression-CostFunction.mp4<br /></li>
+<li><a id="org505f438"></a>06.5-LogisticRegression-SimplifiedCostFunctionAndGradientDescent.mp4<br /></li>
+<li><a id="orgb111bce"></a>06.6-LogisticRegression-AdvancedOptimization.mp4<br /></li>
+<li><a id="org3201f44"></a>06.7-LogisticRegression-MultiClassClassificationOneVsAll.mp4<br /></li>
+<li><a id="org27a7b5d"></a>07.1-Regularization-TheProblemOfOverfitting.mp4<br /></li>
+<li><a id="orge3ea3e6"></a>07.2-Regularization-CostFunction.mp4<br /></li>
+<li><a id="org7dd9190"></a>07.3-Regularization-RegularizedLinearRegression.mp4<br /></li>
+<li><a id="org887de80"></a>07.4-Regularization-RegularizedLogisticRegression.mp4<br /></li>
+<li><a id="org75534f9"></a>08.1-NeuralNetworksRepresentation-NonLinearHypotheses.mp4<br /></li>
+<li><a id="org05b2376"></a>08.2-NeuralNetworksRepresentation-NeuronsAndTheBrain.mp4<br /></li>
+<li><a id="org5c0b9dc"></a>08.3-NeuralNetworksRepresentation-ModelRepresentationI.mp4<br /></li>
+<li><a id="org69a9a87"></a>08.4-NeuralNetworksRepresentation-ModelRepresentationII.mp4<br /></li>
+<li><a id="org098dc96"></a>08.5-NeuralNetworksRepresentation-ExamplesAndIntuitionsI.mp4<br /></li>
+<li><a id="org0bbfbe0"></a>08.6-NeuralNetworksRepresentation-ExamplesAndIntuitionsII.mp4<br /></li>
+<li><a id="orgb3aaa20"></a>08.7-NeuralNetworksRepresentation-MultiClassClassification.mp4<br /></li>
+<li><a id="org44dacfc"></a>09.1-NeuralNetworksLearning-CostFunction.mp4<br /></li>
+<li><a id="org2dad24b"></a>09.2-NeuralNetworksLearning-BackpropagationAlgorithm.mp4<br /></li>
+<li><a id="org623ce63"></a>09.3-NeuralNetworksLearning-BackpropagationIntuition.mp4<br /></li>
+<li><a id="org224901e"></a>09.3-NeuralNetworksLearning-ImplementationNoteUnrollingParameters.mp4<br /></li>
+<li><a id="orgf5ea44b"></a>09.4-NeuralNetworksLearning-GradientChecking.mp4<br /></li>
+<li><a id="org3cd8dd5"></a>09.5-NeuralNetworksLearning-RandomInitialization.mp4<br /></li>
+<li><a id="org68d3388"></a>09.7-NeuralNetworksLearning-PuttingItTogether.mp4<br /></li>
+<li><a id="org38837cb"></a>09.8-NeuralNetworksLearning-AutonomousDrivingExample.mp4<br /></li>
+<li><a id="org3bca794"></a>10.1-AdviceForApplyingMachineLearning-DecidingWhatToTryNext.mp4<br /></li>
+<li><a id="org60c48e9"></a>10.2-AdviceForApplyingMachineLearning-EvaluatingAHypothesis.mp4<br /></li>
+<li><a id="org80e35b6"></a>10.3-AdviceForApplyingMachineLearning-ModelSelectionAndTrainValidationTestSets.mp4<br /></li>
+<li><a id="orgb00b133"></a>10.4-AdviceForApplyingMachineLearning-DiagnosingBiasVsVariance.mp4<br /></li>
+<li><a id="orgbe79f1f"></a>10.5-AdviceForApplyingMachineLearning-RegularizationAndBiasVariance.mp4<br /></li>
+<li><a id="org04f4961"></a>10.6-AdviceForApplyingMachineLearning-LearningCurves.mp4<br /></li>
+<li><a id="orgab720f7"></a>10.7-AdviceForApplyingMachineLearning-DecidingWhatToDoNextRevisited.mp4<br /></li>
+<li><a id="org4fb9e74"></a>11.1-MachineLearningSystemDesign-PrioritizingWhatToWorkOn.mp4<br /></li>
+<li><a id="org4ca15e7"></a>11.2-MachineLearningSystemDesign-ErrorAnalysis.mp4<br /></li>
+<li><a id="org4e6ba47"></a>11.3-MachineLearningSystemDesign-ErrorMetricsForSkewedClasses.mp4<br /></li>
+<li><a id="org0273861"></a>11.4-MachineLearningSystemDesign-TradingOffPrecisionAndRecall.mp4<br /></li>
+<li><a id="org7b98323"></a>11.5-MachineLearningSystemDesign-DataForMachineLearning.mp4<br /></li>
+<li><a id="orge4b8126"></a>12.1-SupportVectorMachines-OptimizationObjective.mp4<br /></li>
+<li><a id="org8d473b2"></a>12.2-SupportVectorMachines-LargeMarginIntuition.mp4<br /></li>
+<li><a id="org78709eb"></a>12.3-SupportVectorMachines-MathematicsBehindLargeMarginClassificationOptional.mp4<br /></li>
+<li><a id="orga3011da"></a>12.4-SupportVectorMachines-KernelsI.mp4<br /></li>
+<li><a id="org21b435d"></a>12.5-SupportVectorMachines-KernelsII.mp4<br /></li>
+<li><a id="orgf94d5a0"></a>12.6-SupportVectorMachines-UsingAnSVM.mp4<br /></li>
+<li><a id="org5194904"></a>14.1-Clustering-UnsupervisedLearningIntroduction.mp4<br /></li>
+<li><a id="orgf991522"></a>14.2-Clustering-KMeansAlgorithm.mp4<br /></li>
+<li><a id="org6045439"></a>14.3-Clustering-OptimizationObjective.mp4<br /></li>
+<li><a id="orge51a639"></a>14.4-Clustering-RandomInitialization.mp4<br /></li>
+<li><a id="orgb0822c1"></a>14.5-Clustering-ChoosingTheNumberOfClusters.mp4<br /></li>
+<li><a id="org93e27c3"></a>15.1-DimensionalityReduction-MotivationIDataCompression.mp4<br /></li>
+<li><a id="org6cb512f"></a>15.2-DimensionalityReduction-MotivationIIVisualization.mp4<br /></li>
+<li><a id="org8a7c83d"></a>15.3-DimensionalityReduction-PrincipalComponentAnalysisProblemFormulation.mp4<br /></li>
+<li><a id="org543a34e"></a>15.4-DimensionalityReduction-PrincipalComponentAnalysisAlgorithm.mp4<br /></li>
+<li><a id="orgcc585f7"></a>15.5-DimensionalityReduction-ChoosingTheNumberOfPrincipalComponents.mp4<br /></li>
+<li><a id="org399ceae"></a>15.6-DimensionalityReduction-ReconstructionFromCompressedRepresentation.mp4<br /></li>
+<li><a id="orgf4adb8a"></a>15.7-DimensionalityReduction-AdviceForApplyingPCA.mp4<br /></li>
+<li><a id="org2fe5544"></a>16.1-AnomalyDetection-ProblemMotivation-V1.mp4<br /></li>
+<li><a id="org76e386f"></a>16.2-AnomalyDetection-GaussianDistribution.mp4<br /></li>
+<li><a id="org35b44ec"></a>16.3-AnomalyDetection-Algorithm.mp4<br /></li>
+<li><a id="org2669455"></a>16.4-AnomalyDetection-DevelopingAndEvaluatingAnAnomalyDetectionSystem.mp4<br /></li>
+<li><a id="orgbcd4415"></a>16.5-AnomalyDetection-AnomalyDetectionVsSupervisedLearning-V1.mp4<br /></li>
+<li><a id="orgb8e4cc5"></a>16.6-AnomalyDetection-ChoosingWhatFeaturesToUse.mp4<br /></li>
+<li><a id="orgb56cd13"></a>16.7-AnomalyDetection-MultivariateGaussianDistribution-OPTIONAL.mp4<br /></li>
+<li><a id="orgff8d793"></a>16.8-AnomalyDetection-AnomalyDetectionUsingTheMultivariateGaussianDistribution-OPTIONAL.mp4<br /></li>
+<li><a id="org3793b8c"></a>17.1-RecommenderSystems-ProblemFormulation.mp4<br /></li>
+<li><a id="org7789d50"></a>17.2-RecommenderSystems-ContentBasedRecommendations.mp4<br /></li>
+<li><a id="org56ff252"></a>17.3-RecommenderSystems-CollaborativeFiltering-V1.mp4<br /></li>
+<li><a id="orgee0ac34"></a>17.4-RecommenderSystems-CollaborativeFilteringAlgorithm.mp4<br /></li>
+<li><a id="org06a9e0f"></a>17.5-RecommenderSystems-VectorizationLowRankMatrixFactorization.mp4<br /></li>
+<li><a id="orgf653945"></a>17.6-RecommenderSystems-ImplementationalDetailMeanNormalization.mp4<br /></li>
+<li><a id="org3f9b176"></a>18.1-LargeScaleMachineLearning-LearningWithLargeDatasets.mp4<br /></li>
+<li><a id="orge510836"></a>18.2-LargeScaleMachineLearning-StochasticGradientDescent.mp4<br /></li>
+<li><a id="org6a09fa1"></a>18.3-LargeScaleMachineLearning-MiniBatchGradientDescent.mp4<br /></li>
+<li><a id="org815ca1d"></a>18.4-LargeScaleMachineLearning-StochasticGradientDescentConvergence.mp4<br /></li>
+<li><a id="orgf061e9c"></a>18.5-LargeScaleMachineLearning-OnlineLearning.mp4<br /></li>
+<li><a id="org7d2dcba"></a>18.6-LargeScaleMachineLearning-MapReduceAndDataParallelism.mp4<br /></li>
+<li><a id="org1f8cbb3"></a>19.1-ApplicationExamplePhotoOCR-ProblemDescriptionAndPipeline.mp4<br /></li>
+<li><a id="orgf8cc282"></a>19.2-ApplicationExamplePhotoOCR-SlidingWindows.mp4<br /></li>
+<li><a id="org1e48333"></a>19.3-ApplicationExamplePhotoOCR-GettingLotsOfDataArtificialDataSynthesis.mp4<br /></li>
+<li><a id="orgf3deaf5"></a>19.4-ApplicationExamplePhotoOCR-CeilingAnalysisWhatPartOfThePipelineToWorkOnNext.mp4<br /></li>
+<li><a id="org5e6f9a7"></a>20.1-Conclusion-SummaryAndThankYou.mp4<br /></li></ol>
+</div>
+
+<div id="outline-container-org18129b5" class="outline-4">
+<h4 id="org18129b5"><span class="section-number-4">1.97.16</span> <span class="todo TODO">TODO</span> MIT 6.042J Mathematics for Computer Science, Spring 2015 <code>[4%]</code></h4>
+<div class="outline-text-4" id="text-1-97-16">
+<p>
+source: <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ">https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ</a>
+</p>
+</div>
+<ol class="org-ol"><li><a id="org7ee1813"></a><span class="done DONE">DONE</span> 1.1.1 Welcome to 6.042-wIq4CssPoO0.mp4<br /><div class="outline-text-5" id="text-1-97-16-1">
+</div></li>
+<li><a id="org9134e4b"></a><span class="done DONE">DONE</span> 1.1.2 Intro to Proofs - Part 1-GyFVgJZ0hIs.mp4<br /><div class="outline-text-5" id="text-1-97-16-2">
+</div></li>
+<li><a id="org33d3f05"></a><span class="done DONE">DONE</span> 1.1.3 Intro to Proofs - Part 2-wfr4XbR5VP8.mp4<br /><div class="outline-text-5" id="text-1-97-16-3">
+</div></li>
+<li><a id="org2b74f97"></a><span class="done DONE">DONE</span> 1.2.1 Proof by Contradiction-CpW0ZJ7i0oc.mp4<br /><div class="outline-text-5" id="text-1-97-16-4">
+</div></li>
+<li><a id="org97ecd4a"></a><span class="done DONE">DONE</span> 1.2.3 Proof by Cases-vzpFQ3uNyPo.mp4<br /><div class="outline-text-5" id="text-1-97-16-5">
+</div></li>
+<li><a id="org442d9f7"></a><span class="todo TODO">TODO</span> 1.3.1 Well Ordering Principle 1 - Video-fV3v6qQ3w4A.mp4<br /></li>
+<li><a id="org5536795"></a><span class="todo TODO">TODO</span> 1.3.3 Well Ordering Principle 2 - Video-I1HpgnWQI7I.mp4<br /></li>
+<li><a id="org50a582c"></a><span class="todo TODO">TODO</span> 1.3.5 Well Ordering Principle 3 - Video-hNrtGiCFPGs.mp4<br /></li>
+<li><a id="org24fd9e1"></a><span class="todo TODO">TODO</span> 1.4.1 Propositional Operators - Video-0exBzsexUoI.mp4<br /></li>
+<li><a id="org4921ebe"></a><span class="todo TODO">TODO</span> 1.4.3 Digital Logic - Video-eMWG-jTh-GE.mp4<br /></li>
+<li><a id="org623355f"></a><span class="todo TODO">TODO</span> 1.4.4 Truth Tables - Video-<sub>3WDzxt5p8c.mp4</sub><br /></li>
+<li><a id="orgaeb1693"></a><span class="todo TODO">TODO</span> 1.5.1 Predicate Logic 1 - Video-UroprmQHTLc.mp4<br /></li>
+<li><a id="org102dc00"></a><span class="todo TODO">TODO</span> 1.5.2 Predicate Logic 2 - Video-T1AtlGrCoU8.mp4<br /></li>
+<li><a id="org1610503"></a><span class="todo TODO">TODO</span> 1.5.4 Predicate Logic 3 - Video-L5uBeAGJV1k.mp4<br /></li>
+<li><a id="orgc9a35fe"></a><span class="todo TODO">TODO</span> 1.6.1 Sets Definitions - Video-KZ7jjLTQ9r4.mp4<br /></li>
+<li><a id="org490dc90"></a><span class="todo TODO">TODO</span> 1.6.2 Sets Operations - Video-Mhip1rljvRo.mp4<br /></li>
+<li><a id="org4f313f8"></a><span class="todo TODO">TODO</span> 1.7.1 Relations - Video-FkfsmwAtDdY.mp4<br /></li>
+<li><a id="org26c9985"></a><span class="todo TODO">TODO</span> 1.7.3 Relational Mappings - Video-gFD1Lp6zK3w.mp4<br /></li>
+<li><a id="org1d630b8"></a><span class="todo TODO">TODO</span> 1.7.5 Finite Cardinality - Video-fpy5Hsz5t6E.mp4<br /></li>
+<li><a id="orgb808c40"></a><span class="todo TODO">TODO</span> 1.8.1 Induction - Video-XnV8GAuAqJM.mp4<br /></li>
+<li><a id="org9a30ceb"></a><span class="todo TODO">TODO</span> 1.8.2 Bogus Induction - Video-D3E5CKebKuQ.mp4<br /></li>
+<li><a id="org323359c"></a><span class="todo TODO">TODO</span> 1.8.4 Strong Induction - Video-TUueMeRooBk.mp4<br /></li>
+<li><a id="org870536c"></a><span class="todo TODO">TODO</span> 1.8.6 WOP vs Induction - Video [optional]-K8ZfzNN1miQ.mp4<br /></li>
+<li><a id="org7437e37"></a><span class="todo TODO">TODO</span> 1.9.3 Derived Variables - Video-a7JUH-EtHtI.mp4<br /></li>
+<li><a id="orgfaf50a5"></a><span class="todo TODO">TODO</span> 1.10.1 Recursive Data - Video-TXNXT3oBROw.mp4<br /></li>
+<li><a id="orgc12e205"></a><span class="todo TODO">TODO</span> 1.10.4 Structural Induction - Video-VWIDwHCGJDQ.mp4<br /></li>
+<li><a id="org5272e91"></a><span class="todo TODO">TODO</span> 1.10.7 Recursive Functions - Video-tOsdeaYDCMk.mp4<br /></li>
+<li><a id="org95d942f"></a><span class="todo TODO">TODO</span> 1.11.11 Set Theory Axioms - Video [Optional]-zcvsyL7GtH4.mp4<br /></li>
+<li><a id="org7d4fb1b"></a><span class="todo TODO">TODO</span> 1.11.1 Cardinality - Video-QzSCf62kzjE.mp4<br /></li>
+<li><a id="org5d6ff13"></a><span class="todo TODO">TODO</span> 1.11.3 Countable Sets - Video-AipSRi3CyLg.mp4<br /></li>
+<li><a id="orgf6fd1e9"></a><span class="todo TODO">TODO</span> 1.11.4 Cantor's Theorem - Video-4dj1ogUwTEM.mp4<br /></li>
+<li><a id="org1e528f1"></a><span class="todo TODO">TODO</span> 1.11.7 The Halting Problem - Video [Optional]-WQHOImO0pX0.mp4<br /></li>
+<li><a id="org16556b7"></a><span class="todo TODO">TODO</span> 1.11.9 Russell's Paradox - Video-5hETv64GIuE.mp4<br /></li>
+
+<li><a id="org22ac16d"></a><span class="todo TODO">TODO</span> 2.1.1 GCDs &amp; Linear Combinations - Video-et3FOZdI6pk.mp4<br /></li>
+<li><a id="org503d7d4"></a><span class="todo TODO">TODO</span> 2.1.2 Euclidean Algorithm - Video-dW0f62lcCLE.mp4<br /></li>
+<li><a id="orgba9d2d6"></a><span class="todo TODO">TODO</span> 2.1.4 Pulverizer - Video-yzKPotFLfsc.mp4<br /></li>
+<li><a id="orgad910fb"></a><span class="todo TODO">TODO</span> 2.1.6 Revisiting Die Hard - Video-c3qNBNl1h8g.mp4<br /></li>
+<li><a id="org3168194"></a><span class="todo TODO">TODO</span> 2.1.7 Prime Factorization - Video-QsKtEuUyIdw.mp4<br /></li>
+<li><a id="org9a7ff48"></a><span class="todo TODO">TODO</span> 2.2.1 Congruence mod n - Video-KvtLWgCTwn4.mp4<br /></li>
+<li><a id="orgb8a17d1"></a><span class="todo TODO">TODO</span> 2.2.3 Inverses mod n - Video-CAKSh3M0y8k.mp4<br /></li>
+<li><a id="org97b3ab6"></a><span class="todo TODO">TODO</span> 2.3.1 Modular Exponentiation Euler's Function - Video-TeRYL7kkhqs.mp4<br /></li>
+<li><a id="orga807f77"></a><span class="todo TODO">TODO</span> 2.3.3 The Ring Z - Video-dZgI16nMuqE.mp4<br /></li>
+<li><a id="orga5cc549"></a><span class="todo TODO">TODO</span> 2.4.1 RSA Public Key Encryption - Video-ZUZ8VbX1YNQ.mp4<br /></li>
+<li><a id="orgc2efd8d"></a><span class="todo TODO">TODO</span> 2.4.3 Reducing Factoring To SAT - Video-yWIQCewgfwY.mp4<br /></li>
+<li><a id="orgeee529b"></a><span class="todo TODO">TODO</span> 2.5.1 Digraphs - Walks &amp; Paths - Video-MX-mBxt6huU.mp4<br /></li>
+<li><a id="org2d6e6ad"></a><span class="todo TODO">TODO</span> 2.5.3 Digraphs - Connected Vertices - Video-QORX1OUabio.mp4<br /></li>
+<li><a id="org7799824"></a><span class="todo TODO">TODO</span> 2.6.1 DAGs - Video-Sdw8<sub>0RDZuw.mp4</sub><br /></li>
+<li><a id="org42c42e1"></a><span class="todo TODO">TODO</span> 2.6.3 Scheduling - Video-1TpzSCMLg08.mp4<br /></li>
+<li><a id="org34c05c1"></a><span class="todo TODO">TODO</span> 2.6.5 Time versus Processors - Video-cUYTlKA8jaw.mp4<br /></li>
+<li><a id="org935552b"></a><span class="todo TODO">TODO</span> 2.7.1 Partial Orders - Video-0w9luYcxHrw.mp4<br /></li>
+<li><a id="org8594dce"></a><span class="todo TODO">TODO</span> 2.7.3 Representing Partial Orders As Subset Relations - Video-bHvMYZvZp7Y.mp4<br /></li>
+<li><a id="org0506672"></a><span class="todo TODO">TODO</span> 2.7.4 Equivalence Relations - Video-s-E5T3igntw.mp4<br /></li>
+<li><a id="orgac24500"></a><span class="todo TODO">TODO</span> 2.8.1 Degree - Video-TIpnudrzvgg.mp4<br /></li>
+<li><a id="org3fdf093"></a><span class="todo TODO">TODO</span> 2.8.3 Isomorphism - Video-hVerxuP4cFg.mp4<br /></li>
+<li><a id="org9261492"></a><span class="todo TODO">TODO</span> 2.9.1 Coloring - Video-Penh4mv5gAg.mp4<br /></li>
+<li><a id="org7bb191f"></a><span class="todo TODO">TODO</span> 2.9.3 Connectivity - Video-TIQ3xN38jgM.mp4<br /></li>
+<li><a id="orgda94ef5"></a><span class="todo TODO">TODO</span> 2.9.4 k-Connectivity - Video-5wCZqdCDafc.mp4<br /></li>
+<li><a id="org8573e55"></a><span class="todo TODO">TODO</span> 2.10.1 Trees - Video-ZEsk64C0fJg.mp4<br /></li>
+<li><a id="org92cca5e"></a><span class="todo TODO">TODO</span> 2.10.3 Tree Coloring - Video-g2mOvmC1TKc.mp4<br /></li>
+<li><a id="org0eeb569"></a><span class="todo TODO">TODO</span> 2.10.5 Spanning Trees - Video-<sub>RqqzyWDVMA.mp4</sub><br /></li>
+<li><a id="org5dd406a"></a><span class="todo TODO">TODO</span> 2.11.1 Stable Matching - Video-RE5PmdGNgj0.mp4<br /></li>
+<li><a id="org27f97c4"></a><span class="todo TODO">TODO</span> 2.11.2 Matching Ritual - Video-6vgHIImFwHo.mp4<br /></li>
+<li><a id="org3268fee"></a><span class="todo TODO">TODO</span> 2.11.5 Optimal Stable Matching - Video-n4KKgKpp&#x2013;0.mp4<br /></li>
+<li><a id="org251a2cf"></a><span class="todo TODO">TODO</span> 2.11.7 Bipartite Matching-HZLKDC9OSaQ.mp4<br /></li>
+<li><a id="orgdb350be"></a><span class="todo TODO">TODO</span> 2.11.9 Hall's Theorem-i5AWE-OoOsY.mp4<br /></li>
+
+<li><a id="orge9a5b68"></a><span class="todo TODO">TODO</span> 3.1.1 Arithmetic Sums - Video-v6axtBS6IF8.mp4<br /></li>
+<li><a id="orgd46da3f"></a><span class="todo TODO">TODO</span> 3.1.3 Geometric Sums - Video-ZDQk45NQbEo.mp4<br /></li>
+<li><a id="org58ca9da"></a><span class="todo TODO">TODO</span> 3.1.5 Book Stacking - Video-CdhuVhWTSMI.mp4<br /></li>
+<li><a id="org554ad06"></a><span class="todo TODO">TODO</span> 3.1.7 Integral Method - Video-EegG5TPL29c.mp4<br /></li>
+<li><a id="org1b49372"></a><span class="todo TODO">TODO</span> 3.1.9 Stirling's Formula - Video-lU<sub>QT5GSuxI.mp4</sub><br /></li>
+<li><a id="orgad94b2d"></a><span class="todo TODO">TODO</span> 3.2.1 Asymptotic Notation - Video-CWkh5kb4TGc.mp4<br /></li>
+<li><a id="orgb97888d"></a><span class="todo TODO">TODO</span> 3.2.3 Asymptotic Properties - Video-HeyEK0TWiBw.mp4<br /></li>
+<li><a id="org786d9b9"></a><span class="todo TODO">TODO</span> 3.2.6 Asymptotic Blunders-Y9Blo<sub>G</sub>-Mvg.mp4<br /></li>
+<li><a id="orgdceae50"></a><span class="todo TODO">TODO</span> 3.3.1 Sum And Product Rules - Video-yTrtVwKZkwU.mp4<br /></li>
+<li><a id="org7e70a8e"></a><span class="todo TODO">TODO</span> 3.3.3 Counting with Bijections - Video-n0lce1dMAh8.mp4<br /></li>
+<li><a id="orga2795d8"></a><span class="todo TODO">TODO</span> 3.4.1 Generalized Counting Rules - Video-iDfyX8WRIyM.mp4<br /></li>
+<li><a id="orgae7d22a"></a><span class="todo TODO">TODO</span> 3.4.3 Two Pair Poker Hands - Video-HswnmlLPGZ4.mp4<br /></li>
+<li><a id="orgbd4114b"></a><span class="todo TODO">TODO</span> 3.4.4 Binomial Theorem - Video-jwjDj4GoSV0.mp4<br /></li>
+<li><a id="org6f22d51"></a><span class="todo TODO">TODO</span> 3.4.5 Multinomial Theorem - Video-juGgfHsO-xM.mp4<br /></li>
+<li><a id="org7e6e7ac"></a><span class="todo TODO">TODO</span> 3.5.1 The Pigeonhole Principle - Video-4Dz4vNUxnZM.mp4<br /></li>
+<li><a id="org9818739"></a><span class="todo TODO">TODO</span> 3.5.3 Inclusion-Exclusion Example - Video-51-b2mgZVNY.mp4<br /></li>
+<li><a id="orgc9b50f6"></a><span class="todo TODO">TODO</span> 3.5.4 Inclusion-Exclusion 2 Sets - Video-nwpzBE9IwJQ.mp4<br /></li>
+
+<li><a id="orga4e3af4"></a><span class="todo TODO">TODO</span> 4.1.1 Tree Model - Video-dEsFEK4vnV4.mp4<br /></li>
+<li><a id="org7dfd23d"></a><span class="todo TODO">TODO</span> 4.1.3 Simplified Monty Hall Tree - Video-L30HPgryd6I.mp4<br /></li>
+<li><a id="orgbcd31db"></a><span class="todo TODO">TODO</span> 4.1.5 Sample Spaces - Video-Amd<sub>bNYzgUw.mp4</sub><br /></li>
+<li><a id="orgbdf0d06"></a><span class="todo TODO">TODO</span> 4.2.1 Conditional Probability Definitions - Video-Cu9<sub>LaaWgHo.mp4</sub><br /></li>
+<li><a id="org34a8736"></a><span class="todo TODO">TODO</span> 4.2.3 Law of Total Probability - Video-F3y8qupFfUs.mp4<br /></li>
+<li><a id="org7e5852c"></a><span class="todo TODO">TODO</span> 4.2.5 Bayes' Theorem - Video-e-yQFC6dACA.mp4<br /></li>
+<li><a id="org3a91a5f"></a><span class="todo TODO">TODO</span> 4.2.7 Monty Hall Problem - Video-BEAv82FinM0.mp4<br /></li>
+<li><a id="org56bd618"></a><span class="todo TODO">TODO</span> 4.3.1 Independence - Video-1vQ2x5O<sub>xqk.mp4</sub><br /></li>
+<li><a id="org8d4ece7"></a><span class="todo TODO">TODO</span> 4.3.3 Mutual Independence - Video-wJzBU7Do1ls.mp4<br /></li>
+<li><a id="org9f44583"></a><span class="todo TODO">TODO</span> 4.4.1 Bigger Number Game - Video-BH4qlkYCLW0.mp4<br /></li>
+<li><a id="org1301b6f"></a><span class="todo TODO">TODO</span> 4.4.2 Random Variables - Independence - Video-VJzv6WJTtNc.mp4<br /></li>
+<li><a id="orgbfeba9f"></a><span class="todo TODO">TODO</span> 4.4.4 Random Variables - Uniform &amp; Binomial - Video-L2yOSFsMvnc.mp4<br /></li>
+<li><a id="org2a481c6"></a><span class="todo TODO">TODO</span> 4.5.1 Expectation - Video-YVQdVzSkcmQ.mp4<br /></li>
+<li><a id="org963a3f8"></a><span class="todo TODO">TODO</span> 4.5.3 Expected Number Of Heads - Video-D9l-pIg1Ayo.mp4<br /></li>
+<li><a id="org491854c"></a><span class="todo TODO">TODO</span> 4.5.5 Total Expectation - Video-mqoDXWrSais.mp4<br /></li>
+<li><a id="org9a7fc64"></a><span class="todo TODO">TODO</span> 4.5.7 Mean Time to Failure - Video-Dqx56lZ<sub>icg.mp4</sub><br /></li>
+<li><a id="org307bfcf"></a><span class="todo TODO">TODO</span> 4.5.9 Linearity of Expectation - Video-KFcodn4qfrQ.mp4<br /></li>
+<li><a id="orgee0c121"></a><span class="todo TODO">TODO</span> 4.6.1 Deviation From The Mean - Video-ALn1McUXg-c.mp4<br /></li>
+<li><a id="orgfaf0174"></a><span class="todo TODO">TODO</span> 4.6.3 Markov Bounds - Video-m07lrb7m0D0.mp4<br /></li>
+<li><a id="org9cb0cc7"></a><span class="todo TODO">TODO</span> 4.6.5 Chebyshev Bounds - Video-uaa4P-kkLrA.mp4<br /></li>
+<li><a id="org34350a0"></a><span class="todo TODO">TODO</span> 4.6.7 Variance - Video-o57CTwt1-ck.mp4<br /></li>
+<li><a id="orgeb9d3be"></a><span class="todo TODO">TODO</span> 4.7.1 Law Of Large Numbers - Video&#x2013;yo3YxfY47g.mp4<br /></li>
+<li><a id="orgfc4a8db"></a><span class="todo TODO">TODO</span> 4.7.3 Independent Sampling Theorem - Video-MMn7q1M7pGI.mp4<br /></li>
+<li><a id="orgbd624cf"></a><span class="todo TODO">TODO</span> 4.7.5 Birthday Matching - Video-TWVntUfXsKs.mp4<br /></li>
+<li><a id="org6329e07"></a><span class="todo TODO">TODO</span> 4.7.7 Sampling &amp; Confidence - Video-Q-6Cw8tYVeY.mp4<br /></li>
+<li><a id="org241633e"></a><span class="todo TODO">TODO</span> 4.8.1 Random Walks - Video&#x2013;j7MoM3P<sub>J8.mp4</sub><br /></li>
+<li><a id="org3c6df94"></a><span class="todo TODO">TODO</span> 4.8.2 Stationary Distributions - Video-iZX8WEGZTVw.mp4<br /></li>
+<li><a id="orgaa57528"></a><span class="todo TODO">TODO</span> 4.8.3 Page Rank - Video-QKO<sub>2WQkZ0k.mp4</sub><br /></li></ol>
+</div>
+
+<div id="outline-container-org0a065c5" class="outline-4">
+<h4 id="org0a065c5"><span class="section-number-4">1.97.17</span> <span class="todo TODO">TODO</span> Machine Learning, 1997 by Tom M. Mitchell <code>[0%]</code></h4>
+<div class="outline-text-4" id="text-1-97-17">
+</div><ol class="org-ol"><li><a id="org7394b37"></a><span class="todo TODO">TODO</span> Introduction<br /></li>
+<li><a id="org56162dd"></a><span class="todo TODO">TODO</span> Concept Learning and the General-to-Specific Ordering<br /></li>
+<li><a id="orge20d9a2"></a><span class="todo TODO">TODO</span> Decision Tree Learning<br /></li>
+<li><a id="orgb28d17d"></a><span class="todo TODO">TODO</span> Artificial Neural Networks<br /></li>
+<li><a id="orga738c20"></a><span class="todo TODO">TODO</span> Evaluating Hypotheses<br /></li>
+<li><a id="org3d837a6"></a><span class="todo TODO">TODO</span> Bayesian Learning<br /></li>
+<li><a id="orgdff3320"></a><span class="todo TODO">TODO</span> Computational Learning Theory<br /></li>
+<li><a id="org8290080"></a><span class="todo TODO">TODO</span> Instance-Based Learning<br /></li>
+<li><a id="org0c483d8"></a><span class="todo TODO">TODO</span> Genetic Algorithms<br /></li>
+<li><a id="org616424c"></a><span class="todo TODO">TODO</span> Learning Sets of Rules<br /></li>
+<li><a id="orgc72951d"></a><span class="todo TODO">TODO</span> Analytical Learning<br /></li>
+<li><a id="orgb64bc98"></a><span class="todo TODO">TODO</span> Combining Inductive And Analytical Learning<br /></li>
+<li><a id="org15cdf13"></a><span class="todo TODO">TODO</span> Reinforcement Learning<br /></li></ol>
+</div>
+
+<div id="outline-container-orgf4d80cd" class="outline-4">
+<h4 id="orgf4d80cd"><span class="section-number-4">1.97.18</span> <span class="todo TODO">TODO</span> MIT6.034ArtificialIntelligenceFall2010 <code>[0%]</code></h4>
+<div class="outline-text-4" id="text-1-97-18">
+<p>
+done 1,2,3,4, still downloading the rest&#x2026;
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org87c7850" class="outline-3">
+<h3 id="org87c7850"><span class="section-number-3">1.98</span> <span class="todo TODO">TODO</span> ITMOx Competitive Programing Course <code>[%]</code></h3>
+<div class="outline-text-3" id="text-1-98">
+<p>
+Weeks 1 to 4 have eight problems each, and every solved problem brings
+you 2%, which adds up to 64% for all these weeks.
+</p>
+
+<p>
+Week 5 is the final exam week. On the final exam, you will have 5
+hours to solve 8 problems – just like on the ACM ICPC World Finals! 
+Every solved problem brings you 4% or 5%, for a total 36% on the exam.
+</p>
+
+<p>
+To earn a certificate for this course, you need an overall score of at
+least 65%. This means you have to solve at least one problem on the
+exam, so get prepared!
+</p>
+
+<p>
+course url: <a href="https://courses.edx.org/courses/course-v1:ITMOx+I2CPx+1T2017/">https://courses.edx.org/courses/course-v1:ITMOx+I2CPx+1T2017/</a>
+</p>
+</div>
+
+<div id="outline-container-orge382579" class="outline-4">
+<h4 id="orge382579"><span class="section-number-4">1.98.1</span> <span class="todo TODO">TODO</span> Week 1: Welcome to competitive programming</h4>
+<div class="outline-text-4" id="text-1-98-1">
+<p>
+Explore different kinds of programming competitions and benefits
+of participating,  as well as typical rules and challenges. An
+overview of algorithmic programming competitions. This is an
+introduction to community resources and online contests.
+</p>
+</div>
+<ol class="org-ol"><li><a id="orgfe468aa"></a><span class="todo TODO">TODO</span> problem 1<br /></li>
+<li><a id="org2701238"></a><span class="todo TODO">TODO</span> problem 2<br /></li>
+<li><a id="org586ba26"></a><span class="todo TODO">TODO</span> problem 3<br /></li>
+<li><a id="org3d8fcd4"></a><span class="todo TODO">TODO</span> problem 4<br /></li>
+<li><a id="org99e81a5"></a><span class="todo TODO">TODO</span> problem 5<br /></li>
+<li><a id="org65dc0cd"></a><span class="todo TODO">TODO</span> problem 6<br /></li>
+<li><a id="org8a5bd10"></a><span class="todo TODO">TODO</span> problem 7<br /></li>
+<li><a id="orgc961e65"></a><span class="todo TODO">TODO</span> problem 8<br /></li></ol>
+</div>
+
+
+<div id="outline-container-org3828883" class="outline-4">
+<h4 id="org3828883"><span class="section-number-4">1.98.2</span> <span class="todo TODO">TODO</span> Week 2: Computational complexity. Linear data structures</h4>
+<div class="outline-text-4" id="text-1-98-2">
+<p>
+An overview of computational complexity (Big O notation). 
+Introduction to linear data structures (array, list, stack, queue): operations, complexity, implementation and examples.
+</p>
+</div>
+<ol class="org-ol"><li><a id="orgeafde3f"></a><span class="todo TODO">TODO</span> problem 1<br /></li>
+<li><a id="orgc1a78a9"></a><span class="todo TODO">TODO</span> problem 2<br /></li>
+<li><a id="orgfc253fe"></a><span class="todo TODO">TODO</span> problem 3<br /></li>
+<li><a id="org1b248bf"></a><span class="todo TODO">TODO</span> problem 4<br /></li>
+<li><a id="orgee6074b"></a><span class="todo TODO">TODO</span> problem 5<br /></li>
+<li><a id="org8c5a55a"></a><span class="todo TODO">TODO</span> problem 6<br /></li>
+<li><a id="org962abbb"></a><span class="todo TODO">TODO</span> problem 7<br /></li>
+<li><a id="orgd24edf5"></a><span class="todo TODO">TODO</span> problem 8<br /></li></ol>
+</div>
+
+
+<div id="outline-container-orgd00e2fb" class="outline-4">
+<h4 id="orgd00e2fb"><span class="section-number-4">1.98.3</span> <span class="todo TODO">TODO</span> Week 3: Sorting and search algorithms</h4>
+<div class="outline-text-4" id="text-1-98-3">
+<p>
+Binary search (implementation and examples). 
+An overview of sorting algorithms (insertion sort, quicksort, merge
+sort), including theoretical analysis and examples of use. Linear
+sorting algorithms for integers.
+</p>
+</div>
+<ol class="org-ol"><li><a id="orgb73e4a7"></a><span class="todo TODO">TODO</span> problem 1<br /></li>
+<li><a id="orgf3fed63"></a><span class="todo TODO">TODO</span> problem 2<br /></li>
+<li><a id="orgf264add"></a><span class="todo TODO">TODO</span> problem 3<br /></li>
+<li><a id="org8268fff"></a><span class="todo TODO">TODO</span> problem 4<br /></li>
+<li><a id="org1dac8d1"></a><span class="todo TODO">TODO</span> problem 5<br /></li>
+<li><a id="org0b8fb8f"></a><span class="todo TODO">TODO</span> problem 6<br /></li>
+<li><a id="org29b539d"></a><span class="todo TODO">TODO</span> problem 7<br /></li>
+<li><a id="org319aab6"></a><span class="todo TODO">TODO</span> problem 8<br /></li></ol>
+</div>
+
+<div id="outline-container-org5793b4e" class="outline-4">
+<h4 id="org5793b4e"><span class="section-number-4">1.98.4</span> <span class="todo TODO">TODO</span> Week 4: Graph theory</h4>
+<div class="outline-text-4" id="text-1-98-4">
+<p>
+Definition of graphs and examples of graph problems. 
+Various ways of storing graphs in memory. Bitmask optimization. 
+Depth First Search and related topics: connected components, detecting
+cycles, detecting bipartite graphs. Shortest paths: Breadth First
+Search, Dijkstra, Bellman-Ford, Floyd-Warshall.
+</p>
+</div>
+<ol class="org-ol"><li><a id="org6a53980"></a><span class="todo TODO">TODO</span> problem 1<br /></li>
+<li><a id="org3621f2e"></a><span class="todo TODO">TODO</span> problem 2<br /></li>
+<li><a id="org92cc9b9"></a><span class="todo TODO">TODO</span> problem 3<br /></li>
+<li><a id="org4c44985"></a><span class="todo TODO">TODO</span> problem 4<br /></li>
+<li><a id="orge7a6d36"></a><span class="todo TODO">TODO</span> problem 5<br /></li>
+<li><a id="org75922ec"></a><span class="todo TODO">TODO</span> problem 6<br /></li>
+<li><a id="org40503fc"></a><span class="todo TODO">TODO</span> problem 7<br /></li>
+<li><a id="orgbfd20fc"></a><span class="todo TODO">TODO</span> problem 8<br /></li></ol>
+</div>
+
+<div id="outline-container-orgadce778" class="outline-4">
+<h4 id="orgadce778"><span class="section-number-4">1.98.5</span> <span class="todo TODO">TODO</span> Exam Contest</h4>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mohamed Fouad</p>
+<p class="date">Created: 2017-04-01 Sat 20:12</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

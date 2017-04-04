@@ -8,96 +8,6 @@
 #+OPTIONS: H:3 num:4
 #+TAGS: zpd0(0)  zpd1(1) zpd2(2)  problem solution predicate implication question fig mindmap number_theory set_theory proof_theory computational_theory problem_solving category_theory single_variable_calculas multi_variable_calculas vedic_mathematics graph_theory discerete_mathematics concerete_mathematics continous_mathematics statistics real_analysis grit top_universities studying_strategy data_structures algorithms artificial_intellegence machine_learning deep_learning bigdata R python puzzles { MOOC : coursera  stanford oxford MIT} { philosphy : socrates plato} book youtube blog competitive_programming C_programming {algorithms : ConstructiveAlgorithms Strings Sorting Search GraphTheory  Greedy DynamicProgramming  BitManipulation  Recursion GameTheory  NPComplete } DistributedSystems Regex Security Functions Cryptography
 #+STARTUP: latexpreview
-* Plans
-** TODO CodeJam Plan [%]
-*** Practice Contests
-*** Google Code Jam 2008
-*** Google Code Jam 2009
-*** Google Code Jam 2010
-*** Google Code Jam 2011
-*** Google Code Jam Japan 2011 
-*** Google Code Jam Korea 2012 
-*** EuroPython 2012
-*** Google Code Jam 2012 
-*** 
-*** 
-*** 
-*** 
-*** 
-  
-** TODO ITMOx Competitive Programing Course [%]
-   Weeks 1 to 4 have eight problems each, and every solved problem brings
-   you 2%, which adds up to 64% for all these weeks.
-
-   Week 5 is the final exam week. On the final exam, you will have 5
-   hours to solve 8 problems – just like on the ACM ICPC World Finals! 
-   Every solved problem brings you 4% or 5%, for a total 36% on the exam.
-
-   To earn a certificate for this course, you need an overall score of at
-   least 65%. This means you have to solve at least one problem on the
-   exam, so get prepared!
-
-   course url: https://courses.edx.org/courses/course-v1%3AITMOx%2BI2CPx%2B1T2017/
-
-*** TODO Week 1: Welcome to competitive programming
-    Explore different kinds of programming competitions and benefits
-    of participating,  as well as typical rules and challenges. An
-    overview of algorithmic programming competitions. This is an
-    introduction to community resources and online contests.
-**** TODO problem 1
-**** TODO problem 2
-**** TODO problem 3
-**** TODO problem 4
-**** TODO problem 5
-**** TODO problem 6
-**** TODO problem 7
-**** TODO problem 8
-
-
-*** TODO Week 2: Computational complexity. Linear data structures
-    An overview of computational complexity (Big O notation). 
-    Introduction to linear data structures (array, list, stack, queue): operations, complexity, implementation and examples.
-**** TODO problem 1
-**** TODO problem 2
-**** TODO problem 3
-**** TODO problem 4
-**** TODO problem 5
-**** TODO problem 6
-**** TODO problem 7
-**** TODO problem 8
-
-
-*** TODO Week 3: Sorting and search algorithms
-    Binary search (implementation and examples). 
-    An overview of sorting algorithms (insertion sort, quicksort, merge
-    sort), including theoretical analysis and examples of use. Linear
-    sorting algorithms for integers.
-**** TODO problem 1
-**** TODO problem 2
-**** TODO problem 3
-**** TODO problem 4
-**** TODO problem 5
-**** TODO problem 6
-**** TODO problem 7
-**** TODO problem 8
-
-*** TODO Week 4: Graph theory
-    Definition of graphs and examples of graph problems. 
-    Various ways of storing graphs in memory. Bitmask optimization. 
-    Depth First Search and related topics: connected components, detecting
-    cycles, detecting bipartite graphs. Shortest paths: Breadth First
-    Search, Dijkstra, Bellman-Ford, Floyd-Warshall.
-**** TODO problem 1
-**** TODO problem 2
-**** TODO problem 3
-**** TODO problem 4
-**** TODO problem 5
-**** TODO problem 6
-**** TODO problem 7
-**** TODO problem 8
-
-*** TODO Exam Contest
-
 
 * Knowledge 
   (P) Any knowledge by definition is true & concise otherwise it would
@@ -1234,296 +1144,76 @@ ref: http://web.mit.edu/10.001/Web/Tips/tips_on_segmentation.html
 
     
     
-* Problems
-** Saving the universe :gcj:2008:
+** TODO ITMOx Competitive Programing Course [%]
+   Weeks 1 to 4 have eight problems each, and every solved problem brings
+   you 2%, which adds up to 64% for all these weeks.
+
+   Week 5 is the final exam week. On the final exam, you will have 5
+   hours to solve 8 problems – just like on the ACM ICPC World Finals! 
+   Every solved problem brings you 4% or 5%, for a total 36% on the exam.
+
+   To earn a certificate for this course, you need an overall score of at
+   least 65%. This means you have to solve at least one problem on the
+   exam, so get prepared!
+
+   course url: https://courses.edx.org/courses/course-v1%3AITMOx%2BI2CPx%2B1T2017/
+
+*** TODO Week 1: Welcome to competitive programming
+    Explore different kinds of programming competitions and benefits
+    of participating,  as well as typical rules and challenges. An
+    overview of algorithmic programming competitions. This is an
+    introduction to community resources and online contests.
+**** TODO problem 1
+**** TODO problem 2
+**** TODO problem 3
+**** TODO problem 4
+**** TODO problem 5
+**** TODO problem 6
+**** TODO problem 7
+**** TODO problem 8
 
 
-** TODO Spaceship Defence
-   https://code.google.com/codejam/contest/2924486/dashboard#s=p4
-   
-   - *Teleporters*: 
-     - (P) Teleporters allow your soldiers to move instantly between rooms.
-     - (P) Every room contains a teleporter, and rooms are color-coded.
-     - (I) *if* a soldier is in a room with some color, 
-       *then* the solider can use the teleporter in that room to immediately move to any other room with the same color. 
-
-   - *Turbolifts*:
-     - (P) Turbolifts allow your soldiers to move between rooms more slowly.
-     - (P) A turbolift is like an elevator that moves in many directions.
-     - (P) Each turbolift moves from one room to one other room.
-     - (P) it takes a certain amount of time *t* to travel. 
-     - (I) Turbolifts are not two-way: 
-       *if* a turbolift moves soldiers from room a to room b, 
-       *then* the same turbolift cannot move soldiers from room b
-       to room a, 
-       *although* there might be another turbolift that does that.
-     - (P) More than one soldier can use the same turbolift, and they do not interfere with each other in any way.
-
-   - *Given*
-     - *locations* and *destinations* of several soliders 
-   - *Required*
-     - For each soldier, *output the minimum amount of time* it could take that soldier to travel from his location to his destination.
-*** Input
-    The first line of the input gives the number of test cases, T; T
-    test cases follow. For every test case:
-    - *rooms* 
-      - The first line of every test case contains an integer N, which
-        is the number of rooms in your spaceship. 
-      - The rooms are numbered from 1 to N. 
-      - The following N lines each contain a string telling the color of the rooms, from room 1 to room N. 
-      - The strings only contain characters a-z (the lower-case
-        English letters) and 0-9 (the number 0 to 9), and the length of each string will be less than or equal to 2.
-
-    - *turbolifts* 
-      - The next line in the test case is an integer M, 
-        which indicates the number of turbolifts in your spaceship. 
-      - The following M lines each contain 3 space-separated integers ai,
-        bi, ti, telling us that there is a turbolift that can transport 
-        soldiers from room ai to room bi in ti seconds.
-
-    - *Soliders* 
-      - The next line in the test case contains an integer S, which is the number of soldiers at your command. 
-      - The following S lines each contain two integers: the location and destination of one soldier, pj and qj.
+*** TODO Week 2: Computational complexity. Linear data structures
+    An overview of computational complexity (Big O notation). 
+    Introduction to linear data structures (array, list, stack, queue): operations, complexity, implementation and examples.
+**** TODO problem 1
+**** TODO problem 2
+**** TODO problem 3
+**** TODO problem 4
+**** TODO problem 5
+**** TODO problem 6
+**** TODO problem 7
+**** TODO problem 8
 
 
-** TODO Journey to the moon                              :graphtheory:medium: 
-   :PROPERTIES:   
-   :SCHEDULED: <2017-03-13 Mon +2d/4d>
-   :DESCRIPTION: hackerrank problem, found in rookierank2 contest, its about dupilcates in an array
-   :Difficulty: medium
-   :CATEGORY: graphtheory
-   :Source:   https://www.hackerrank.com/challenges/journey-to-the-moon
-   :LAST_REPEAT: [2017-02-24 Fri 12:37]
-   :END:
-   
-   The member states of the UN are planning to send  people to the Moon. 
-   But there is a problem. 
-   In line with their principles of global unity, 
-   they want to pair astronauts of 2 different countries.
+*** TODO Week 3: Sorting and search algorithms
+    Binary search (implementation and examples). 
+    An overview of sorting algorithms (insertion sort, quicksort, merge
+    sort), including theoretical analysis and examples of use. Linear
+    sorting algorithms for integers.
+**** TODO problem 1
+**** TODO problem 2
+**** TODO problem 3
+**** TODO problem 4
+**** TODO problem 5
+**** TODO problem 6
+**** TODO problem 7
+**** TODO problem 8
 
-   There are N trained astronauts numbered from 0 to N - 1. 
-   But those in charge of the mission did not receive information about the 
-   citizenship of each astronaut. 
+*** TODO Week 4: Graph theory
+    Definition of graphs and examples of graph problems. 
+    Various ways of storing graphs in memory. Bitmask optimization. 
+    Depth First Search and related topics: connected components, detecting
+    cycles, detecting bipartite graphs. Shortest paths: Breadth First
+    Search, Dijkstra, Bellman-Ford, Floyd-Warshall.
+**** TODO problem 1
+**** TODO problem 2
+**** TODO problem 3
+**** TODO problem 4
+**** TODO problem 5
+**** TODO problem 6
+**** TODO problem 7
+**** TODO problem 8
 
-   The only information they have is that some particular pairs of 
-   astronauts belong to the same country.
-
-   Your task is to compute in how many ways they can pick a pair of 
-   astronauts belonging to different countries. 
-   Assume that you are provided enough pairs to let you identify the 
-   groups of astronauts even though you might not know their country directly. 
-
-   For instance, if  are astronauts from the same country; 
-   it is sufficient to mention that  and  are pairs of astronauts from 
-   the same country without providing information about a third pair . 
-
-** Birthday Cake Candles  
-   :PROPERTIES:   
-   :SCHEDULED: <2017-02-19 Sun +2d/4d>
-   The repeat specification, .+2d/4d means:
-   Repeat as frequently as every two days, but
-   Never less frequently than every four days, and
-   When completed, start counting again from today. 
-   :DESCRIPTION: hackerrank problem, found in rookierank2 contest, its about dupilcates in an array
-   :Difficulty: easy  
-   :CATEGORY: search algorithms 
-   :Source:      https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
-   :ZPT:      1
-   :END:
-** :problem:
-   -  Colleen is turning  \(n\)  years old!                        
-   - She has  \(n\)  candles of various heights on her cake, 
-   - Candle \(i\) has height \(heighti\) . Because the taller candles tower over the shorter ones, Colleen can only blow out the tallest candles.
-   -  Given the  for each individual candle, find and print the number of candles she can successfully blow out.
-*** :input: 
-    - The first line contains a single integer, , denoting the number of candles on the cake. 
-    - The second line contains  space-separated integers, where each integer  describes the height of candle .
-*** :constraints:
-    none
-*** :output: 
-    - Print the number of candles Colleen blows out on a new line.
-*** :explanation:
-    - 1..
-    - 2.. 
-** :solution:
-*** :questions:
-    none
-*** :predicates:   
-    - the brute force solution gives O(N^2) via comparing each of two strings. 
-    - A common technique is the trade-off between time and space. 
-    - We want to make the algorithm faster, we can think of how to use more memory to solve the problem. .
-    - The keyphrase “find duplicate”, is translated to "use a hash set" immediately,  as hash is the most common technique to detect duplicates. 
-*** :implications:
-    - If we store every element into a hash set, we can make it O(N) for both time and space complexity.
-    #+BEGIN_SRC ruby
-      def input
-        p "love emacs, because emacs is a philosphy of how yo all dealing with computer..."
-      end
-      def output
-      end       
-      input
-    #+END_SRC
-
-    #+RESULTS: 
-    : love emacs, because emacs is a philosphy of how yo all dealing with computer
-
-** References       
-   - source: https://www.hackerrank.com/contests/rookierank/challenges/birthday-cake-candles
-   - ref: http://blog.gainlo.co/index.php/2016/05/10/duplicate-elements-of-an-array/
-
-   ----- 
-
-** TODO Somthing 
-   :PROPERTIES:   
-   :SCHEDULED: <2017-02-19 Sun +2d/4d>
-   :DESCRIPTON: hackerrank problem, found in....
-   :Difficulty: easy
-   :CATEGORY: none
-   :Source:   none
-   :ZPT:      1
-   :END:
-*** :problem:
-    -  something
-**** :input: 
-     - none 
-**** :constraints:
-     - none
-**** :output: 
-     - none
-**** :explanation:
-     - none
-*** :solution:
-**** :questions:
-     - none
-**** :predicates:   
-     - none
-**** :implications:
-     - none
-       #+BEGIN_SRC ruby
-       #+END_SRC
-       #+BEGIN_SRC C 
-       #+END_SRC
-*** References       
-    -  none
-
-      -----
-
-** Battlecode
-   MIT AI game #battlecode@freenode.net
-
-** ProblemName KnightL on a Chessboard
-** ProblemStatment 
-   is a chess piece that moves in an L shape. We define the possible moves of  as any movement from some position  to some  satisfying either of the following:
-** Input Format 
-** Constraints
-** Out Format
-** Solution 
-** Theatre Square                                :website:codeforces:contest:
-
-   source: http://codeforces.com/contest/1/problem/A
-   ----- 
-
-
-  
-   keep log of all the interviews I made and schedules for upcoming interviews, as well as info for mastering the
-   art of interviews. 
-  
-   Some people make multiple interviews with fake names, imporsnating someone who doens't
-   have a public profile photo on twitter and github, they require a fake skypename for that! You are too lazy for this :))
-
-** References       
-   - not related to the problem but good to notice https://en.wikipedia.org/wiki/Knight's_tour
-     
-
-   ----- 
-
- **** TODO add vjudge owner on whatsapp and wechat and talkk
-**** TODO use a tiled window manager instead of openbox to watch videos and emacs at teh same time
-
-     
-* Distractions 
-  write down distractions here to focus on task at hand, good for the focus muscle, 
-  watch https://www.youtube.com/watch?v=H0k0TQfZGSc
-** TODO Index CodeJam website and collection all their problem sets and Answers!.
-** TODO Org-mode shortcuts for SQ3R
-   - If I press space-q then I get (Q) with color red
-   - If I press space-p then I get (P) with color blue
-   - If I press space-p then I get (I) with color green
-   - If I press space-p then I get (I) with color yellow
-** TODO how to get all the file names from a folder and write them in a ** Reference TODO
-** TODO how to do references between the * Knoweldge and ** References  
-** DONE ban facebook
-   CLOSED: [2017-03-01 Wed 01:11]
-   /etc/hosts
-   0.0.0.1         facebook.com    
-   0.0.0.1         www.facebook.com
-
-** Hackertyper for reviewing practiced algorithms
-  I should use hackertyper to review practiced algorithms,
-  ref: http://www.hackertyper.com/
-  
-** How to use emacs in my life?
-   So the idea is that I while I want to code, I code in C or ruby file using its respective emacs-mode and its capabilities, but when i want to take notes and log it into my blog, 
-   I use org-capture. as I am very neat and I know what kind of stuff I add into my single-page blog, I have created many templates to my various data contents, 
-   example: if i am solving a hackerrank problem and i got it to pass, and now I want to add it to my blog, I just press C-cc followed by h or similar to start editing the hackerrank template, C-c C-c to finish 
-   and have it saved to the end of my blog with all the correct tags that gets viewed via emacs agenda later on. 
-
-   This is so powerful that I can create many powerful org-capture templates and save it in my .emacs and keep enhancing them to reflect my level of performance in study, practice and work. 
-
-   *use C-c \* to search for zpd0, zpd1, zpd2 tags and find what you are trying to do that day, and C-c C-c to choose the tags
-   *use space-p* to add new empty line in org-mode
-** PracticeTips:
-   - Whenever you solve some questions, try to ask yourself what if we *expand the question to a larger scale!*
-   - *Revisit old problems* and think about new techqinues, better ways, different contexts, different constrains, etc.  
-   - every solution is a finite state automata
-**  use inf-ruby more often please
-   ;; inf-ruby
-   ;;Use C-c C-s to launch the inf-ruby process.
-   ;;Use C-x o to switch to the inf-ruby pane and try running some random ruby snippets as you normally would from IRB or pry.
-   ;;Go back to your Ruby buffer, select (by highlighting) a chunk of code, and use C-c C-r to push that Ruby code into the IRB session.
-   ;;For example, try defining a class in your Ruby buffer, select the whole buffer, run C-c C-r, then swap over to the inf-ruby buffer and instantiate an instance of your class. Pretty cool!
-   ;;Alternatively, use C-c M-r to run a selected chunk of code and automatically go to the ruby buffer
-   ;;Finally, use helm-M-x (which we bound earlier to the default M-x keybinding) to search for âruby sendâ and see what other default bindings inf-ruby gives us.
-   ;;If you do a lot of work in Rails or Sinatra, check out the commands inf-ruby-console-rails and inf-ruby-console-racksh. Using these commands inf-ruby can start a console session in the environment of your web project.
-   (autoload 'inf-ruby-minor-mode "inf-
-
-** TODO
-   - create templates for hackerrank problems, store in zotherstupidguy.github.io/org/templates/hackerrank.text
-   - codeforces problems, store in zotherstupidguy.github.io/org/templates/codeforces.text
-   - experiment with org-mode agenda to view my headings based on their tags? or a smiliar functionality from somthing else maybe! 
-   - use org-capture for saving common algorithms in C. eg. sorting.c shortestpath.c, etc.
-   - find the ability to query my huge org file.  
-   - on emacs open, make sure it opens scratch and also opens index.org and make index.org the active buffer to easily edit.
-   - org-capture template for Questions, Predicates, and Implications
-
-** Emacs Agenda :agenda:
-   The agenda allows you to create filtered views of the items in your 
-   *agenda files*("day-planner" views of your schedule, lists of your todos, and the results of queries (for tags, words, regular expressions, etc.)).
-
-   One use of the agenda is as a day planner system. If you prefer to schedule your tasks and to see a daily agenda of TODOs, you'll probably be pressing C-c a a a lot.
-   The agenda can also be used for a powerful GTD system. If you like to filter your "next actions" by context, 
-   then you'll probably make frequent use of C-c a t to see a list of all your active TODOs and to filter them by tag/context.
-   While the agenda is a powerful task management tool, it is also a fantastic research tool. If you keep a file full of reading notes, 
-   for instance, you can use the agenda to locate entries containing a particular word or labeled by a particular tag.
-
-   *Do you want quickly to filter for the item in the agenda view? If so, a tag is probably your best choice.*
-   Note, you can add a setting to your .emacs that automatically adds a tag whenever you assign a particular TODO keyword. Type "C-c v org-todo-state-tags-triggers" for more information.
-   An excellent way to implement labels and contexts for cross-correlating information is to assign tags to headlines. Org mode has extensive support for tags.
-
-   Every headline can contain a list of tags; they occur at the end of the headline. Tags are normal words containing letters, numbers, ‘_’, and ‘@’. Tags must be preceded and followed by a single colon, e.g., ‘:work:’. Several tags can be specified, as in ‘:work:urgent:’. Tags will by default be in bold face with the same color as the headline.
-
-   Tag inheritance: Tags use the tree structure of the outline
-   Setting tags: How to assign tags to a headline
-   Tag groups: Use one tag to search for several tags
-   Tag searches: Searching for combinations of tags
-   ref: http://orgmode.org/guide/Tags.html#Tags
-  
-** C programs debugging via GDB in Emacs   
-   https://kb.iu.edu/d/aqsy
-  
-
-
-** TODO Viewing images inside emacs (org-mode)
-** TODO add vjudge owner on whatsapp and wechat and talkk
-** TODO use a tiled window manager instead of openbox to watch videos and emacs at teh same time
+*** TODO Exam Contest
 

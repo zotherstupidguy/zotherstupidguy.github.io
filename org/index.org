@@ -1,25 +1,79 @@
-* Codejam in C 
+* Codejam Qualification Round in C  [%]
 ** Introduction
-   My name is Mohamed Fouad, and I am making an opensource book for Google CodeJam, it attempts to explain
-   the problems and their analysis, as well as *most compact* implementations in
+   My name is Mohamed Fouad, and I am making an opensource book for
+   Google CodeJam, it attempts to show the problems and their
+   analysis, as well as *most compact* implementations in
    the C programming language. It is intended to be printed to a nice
    hardcover book and sold per its printing cost (nonprofit). The idea
    is to make a really cool & neat book for competitive programmers to enjoy. 
+   Meanwhile I am practicing atlease a codejam contest per day (3 hours each)
+   in C and logging my results.
 
-** 2016
-*** Qualification Round
-**** Problem A. Counting Sheep
-***** Description
-      dfdfasf
-***** Input
-      dfasfas
-***** Output
-      dfasfasf
+   Problems are grouped based on their difficulity level on which rounds
+   they are presented.
 
-**** Problem A. Counting Sheep Solving Approach 
+   
+** TODO Qualification Round 2016 [%]
+**** TODO Problem A. Counting Sheep
+**** TODO Problem B. Revenge of the Pancakes
+**** TODO Problem C. Coin Jam
+**** TODO Problem D. Fractiles
 
-***** Solution
 
-      #+BEGIN_SRC C
+** TODO Qualification Round 2015 [%]
+**** TODO Problem A. Standing Ovation
+     - You Lose(2017-04-03) 
+**** TODO Problem B. Infinite House of Pancakes
+     - You Lose(2017-04-03) 
+**** TODO Problem C. Dijkstra
+     - You Lose(2017-04-03) 
+**** TODO Problem D. Ominous Omino
+     - You Lose(2017-04-03) 
 
-      #+END_SRC
+
+** TODO Qualification Round 2014 [%]
+**** TODO Problem A. Magic Trick
+
+**** TODO Problem B. Cookie Clicker Alpha
+**** TODO Problem C. Minesweeper Master
+**** TODO Problem D. Deceitful War
+
+     
+** TODO Qualification Round 2013 [%]
+**** TODO Problem A. Tic-Tac-Toe-Tomek
+**** TODO Problem B. Lawnmower
+**** TODO Problem C. Fair and Square
+**** TODO Problem D. Treasure
+
+
+** TODO Qualification Round 2012 [%]
+**** TODO Problem A. Speaking in Tongues
+**** TODO Problem B. Dancing With the Googlers
+**** TODO Problem C. Recycled Numbers
+**** TODO Problem D. Hall of Mirrors
+
+
+** TODO Qualification Round 2011 [%]
+**** TODO Problem A. Bot Trust
+**** TODO Problem B. Magicka
+**** TODO Problem C. Candy Splitting
+**** TODO Problem D. GoroSort
+
+
+** TODO Qualification Round 2010 [%]
+**** TODO Problem A. Snapper Chain
+**** TODO Problem B. Fair Warning
+**** TODO Problem C. Theme Park
+
+
+** TODO Qualification Round 2009 [%]
+**** TODO Problem A. Alien Language
+**** TODO Problem B. Watersheds
+**** TODO Problem C. Welcome to Code Jam
+
+     
+** TODO Qualification Round 2008 [%]
+**** TODO Problem A. Saving the Universe
+**** TODO Problem B. Train Timetable
+**** TODO Problem C. Fly Swatter
+     
