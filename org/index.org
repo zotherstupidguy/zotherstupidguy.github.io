@@ -5,14 +5,14 @@
   the C programming language. It is intended to be printed to a nice
   hardcover book and sold per its printing cost (nonprofit). The idea
   is to make a really cool & neat book for competitive programmers to enjoy. 
-  Meanwhile I am practicing atlease a codejam contest per day (3 hours each)
-  in C and logging my results.
-
+  
   Problems are grouped based on their difficulity level on which rounds
   they are presented.
    
   Total of Qualification Round problems from 2016-2008 is *33 problems*.
-  Each problem should be divided into subproblem(s).
+  Each problem should be divided into subproblems. Subproblems include
+  getting the input correctly using C, consiously storing it in
+  appropiate datastructures.
  
 ** TODO 2016 Problem A. Counting Sheep [%]
 
@@ -22,7 +22,6 @@
 
 ** TODO 2016 Problem D. Fractiles [%]
 
-
 ** TODO 2015 Problem A. Standing Ovation [%]
 
 ** TODO 2015 Problem B. Infinite House of Pancakes [%]
@@ -31,41 +30,52 @@
 
 ** TODO 2015 Problem D. Ominous Omino [%]
 
-
 ** TODO 2014 Problem A. Magic Trick [%]
+
 ** TODO 2014 Problem B. Cookie Clicker Alpha [%]
+
 ** TODO 2014 Problem C. Minesweeper Master [%]
+
 ** TODO 2014 Problem D. Deceitful War [%]
 
-     
 ** TODO 2013 Problem A. Tic-Tac-Toe-Tomek [%]
+
 ** TODO 2013 Problem B. Lawnmower [%]
+
 ** TODO 2013 Problem C. Fair and Square [%]
+
 ** TODO 2013 Problem D. Treasure [%]
 
 ** TODO 2012 Problem A. Speaking in Tongues [%]
+
 ** TODO 2012 Problem B. Dancing With the Googlers [%]
+
 ** TODO 2012 Problem C. Recycled Numbers [%]
+
 ** TODO 2012 Problem D. Hall of Mirrors [%]
 
-
 ** TODO 2011 Problem A. Bot Trust [%]
+
 ** TODO 2011 Problem B. Magicka [%]
+
 ** TODO 2011 Problem C. Candy Splitting [%]
+
 ** TODO 2011 Problem D. GoroSort [%]
 
-
 ** TODO 2010 Problem A. Snapper Chain [%]
+
 ** TODO 2010 Problem B. Fair Warning [%]
+
 ** TODO 2010 Problem C. Theme Park [%]
 
-
 ** TODO 2009 Problem A. Alien Language [%]
+
 ** TODO 2009 Problem B. Watersheds [%]
+
 ** TODO 2009 Problem C. Welcome to Code Jam [%]
 
-     
 ** TODO 2008 Problem A. Saving the Universe [%]
+
 ** TODO 2008 Problem B. Train Timetable [%]
+
 ** TODO 2008 Problem C. Fly Swatter [%]
-     
