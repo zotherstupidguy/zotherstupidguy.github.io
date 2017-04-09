@@ -13,69 +13,235 @@
   Each problem should be divided into subproblems. Subproblems include
   getting the input correctly using C, consiously storing it in
   appropiate datastructures.
- 
-** TODO 2016 Problem A. Counting Sheep [%]
 
-** TODO 2016 Problem B. Revenge of the Pancakes [%]
+  Competitive spirit is required to maintain discipline intact, as such
+  channels as #algorithms@freenode.net are preferred hangout places. 
 
-** TODO 2016 Problem C. Coin Jam [%]
+  Objective is to earn 25points per practice day. 
 
-** TODO 2016 Problem D. Fractiles [%]
+** TODO 2016 Problem A. Counting Sheep [%] :small7points:large8points:
+*** Problem Solving Period (1h)
+**** input subproblems 
+     canadian solution->
+     freopen("A-large.in", "r", stdin);
+
+     indian solution->
+     in = fopen("D-large.in","r");
+     out = fopen("output.txt","w");
+     fscanf(in,"%d",&t);
+
+
+**** datastructure subproblems
+**** algorithm subproblems
+**** output subproblems
+     freopen("A-large.out", "w", stdout);
+
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
 
 ** TODO 2015 Problem A. Standing Ovation [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
 
-** TODO 2015 Problem B. Infinite House of Pancakes [%]
-
-** TODO 2015 Problem C. Dijkstra [%]
-
-** TODO 2015 Problem D. Ominous Omino [%]
 
 ** TODO 2014 Problem A. Magic Trick [%]
-
-** TODO 2014 Problem B. Cookie Clicker Alpha [%]
-
-** TODO 2014 Problem C. Minesweeper Master [%]
-
-** TODO 2014 Problem D. Deceitful War [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
 
 ** TODO 2013 Problem A. Tic-Tac-Toe-Tomek [%]
-
-** TODO 2013 Problem B. Lawnmower [%]
-
-** TODO 2013 Problem C. Fair and Square [%]
-
-** TODO 2013 Problem D. Treasure [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
 
 ** TODO 2012 Problem A. Speaking in Tongues [%]
-
-** TODO 2012 Problem B. Dancing With the Googlers [%]
-
-** TODO 2012 Problem C. Recycled Numbers [%]
-
-** TODO 2012 Problem D. Hall of Mirrors [%]
-
-** TODO 2011 Problem A. Bot Trust [%]
-
-** TODO 2011 Problem B. Magicka [%]
-
-** TODO 2011 Problem C. Candy Splitting [%]
-
-** TODO 2011 Problem D. GoroSort [%]
-
-** TODO 2010 Problem A. Snapper Chain [%]
-
-** TODO 2010 Problem B. Fair Warning [%]
-
-** TODO 2010 Problem C. Theme Park [%]
-
-** TODO 2009 Problem A. Alien Language [%]
-
-** TODO 2009 Problem B. Watersheds [%]
-
-** TODO 2009 Problem C. Welcome to Code Jam [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
 
 ** TODO 2008 Problem A. Saving the Universe [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
 
+** TODO 2009 Problem A. Alien Language [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2010 Problem A. Snapper Chain [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2011 Problem A. Bot Trust [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2016 Problem B. Revenge of the Pancakes [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2015 Problem B. Infinite House of Pancakes [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2014 Problem B. Cookie Clicker Alpha [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2013 Problem B. Lawnmower [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2010 Problem B. Fair Warning [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+** TODO 2009 Problem B. Watersheds [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
 ** TODO 2008 Problem B. Train Timetable [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2012 Problem B. Dancing With the Googlers [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+
+
+
+
+** TODO 2011 Problem B. Magicka [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+
+** TODO 2016 Problem C. Coin Jam [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2015 Problem C. Dijkstra [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2014 Problem C. Minesweeper Master [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
 
 ** TODO 2008 Problem C. Fly Swatter [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2009 Problem C. Welcome to Code Jam [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2010 Problem C. Theme Park [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+
+** TODO 2013 Problem C. Fair and Square [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+
+
+
+** TODO 2011 Problem C. Candy Splitting [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+** TODO 2012 Problem C. Recycled Numbers [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+
+** TODO 2016 Problem D. Fractiles [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2015 Problem D. Ominous Omino [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+
+
+
+** TODO 2014 Problem D. Deceitful War [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+
+
+
+** TODO 2011 Problem D. GoroSort [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+** TODO 2013 Problem D. Treasure [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
+
+** TODO 2012 Problem D. Hall of Mirrors [%]
+*** Problem Solving Period (1h)
+*** Problem Analysis Period A (1h)
+*** Problem Analysis Period B (1h)
+*** Problem Analysis Period C (1h)
