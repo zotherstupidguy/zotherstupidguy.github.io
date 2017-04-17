@@ -1,26 +1,5221 @@
-* Codejam Qualification Round in C  [%]
-  My name is Mohamed Fouad, and I am making an opensource book for
-  Google CodeJam, it attempts to show the problems and their
-  analysis, as well as *most compact* implementations in
-  the C programming language. It is intended to be printed to a nice
-  hardcover book and sold per its printing cost (nonprofit). The idea
-  is to make a really cool & neat book for competitive programmers to enjoy. 
+*   Problem Practice Checklist:
+  Each solution got many levels, must choose which level is best to
+  solve the problem:
+  - Mathematical level: Solve Sample Dataset on Paper:
   
-  Problems are grouped based on their difficulity level on which rounds
-  they are presented.
-   
-  Total of Qualification Round problems from 2016-2008 is *33 problems*.
-  Each problem should be divided into subproblems. Subproblems include
-  getting the input correctly using C, consiously storing it in
-  appropiate datastructures.
+  - Algorithmic & Datastructure level
+  - Implementation level(pointers, etc)
 
-  Competitive spirit is required to maintain discipline intact, as such
-  channels as #algorithms@freenode.net are preferred hangout places. 
 
-  Objective is to earn 25points per practice day. 
+  - Stage00: Solve Sample Dataset on Paper:
+    - Write observations about the problem (Description, Input, Output)
+    - Testout sample dataset on paper
+    - Proof a solution for the sample dataset (induction, construction, contradiction, etc.) 
+    - Seek special cases of the genral proof that require additional
+      control flow logic.
 
-** TODO 2016 Problem A. Counting Sheep [%] :small7points:large8points:
-*** Problem Solving Period (1h)
+    - Identify Subproblems on paper
+    - Label Subproblems on paper
+    - Classify Subproblems according to Type on paper
+      http://www.sanfoundry.com/c-programming-examples-set-string-problems-algorithms/
+      - Sorting (Binary Search, Merge-sort)
+      - Backtracking (8-queens, Sudoku)
+      - Search/Path-finding (Breadth-First Search, Depth-First Search, Djikstra)
+      - String Processing
+        - string.searching.naive
+        - string.searching.kmp 
+
+    Add comments about complexity in the template and alternaive
+    algorithms comparisons as well 
+
+
+  - Graph problems
+  - Combinatorial (Permutations, Calendrical Calculations)
+  - Network Flow Problems (Minimum Cut, Max Flow)
+  - Geometrical (Convex Hull, Minkwoski Sum)
+  - Numerical problems
+  - Dynamic Programming (Knapsack, 8-queens, Traveling Salesman)
+  - Greedy Algorithms (Matching Pursuit, Egyptian Fractions)
+  - Investigate what kind of DataStructures needed for every subproblem   
+  - Grade each subproblem according to its difficulity to you
+  - Decide if I should solve this problem.   
+
+  - Stage 1 Solving the problem:
+    - Devise a Naive Approach for each subproblem
+    - Proof the Naive Approach by induction or similiar.
+    - Solve each Subproblems on paper via its devised naive Approach
+    - Devise algorithmic knowledge approach according to its classified type
+      - Check library 
+
+  - Stage 2:
+    - Use gcj template 'solution.c' for format input function for SampleDataset
+    - Solve Subproblems on computer via a Naive Approach
+    - format output function for SampleDataset 
+    - Test given SampleDataset via Testing flag
+
+    - Catogrize each subproblem study area
+      #+BEGIN_SRC C
+        #ifdef TESTING
+        printf("Final Record: %lX\n", (unsigned long int)pp[1]);
+        #endif
+      #+END_SRC  
+
+      - TESTING (macro for testing)
+
+  - Stage 3:
+    - find multiple solutions to a given problem on your own.
+    - Study others C solutions using the spiralrule http://c-faq.com/decl/spiral.anderson.html
+    - Use\Create\Modify Emacs Yas Snippets for the used algorithms
+* Level A [%]
+** TODO 2017 Problem A. Oversized Pancake Flipper [%]
+   (Proven Wrong)My hypothsis: if (no of negative signs) mod k != 0 then "Impossible"    
+
+   flips are commutative, that is the order of flips doesn't matter.
+
+   if (no of negative signs is zero) then results is 0 (special case)
+*** Solutions
+
+    #+BEGIN_SRC C
+      // Copyright mimo31 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int main(void)
+      {
+        int t;
+        int curcase = 0;
+        scanf("%d", &t);
+        while (t != curcase)
+          {
+            char s[1001];
+            scanf("%s", s);
+            int len = strlen(s);
+            for (int i = 0; i < len; i++)
+              {
+                s[i] = s[i] == '-';
+              }
+            int flips = 0;
+            int k;
+            scanf("%d", &k);
+            for (int i = 0; i < len - k + 1; i++)
+              {
+                if (s[i])
+                  {
+                    for (int j = i; j < i + k; j++)
+                      {
+                        s[j] = !s[j];
+                      }
+                    flips++;
+                  }
+              }
+            int impossible = 0;
+            for (int i = len - k + 1; i < len; i++)
+              {
+                if (s[i])
+                  {
+                    impossible = 1;
+                  }
+              }
+            printf("Case #%d: ", curcase + 1);
+            if (impossible)
+              {
+                printf("IMPOSSIBLE\n");
+              }
+            else
+              {
+                printf("%d\n", flips);
+              }
+            curcase++;
+          }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright nzqrc Codejam 2017 QR Problem A
+      #include <stdio.h>
+
+      int main(int argc, char **argv)
+      {
+        char e[1024], x[1024], *p;
+        unsigned int t, c, k, f, s, i, b;
+        scanf("%u", &t);
+        getchar();
+        for (c = 0; c != t; c++)
+          {
+            p = e;
+            while ((*p++ = getchar()) != ' ') {}
+            p[-1] = 0;
+            scanf("%u", &k);
+            getchar();
+
+            for (i = 0; i != k; i++)
+              {
+                x[i] = 0;
+              }
+            f = s = i = b = 0;
+            do
+              {
+                f += x[i + k] = e[i] == '-' ^ (s ^= x[i]);
+                s = e[i] == '-';
+              } while (e[i++ + k]);
+            while (e[i])
+              {
+                b |= e[i] == '-' ^ (s ^= x[i]);
+                s = e[i] == '-';
+                i++;
+              }
+            printf(b ? "Case #%u: IMPOSSIBLE\n" : "Case #%u: %u\n", c + 1, f);
+          }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright rng..58 Codejam 2017 QR Problem A
+      #include "stdio.h"
+      #include "stdlib.h"
+      #include "string.h"
+  
+      #define REP(i,n) for((i)=0;(i)<(int)(n);(i)++)
+  
+      int N,K;
+      char s[1010];
+      int a[1010];
+  
+      void main2(void){
+        int i,j,ans=0;
+    
+        scanf("%s", s);
+        scanf("%d", &K);
+    
+        N = strlen(s);
+        REP(i,N) a[i] = ((s[i] == '-') ? 1 : 0);
+    
+        REP(i,N-K+1) if(a[i] == 1){
+          ans++;
+          REP(j,K) a[i+j] ^= 1;
+        }
+    
+        REP(i,N) if(a[i] == 1){
+          printf("IMPOSSIBLE\n");
+          return;
+        }
+    
+        printf("%d\n", ans);
+      }
+  
+      int main(void){
+        int TC,tc;
+        scanf("%d", &TC);
+        REP(tc,TC){
+          printf("Case #%d: ", tc + 1);
+          main2();
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright daybreakcx Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int ti, tn, i, j, l, n, k;
+      char a[1002];
+
+      int
+      main()
+      {
+        fscanf(stdin, "%d", &tn);
+        for (ti = 1; ti <= tn; ++ti) {
+          fprintf(stdout, "Case #%d: ", ti);
+          fscanf(stdin, "%s", a);
+          fscanf(stdin, "%d", &k);
+          for (i = (l = (int)strlen(a)) - 1, n = 0; i >= k - 1; --i)
+            if (a[i] == '-') {
+              ++n;
+              for (j = 0; j < k; ++j)
+                a[i - j] = '+' + '-' - a[i - j];
+            }
+          for (; i >= 0; --i)
+            if (a[i] == '-')
+              break;
+          if (i == -1)
+            fprintf(stdout, "%d\n", n);
+          else
+            fprintf(stdout, "IMPOSSIBLE\n");
+        }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Smithers Codejam 2017 QR Problem A
+      /* Google Code Jam Qualification Round 2017
+       ,* Problem A. Oversized Pancake Flipper
+       ,* Solution in C
+       ,* By Smithers
+       ,*/
+
+      #include <stdio.h>
+
+      int main()
+      {
+        int t, x;
+        int n, k;
+        int a[1000];
+        int y;
+        int c1, c2;
+        int i;
+
+        scanf("%d ", &t);
+        for (x = 1; x <= t; x++)
+          {
+            c1 = '+';
+            for (n = 0; (c2 = getc(stdin)) != ' '; n++)
+              {
+                a[n] = c2 != c1;
+                c1 = c2;
+              }
+            scanf("%d ", &k);
+            y = 0;
+            for (i = 0; i < n; i++)
+              {
+                if (!a[i])
+                  continue;
+                if (i + k > n)
+                  {
+                    y = -1;
+                    break;
+                  }
+                else if (i + k < n)
+                  {
+                    a[i + k] ^= 1;
+                  }
+                y++;
+              }
+            if (y < 0)
+              printf("Case #%d: IMPOSSIBLE\n", x);
+            else
+              printf("Case #%d: %d\n", x, y);
+          }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Vytas Codejam 2017 QR Problem A
+      /* Uses C99 standard, compile accordingly.
+         Considering gcc, something like this should do:
+
+         gcc -std=c99 solution.c -o solution
+      ,*/
+      #include <stdio.h>
+      #include <string.h>
+
+      #define MAX_PANCAKES 1023
+
+
+      void
+      flip(char *S, int K, int i) {
+        for (int j = i; j < i+K; j++) {
+          if (S[j] == '+') {
+            S[j] = '-';
+          } else if (S[j] == '-') {
+            S[j] = '+';
+          }
+        }
+      }
+
+      int
+      solve(char *S, int K) {
+        int flips = 0;
+        int length = strlen(S);
+
+        for (int i = 0; i < length; i++) {
+          if (S[i] == '-') {
+            if (i + K > length) {
+              return -1;
+            }
+
+            flip(S, K, i);
+            flips++;
+          }
+        }
+
+        return flips;
+      }
+
+      int
+      main(int argc, char **argv) {
+        int T;
+        scanf("%d", &T);
+
+        for (int c = 1; c <= T; c++) {
+          char S[MAX_PANCAKES];
+          int K;
+          scanf("%s %d", S, &K);
+
+          int solution = solve(S, K);
+          if (solution < 0) {
+            printf("Case #%d: IMPOSSIBLE\n", c);
+          } else {
+            printf("Case #%d: %d\n", c, solution);
+          }
+        }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Yao Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<string.h>
+  
+      char str[1024];
+      int n,m;
+  
+      int main() {
+        int i,j,N,cs=0,ret;
+        for(scanf("%d",&N);N--;) {
+          scanf("%s %d",str,&m);
+          n=strlen(str);
+          for(ret=i=0;i<=n-m;i++) if (str[i]=='-') {
+              for(j=0;j<m;j++) if (str[i+j]=='-') str[i+j]='+'; else str[i+j]='-';
+              ret++;
+            }
+          for(i=0;i<m;i++) if (str[n-m+i]=='-') ret=-1;
+          if (ret==-1) printf("Case #%d: IMPOSSIBLE\n",++cs);
+          else printf("Case #%d: %d\n",++cs,ret);
+        }
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright algmyr Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+
+      int main(int argc, char *argv[])
+      {
+        char *buffer = malloc(1024);
+        int T;
+
+        scanf("%d\n", &T);
+
+        for (int t = 0; t < T; ++t) {
+          int k;
+          scanf("%s %d\n", buffer, &k);
+
+          int len = strlen(buffer); 
+          int moves = 0;
+
+          for (int i = 0; i <= len - k; ++i) {
+            if (buffer[i] == '+') continue;
+            ++moves;
+            for (int j = 0; j < k; ++j) {
+              buffer[i+j] = 88 - buffer[i+j];
+            }
+          }
+
+          int fail = 0;
+          for (int i = 0; i < len; ++i) {
+            if (buffer[i] == '-') {
+              fail = 1;
+              break;
+            }
+          }
+          if (fail)
+            printf("Case #%d: IMPOSSIBLE\n", t+1);
+          else {
+            printf("Case #%d: %d\n", t+1, moves);
+          }
+        }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright hidden1 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+  
+      char s[1001];
+  
+      int main() {
+        freopen("a.in", "r", stdin);
+        freopen("a.out", "w", stdout);
+    
+        int t, ti;
+        scanf("%i", &t);
+        for (ti = 1; ti <= t; ++ti) {
+          int k;
+      
+          scanf("%s%i", s, &k);
+      
+          int sl = strlen(s);
+      
+          int i, j;
+      
+          int plus = 0;
+          for (i = 0; i <= sl - k; ++i) {
+            if (s[i] == '+') continue;
+        
+            ++plus;
+            for (j = 0; j < k; ++j) {
+              if (s[i + j] == '+') s[i + j] = '-';
+              else s[i + j] = '+';
+            }
+          }
+      
+          for (i = 0; i < sl; ++i) {
+            if (s[i] != '+') plus = -1;
+          }
+      
+          printf("Case #%i: ", ti);
+          if (plus == -1) printf("IMPOSSIBLE\n");
+          else printf("%i\n", plus);
+        }
+    
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Siddhant22 Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<stdlib.h>
+      #include<string.h>
+
+      int main()
+      {
+        int n;
+        scanf("%d", &n);
+        int a,b[100],k;
+        char s[1001];
+        for(int i=0; i<n; i++)
+          {
+            scanf("%s %d",s, &a);
+
+            b[i]=0;
+            for(int j=0; s[j]!='\0'; j++)
+              {
+                if(s[j]=='-')
+                  {
+                    b[i]++;
+                    for(k=0; k<a; k++)
+                      {
+                        if(s[j+k]=='\0')
+                          {
+                            b[i]=-1;
+                            break;
+                          }
+                        if(s[j+k]=='+')
+                          s[j+k]='-';
+                        else
+                          s[j+k]='+';
+                      }
+                    if(b[i]==-1)
+                      break;
+                  }
+              }
+          }
+        for(int i=0; i<n; i++)
+          {
+            if(b[i]==-1)
+              printf("Case #%d: %s\n",i+1,"IMPOSSIBLE");
+            else
+              printf("Case #%d: %d\n",i+1,b[i]);
+          }
+
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright debad Codejam 2017 QR Problem A
+      #include <stdlib.h>
+      #include <stdio.h>
+
+      #define F0(i,n) for(int i=0;i<n;i++)
+
+      int find(int *l,int start, int size,int value){
+        for(int i=start;i<size;i++)if(l[i]==value)return i;
+        return -1;
+      }
+
+      int main(){
+        int T,K,S;
+        char tmp;
+        int *P = malloc(1000*sizeof(int));
+        scanf("%d\n",&T);
+        F0(i,T){
+          printf("Case #%d: ",i+1);
+          S=0;
+          scanf("%c",&tmp);
+          while(tmp == '+' || tmp == '-'){
+            if(tmp == '+')P[S] = 1;
+            else P[S] = -1;
+            S++;
+            scanf("%c",&tmp);
+          }
+          // S will be the number of pancakes (the length of P)
+          scanf("%d\n",&K);
+          int flips = 0;
+          int index = 0;
+          while((index = find(P,index,S,-1)) != -1){
+            if(index + K > S){
+              // we cannot flip
+              flips = -1;
+              break;
+            }else{
+              F0(j,K)P[index+j] = -P[index+j];
+              flips++;
+            }
+          }
+          if(flips == -1)printf("IMPOSSIBLE\n");
+          else printf("%d\n",flips);
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright hikalium Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      char buf[100][1024];
+      int bufLen[100];
+      int K[100];
+      char pat[1024];
+
+      int check(char *s, int len, int K)
+      {
+        int i, k, count = 0;
+        for(i = 0; i < len; i++){
+          pat[i] = 0;
+        }
+        for(i = 0; i < len - K + 1; i++){
+          if(pat[i] == s[i]){
+            for(k = 0; k < K; k++){
+              if(i + k >= len) return -1;
+              pat[i + k] ^= 1;
+            }
+            count++;
+          }
+        }
+        for(; i < len; i++){
+          if(pat[i] == s[i]) return -1;
+        }
+        return count;
+      }
+
+      int main(int argc, char *argv[])
+      {
+        int T, i, k;
+        scanf("%d", &T);
+        for(i = 0; i < T; i++){
+          scanf("%s %d", buf[i], &K[i]);
+          bufLen[i] = strlen(buf[i]);
+          for(k = 0; k < bufLen[i]; k++){
+            buf[i][k] = (buf[i][k] == '+') ? 1 : 0;
+          }
+        }
+        for(i = 0; i < T; i++){
+          k = check(buf[i], bufLen[i], K[i]);
+          if(k == -1){
+            printf("Case #%d: IMPOSSIBLE\n", i + 1);
+          } else{
+            printf("Case #%d: %d\n", i + 1, check(buf[i], bufLen[i], K[i]));
+          }
+        }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+    
+    #+BEGIN_SRC C
+      // Copyright Asrael Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<string.h>
+
+      int main(){
+        int tot,len,flipper,max,cnt,j;
+        char pan[1004];
+        scanf("%d",&tot);
+        for(int i = 1;i<=tot;i++){
+          scanf("%s",pan);
+          len = strlen(pan);
+          scanf("%d",&flipper);
+          max = len-flipper+1;
+          cnt = 0;
+          for(j = 0;j<max;j++){
+            if(pan[j]=='-'){
+              for(int k = 0;k<flipper;k++){
+                if(pan[j+k]=='-')
+                  pan[j+k] = '+';
+                else
+                  pan[j+k] = '-';
+              }
+              cnt++;
+            }
+          }
+          for(j = max;j<len;j++)
+            if(pan[j]=='-')
+              break;
+          if(j==len)
+            printf("Case #%d: %d\n",i,cnt);
+          else
+            printf("Case #%d: IMPOSSIBLE\n",i);
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright stubbscroll Codejam 2017 QR Problem A
+      #include <stdio.h>
+  
+      void solve() {
+        char s[1001];
+        int k,i,j,r=0;
+        scanf("%1000s %d",s,&k);
+        for(i=0;s[i];i++) if(s[i]=='-') {
+            for(j=0;j<k;j++) {
+              if(!s[i+j]) { puts("IMPOSSIBLE"); return; }
+              s[i+j]^='-'^'+';
+            }
+            r++;
+          }
+        printf("%d\n",r);
+      }
+  
+      int main() {
+        int T,caseno=1;
+        scanf("%d",&T);
+        while(T--) printf("Case #%d: ",caseno++),solve();
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright eax255 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+      char v[10101];
+      int main(){
+        int Ti,T;
+        scanf("%d",&T);
+        for(Ti=1;Ti<=T;++Ti){
+          printf("Case #%d: ",Ti);
+          int K,i,j;
+          int r=0;
+          scanf("%s %d",v,&K);
+          int l = strlen(v);
+          for(i=0;i<l;++i){
+            if(v[i]=='-'){
+              if(i+K>l)goto impossible;
+              for(j=0;j<K;++j)v[i+j]=(v[i+j]=='-'?'+':'-');
+              ++r;
+            }
+          }
+          printf("%d\n",r);
+          continue;
+        impossible:	printf("IMPOSSIBLE\n");
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright changneng Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      const int M = 2000;
+      int main() {
+        int tc;
+        char str[M];
+        scanf("%d", &tc);
+        for (int t = 1; t <= tc; t++) {
+          int m, n;
+          scanf("%s%d", str, &n);
+          m = strlen(str);
+          bool flag = true;
+          int inc = 0;
+          for (int p = 0; p < m; p++) {
+            if (str[p] == '+') {
+              continue;
+            }
+            if (p + n > m) {
+              flag = false;
+              break;
+            }
+            for (int q = p; q < p + n; q++) {
+              str[q] = (str[q] == '+' ? '-' : '+');
+            }
+            inc++;
+            //printf("%s\n", str);
+          }
+          printf("Case #%d: ", t);
+          if (flag == false) {
+            printf("IMPOSSIBLE\n");
+          } else {
+            printf("%d\n", inc);
+          }
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright trainsick Codejam 2017 QR Problem A
+
+      #include <stdio.h>
+
+      int K;
+      char pattern[2000];
+
+      void flip(char *p, int k, int *toohigh) {
+        int i;
+        for (i=0;i<k;i++) {
+          if (!p[i]) {*toohigh=1; return; }
+          if (p[i]=='+') p[i]='-';
+          else if (p[i]=='-') p[i]='+';
+        }
+      }
+
+      int pancake(void) {
+        int i;
+        int bcnt;
+        int toohigh=0;
+        scanf("%s %d",pattern,&K);
+        i=0;
+        bcnt=0;
+        while (pattern[i]) {
+          if (pattern[i]=='-') {
+            flip(pattern+i,K,&toohigh);
+            if (toohigh) return -1;
+            bcnt++;
+          }
+          i++;
+        }
+        return bcnt;
+      }
+
+      int main(int argc, char **argv) {
+        int tc,i,r;
+        scanf("%d", &tc);
+        for (i=1;i<=tc;i++) {
+          printf("Case #%d: ",i);
+          r=pancake();
+          if (r>=0) printf("%d\n",r);
+          else printf("IMPOSSIBLE\n");
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright caf Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <ctype.h>
+      #include <string.h>
+
+      #define DEBUGF(s, ...) fprintf(stderr, "DEBUG #%d: " s, t+1, ##__VA_ARGS__)
+
+      void do_test(int t)
+      {
+        char s[4000];
+        int f[4000] = { 0 };
+        int k;
+        int rs = 0;
+        int count = 0;
+        int i;
+        int ns;
+
+        scanf("%s %d", s, &k);
+
+        ns = strlen(s);
+
+        for (i = 0; i < ns; i++)
+          {
+            if (i <= ns - k)
+              {
+                f[i] = (s[i] == '-') ^ rs;
+                rs ^= f[i];
+                count += f[i];
+              }
+            else
+              {
+                if ((s[i] == '-') ^ rs)
+                  {
+                    printf("Case #%d: IMPOSSIBLE\n", t + 1);
+                    return;
+                  }
+              }
+            if (i + 1 >= k)
+              rs ^= f[i + 1 - k];
+          }
+
+        printf("Case #%d: %d\n", t + 1, count);
+      }
+
+      int main()
+      {
+        int t, i;
+
+        scanf("%d", &t);
+
+        for (i = 0; i < t; i++)
+          do_test(i);
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright TsReaper Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+  
+      int tcase,n,K,ans;
+      char s[1010];
+  
+      int main()
+      {
+        int i,j,cas;
+    
+        scanf("%d",&tcase);
+        for(cas=1;cas<=tcase;cas++)
+          {
+            scanf("%s%d",s+1,&K);
+            n = strlen(s+1); ans = 0;
+        
+            for(i=1;i+K-1<=n;i++) if(s[i] == '-')
+                                    {
+                                      ans++;
+                                      for(j=i;j<i+K;j++) s[j] = (s[j] == '+' ? '-' : '+');
+                                    }
+        
+            for(i=1;i<=n;i++) if(s[i] == '-') break;
+            printf("Case #%d: ",cas);
+            if(i <= n) printf("IMPOSSIBLE\n");
+            else printf("%d\n",ans);
+          }
+    
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright along Codejam 2017 QR Problem A
+      #include <iostream>
+      #include <stdio.h>
+      using namespace std;
+
+      int main()
+      {
+        int cc,ca;
+        cin >> ca;
+        for(cc=1; cc<=ca; cc++)
+          {
+            string s; int K;
+            cin >> s >> K;
+            int r = 0;
+            int i,j,k;
+            for(i=0; i<s.size(); i++)
+              {
+                while(s[i] == '+' && i < s.size())
+                  i++;
+                if (i >= s.size())
+                  break;
+                if (i+K > s.size())
+                  break;
+                for(int j=0; j<K; j++)
+                  if (s[i+j] == '+') s[i+j] = '-';
+                  else s[i+j] = '+';
+                r++;
+              }
+            if (i >= s.size())
+              printf("Case #%d: %d\n", cc, r);
+            else
+              printf("Case #%d: IMPOSSIBLE\n", cc);
+          }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright dstabosz Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int gDebug = 0;
+
+      int main(int argc, char **argv)
+      {
+        int t, T;
+        char line[1024];
+        char S[1001];
+        char count[1000];
+        int len;
+        int K;
+        int flips;
+
+        T = -1;
+
+        gets(line);
+
+        sscanf(line, "%d", &T);
+
+        for (t = 1; t <= T; t++)
+          {
+            int i = 0;
+            flips = 0;
+            if (gDebug)
+              {
+                printf("t=%d of %d\n", t, T);    
+              }
+
+            gets(line);
+            sscanf(line, "%s %d", S, &K);
+
+            if (gDebug)
+              {
+                printf("[%s] [%d]\n", S, K);
+              }
+
+            len = strlen(S);
+
+            for (i = 0; i < len; i++)
+              {
+                if (S[i] == '+')
+                  count[i] = 0;
+                else
+                  count[i] = 1;    
+                if (gDebug)
+                  printf("%d", count[i]);
+              }
+            if (gDebug)
+              printf("\n");
+
+            i = 0;
+            while (i < len)
+              {
+                while ( ((count[i] % 2) == 0) && (i < len) )
+                  i++;
+
+                if (gDebug)
+                  printf("i = %d\n", i);
+
+                if (i + K <= len)
+                  {
+                    int j;
+                    for (j = i; j < i + K; j++)
+                      {
+                        count[j]++;
+                      }
+                    i++;
+                    flips++;
+                  } else if (i == len)
+                  {
+                    /* made it to the end.  all happy */
+                  }
+                else
+                  {
+                    flips = -1;
+                    break;
+                  }
+              }
+
+            if (flips == -1)
+              printf("Case #%d: IMPOSSIBLE\n", t);
+            else 
+              printf("Case #%d: %d\n", t, flips);
+          }  
+
+
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Potos Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+  
+      int moves;
+  
+      int flip(char *buf, int size,int F){
+        int index = 0;
+        while(index<size){
+          //printf("index %d buf: %s\n" , index , buf);
+          if (buf[index] == '-' && (size-index)<F)
+            return 0;
+          if (buf[index] == '-'){
+            int j;
+            moves++;
+            for (j=index;j<index+F;j++){
+              if (buf[j] == '-')
+                buf[j] = '+';
+              else
+                buf[j] = '-';
+            }
+          }
+          index++;
+        }
+        return 1;
+      }
+  
+      int main(){
+        int T,i;
+        scanf("%d", &T);
+        char c = getchar();
+        char *buf = malloc(1002*sizeof(char));
+        for (i=1;i<=T;i++){
+          int size = 0;
+          while ((c=getchar())!=' '){
+            buf[size] = c;
+            size++;
+          }
+          buf[size] = '\0';
+          int F;
+          scanf("%d", &F);
+          moves = 0;
+          int ret = flip(buf,size,F);
+          if (ret){
+            printf("Case #%d: %d\n", i , moves);
+          }else
+            printf("Case #%d: IMPOSSIBLE\n", i);
+          c = getchar();
+        }
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright rkevindem Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      void reverse(char *s,int start,int n){
+        for(int i=start;i<start+n;i++){
+          switch(s[i]){
+          case '+':	s[i]='-'; break;
+          case '-':	s[i]='+'; break;
+          }
+        }
+      }
+
+      int main(){
+        int T;
+        char buf[1008];
+        fgets(buf,sizeof(buf),stdin);
+        sscanf(buf,"%d",&T);
+
+        for(int t=1;t<=T;t++){
+          char s[1001];
+          int k;
+          int ans=0;
+          fgets(buf,sizeof(buf),stdin);
+          sscanf(buf,"%s %d",s,&k);
+          int len=strlen(s);
+
+          for(int j=0;j<=len-k;j++){
+            if(s[j]=='-'){
+              reverse(s,j,k);
+              ans++;
+            }
+          }
+
+          for(int j=len-k+1;j<len;j++){
+            if(s[j]=='-'){
+              ans=-1;
+              break;
+            }
+          }
+
+          if(ans<0)
+            printf("Case #%d: IMPOSSIBLE\n",t);
+          else
+            printf("Case #%d: %d\n",t,ans);
+        }
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright yevshin Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <inttypes.h>
+      #include <string.h>
+      char S[1001];
+      int main()
+      {
+        int nt; scanf("%i\n", &nt);
+        for(int t = 1; t <= nt; t++) {
+          int k; scanf("%s %i", S, &k);
+          int n = strlen(S);
+          int r = 0;
+          for(int i = 0; i < n-k+1; i++)
+            if(S[i]=='-') {
+              r++;
+              for(int j = 0; j < k; j++)
+                S[i+j] = S[i+j] == '+' ? '-' : '+';
+            }
+          for(int i = n-k+1; i < n; i++)
+            if(S[i] == '-')
+              r = -1;
+          if(r==-1)
+            printf("Case #%i: IMPOSSIBLE\n", t);
+          else
+            printf("Case #%i: %i\n", t, r);
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright arunabh2k Codejam 2017 QR Problem A
+      #include <stdio.h>
+
+      int ncheck(char str[], int i, int t, int len, int count)
+      {
+        if(i==len)
+          return count;
+        if(str[i] == '-')
+          {
+            for(int k=0; k< t; k++) {
+              if(i+k >= len)
+                return -1;
+              if(str[i+k] == '-')
+                str[i+k] = '+';
+              else
+                str[i+k] = '-';
+            }
+            count++;
+          }
+
+        return ncheck(str, i+1, t, len, count);
+      }
+
+      int checkFor(char str[], int i, int t, int len, int count, int from, int to)
+      {
+        if(i == len)
+          return count;
+
+        int bad = 0;
+        if(i >= from && i <= to)
+          {
+            if(str[i] == '+')
+              {
+                bad = 1;
+              }
+          }
+        else
+          {
+            if(str[i] == '-')
+              {
+                bad = 1;
+              }
+          }
+        //printf("%d %d %d : %d %d\n", i, bad, count, from, to);
+        if((len - i) < t && bad == 1)
+          return -1;
+        if(bad)
+          {
+            int nfrom  = to+1;
+            int nto = to+t;
+            if(to <= i)
+              {
+                nfrom = i;
+                nto = i + t -1;
+              }
+
+            return checkFor(str, i+1, t, len, count+1,nfrom, nto);
+          }
+        else
+          {
+            return checkFor(str, i+1, t, len, count, from, to);
+          }
+      }
+
+      int main()
+      {
+        int notc;
+        scanf("%d", &notc);
+        for(int nc=1; nc <= notc; nc++)
+          {
+            char str[1001];
+            int t;
+            scanf("%s %d", str, &t);
+            int slen = strlen(str);
+            /*
+              char nstr[1000];
+              for(int i=0;i<slen;i++) {
+              nstr[i] = str[i];
+              }
+              //int ret = checkFor(str, 0 , t, slen, 0, -1, -1);
+              if(ret != nret)
+              {
+              printf("Case #%d: %d %d\n", nc, ret, nret);
+              printf("%s %d\n", nstr, t);
+              }
+            ,*/
+            int ret = ncheck(str, 0 , t, slen, 0);
+            if(ret == -1)
+              {
+                printf("Case #%d: IMPOSSIBLE\n", nc);
+              }
+            else
+              {
+                printf("Case #%d: %d\n", nc, ret);
+              }
+          }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Chotiwat Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+      #define MAX_BUF 1011
+
+      #define FLIP(x) ((x) = (x == '+') ? '-' : '+')
+
+      int main() {
+        int T;
+        char s[MAX_BUF];
+        int flip_q[MAX_BUF];
+        scanf("%d", &T);
+        for (int t = 1; t <= T; t++) {
+          int k;
+          scanf("%s %d", s, &k);
+          int n = strlen(s);
+          int count = 0;
+          int front = 0, rear = 0;
+          for (int i = 0, m = n - k; i <= m; i++) {
+            if (front < rear && flip_q[front] <= i) {
+              ++front;
+            }
+            int flip = rear - front;
+            if (flip % 2 == 1) {
+              FLIP(s[i]);
+            }
+            if (s[i] == '-') {
+              ++count;
+              s[i] = '+';
+              flip_q[rear++] = i + k;
+            }
+          }
+          int impossible = 0;
+          for (int i = n - k + 1; i < n; i++) {
+            if (front < rear && flip_q[front] <= i) {
+              ++front;
+            }
+            int flip = rear - front;
+            if (flip % 2 == 1) {
+              FLIP(s[i]);
+            }
+            if (s[i] == '-') {
+              impossible = 1;
+              break;
+            }
+          }
+          printf("Case #%d: ", t);
+          if (impossible) {
+            printf("IMPOSSIBLE\n");
+          } else {
+            printf("%d\n", count);
+          }
+        }
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright HiroshiMinordaimyo Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+  
+      #define TESTCASES 100
+      #define MAXS 1024
+  
+  
+      int main(void)
+      {
+        char str[1024];
+        int n;
+        char pancake[MAXS];
+        int pancakeCount;
+        int k;
+        int flipCount = 0;
+        int ans = 0;
+    
+        fgets(str, sizeof(str), stdin);
+        n = atoi(str);
+    
+        for (int caseNum = 1; caseNum <= n; caseNum++){
+          //fgets(str, sizeof(str), stdin);
+          scanf("%s%d", pancake, &k);
+      
+      
+          //fgets(pancake, sizeof(pancake), stdin);
+          //fgets(str, sizeof(str), stdin);
+          //k = atoi(str);
+      
+          pancakeCount = strlen(pancake);
+          flipCount = 0;
+      
+          int i = 0;
+          while (i + k <= pancakeCount){
+            if (pancake[i] == '-'){
+              flipCount++;
+              for (int j = 0; j < k; j++){
+                if (pancake[i + j] == '-'){
+                  pancake[i + j] = '+';
+                }
+                else{
+                  pancake[i + j] = '-';
+                }
+              }
+            }
+        
+            i++;
+          }
+      
+          if (strchr(pancake, '-') == NULL){
+            printf("Case #%d: %d\n", caseNum, flipCount);
+          }
+          else{
+            printf("Case #%d: IMPOSSIBLE\n", caseNum);
+          }
+        }
+    
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright alsoba Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+      FILE *fin, *fout;
+      char S[1001];
+      char kk;
+      int K;
+      int N;
+      void solve(){
+        int i, j;
+        int s = 0;
+        for(i = 0; i<1001; i++){
+          S[i]='\0';
+        }
+        i = 0;
+
+        do{
+          fscanf(fin, "%c", &S[i++]);
+        }while(S[i-1]!=' ');
+        S[i-1] = '\0';
+        N = strlen(S);
+        fscanf(fin, "%d", &K);
+        fscanf(fin, "%c", &kk);
+
+        for(i = 0; i<N-K; i++){
+          if(S[i] == '+'){
+            continue;
+          }else{
+            s++;
+            for(j=0; j<K; j++){
+              if(S[i+j]=='+') S[i+j]='-';
+              else S[i+j]='+';
+            }
+          }
+        }
+        j = 0;
+        for (i = N-K; i < N; i++){
+          if(S[i]=='-') j++;
+        }
+        if(j == K) s++;
+        else if (j != 0){
+          fprintf(fout, "IMPOSSIBLE\n");
+          return;
+        }
+        fprintf(fout, "%d\n", s);
+        return;
+      }
+
+      int main(int argc, char *argv[]){
+        char kk;
+        int total, i;
+
+        fin=fopen(argv[1], "r");
+        fout=fopen("out", "w");
+        if (fin==NULL || fout == NULL)
+          {
+            printf("Fitxer out.\n");
+          }
+        else 
+          {
+            fscanf(fin, "%d", &total);
+            fscanf(fin, "%c", &kk);
+            for (i = 0; i<total; i++)
+              {
+                fprintf(fout, "Case #%d: ", i+1);
+                solve();
+              }
+            fclose(fin);
+            fclose(fout);
+          }
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright NULLspeed Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<string.h>
+  
+      int main(void){
+        char pancake[1024];
+        int l,t,n,flip,i,j,k,flg;
+    
+        scanf("%d",&t);
+        for(i=1;i<=t;i++){
+          scanf("%s%*c%d", pancake,&n);
+          l=strlen(pancake);
+          flg=0;
+          flip=0;
+          for(j=0;j<=l-n;j++){
+            if(pancake[j]=='-'){
+              flip++;
+              for(k=0;k<n;k++){
+                pancake[j+k]=(pancake[j+k]=='+')?'-':'+';
+              }
+              //puts(pancake);
+            }
+          }
+          for(;j<l;j++){
+            if(pancake[j]=='-'){
+              flg=1;
+              break;
+            }
+          }
+          printf("Case #%d: ",i);
+          if(flg==1) puts("IMPOSSIBLE");
+          else printf("%d\n",flip);
+        }
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright softtime Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+
+      #define MAX_SIZE 1001
+
+      int solve(char *string, int K);
+      void flip(char *string, int start, int len);
+
+      int main()
+      {
+
+        int T, K;
+        int cnt;
+        char S[MAX_SIZE + 1];
+        int ret;
+
+        scanf("%d", &T);
+        for (cnt = 0; cnt < T; cnt++) {
+          memset(S, 0, sizeof(S));
+          scanf("%s", S);
+          scanf("%d", &K);
+
+          ret = solve(S, K);
+          if (ret == -1)
+            printf("Case #%d: IMPOSSIBLE\n", cnt+1);
+          else
+            printf("Case #%d: %d\n", cnt+1, ret);
+        }
+
+        return 0;
+      }
+
+
+      int solve(char *string, int K)
+      {
+        int cnt;
+        int i;
+        int len;
+
+        cnt = 0;
+        len = strlen(string);
+        for (i=0; i<= len - K; i++) {
+          if (string[i] == '-') {
+            flip(string, i, K);
+            cnt++;
+          }
+        }
+
+        for (; i<len; i++) {
+          if (string[i] == '-')
+            return -1;
+        }
+
+        return cnt;
+      }
+
+      void flip(char *string, int start, int len)
+      {
+        int i;
+
+        for (i=start; i < start + len; i++) {
+          if (string[i] == '-')
+            string[i] = '+';
+          else
+            string[i] = '-';
+        }
+      }
+
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright tamil602 Codejam 2017 QR Problem A
+      #include <stdio.h>
+
+      int S[1001];
+
+      int main() {
+
+        int T, t, N, K, i, j, result;
+        char c;
+        scanf("%d\n", &T);
+
+        for(t = 1; t <= T; t++) {
+          scanf("%c", &c);
+          i = 0;
+          while(c != ' ') {
+            if(c == '-')
+              S[i] = 0;
+            else if(c == '+')
+              S[i] = 1;
+            i++;
+            scanf("%c", &c);
+          }
+          N = i;
+          scanf("%d\n", &K);
+          result = 0;
+          for(i = 0; i < N; i++) {
+            //printf("%c", (S[i] == 1) ? '+': '-');
+            if(N - i < K) {
+              if(S[i] == 0){
+                result = -1;
+                break;
+              }
+              if(i == N - 1)
+                break;
+              continue;
+            }
+            if(S[i] == 0) {
+              result++;
+              for(j = i; j < i + K; j++)
+                S[j] = (S[j] == 1) ? 0 : 1;
+            }
+          }
+
+          printf("Case #%d: ", t);
+          if(result == -1)
+            printf("IMPOSSIBLE\n");
+          else
+            printf("%d\n", result);
+        }
+
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright MechanicalTurd Codejam 2017 QR Problem A
+      #include <stdio.h>
+
+      int T, K;
+      char pancakes[1001];
+
+      int main() {
+        scanf("%d%*c", &T);
+        for (int t = 1; t <= T; t++) {
+          int S = 0, flip = 0;
+          while ((pancakes[S] = getchar()) != ' ')
+            S++;
+          scanf("%d%*c", &K);
+          for (int s = 0; s <= S - K; s++) {
+            if (pancakes[s] == '+')
+              continue;
+            flip++;
+            for (int i = s; i < s + K; i++)
+              pancakes[i] ^= 6;
+          }
+          int impossible = 0;
+          for (int s = S - K + 1; s < S; s++)
+            impossible |= pancakes[s] == '-';
+          printf(impossible ? "Case #%d: IMPOSSIBLE\n" : "Case #%d: %d\n", t, flip);
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright guru1234 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+      #include <math.h>
+
+      int f(char* s, int k, int l, int nMinus) {
+        int count = 0, i, j;
+        if(nMinus == 0) return 0;
+        for(i=l-k; i < k-1; i++) {
+          if(s[i] != s[i+1]) return -1;
+        }
+        for(i=0; i<l-k+1; i++) {
+          if(s[i] == '-') {
+            count++;
+            for(j=i; j<i+k; j++) {
+              if(s[j] == '-') s[j] = '+';
+              else s[j] = '-';
+            }
+          }
+        }
+        for(i=l-k; i < l; i++) {
+          if(s[i] != '+') return -1;
+        }
+        return count;
+      }
+
+      int main() {
+        int tc, tci = 1, i, l, k, nMinus;
+        char s[1001];
+        scanf("%d", &tc);
+        while(tc--) {
+          scanf("%s", s);
+          scanf("%d", &k);
+          l = strlen(s);
+          nMinus = 0;
+          for(i=0; i<l; ++i) if(s[i] == '-') ++nMinus;
+          i = f(s, k, l, nMinus);
+          if(i == -1) printf("Case #%d: IMPOSSIBLE\n", tci);
+          else printf("Case #%d: %d\n", tci, i);
+          tci++;
+        }
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright edf825 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int main() {
+        int T;
+        scanf("%d", &T);
+
+        for (int t = 1; t <= T; t++) {
+          char str[2560];
+          int k;
+          scanf("%s %d", str, &k);
+          int len = strlen(str);
+
+          int flips = 0;
+          for (int i = 0; i <= len - k; i++) {
+            if (str[i] == '-') {
+              flips++;
+              for (int j = 0; j < k; j++) {
+                str[i + j] = str[i + j] == '-' ? '+' : '-';
+              }
+            }
+          }
+
+          for (int i = 0; i < len; i++) {
+            if (str[i] == '-') {
+              flips = -1;
+            }
+          }
+
+          if (flips < 0) {
+            printf("Case #%d: IMPOSSIBLE\n", t);
+          } else {
+            printf("Case #%d: %d\n", t, flips);
+          }
+        }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright xiangdao Codejam 2017 QR Problem A
+      #import <stdio.h>
+      #import <string.h>
+
+      #define MAX_LENGTH 2000
+
+      // take in a character to represent current upfacing side of pancake,
+      // return the flipped side
+      // +: happy face
+      // -: blank face
+      char flip(char before) {
+        return before == '+' ? '-' : '+';
+      }
+
+      int main(int argc, char const *argv[]) {
+        int num_of_tests;
+        scanf("%d", &num_of_tests);
+
+        char cases[num_of_tests][MAX_LENGTH]; // store test cases
+        int flipper_lengths[num_of_tests]; // arrary for length of each flipper
+
+        // read inputs
+        for (int i = 0; i < num_of_tests; i++) {
+          scanf("%s %d", cases[i], &flipper_lengths[i]);
+        }
+
+        // for each test case
+        for (int i = 0; i < num_of_tests; i++) {
+          char pancakes[MAX_LENGTH];
+          strcpy(pancakes, cases[i]);
+          int num_of_faces = strlen(pancakes);
+          int k = flipper_lengths[i];
+          int j = 0, counter = 0;
+          for (j = 0; j < num_of_faces; j++) {
+            if (pancakes[j] == '+') { // happy face up
+              continue;
+            } else { // sad face up
+              if (num_of_faces - j < k) {
+                break;
+              } else {
+                counter++;
+                for (int m = 0; m < k; m++) {
+                  pancakes[j+m] = flip(pancakes[j+m]);
+                }
+              }
+            }
+          }
+
+          printf("Case #%d: ", i + 1);
+          if (j < num_of_faces) {
+            printf("%s\n", "IMPOSSIBLE");
+          } else {
+            printf("%d\n", counter);
+          }
+        }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright ryuhei Codejam 2017 QR Problem A
+      #include <unistd.h>
+
+      #define MIN(a, b) ((a)<(b)?(a):(b))
+
+      char ibuf[200000];
+      char *ibufe = ibuf-1;
+
+
+      void readall(){
+        int k, t = 0;
+        while((k=read(STDIN_FILENO, ibuf+t, sizeof(ibuf)-t))>0) t += k;
+      }
+
+      int read_uint(){
+        int x=0;
+        while(*(++ibufe) <'0');
+        do {
+          x *= 10;
+          x += *ibufe-'0';
+        } while(*(++ibufe) >='0');
+
+        return x;
+      }
+
+
+      extern inline char read_char(){
+        return *(++ibufe);
+      }
+
+      extern inline int read_string(char **s){
+        ,*s = ++ibufe;
+        while(*ibufe != ' '){
+          ,*ibufe=((*ibufe>>1)^1)&1;
+          ibufe++;
+        }
+        return ibufe-*s;
+      }
+
+      char buf[5000];
+      char *bufe = buf;
+
+      void write_uint(int x){
+        int i;
+        static char tmp[13];
+        if(x==0){
+          ,*bufe++ = '0';
+          return;
+        }
+
+        for(i=0; x; i++){
+          tmp[i] = '0' + x % 10;
+          x /= 10;
+        }
+        for(i--; i >= 0; i--){
+          ,*bufe++ = tmp[i];
+        }
+      }
+
+      void write_uintln(int x){
+        write_uint(x);
+        ,*bufe++ = '\n';
+      }
+
+      extern inline void write_string(char *s){
+        while(*s) *bufe++ = *s++;
+      }
+
+      extern inline void writeall(){
+        int k, t = 0;
+        while((k=write(STDOUT_FILENO, buf+t, bufe-buf-t))>0) t += k;
+      }
+
+      char rr[2000];
+
+      int main(){
+        int t, i, j, c;
+        char * const r = rr+1000;
+        readall();
+        t = read_uint();
+        for(i=1;i<=t;i++){
+          char *s;
+          int n, k, st;
+          n = read_string(&s);
+          k = read_uint();
+          c = st = 0;
+          for(j=0; j<=n-k;j++){
+            st ^= r[j-k];
+            r[j] = s[j] ^ st;
+            c += r[j];
+            st ^= r[j];
+          }
+          for(;j<n;j++){
+            st ^= r[j-k];
+            if(s[j] ^ st) break;
+          }
+          write_string("Case #");
+          write_uint(i);
+          write_string(": ");
+          if(j==n) write_uintln(c);
+          else write_string("IMPOSSIBLE\n");
+        }
+
+        writeall();
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright channabankapur Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int flipsCount(char* pancakes, int flipWidth);
+      int main() {
+        int nTestcases, tc = 1;
+        char pancakes[1001]; //max 1000 pancakes
+        int flipWidth, flips;
+
+        scanf("%d", &nTestcases);
+        for(tc = 1; tc <= nTestcases; ++tc) {
+          scanf("%s", pancakes);
+          scanf("%d", &flipWidth);
+          flips = flipsCount(pancakes, flipWidth);
+          if(flips < 0) {
+            printf("Case #%d: IMPOSSIBLE\n", tc);
+          } else { 
+            printf("Case #%d: %d\n", tc, flips);
+          }
+        }
+        return 0;
+      }
+
+      int flipsCount(char* pancakes, int flipWidth) {
+        int n = strlen(pancakes);
+        int i, j, flips = 0;
+
+        //There are "n - flipWidth + 1" substrings of length flipWidth.
+        //Make sure the first char of each of them is a "happy side".
+        //That way, we'll be left with only the last "flipWidth - 1" pancakes.
+        //If any one of them doesn't have a "happy side", it's IMPOSSIBLE.
+        for(i = 0; i <= n - flipWidth; ++i) {
+          if(pancakes[i] == '-') { //flip from the leftmost "blank side"
+            ++flips;
+            for(j = i; j < i + flipWidth; ++j) {
+              pancakes[j] = (pancakes[j] == '+') ? '-' : '+';
+            }
+          }
+        }
+
+        //except for the last flipWidth-1 pancakes, we are sure all are with "happy side".
+        for(i = n - flipWidth; i < n; ++i) {
+          if(pancakes[i] == '-') return -1;
+        }
+        return flips;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright physics0523 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      void flip(int st,int k,char s[]){
+        int i;
+        for(i = st;i < st+k;i++){
+          if(s[i] == '-'){s[i] = '+';}else{s[i] = '-';}
+        }
+      }
+
+      int main(void) {
+        int i,j,t,k,l,r;
+        char s[1024];
+        scanf("%d",&t);
+        for(i = 1;i <= t;i++){
+          scanf("%s%d",s,&k);
+          l = strlen(s);
+          r = 0;
+          for(j = 0;j <= l-k;j++){
+            if(s[j] == '-'){flip(j,k,s);r++;}
+          }
+          printf("Case #%d: ",i);
+          for(j = l-k+1;j < l;j++){
+            if(s[j] == '-'){printf("IMPOSSIBLE\n");break;}
+            if(j == l-1){printf("%d\n",r);}
+          }
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright bhanu015 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+
+      int main() {
+        FILE *f;
+        f = fopen("out.txt", "w");
+        int T;
+        scanf("%d", &T);
+        for (int i=0;i<T;i++) {
+          char arr[1005];
+          int x;
+          scanf("%s", arr);
+          scanf("%d", &x);
+          int len = strlen(arr);
+          int ans = 0;
+          int j=0;
+          while (j<len) {
+            if (arr[j] == '-') {
+              ans += 1;
+              for (int k=0;k<x;k++) {
+                if (j+k < len) {
+                  if (arr[j+k] == '-') arr[j+k] = '+';
+                  else arr[j+k] = '-';
+                }
+                else {
+                  ans = -1;
+                  k = x;
+                  j = len;
+                }
+              }
+              j++;
+            }
+            else {
+              j++;
+            }
+          }
+          if (ans != -1) {
+            fprintf(f,"Case #%d: %d\n", i+1, ans);
+          }
+          else {
+            fprintf(f,"Case #%d: IMPOSSIBLE\n", i+1);
+          }
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright attempt.to.get.a.tshirst.3 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int main(void) {
+        int T;
+        scanf("%i", &T);
+
+        char s[2001];
+        int k;
+        for (int t = 1; t <= T; t++) {
+          scanf("%s %i", s, &k);
+
+          int n = strlen(s);
+
+          int count = 0;
+          for (int i = 0; i <= n-k; i++) {
+            if (s[i] == '-') {
+              count++;
+              for (int j = i; j < i+k; j++) {
+                s[j] = (s[j] == '+') ? '-' : '+';
+              }
+            }
+          }
+
+          int ok = 1;
+          for (int i = 0; i < n; i++) {
+            if (s[i] == '-') {
+              ok = 0;
+            }
+          }
+
+          printf("Case #%i: ", t);
+          if (ok) {
+            printf("%i\n", count);
+          } else {
+            printf("IMPOSSIBLE\n");
+          }
+        }
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Chuchox.Jaraday Codejam 2017 QR Problem A
+      #include <stdio.h>
+  
+      int main(void){
+        int cases, casos;
+        char cadena[1000];
+        int flip, volteos, success, i, j, k;
+        char c;
+    
+        scanf("%d\n",&cases);
+        for(casos=1;casos<=cases;casos++){
+          i = 0;
+          while((c=getchar())!=' '){
+            cadena[i] = c;
+            i++;
+            //putchar(cadena[i-1]);
+          }
+          scanf("%d\n",&flip);
+          //printf("%d %d\n",flip,i);
+          volteos = 0;
+          for(j=0;j<=(i-flip);j++){
+            if(cadena[j] == '-'){
+              for(k=0;k<flip;k++){
+                if(cadena[j+k] == '-'){
+                  cadena[j+k] = '+';
+                }else{
+                  cadena[j+k] = '-';
+                }
+              }
+              volteos++;
+              /*for(k=0;k<i;k++){
+                putchar(cadena[k]);
+                }
+                putchar('\n');*/
+            }
+          }
+          success = 1;
+          for(j=(i-flip);j<i;j++){
+            if(cadena[j] == '-'){
+              success = 0;
+            }
+          }
+          if(success){
+            printf("Case #%d: %d\n",casos,volteos);
+          }else{
+            printf("Case #%d: IMPOSSIBLE\n",casos);
+          }
+        }
+    
+        return(0);
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Jeancjcosta Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+
+
+      int main(){
+        int t, k, i, ini, fim, j, w;
+        int res, count;
+        char str[1001];
+
+        scanf("%d", &t);
+
+        for (i = 0; i < t; i++){
+          scanf(" %s %d", str, &k);
+          res = 1; count = 0;
+          ini = 0; fim = k-1;
+          for (j = k-1; j < strlen(str); j++){
+            if (str[ini] == '-'){
+              count++;
+              for (w = ini; w <= fim; w++){
+                if (str[w] == '-')
+                  str[w] = '+';
+                else
+                  str[w] = '-';
+              }
+            }
+            ini++;
+            fim++;
+          }
+
+          for (j = 0;  j <strlen(str); j++){
+            if (str[j]=='-') res = 0;
+          }
+          if(res) 
+            printf("Case #%d: %d\n", i+1, count);
+          else
+            printf("Case #%d: IMPOSSIBLE\n", i+1);
+        }
+
+
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright DaithK Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      void func(
+                unsigned int num,
+                char *S)
+      {
+        unsigned int K;
+        unsigned int len;
+        unsigned int idx;
+        unsigned int flip;
+        unsigned int cnt;
+        unsigned int blank;
+
+        len = strlen(S);
+        for (idx = 0 ; idx < len ; idx++)
+          {
+            if (' ' == S[idx])
+              {
+                S[idx] = 0x00;
+                K = atoi(S + idx + 1);
+                break;
+              }
+          }
+
+        cnt = 0;
+        len = strlen(S);
+        for (idx = 0 ; idx < len-(K-1) ; idx++)
+          {
+            if ('+' == S[idx]) continue;
+
+            cnt++;
+            for (flip = 0 ; flip < K ; flip++)
+              {
+                S[idx+flip] = ('-' == S[idx+flip])? '+': '-';
+              }
+          }
+
+        blank = 0;
+        for (idx = len-(K-1) ; idx < len ; idx++)
+          {
+            if ('-' == S[idx]) blank++;
+          }
+
+        if (0 == blank) printf("Case #%d: %d\n", num+1, cnt);
+        else            printf("Case #%d: IMPOSSIBLE\n", num+1);
+      }
+
+      int main(void)
+      {
+        unsigned int num, T;
+        char S[1024];
+
+        fgets(S, sizeof(S), stdin);
+        sscanf(S, "%u\n", &T);
+        for(num = 0 ; num < T ; num++)
+          {
+            fgets(S, sizeof(S), stdin);
+            func(num, S);
+          }
+
+        return 0;
+      }
+
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright cichy1024 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      static const char neg[256] = {
+        ['-'] = '+',
+        ['+'] = '-'
+      };
+
+      int solve(void)
+      {
+        int k, l, n, i;
+        char s[1024], *p, *e;
+
+        scanf("%s%d", s, &k);
+
+        l = strlen(s);
+        e = s + l;
+        n = 0;
+        p = s;
+
+        while ((p = strchr(p, '-'))) {
+          if (p + k > e)
+            return -1;
+
+          for (i = 0; i < k; i++)
+            p[i] = neg[p[i]];
+
+          n++;
+        }
+
+        return n;
+      }
+
+      int main(void)
+      {
+        int i, t, n;
+
+        scanf("%d", &t);
+
+        for (i = 1; i <= t; i++) {
+          n = solve();
+
+          if (n >= 0)
+            printf("Case #%d: %d\n", i, n);
+
+          else
+            printf("Case #%d: IMPOSSIBLE\n", i);
+        }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright skazi Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+      #define N 0x400
+
+      int max( int x, int y ) { return x < y ? y:x; }
+
+      int n,k,x[N],c[N],r[N];
+      char s[N];
+
+      int main() {
+        int i,j,t,ts,cs = 0,ax,ok = 0;
+        for ( scanf("%d",&ts); ts--; ) {
+          scanf("%s %d",s,&k), n = strlen(s);
+          for ( i = 0; i < n; c[i] = s[i]=='+'?1:0, ++i );
+          for ( i = 0; i <= n-k; x[i++] = 0 );
+          for ( i = 0; i < n; ++i ) r[i] = c[i];
+          for ( x[0] = (c[0]^1), i = 1; i <= n-k; x[i] = (ax^1^c[i]), ++i ) 
+            for ( ax = 0, j = max(i-k+1,0); j <= i-1; ax ^= x[j++] );
+          for ( i = 0; i <= n-k; ++i )
+            if ( x[i] )
+              for ( t = i; t <= i+k-1; ++t )
+                r[t] ^= 1;
+          for ( ok = 1, i = 0; i < n && ok; ++i )
+            if ( !r[i] ) ok = 0;
+          if ( !ok ) {
+            printf("Case #%d: IMPOSSIBLE\n",++cs);
+            continue ;
+          }
+          for ( j = 0, i = 0; i <= n-k; j += x[i++] );
+          printf("Case #%d: %d\n",++cs,j);
+        }
+        return 0;
+      }
+
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright JamieY Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+      #include <math.h>
+      #include <stdlib.h>
+  
+      void reverse_pancake(char* s, int K) {
+        for(int i=0; i<K; i++) {
+          if(s[i]=='+')
+            s[i] = '-';
+          else
+            s[i] = '+';
+        }
+      }
+  
+      int main() {
+        int round;
+        scanf("%d",&round);
+        getchar();
+    
+        char s[1024];
+        for(int i=0; i<round; i++) {
+          int K;
+          int len;
+          scanf("%s %d", s, &K);
+          len = strlen(s);
+          // start solving
+          int result = 0;
+          int pos = 0;
+          while( (pos+K) <= len) {
+            if(s[pos] == '-') {
+              reverse_pancake(s+pos, K);
+              result++;
+            }
+            // check next pos
+            pos++;
+          }
+      
+          // check final
+          for(; pos<len; pos++) {
+            if(s[pos] == '-') {
+              result = -1;
+              break;
+            }
+          }
+          printf("Case #%d: ", i+1);
+          if(result<0) {
+            printf("IMPOSSIBLE\n");
+          }
+          else {
+            printf("%d\n", result);
+          }
+        }
+    
+    
+    
+    
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Kuroneer Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+
+      int handleCase() {
+        int buffer_size = 1024;
+        int flippersize = 1;
+        char* buffer = calloc(buffer_size, sizeof(char));
+        fscanf(stdin, "%s %i\n", buffer, &flippersize);
+        int i=0, j=0;
+        int flips = 0;
+        do {
+          switch (buffer[i]) {
+          case '+': // Do nothing
+            break;
+          case '-' :
+            flips++;
+            for (j=i; j<i+flippersize; ++j) {
+              switch (buffer[j]) {
+              case '+' :
+                buffer[j] = '-';
+                break;
+              case '-' :
+                buffer[j] = '+';
+                break;
+              default:
+                fprintf(stdout, "IMPOSSIBLE");
+                return 0;
+              }
+            }
+            break;
+          default: //exit
+            i = -1;
+          }
+        } while (++i);
+        fprintf(stdout, "%i", flips);
+
+        free(buffer);
+        return 0;
+      }
+
+      void main () {
+        int ncases,i;
+        fscanf(stdin, "%i ", &ncases);
+
+        for(i=0; i<ncases; i++) {
+          fprintf(stdout, "Case #%i: ", i+1);
+          handleCase();
+          fprintf(stdout, "\n");
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright prateekAlakh Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<string.h>
+      #include<malloc.h>
+      int main()
+      {
+        int i,j,n,t,l,c,k,i1,flag;
+        char *a = (char*)malloc(1200*sizeof(char));
+        scanf("%d",&t);
+        for(i1=0; i1<t; i1++)
+          {
+            flag=1;
+            c=0;
+            scanf("%s",a);
+            for(l=0; a[l]!='\0'; l++);
+            scanf("%d",&k);
+            for(i=0; i<l-k+1; i++)
+              {
+                if(a[i]=='-')
+                  {
+                    for(j=i; j<i+k; j++)
+                      {
+                        if(a[j]=='-')
+                          a[j]='+';
+                        else
+                          a[j]='-';
+                      }
+                    c++;
+                  }
+              }
+            for(; i<l; i++)
+              {
+                if(a[i]=='-')
+                  {
+                    printf("Case #%d: IMPOSSIBLE\n",i1+1);
+                    flag=0;
+                    break;
+                  }
+              }
+            if(flag)
+              printf("Case #%d: %d\n",i1+1,c);
+          }
+        free(a);
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Aaby Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<string.h>
+      #include <stdlib.h>
+      int main()
+      {
+        int x,y,n,test_case,k,i1;    
+        char *str = (char*)malloc(1000000*sizeof(char));
+        fscanf(input,"%d ",&test_case); // input test case
+    
+        for(i1=0; i1<test_case; i1++)
+          {
+            int flag=0;
+            int count=0;
+            int length;
+        
+            scanf("%s",str); // input string
+        
+            for(length=0; str[length]!='\0'; length++);
+        
+            scanf("%d",&k); //input k
+        
+            for(x=0; x<length-k+1; x++)
+              {
+                if(str[x]=='-')
+                  {
+                    for(y=x; y<x+k; y++)
+                      {
+                        if(str[y]=='-')
+                          str[y]='+';
+                        else
+                          str[y]='-';
+                      }
+                    count++;
+                  }
+              }
+        
+            for(; x<length; x++)
+              {
+                if(str[x]=='-')
+                  {
+                    printf("Case #%d: IMPOSSIBLE\n",i1+1);
+                    flag=1;
+                    break;
+                  }
+            
+              }
+        
+            if(flag==0)
+              printf("Case #%d: %d\n",i1+1,count);
+        
+          }
+    
+        free(str);
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright maxpic Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+      #include <gmp.h>
+
+      void chopString(char *st)
+      {
+        char *p=strchr(st, '\n');
+        if (p) *p='\0';
+        p=strchr(st, '\r');
+        if (p) *p='\0';
+      }
+
+      void ElaboraCaso(long caso, FILE *fl)
+      {
+        char	riga[4096];
+
+        if (!fgets(riga, sizeof(riga), fl))
+          {
+            fprintf(stderr, "Finito File\n");
+            exit(1);
+          }
+        chopString(riga);
+        printf("Case #%d: ", caso);
+
+        // Riga ha dei + e meno fino allo spazio, seguito da un numero
+        char *p;
+        p=strchr(riga, ' ');
+        if (!p)
+          {
+            fprintf(stderr, "Errore");
+            exit(1);
+          }
+        ,*p='\0';
+        p++;
+        int lS=strlen(riga);
+        int K=atoi(p);
+        memset(p, 0, K+1);
+        //printf("S=[%s] K=%d\n", riga, K);
+
+        int girate=0;
+
+        while(girate < 1000)
+          {
+            // Controllo a che punto e' il primo meno
+            fprintf(stderr, "%d Loop %d: S=[%s]\n",caso, girate, riga);
+            for (p=riga; *p=='+'; p++);
+
+            if (*p=='\0') break;
+
+            if (p[K-1]=='\0')
+              {
+                p=riga+lS-K;
+              }
+            int i;
+            for (i=0; i < K; i++)
+              {
+                ,*p++= (*p=='-') ? '+' : '-';
+              }
+
+            girate++;
+          }
+
+        if (girate < 1000)
+          printf("%d\n", girate);
+        else
+          printf("IMPOSSIBLE\n");
+      }
+
+      // // // // // // // // // 
+      int main(int argc, char *argv[])
+      {
+        if (argc != 2)
+          {
+            printf("Usa %s <file_input>\n", argv[0]);
+            return 1;
+          }
+
+        FILE *fl;
+
+        fl=fopen(argv[1], "r");
+        if (!fl)
+          {
+            perror("Aprendo file input");
+            return 1;
+          }
+        long T;
+        char riga[1024];
+        fgets(riga, sizeof(riga), fl);
+        T=atol(riga);
+
+        long i;
+        for (i=0; i < T; i++)
+          {
+            ElaboraCaso(i+1, fl);
+          }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Noble.Mushtak Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+      #include <stdbool.h>
+
+      #define REPEAT(token, num) for (token = 0; token < num; token++)
+      #define getchar getchar_unlocked
+      #define putchar putchar_unlocked
+      static inline long long min(long long length1, long long length2) { return (length1 < length2) ? length1 : length2; }
+      static inline long long max(long long length1, long long length2) { return (length1 > length2) ? length1 : length2; }
+
+      //#define DEBUG
+      #ifdef DEBUG
+      #define PRINTF printf
+      #else
+      #define PRINTF(...) 1
+      #endif
+
+      typedef long test_cases;
+      typedef long num_pancakes;
+      typedef long num_flips;
+
+      num_flips answer;
+      num_pancakes numPancakes, flipperLength;
+      char string[1001];
+      bool pancakes[1000];
+
+      int main() {
+        num_pancakes i, j;
+        test_cases numTestCases, l;
+        scanf("%li", &numTestCases);
+
+        REPEAT(l, numTestCases) {
+          scanf("%s", string);
+          numPancakes = strlen(string);
+          REPEAT(i, numPancakes) {
+            pancakes[i] = (string[i] == '+');
+          }
+          scanf("%li", &flipperLength);
+
+          answer = 0;
+          REPEAT(i, numPancakes) if (!pancakes[i]) {
+            if (i+flipperLength-1 < numPancakes) {
+              answer++;
+              REPEAT(j, flipperLength) pancakes[i+j] = !pancakes[i+j];
+            }
+            else answer = -1;
+          }
+
+          if (answer < 0) printf("Case #%li: IMPOSSIBLE\n", l+1);
+          else printf("Case #%li: %li\n", l+1, answer);
+        }
+
+        exit(0);
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright yos.hk Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+  
+      int main()
+      {
+        int T,t,n,k;
+        int i,j,x;
+    
+        int a[10000];
+        char s[1100];
+    
+        fscanf(stdin, "%d", &T);
+        for(t=1;t<=T;t++)
+          {
+            fscanf(stdin, "%s%d", s, &k);
+            printf("Case #%d: ", t);
+        
+            x=0;
+            n=strlen(s);
+            for(i=0;i<=n-k;i++)
+              {
+                if(s[i]=='-')
+                  {
+                    for(j=0;j<k;j++)
+                      {
+                        if(s[i+j]=='+') s[i+j]='-'; 
+                        else if(s[i+j]=='-') s[i+j]='+';
+                      }
+                    x++;
+                  }
+              }
+        
+            for(i=0;i<n;i++)
+              {
+                if(s[i]=='-') break;
+              }
+            if(i<n) printf("IMPOSSIBLE\n");
+            else printf("%d\n",x);
+        
+          }
+    
+        return 0;
+    
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright NO2 Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<string.h>
+
+      void main() {
+        int t;
+        char s[1001];
+        int i,j,k,l,m,count;
+        scanf("%d",&t);
+        for(i=0;i<t;i++) {
+          scanf("%s %d",s,&j);
+          l = strlen(s);
+          count=0;
+          for(k=0;k<l-j+1;k++) {
+            if(s[k]=='-') {
+              count++;
+              for(m=0;m<j;m++) {
+                if(s[k+m]=='+') s[k+m]='-';
+                else s[k+m]='+';
+              }
+            }
+          }
+          m=0;
+          for(k=(l-j);k<l;k++) {
+            if(s[k]=='-') m++;
+          }
+          if(m) {
+            printf("Case #%d: IMPOSSIBLE\n",i+1);
+          } else 
+            printf("Case #%d: %d\n",i+1,count);
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright midhunmathew Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<string.h>
+      int main(){
+        int T,n,i,j,k,l,m,bin[1000]={0},count,flag	;
+        char cakes[1000]={0};
+        scanf("%d",&T);
+        for(i=0;i<T;i++){
+          count=0;
+          scanf("%s%d",cakes,&k);
+          l=strlen(cakes);
+          for(j=0;j<l;j++)
+            bin[j]=(cakes[j]=='+')?1:0;
+          for(j=0;j<l-k+1;j++){
+            if(!bin[j]){
+              for(m=j;m<j+k;m++)
+                bin[m]=1-bin[m];
+              count++;
+            }
+          }
+          flag=0;
+          for(;j<l;j++)
+            if(!bin[j]){
+              flag=1;
+            }
+          if(flag==1)
+            printf("Case #%d: IMPOSSIBLE\n",i+1);
+          else
+            printf("Case #%d: %d\n",i+1,count);
+        }
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Ioannis70 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <time.h>
+      #define INFILE "pancake.in"
+      #define OUTFILE "pankace.out"
+  
+      long T;
+      char S[1500];
+      long SL=0;
+      FILE *fin;
+      long K;
+  
+  
+      void read_problem()
+      {
+        SL = 0;
+        char ch;
+        fscanf(fin, "%c", &ch);
+        while (ch != ' ')
+          {
+            S[SL++] = ch;
+            fscanf(fin, "%c", &ch);
+          }
+        S[SL] = 0;
+    
+        fscanf(fin, "%d\n", &K);
+    
+        printf("%s %d % d\n", S, SL, K);
+      }
+  
+      long solve_problem()
+      {
+        long counter = 0;
+        long i,j;
+        for (i = 0;i <= SL - K;i++)
+          if (S[i] == '-')
+            {
+              for (j = i;j < i + K;j++)
+                if (S[j] == '-')
+                  S[j] = '+';
+                else
+                  S[j] = '-';
+              counter++;
+            }
+    
+        for (i = SL - K;i < SL;i++)
+          if (S[i] == '-')
+            return -1;
+    
+        return counter;
+      }
+  
+  
+      void read_file()
+      {
+        long problem;
+        fin = fopen(INFILE, "r");
+        fscanf(fin, "%d\n", &T);
+        FILE *fout;
+        fout = fopen(OUTFILE, "w");
+    
+        for (problem = 0;problem < T;problem++)
+          {
+            long SOL;
+            read_problem();
+            SOL = solve_problem();
+            if (SOL < 0)
+              fprintf(fout, "Case #%d: IMPOSSIBLE\n", problem+1);
+            else
+              fprintf(fout, "Case #%d: %d\n", problem + 1, SOL);
+          }
+    
+        fclose(fin);
+        fclose(fout);
+      }
+  
+  
+      long main() 
+      {
+        read_file();
+    
+        return 1;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Jojo.le.Barjos Codejam 2017 QR Problem A
+  
+      #include <stdio.h>
+      #include <string.h>
+  
+      int main() {
+        int t, T, k, n, c, i, j;
+        char S[1001];
+        scanf("%d", &T);
+        for (t = 1; t <= T; ++t) {
+          scanf("%s %d", S, &k);
+          n = strlen(S);
+          c = 0;
+          for (i = 0; i <= n - k; ++i)
+            if (S[i] == '-') {
+              ++c;
+              for (j = 0; i + j < n && j < k; ++j)
+                S[i + j] = S[i + j] == '+' ? '-' : '+';
+            }
+          for (; i < n && c >= 0; ++i)
+            if (S[i] == '-')
+              c = -1;
+          if (c == -1)
+            printf("Case #%d: IMPOSSIBLE\n", t);
+          else
+            printf("Case #%d: %d\n", t, c);
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright sgtlaugh Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+      #include <stdbool.h>
+  
+      #define MAX 1000010
+      #define clr(ar) memset(ar, 0, sizeof(ar))
+      #define read() freopen("lol.txt", "r", stdin)
+      #define write() freopen("out.txt", "w", stdout)
+  
+      int n, k;
+      char str[MAX];
+  
+      void flip(int l, int r){
+        int i;
+        for (i = l; i <= r; i++){
+          if (str[i] == '+') str[i] = '-';
+          else str[i] = '+';
+        }
+      }
+  
+      bool happy(){
+        int i;
+        for (i = 0; i < n; i++){
+          if (str[i] == '-') return false;
+        }
+        return true;
+      }
+  
+      int main(){
+        read();
+        write();
+        int T = 0, t, i, j, res;
+    
+        scanf("%d", &t);
+        while (t--){
+          scanf("%s %d", str, &k);
+          res = 0, n = strlen(str);
+          for (i = 0; (i + k) <= n; i++){
+            if (str[i] == '-'){
+              res++;
+              flip(i, i + k - 1);
+            }
+          }
+      
+          if (happy()) printf("Case #%d: %d\n", ++T, res);
+          else printf("Case #%d: IMPOSSIBLE\n", ++T);
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright hak7a3 Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<string.h>
+      #include<stdlib.h>
+  
+      #define POS_CHAR '+' // 0
+      #define NEG_CHAR '-' // 1
+  
+  
+      void calc(char *buffer, int flip)
+      {
+        int count = 0;
+    
+        int len = strlen(buffer);
+        int i;
+        for(i = 0; i + flip <= len; i++) {
+          if(buffer[i] != POS_CHAR) {
+            count++;
+            for(int j = 0; j < flip; j++) {
+              if(buffer[i+j] == POS_CHAR) {
+                buffer[i+j] = NEG_CHAR;
+              } else {
+                buffer[i+j] = POS_CHAR;
+              }
+            }
+          }
+        }
+        while(buffer[i] != '\0') {
+          if(buffer[i] == NEG_CHAR) {
+            printf("IMPOSSIBLE");
+            return;
+          }
+          i++;
+        }
+        printf("%d", count);
+      }
+  
+      int main()
+      {
+        int cases;
+        scanf("%d", &cases);
+    
+        for(int i = 1; i <= cases; i++) {
+          printf("Case #%d: ", i);
+          char buffer[1000 + 1];
+          int flip;
+          scanf("%s %d", buffer, &flip);
+          calc(buffer, flip);
+          printf("\n");
+        }
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Olav Codejam 2017 QR Problem A
+      #include<stdlib.h>
+      #include<stdio.h>
+      #include<string.h>
+
+      void flip(char *pancakes, int flip_length);
+
+      int main(){
+        int cases, num_pancakes, flip_length, flips, can_be_flipped, i, c;
+        char pancakes[1001];
+        scanf("%d", &cases);
+        for (c=0;c<cases;c++){
+          scanf("%s%d", pancakes, &flip_length);
+          num_pancakes = strlen(pancakes);
+
+          flips = 0;
+          for(i=0;i<num_pancakes-flip_length+1;i++){
+            if(pancakes[i] == '-'){
+              flip(&pancakes[i], flip_length);
+              flips++;
+            }
+          }
+
+          can_be_flipped = 1;
+          for(i=0;i<num_pancakes;i++)
+            if(pancakes[i] == '-')
+              can_be_flipped = 0;
+
+          if (can_be_flipped)
+            printf("Case #%d: %d\n", c+1, flips);
+          else
+            printf("Case #%d: IMPOSSIBLE\n", c+1);
+        }
+      }
+
+      void flip(char *pancakes, int flip_length){
+        int i;
+        for(i=0;i<flip_length;i++){
+          if (pancakes[i] == '-')
+            pancakes[i] = '+';
+          else if (pancakes[i] == '+')
+            pancakes[i] = '-';
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Math.Wizard.Boy Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+
+      int main(void) {
+        int T, K, L, C, t, l, k;
+        char S[1001], F[256];
+
+        F['-'] = '+';
+        F['+'] = '-';
+
+        scanf("%d", &T);
+        for (t = 0; t++ < T; ) {
+          C = 0;
+          scanf("%s %d", S, &K);
+          L = strlen(S);
+          for (l = 0; l + K <= L; ++l) {
+            if (S[l] == '-') {
+              ++C;
+              for (k = 0; k < K; ++k) {
+                S[l + k] = F[S[l + k]];
+              }
+            }
+          }
+          for (; l < L; ++l) {
+            if (S[l] == '-') {
+              break;
+            }
+          }
+          if (l == L) {
+            printf("Case #%d: %d\n", t, C);
+          } else {
+            printf("Case #%d: IMPOSSIBLE\n", t);
+          }
+        }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright J.. Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<stdlib.h>
+      #include<string.h>
+      #include<math.h>
+  
+      int main()
+      {
+        freopen("A-large.in","r",stdin);
+        freopen("A-large.out","w",stdout);
+        int T,i,k,length,j,count,flag,h;
+        char s[1009];
+    
+        scanf("%d",&T);
+        for(i=1;i<=T;i++)
+          {
+            flag=count=0;
+            scanf("%s %d",s,&k);
+            length=strlen(s);
+            for(j=0;j<length;j++)
+              {
+                if(s[j]=='-')
+                  {
+                    if(length-j<k)
+                      {
+                        flag=1;
+                        break;             
+                      } 
+                    else
+                      {
+                        for(h=0;h<k;h++)
+                          if(s[j+h]=='-')
+                            s[j+h]='+';
+                          else
+                            s[j+h]='-';
+                        count++;        
+                      }          
+                  }                 
+              }
+            printf("Case #%d: ",i);
+            if(flag)
+              printf("IMPOSSIBLE");
+            else
+              printf("%d",count);
+            printf("\n");    
+          }
+    
+        // system("pause");
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Manolman Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      char A[1001];
+      int pan_left;
+
+      void flip(int, int);
+
+      int main() {
+
+        int i, j, w, T, K, moves, S;	
+        scanf("%d", &T);
+        for (i = 0; i < T; i++) {
+          scanf("%s", A);
+          scanf("%d", &K);
+          pan_left = 0;
+          j = 0;
+          moves = 0;
+          while (A[j] != '\0') {
+            if (A[j] == '-')
+              pan_left++;
+            j++;
+          }
+          j = 0;
+          S = strlen(A);
+          while (pan_left > 0 && (j + K  <= S)) {
+            w = 0;
+            while (A[j + w] == '-' && w < K)
+              w++;
+            if (w != 0) {
+              flip(j, K);
+              moves++;
+            }
+            else
+              w = 1;
+            j = j + w;
+          }
+          if (pan_left == 0)
+            printf("Case #%d: %d\n", i + 1, moves);
+          else
+            printf("Case #%d: IMPOSSIBLE\n", i + 1);
+        }
+        return 0;
+      }
+
+
+      void flip(int i, int K) {
+        int j;
+        for (j = i; j < i+K; j++)
+          if (A[j] == '+') {
+            A[j] = '-';
+            pan_left++;
+          }
+          else {
+            A[j] = '+';
+            pan_left--;
+          }
+      }
+
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright rainboy.jiang Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int main() {
+        int T, t;
+
+        scanf("%d", &T);
+        for (t = 1; t <= T; t++) {
+          static char s[1024];
+          int k, n, i, j, cnt;
+
+          scanf("%s%d", s, &k);
+          n = strlen(s);
+          cnt = 0;
+          for (i = 0; i < n; i++)
+            if (s[i] == '-') {
+              if (i + k > n) {
+                cnt = -1;
+                break;
+              }
+              for (j = i; j < i + k; j++)
+                s[j] = (s[j] == '-' ? '+' : '-');
+              cnt++;
+            }
+          printf("Case #%d: ", t);
+          if (cnt == -1)
+            printf("IMPOSSIBLE");
+          else
+            printf("%d", cnt);
+          printf("\n");
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright minus9d Codejam 2017 QR Problem A
+      #!/usr/bin/env python3
+      # -*- coding: utf-8 -*-
+
+      def flip(S, idx, K):
+      for j in range(idx, idx + K):
+      S[j] = '-' if S[j] == '+' else '+'
+                                       return S
+
+                                       def solve():
+                                       S, K = input().split()
+                                       S = list(S)
+                                       K = int(K)
+
+                                       ans = 0
+                                       for i in range(len(S) - K + 1):
+        if S[i] == '-':
+          ans += 1
+            S = flip(S, i, K)
+            if '-' in S:
+            print("IMPOSSIBLE")
+              else:
+                print(ans)
+
+                  def main():
+                  T = int(input())
+                  for t in range(T):
+                  print ("Case #" + str(t+1) + ": ", end="")
+                    solve()
+
+                    main()
+
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright detectiveal Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+
+      int S[1000];
+
+      int main () {
+        int T, i = 1, j = 0, K, sum = 0, N, l, c;
+        FILE *fp;
+        fp = fopen("A-large.in","r");
+        if (fscanf(fp,"%d", &T) < 1)
+          return 1;
+        c = getc(fp);
+        while (i <= T) {
+          c = getc(fp);
+          while ((c == '+') || (c == '-')) {
+            if (c == '+') {
+              S[j] = 1;
+              sum += 1;
+            }
+            else if (c == '-')
+              S[j] = 0;
+            j++;
+            c = getc(fp);
+          }
+          if (fscanf(fp,"%d", &K) < 1)
+            return 1;
+          N = j;
+          j = 0;
+          if (sum == N)
+            printf("Case #%d: 0\n", i);
+          else {
+            sum = 0;
+            while (j < N-K+1) {
+              if (S[j] == 0) {
+                sum++;
+                for (l = 0; l < K; l++) {
+                  S[j+l] = 1-S[j+l];
+                }
+              }
+              j++;
+            }
+            while (j < N) {
+              if (S[j] == 0) {
+                printf("Case #%d: IMPOSSIBLE\n", i);
+                break;
+              }
+              j++;
+            }
+            if (j == N)
+              printf("Case #%d: %d\n", i, sum);
+          }
+          i++;
+          j = 0;
+          sum = 0;
+          c = fgetc(fp);
+        }
+        fclose(fp);
+        return 0;
+      }	
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright eno3nt Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int main()
+      {
+      #define SIZ 2048
+        char S[SIZ];
+        int T;
+        scanf("%d", &T);
+        for(int t=1; t<=T; t++)
+          {
+            memset(S, 0, SIZ);
+            int K;
+            scanf("%s %d", S, &K);
+            int L=strlen(S);
+            char *s=S;
+            int F=0;
+            int I=0;
+            while(*s && !I)
+              {
+                if(*s=='+')
+                  {
+                    s++;
+                  }
+                else if(s+K > S+L)
+                  {
+                    I=1;
+                  }
+                else
+                  {
+                    F++;
+                    for(int k=0; k<K; k++)
+                      {
+                        s[k] = s[k]=='+' ? '-' : '+';
+                      }
+                    s++;
+                  }
+              }
+            if(I)
+              {
+                printf("Case #%d: IMPOSSIBLE\n", t);
+              }
+            else
+              {
+                printf("Case #%d: %d\n", t, F);
+              }
+          }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Neelesh.Sinha Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+  
+      int main(void) {
+        freopen("A-large.in","r",stdin);
+        freopen("A-largeoutput.out","w",stdout);
+        int t,i,j,k,l,len,ans,flag;
+        scanf("%d",&t);
+        for(i=1;i<=t;i++)
+          {
+            char ch[1001];
+            scanf("%s %d",ch,&k);
+            len=strlen(ch);
+            ans=0;
+            for(j=0;j<=len-k;j++)
+              {
+                if(ch[j]=='-')
+                  {
+                    for(l=j;l<j+k;l++)
+                      {
+                        if(ch[l]=='+')
+                          ch[l]='-';
+                        else
+                          ch[l]='+';
+                      }
+                    ans++;
+                  }
+              }
+            flag=1;
+            for(j=len-k+1;j<len;j++)
+              {
+                if(ch[j]=='-')
+                  {
+                    flag=0;
+                    break;
+                  }
+              }
+            if(flag==1)
+              printf("Case #%d: %d\n",i,ans);
+            else
+              printf("Case #%d: IMPOSSIBLE\n",i);
+          }
+        return 0;
+      }
+  
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright mikim42 Codejam 2017 QR Problem A
+      /* ************************************************************************** */
+      /*                                                                            */
+      /*                                                        :::      ::::::::   */
+      /*   mikim42_a.c                                        :+:      :+:    :+:   */
+      /*                                                    +:+ +:+         +:+     */
+      /*   By: mikim <mikim@student.42.us.org>            +#+  +:+       +#+        */
+      /*                                                +#+#+#+#+#+   +#+           */
+      /*   Created: 2017/04/07 17:06:28 by mikim             #+#    #+#             */
+      /*   Updated: 2017/04/07 19:24:19 by mikim            ###   ########.fr       */
+      /*                                                                            */
+      /* ************************************************************************** */
+
+      #include <stdio.h>
+      #include <string.h>
+      #include <stdlib.h>
+
+      void	check_happy(char *s, int x, int cnt)
+      {
+        int i;
+
+        i = -1;
+        while (s[++i] != '\0')
+          if (s[i] == '-')
+            {
+              printf("Case #%d: IMPOSSIBLE\n", x);
+              return ;
+            }
+        printf("Case #%d: %d\n", x, cnt);
+      }
+
+      int		check_flipable(char *s, int k)
+      {
+        int i;
+
+        i = -1;
+        while (++i < k)
+          if (s[i] == '+')
+            break ;
+        if (i == k)
+          return (1);
+        return (0);
+      }
+
+      int		check_possible(char *s, int k)
+      {
+        int	i;
+        int	cnt;
+        int	possible;
+
+        i = -1;
+        cnt = 0;
+        possible = 0;
+        while (s[++i] != '\0')
+          {
+            cnt += (s[i] == '-' ? 1 : 0);
+            if (i + k <= (int)strlen(s))
+              possible += (check_flipable(s + i, k));
+          }
+        if (cnt == k && possible == 1)
+          return (1);
+        return (0);
+      }
+
+      int		check_valid(char *s, int k, int x)
+      {
+        int i;
+        int	tmp;
+
+        i = -1;
+        tmp = 0;
+        while (s[++i] != '\0')
+          {
+            tmp = (tmp == 0 ? s[i] : tmp);
+            if (tmp != s[i])
+              break ;
+            if (s[i + 1] == '\0' && tmp == '+')
+              return (printf("Case #%d: 0\n", x));
+            else if (s[i + 1] == '\0' && tmp == '-' && k == (int)strlen(s))
+              return (printf("Case #%d: 1\n", x));
+          }
+        if (k >= (int)(strlen(s) / 2) + (int)(strlen(s) % 2))
+          {
+            if (check_possible(s, k))
+              return (printf("Case #%d: 1\n", x));
+          }
+        return (0);
+      }
+
+      int		flip(char *s, int k)
+      {
+        int i;
+
+        i = -1;
+        while (++i < k)
+          s[i] = (s[i] == '+' ? '-' : '+');
+        return (1);
+      }
+
+      void	flips(char *s, int k, int x)
+      {
+        int i;
+        int cnt;
+
+        cnt = 0;
+        if (check_valid(s, k, x) != 0)
+          return ;
+        i = -1;
+        while (s[++i + k - 1] != '\0')
+          {
+            if (s[i] == '-' ? flip(s + i, k) : 0)
+              {
+                i = -1;
+                cnt++;
+              }
+          }
+        check_happy(s, x, cnt);
+      }
+
+      int		main(void)
+      {
+        char	s[10000];
+        int		t, t_i, k;
+
+        scanf("%d", &t);
+        t_i = -1;
+        while (++t_i < t)
+          {
+            scanf("%s %d", s, &k);
+            flips(s, k, t_i + 1);
+          }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright coderrrrr Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include<limits.h>
+      #include<string.h>
+  
+      int main()
+      {
+        int i,j,k,z,l,m,s,n,t,flag;
+        char a[1001];
+        scanf("%d",&t);
+        for(z=1;z<=t;z++)
+          {
+            flag=1;
+            s=0;
+            scanf("%s%d",&a,&k);
+            // printf("%s%d",a,k);
+            l=strlen(a);
+            for(i=0;i<l;i++)
+              {
+                if(a[i]=='-')
+                  {
+                    s++;
+                    for(j=i;j<k+i&&i+k-1<l;j++)
+                      {
+                        if(a[j]=='-')
+                          a[j]='+';
+                        else a[j]='-';
+                      }
+                
+                  }
+              }
+            for(i=0;i<l;i++)
+              if(a[i]=='-')
+                {
+              
+                  flag=0;
+                  break;
+                }
+            if(flag)
+              printf("Case #%d: %d\n",z,s);
+            else
+              printf("Case #%d: IMPOSSIBLE\n",z);
+        
+          }
+    
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright malhar.try1 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+      #define max_strlen 1001
+
+      int main(void)
+      {
+        int t, case_no;
+        scanf("%d", &t);
+        for(case_no = 1;case_no <= t; case_no++)
+          {
+            int k, len, i, flips = 0, j;
+            char* str = (char*) malloc (max_strlen * sizeof(char));
+            scanf("%s %d", str, &k);
+
+            len = strlen(str);
+            for(i = 0;i <= len - k;i++)
+              {
+                if(str[i] == '-')
+                  {
+                    flips++;
+                    for(j = i;j < i+k;j++)
+                      str[j] = (str[j] == '-')?'+':'-';
+                  }
+              }
+            for(i; i < len;i++)
+              if(str[i] == '-')
+                break;
+
+            printf("Case #%d: ", case_no);		
+            if(i == len)
+              printf("%d\n", flips);
+            else
+              printf("IMPOSSIBLE\n");
+          }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright santosha Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+
+      typedef long long ll;
+
+
+      void
+      do_pan (char	*pn, int	kk)
+      {
+        char	*p;
+        char	*end;
+        int	flips = 0;
+
+        p = pn;
+        end = pn + strlen(pn);
+
+        while (*p) {
+
+          if (*p == '-') {
+            if (p+kk <= end) {
+
+              char	*tt = p;
+
+              while (tt < p+kk) {
+                if (*tt == '-') {
+                  ,*tt = '+';
+                } else {
+                  ,*tt = '-';
+                }
+                ++tt;
+              }
+              ++flips;
+            } else {
+              puts ("IMPOSSIBLE");
+              return;
+            }
+          } 
+          ++p;
+        }
+        printf ("%d\n", flips);
+      }
+
+      int 
+      main ()
+      {
+        int	ix, ntests;
+        int	k;
+        char	pan[2048];
+
+        scanf ("%d", &ntests);
+
+        for (ix = 1; ix <= ntests; ++ix) {
+
+          scanf("%s %d", pan, &k);
+
+          printf ("Case #%d: ", ix);
+          do_pan (pan, k);
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright HonMing Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+
+      int main()
+      {
+        int i,j,k;
+        int ii,jj,kk;
+        int now;
+        int max;
+        int res;
+        int len;
+        int count=0;
+        char s[2000];
+
+        scanf("%d", &kk);
+
+        for(ii = 1; ii <= kk; ii++)
+          {
+            scanf("%s %d", s, &k);
+            len = strlen(s);
+            count=0;
+
+            for(j = 0; j + k <= len; j++)
+              {
+                if(s[j] == '-')
+                  {
+                    count++;
+                    for(i = 0; i < k; i++)
+                      {
+                        if(s[j+i] == '-')
+                          {
+                            s[j+i] = '+';
+                          }
+                        else
+                          {
+                            s[j+i] = '-';
+                          }
+                      }
+                  }
+
+                //printf("%s\n", s);
+              }
+            for(j = 0; j < k; j++)
+              {
+                if(s[len-j-1] == '-')
+                  break;
+              }
+
+            if(j == k)
+              printf("Case #%d: %d\n", ii, count);
+            else
+              printf("Case #%d: IMPOSSIBLE\n", ii);
+
+          }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Fatemender Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      void
+      solve(int case_no, char *s, int k)
+      {
+        int                                 i, l = strlen(s), r = 0;
+        int                                 j;
+
+        for (i = 0; i != l - k + 1; ++i)
+          {
+            //      printf("i = %d, r = %d, s = %s\n", i, r, s);
+
+            if (s[i] == '-')
+              {
+                for (j = i; j != i + k; ++j) s[j] = s[j] == '+' ? '-' : '+';
+                ++r;
+              }
+          }
+
+        for (i = l - k + 1; i != l; ++i)
+          {
+            if (s[i] == '-')
+              {
+                printf("Case #%d: IMPOSSIBLE\n", case_no);
+                return;
+              }
+          }
+
+        printf("Case #%d: %d\n", case_no, r);
+      }
+
+      int
+      main(void)
+      {
+        int                                 t;
+        int                                 k, i;
+        char                                s[1001];
+
+        scanf("%d", &t);
+
+        for (i = 0; i != t; ++i)
+          {
+            scanf("%s %d", s, &k);
+            solve(i + 1, s, k);
+          }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Ttaisinha Codejam 2017 QR Problem A
+      #include <stdio.h>
+
+      int main(int argc, char const *argv[])
+      {
+        char entry[2010];
+        int t,n,entrada[2000], poss=1;
+        scanf ("%d", &t);
+        for (int i = 0; i < t; ++i)
+          {
+            int j = 0;
+            int pos1 = -1;
+            scanf ("%c",&entry[j] );
+            scanf ("%c",&entry[j] );
+            while ( entry[j] != ' ')
+              {
+                entrada[j]= entry[j]=='-'? -1 : 1;
+                if (entry [j] == '-' && pos1 == -1)
+                  {
+                    pos1 = j;
+                  }
+                j++;
+                scanf ("%c", &entry[j]);
+              }
+            entrada[j]=-1;
+            scanf ("%d", &n);
+            if ((n + pos1) > j)
+              printf("Case #%d: IMPOSSIBLE\n", i+1);
+            else
+              {
+
+                int control = -1, vezes = 0;;
+                for (int h = 0; h < j; ++h)
+                  {
+                    if (entrada[h]==-1 && control == -1)
+                      control = h;
+                  }
+                while (control != -1 && control + n <= j)
+                  {
+
+
+                    int x = 0,k=0, a = -1;
+                    for (int i = 0; i < n; ++i)
+                      {
+                        entrada[i+control]*=(-1);
+                        if (entrada[i+control]==-1 && a == -1)
+                          {
+                            x = i+control;
+                            // printf("x = %d\n",x );
+                            a = 0;
+                          }
+                      }
+
+                    k = control + n;
+                    control = -1;
+                    for (int i = (x != 0 ? x : k); i < j; ++i)
+                      {
+                        // printf("i = %d\n",i );
+                        if (entrada[i]==-1 && control == -1)
+                          {
+                            control = i;
+                            break;
+                          }
+                      }
+                    vezes++;
+
+                  }
+                control = -1;
+                for (int h = 0; h < j; ++h)
+                  {
+                    //printf("%d",entrada[h] );
+                    if (entrada[h]==-1)
+                      control = h;
+                  }
+                // printf("\n");
+                if (control != -1)
+                  {
+                    printf("Case #%d: IMPOSSIBLE\n", i+1);
+                  }
+                else
+                  printf("Case #%d: %d\n", i+1, vezes);
+              }    
+
+          }
+        return 0;
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Fktards Codejam 2017 QR Problem A
+      #include <stdio.h>
+      int main() {
+        // your code goes
+        int t,i,j,p,n,k,r=0;
+        char a[1001],c;
+        scanf("%d",&t);
+        while(t--)
+          {p=0;n=0;r++;
+            scanf("%c",&c);
+            scanf("%c",&c);
+            while(c=='+'||c=='-')
+              {
+                a[n++]=c;
+                scanf("%c",&c);
+              }
+            scanf("%d",&k);
+            for(i=0;i<n-k+1;i++)
+              {
+                if(a[i]=='-'){
+                  p++;
+                  for(j=0;j<k;j++)
+                    if(a[i+j]=='+')
+                      a[i+j]='-';
+                    else
+                      a[i+j]='+';
+                }}
+            for(i;i<n;i++)
+              if(a[i]=='-')
+                break;
+            if(i==n)
+              printf("case #%d: %d\n",r,p);
+            else 
+              printf("case #%d: IMPOSSIBLE\n",r);
+          }
+        return 0;
+      }
+  
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Wa0w Codejam 2017 QR Problem A
+      #include <stdio.h>
+  
+      void printArr(int arr[]) {
+        while (*arr != 0) {
+          printf("%d ", *arr);
+          arr++;
+        }
+        printf("\n");
+      }
+  
+      int main() {
+        int t, k;
+        scanf("%d", &t);
+        getchar();
+        for (int i = 1; i <= t; i++) {
+          int bits[1000] = {0};
+      
+          char c = 0;
+          int s = 0;
+          while ((c = getchar()) != ' ') {
+            if (c == '+') bits[s] = 1;
+            else bits[s] = -1;
+            s++;
+          }
+          scanf("%d", &k);
+          getchar();
+      
+          int flips = 0;
+          int j = 0;
+          while (j + k - 1 < s) {
+            if (bits[j] == -1) {
+              for (int x = 0; x < k; x++) {
+                bits[j+x] = 0 - bits[j+x];
+              }
+              flips++;
+            }
+            j++;
+          }
+          int all_flipped = 1;
+          while (j < s && all_flipped) {
+            if (bits[j] != 1) all_flipped = 0;
+            j++;
+          }
+      
+          printf("Case #%d:", i);
+          if (all_flipped) printf(" %d", flips);
+          else printf(" IMPOSSIBLE");
+          printf("\n");
+        }
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright jkxjkx1031 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+  
+      int T,n,k,s[1010],op[1010];
+      char str[1010];
+  
+      int main(void)
+      {
+        freopen("cake.in","r",stdin);
+        freopen("cake.out","w",stdout);
+        scanf("%d",&T);
+        int t0;
+        for(t0=1;t0<=T;t0++)
+          {
+            scanf("%s%d",str,&k);
+            n=strlen(str);
+            int i;
+            for(i=1;i<=n;i++)
+              s[i] = str[i-1]=='+' ? 1 : 0;
+            int t=0,ans=0;
+            for(i=1;i<=n;i++)
+              {
+                if(i>k) t^=op[i-k];
+                if(s[i]^t) op[i]=0;
+                else
+                  {
+                    if(i>n-k+1) break;
+                    op[i]=1;
+                    t^=1;
+                    ans++;
+                  }
+              }
+            printf("Case #%d: ",t0);
+            if(i<=n) printf("IMPOSSIBLE\n");
+            else printf("%d\n",ans);
+          }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright XeR Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+      #define S 1000
+
+      void flip(char *pancakes, size_t flipper)
+      {
+        size_t i;
+
+        for(i = 0; i < flipper; i++)
+          pancakes[i] ^= '+' ^ '-';
+      }
+
+      int solve(char *pancakes, size_t flipper)
+      {
+        size_t i;
+        size_t count;
+        size_t size;
+
+        count = 0;
+        size  = strlen(pancakes);
+
+        /* Every pancakes before i are in good position, don't touch them */
+        for(i = 0; i <= size - flipper; i++)
+          if(pancakes[i] == '-') {
+            flip(&pancakes[i], flipper);
+            count++;
+          }
+
+        /* Ensure remaining pancakes are flipped */
+        for(i = i; i < size; i++)
+          if(pancakes[i] == '-')
+            return -1;
+
+        return count;
+      }
+
+      int main(int argc, char *argv[])
+      {
+        size_t i, n;
+
+        char   pancakes[S + 1];
+        size_t flipper;
+        int    ret;
+
+        scanf("%u", &n);
+
+        for(i = 0; i < n; i++) {
+          /* Reader gets a bonus point if they can exploit this BoF */
+          scanf("%s %d", pancakes, &flipper);
+
+          printf("Case #%d: ", i + 1);
+
+          ret = solve(pancakes, flipper);
+
+          if(ret >= 0)
+            printf("%d\n", ret);
+          else
+            puts("IMPOSSIBLE");
+        }
+
+      }
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright ali.farzanrad Codejam 2017 QR Problem A
+      main()
+      {
+        int itest, ntest;
+        scanf("%d", &ntest);
+        for (itest = 0; ++itest <= ntest; ) {
+          char a[1<<16];
+          int i, k, res = 0;
+          scanf(" %s%d", a, &k);
+          for (i = 0; a[i]; ++i) {
+            if (a[i] == '-') {
+              int j;
+              for (j = 0; j < k && a[i+j]; ++j)
+                a[i+j] = "+-"[a[i+j] == '+'];
+              if (j < k)
+                break;
+              ++res;
+            }
+          }
+          printf("Case #%d: ", itest);
+          if (a[i])
+            puts("IMPOSSIBLE");
+          else
+            printf("%d\n", res);
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright sdchikorde Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+      #include <malloc.h>
+
+      void main()
+      {
+        int n = 0,k,i,j,count,count1;
+        int cases,len;
+        char strorig[1024];
+        char strcopy[1024];
+        char* str;
+        scanf("%d",&cases);
+        while(n<cases)
+          {
+            n++;
+            printf("Case #%d: ",n);
+
+            //Logic to print answer for this case goes here
+            count = 0, count1 = 0;
+            scanf("%s%d",strorig,&k);
+            len = strlen(strorig);
+            strncpy(strcopy, strorig, len);
+            str = strorig;
+            for(i=0;i<=len-k;i++)
+              {
+                //printf("%d once\n",i);
+                if(str[i]=='-')
+                  {
+                    count++;
+                    for(j=0;j<k;j++)
+                      {
+                        //printf("%d in middle\n",i+j);
+                        if(str[i+j]=='-')
+                          {
+                            str[i+j]='+';
+                          }
+                        else
+                          {
+                            str[i+j]='-';
+                          }
+                      }
+                  }
+              }
+            for(j=0;j<k;j++)
+              {
+                //printf("%d second\n",len-1-j);
+                if(str[len-1-j]=='-')
+                  {
+                    count = 1111;
+                    //printf("Breaking bad\n");
+                    break;
+                  }
+              }
+
+            str = strcopy;
+            for(i=len-1;i>=k-1;i--)
+              {
+                //printf("%d once\n",i);
+                if(str[i]=='-')
+                  {
+                    count1++;
+                    for(j=0;j<k;j++)
+                      {
+                        //printf("%d in middle\n",i-j);
+                        if(str[i-j]=='-')
+                          {
+                            str[i-j]='+';
+                          }
+                        else
+                          {
+                            str[i-j]='-';
+                          }
+                      }
+                  }
+              }
+            for(j=0;j<k;j++)
+              {
+                //printf("%d second\n",j);
+                if(str[j]=='-')
+                  {
+                    count1 = 1111;
+                    //printf("Breaking bad\n");
+                    break;
+                  }
+              }
+
+            if(count>1000&&count1>1000)
+              {
+                printf("IMPOSSIBLE");
+              }
+            else
+              {
+                if(count1<count)
+                  {
+                    count = count1;
+                  }
+                printf("%d",count);
+              }
+
+            printf("\n");
+          }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright .bf Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      #define true 1
+      #define false 0
+
+      typedef unsigned char bool;
+
+      char row[1010];
+
+      void flip(int ini, int k)
+      {
+        int i;
+        for(i = ini; i < ini+k; i++)
+          row[i] = (row[i] == '-') ? '+' : '-';
+      }
+
+      bool check(int size)
+      {
+        int i;
+        for(i = 0; i < size; i++)
+          if(row[i] == '-')
+            return false;
+        return true;
+      }
+
+      int main()
+      {
+        int T, cont = 0;
+
+        scanf("%d\n", &T);
+        while(T--)
+          {
+            int i, k, n = 0;
+            int size;
+
+            memset(row, 0, sizeof(row));
+            scanf("%s %d\n", row, &k);
+
+            size = strlen(row);
+            for(i = 0; i <= size-k; i++)
+              if(row[i] == '-')
+                {
+                  flip(i, k);
+                  n++;
+                }
+
+            if(check(size))
+              printf("Case #%d: %d\n", ++cont, n);
+            else
+              printf("Case #%d: IMPOSSIBLE\n", ++cont);
+          }
+
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright golu1234 Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <string.h>
+
+      int main()
+      {
+        FILE *ptr;
+        ptr= fopen("smallInput.txt","r+");
+        FILE *ptw;
+        ptw=fopen("smallOutput.txt","w+");
+        char c[100];
+        fgets(c,100,ptr);
+        //printf("%s\n",c);
+        int l=strlen(c);
+        //printf("%d\n",l);
+        int q,t=0,w=1;
+        for(q=l-2;q>=0;q--)
+          {
+            t+=w*(c[q]-'0');
+            w*=10;
+          }
+        //printf("%d\n",t);
+        int y=1;
+        while(y<=t)
+          {
+            char ch[2020];
+            fgets(ch,2010,ptr);
+            int len=strlen(ch);
+            //printf("len =%d\n",len);
+            int k=0,l,a;
+            for(q=len-2; ch[q]!=' ';q--);
+            a=q;
+            //printf("a=%d\n",a);
+            w=1;
+            for(q=len-2;q>a;q--)
+              {
+                //printf("c[q]=%c\n",ch[q]);
+                k+=w*(ch[q]-'0');
+                w*=10;	
+              }
+            //printf("k =%d\n",k);
+
+            int i, flips=0;
+            for(i=0;i<=a-k;i++)
+              {
+                if(ch[i]=='-')
+                  {
+                    flips++;
+                    int j;
+                    for(j=i;j<i+k;j++)
+                      {
+                        if(ch[j]=='-')
+                          ch[j]='+';
+                        else
+                          ch[j]='-';
+                      }
+                  }
+              }
+            //printf("%s\n",ch);
+            int flag=1;
+            for(i=0;i<a;i++)
+              {
+                if(ch[i]=='-')
+                  flag=0;
+              }
+            if(flag==1)
+              {
+                fprintf(ptw,"Case #%d: %d\n",y,flips);
+                //printf("Case #%d: %d\n",y,flips);
+              }
+            else
+              {
+                fprintf(ptw,"Case #%d: IMPOSSIBLE\n",y);
+                //printf("Case #%d: IMPOSSIBLE\n",y);
+              }
+            y++;
+          }
+        fclose(ptw);
+        fclose(ptr);
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright ImCoder Codejam 2017 QR Problem A
+      #include<stdio.h>
+      int main()
+      {
+        static int t,k,i,j,l,m,a[1001],ans;
+        char s[1001];
+      #ifndef ONLINE_JUDGE
+        freopen("input.txt","r",stdin);
+        freopen("output.txt","w",stdout);
+      #endif
+        scanf("%d",&t);
+        for(j=1;j<=t;j++)
+          {
+            scanf("%s%d",&s,&k);
+            for(i=0;s[i];i++)
+              {
+                a[i]=1;
+                if(s[i]=='-')
+                  a[i]=0;
+              }
+            ans=0;
+            for(l=0;l<i+1-k;l++)
+              {
+                if(a[l]%2)
+                  continue;
+                ans++;
+                for(m=l+1;m<l+k;m++)
+                  {
+                    a[m]=a[m]+1;
+                  }
+              }
+            for(l=i+1-k;l<i;l++)
+              {
+                if(a[l]%2==0)
+                  break;
+              }
+            if(l==i)
+              printf("Case #%d: %d\n",j,ans);
+            else
+              printf("Case #%d: IMPOSSIBLE\n",j);
+          }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright M.Hafez Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+
+      int main() {
+        int t, tc = 1, k, ans, i, j;
+        int last_index;
+        char S[1110];
+        scanf("%d", &t);
+        while(t--) {
+          scanf("%s %d", S, &k);
+          last_index = strlen(S) - k + 1;
+          for(i = ans = 0; i < last_index; ++i) {
+            if(S[i] == '-') {
+              ++ans;
+              for(j = 0; j < k; ++j) {
+                S[i+j] = S[i+j] == '-'? '+' : '-';
+              }
+            }
+          }
+          for(i = 0, j = 1; S[i]; ++i) j &= S[i] == '+';
+          if(j) {
+            printf("Case #%d: %d\n", tc++, ans);
+          }
+          else {
+            printf("Case #%d: IMPOSSIBLE\n", tc++);			
+          }
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright jonatan.k Codejam 2017 QR Problem A
+      #!/usr/bin/ruby -w
+
+      ARGF.readline.to_i.times do |tc|
+                                     res = 0
+                                     line = ARGF.readline.split ' '
+                                     pcs = line[0]
+                                     flen = line[1].to_i
+                                     fl = 0
+                                     pc = 0
+                                     pclen = pcs.length
+
+                                     pclen.times { |i| if (pcs[i] == '-') then pc |= (1 << i) end }
+           flen.times { |i| fl |= (1 << i) }
+
+      (pclen - flen).times do |i|
+                                 if pc != 0 and pc & (1 << i) != 0 then
+             pc ^= fl << i
+             res += 1
+             end
+             end
+             if pc != 0 then
+             pc ^= fl << (pclen - flen)
+             res += 1
+             end
+
+             res = pc == 0 ? res : 'IMPOSSIBLE'
+             puts "Case ##{tc + 1}: #{res}"
+             end
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright hzyfr Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <string.h>
+      #include <stdlib.h>
+  
+      char in[1200];
+  
+      int main(){
+        int t; scanf("%d", &t);
+        for(int i=1; i<=t; ++i){
+          int x; scanf("%s%d",in,&x);
+          int len = strlen(in);
+          int ans = 0;
+          for(int j=0; j<=len-x; ++j){
+            if (in[j] == '-'){
+              ++ans;
+              for(int k=j; k<j+x; ++k){
+                if (in[k] == '-') in[k] = '+';
+                else in[k] = '-';
+              }
+            }
+          }
+          int yes=1;
+          for(int j=len-x+1; j<len; ++j){
+            if (in[j] == '-') yes=0;
+          }
+          printf ("Case #%d: ", i);
+          if (yes) printf("%d\n", ans);
+          else printf("IMPOSSIBLE\n");
+        }
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright ieste Codejam 2017 QR Problem A
+      #include <stdio.h>
+      #include <stdlib.h>
+
+      void flip (char* arr, int idx, int k) {
+        for (int i = idx; i < idx + k; i++) {
+          if (arr[i] == '-')
+            arr[i] = '+';
+          else
+            arr[i] = '-';
+        }
+      }
+
+      int main (void) {
+        int T;
+        int i, j, k, n, count;
+        char pancakes[1001];
+
+        scanf("%d ", &T);
+
+        for (i = 0; i < T; i++) {
+          n = 1;
+          scanf("%c", pancakes);
+          while(pancakes[n-1] != ' ') {
+            scanf("%c", pancakes+n);
+            n++;
+          }
+          n--;
+
+          scanf("%d ", &k);
+
+          count = 0;
+          for(j = 0; j <= n-k; j++) {
+            if (pancakes[j] == '-') {
+              flip(pancakes, j, k);
+              count++;
+            }
+          }
+
+          for (j = n-k+1; j < n; j++) {
+            if (pancakes[j] == '-')
+              break;
+          }
+
+          printf("Case #%d: ", i+1);
+          if (j < n)
+            printf("IMPOSSIBLE\n");
+          else
+            printf("%d\n", count);
+        }
+
+        return 0;
+      }
+
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright mukel Codejam 2017 QR Problem A
+      #include <cstdio>
+      #include <cstring>
+
+      #define MAXN (1 << 10)
+
+      int testCount;
+      int n, k;
+      char s[MAXN];
+
+      int main() {
+        scanf("%d", &testCount);
+        for (int test = 1; test <= testCount; ++test) {
+          scanf("%s %d", s, &k);
+          n = strlen(s);		
+          int flips = 0;
+          for (int i = 0; i < n && (i + k - 1) < n; ++i)
+            if (s[i] == '-') {
+              flips++;
+              for (int j = 0; j < k; ++j)
+                s[i+j] = (s[i+j] == '+') ? '-' : '+';
+            }			
+          for (int i = 0; i < n; ++i) if (s[i] == '-') flips = -1;		
+          printf("Case #%d: ", test);
+          if (flips < 0) printf("IMPOSSIBLE\n");
+          else printf("%d\n", flips);
+
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright MikeCAT Codejam 2017 QR Problem A
+      #include <stdio.h>
+  
+      #define BIT_MAX 10000
+  
+      int bit_table[BIT_MAX];
+  
+      void bit_init(void) {
+        int i;
+        for (i = 0; i <BIT_MAX; i++) bit_table[i] = 0;
+      }
+  
+      void bit_add(int pos,int value) {
+        pos++;
+        while (pos <= BIT_MAX) {
+          bit_table[pos - 1] += value;
+          pos += pos & (-pos);
+        }
+      }
+  
+      int bit_sum(int pos) {
+        int sum = 0;
+        pos++;
+        while (pos > 0) {
+          sum += bit_table[pos - 1];
+          pos -= pos & (-pos);
+        }
+        return sum;
+      }
+  
+      /* flip [start, end) */
+      void bit_flip(int start, int end) {
+        bit_add(start, 1);
+        bit_add(end, -1);
+      }
+  
+      /* return side[pos] : 0=happy side, 1=blank side */
+      int bit_get(int pos) {
+        return (bit_sum(pos) - bit_sum(pos - 1)) % 2;
+      }
+  
+      int main(void) {
+        int T;
+        int case_count;
+        if (scanf("%d", &T) != 1) return 1;
+        for (case_count = 1; case_count <= T; case_count++) {
+          char S[1024];
+          int K;
+          int length;
+          int i;
+          int count = 0;
+          int is_ok = 1;
+          if (scanf("%1023s%d", S, &K) != 2) return 1;
+          /* initialize board */
+          bit_init();
+          for (i = 0; S[i] != '\0'; i++) {
+            if (S[i] == '-') bit_flip(i, i + 1);
+          }
+          length = i;
+          /* flip from left to right whenever required */
+          for (i = 0; i + K <= length; i++) {
+            if (bit_get(i)) {
+              bit_flip(i, i + K);
+              count++;
+            }
+          }
+          /* check if it is done */
+          for (i = 0; i < length; i++) {
+            if (bit_get(i)) {
+              /* blank side found! */
+              is_ok = 0;
+              break;
+            }
+          }
+          printf("Case #%d: ", case_count);
+          if (is_ok) {
+            printf("%d\n", count);
+          } else {
+            puts("IMPOSSIBLE");
+          }
+        }
+        return 0;
+      }
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright cjoa Codejam 2017 QR Problem A
+      #!/usr/bin/env python
+
+      from sys import stdin, stderr
+
+           INF = 1000000000
+
+           def solve(S, K):
+           N = len(S)
+             res = 0
+             for i in xrange(N-K+1):
+             if S[i] == '-':
+               res += 1
+                 T = ''.join( ['+' if c == '-' else '-' for c in S[i:i+K]] )
+                 S = S[:i] + T + S[i+K:]
+                 return res if S == '+' * N else INF
+
+                                                   def main():
+                                      TC = int(stdin.readline())
+                                        for tc in xrange(1, TC+1):
+                                        S, K = stdin.readline().split()
+                                          K = int(K)
+                                          res = solve(S, K)
+                                          if res >= INF:
+                                          print 'Case #%d: IMPOSSIBLE' % (tc)
+                                          else:
+                                            print 'Case #%d: %d' % (tc, res)
+                                              return 0
+
+                                              if __name__ == '__main__': main()
+
+    #+END_SRC
+
+
+
+    #+BEGIN_SRC C
+      // Copyright Padfoot7 Codejam 2017 QR Problem A
+      #include<stdio.h>
+      #include <stdlib.h>
+
+
+
+      int main()
+      {
+        int test,count=0,i,j=0,k,output=0,flag=0;
+
+        FILE *fp_in, *fp_out;
+        char str_in[1010],input[1010],str_out[105];
+        fp_in = fopen("A-large.in","r");			//add file name here
+        fp_out = fopen("result.txt","w");	
+
+
+        //Enter test cases
+
+
+        //printf ("Enter test cases :\n"); //to be commented
+        //scanf("%d",&test);				 //to be commented
+
+
+
+        fgets(input,105,fp_in);
+        sscanf(input, "%d", &test);
+
+
+
+
+        for (i=0;i<test;i++){
+
+
+          //entering input for each case
+          //	printf ("Enter input for test case %d :\n",i+1);	//to be commented
+          //	scanf ("%s%d",str_in,&k);								//to be commented
+          //printf ("%s\t%d\n",str_in,k);
+
+          fgets(input,105,fp_in);
+          sscanf(input, "%s %d" , str_in,&k);
+
+
+
+
+
+
+          //the main code goes here 
+          while (str_in[j+k-1]!='\0'){
+            if(str_in[j]=='-'){
+              output++;
+              for(count=0;count<k;count++){
+                if(str_in[count+j]=='-')
+                  str_in[count+j]='+';
+                else if (str_in[count+j]=='+')
+                  str_in[count+j]='-';
+
+              }
+
+
+
+            }
+            j++;
+
+
+          }
+
+
+          while (str_in[j]!='\0'){
+            if(str_in[j]=='-'){
+              flag=1;
+              break;
+            }
+            j++;
+
+          }
+
+
+
+          //printing output
+          if(flag==1)
+            sprintf (str_out,"Case #%d:  IMPOSSIBLE\n",i+1);
+          //printf ("Case #%d:  IMPOSSIBLE\n",i+1);		//add the output
+          else
+            sprintf (str_out,"Case #%d:  %d\n",i+1,output);
+          //printf ("Case #%d:  %d\n",i+1,output);	
+
+          fputs(str_out,fp_out);
+          /*	
+          //change according to the output
+
+          ,*/	
+          j=0;
+          flag=0;
+          output=0;
+
+
+        }
+
+
+
+
+      }
+
+    #+END_SRC
+
+** TODO 2016 Problem A. Counting Sheep [%]       :small7points:large8points:
 **** input subproblems 
      canadian solution->
      freopen("A-large.in", "r", stdin);
@@ -30,218 +5225,199 @@
      out = fopen("output.txt","w");
      fscanf(in,"%d",&t);
 
-
 **** datastructure subproblems
 **** algorithm subproblems
 **** output subproblems
      freopen("A-large.out", "w", stdout);
 
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-
 ** TODO 2015 Problem A. Standing Ovation [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-
 ** TODO 2014 Problem A. Magic Trick [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2013 Problem A. Tic-Tac-Toe-Tomek [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2012 Problem A. Speaking in Tongues [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-** TODO 2008 Problem A. Saving the Universe [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-** TODO 2009 Problem A. Alien Language [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-** TODO 2010 Problem A. Snapper Chain [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2011 Problem A. Bot Trust [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
+** TODO 2010 Problem A. Snapper Chain [%]
+** TODO 2009 Problem A. Alien Language [%]
+** TODO 2008 Problem A. Saving the Universe [%]
 
+
+
+* Level B [%]
+** TODO 2017 Problem B. Tidy Numbers [%]
 ** TODO 2016 Problem B. Revenge of the Pancakes [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2015 Problem B. Infinite House of Pancakes [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2014 Problem B. Cookie Clicker Alpha [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2013 Problem B. Lawnmower [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-** TODO 2010 Problem B. Fair Warning [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-** TODO 2009 Problem B. Watersheds [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-** TODO 2008 Problem B. Train Timetable [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2012 Problem B. Dancing With the Googlers [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-
-
-
-
 ** TODO 2011 Problem B. Magicka [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
+** TODO 2010 Problem B. Fair Warning [%]
+** TODO 2009 Problem B. Watersheds [%]
+** TODO 2008 Problem B. Train Timetable [%]
 
 
+
+* Level C [%]
+** TODO 2017 Problem C. Bathroom Stalls [%]
 ** TODO 2016 Problem C. Coin Jam [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2015 Problem C. Dijkstra [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2014 Problem C. Minesweeper Master [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-** TODO 2008 Problem C. Fly Swatter [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-** TODO 2009 Problem C. Welcome to Code Jam [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-** TODO 2010 Problem C. Theme Park [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-
 ** TODO 2013 Problem C. Fair and Square [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-
-
-
-** TODO 2011 Problem C. Candy Splitting [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
 ** TODO 2012 Problem C. Recycled Numbers [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
+** TODO 2011 Problem C. Candy Splitting [%]
+** TODO 2010 Problem C. Theme Park [%]
+** TODO 2009 Problem C. Welcome to Code Jam [%]
+** TODO 2008 Problem C. Fly Swatter [%]
 
 
+   
+* Level D [%]
+** TODO 2017 Problem D. Fashion Show [%]
+   - ss: 
+     dfasdffsdfasf
+     #+BEGIN_SRC C
+       #include <bits/stdc++.h>
+
+       using namespace std;
+
+       int N, K;
+       char S[10000];
+
+       void _main(int TEST)
+       {
+         scanf("%s%d", S, &K);
+         N=strlen(S);
+         int ans=0;
+         for(int i=0; i+K-1<N; i++) if(S[i]=='-')
+                                      {
+                                        for(int j=0; j<K; j++)
+                                          S[i+j]^='-'^'+';
+                                        ans++;
+                                      }
+         for(int i=0; i<N; i++) if(S[i]=='-')
+                                  ans=-1;
+         if(ans==-1)
+           printf("IMPOSSIBLE\n");
+         else
+           printf("%d\n", ans);
+       }
+
+       int main()
+       {
+         freopen("A-small-attempt0.in", "r", stdin);
+         freopen("A-small-attempt0.out", "w", stdout);
+         int TEST;
+         scanf("%d", &TEST);
+         for(int i=1; i<=TEST; i++)
+           {
+             //cerr << i << endl;
+             printf("Case #%d: ", i);
+             _main(i);
+           }
+         return 0;
+       }
+
+     #+END_SRC
 ** TODO 2016 Problem D. Fractiles [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2015 Problem D. Ominous Omino [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-
-
-
 ** TODO 2014 Problem D. Deceitful War [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
-
-
-
-** TODO 2011 Problem D. GoroSort [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
 ** TODO 2013 Problem D. Treasure [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
-
 ** TODO 2012 Problem D. Hall of Mirrors [%]
-*** Problem Solving Period (1h)
-*** Problem Analysis Period A (1h)
-*** Problem Analysis Period B (1h)
-*** Problem Analysis Period C (1h)
+** TODO 2011 Problem D. GoroSort [%]
+
+
+* Autogenerated Book via Hackspree.com
+  webscrapping-to-pdf of compact C solutions and tol contestants, problems, and
+  problem analysis to generate first edition, then create a 2nd edition
+  with comments!
+
+* About: Codejam Qualification Round in C  
+   
+  My name is Mohamed Fouad, and I am making an opensource book for
+  Google CodeJam, it attempts to show the problems and their
+  analysis, as well as *selected* implementations in
+  the C programming language. Why not C++? because I trust that C
+  will provide a much more deep understanding of the craft of writing
+  software programs. This book is intended to be printed 
+  and sold per its printing cost (nonprofit). The idea
+  is to make a really cool, neat, afordable book for competitive
+  programmers to enjoy. 
+  
+  Problems are grouped based on their difficulity level on which rounds
+  they are presented. Total of Qualification Round problems from
+  2008-2017 is *37 problems*. Each problem should be divided into subproblems. Subproblems include
+  getting the input correctly using C, consiously storing it in
+  appropiate datastructures.
+
+  For various topic discussions included in the book we high
+  recommend #algorithms@freenode.net, also it goes without saying
+  that all contributions to this opensource effort are welcomed ofcourse. 
+
+  The change from the person you are, to the person who is a competitive
+  programmer requires the following Mental Resilience Practices:
+  - Practice goes from Level A and Up 
+    Setting very short term, very specific goals; ensures high a higher
+    chance for success as small victories keep morale high and high
+    morale feeds forward into more high morale, and further progress.
+    - Mental visualization when resting is just as important in doing the
+      actual practice itself. 
+      - Maintain a vivid and detailed image of the problem
+        implementations that you encountered. 
+      - Automatic Repetition. Run the play-by-play over and over in your head.   
+      - Always envision positive imagery of effortless success, think
+        "codejam finals". 
+    - Daily Positive Self-talk such as "Practice is Everything", "Tough problems 
+      don’t last, tough coders do", "in a world full of softies, cultivating mental resilience
+      provides an incredible advantage", "How do you eat an elephant?
+      One bite at a time.", "Men are disturbed not by things, but the view they take of them." —Epictetus"
+    - Arousal Control via 4x4 breathing (breathe in for 4secs and
+      breathe out 4secs)
+    - Knowledge
+    - Comprehension
+    - Application
+    - Analysis
+    - Synthesis
+
+
+* Appendix A: FCSC Review
+  each subpoint is a screencast video
+** FCSC Ch.1 Review 
+   Chapter title: Computer Science: The Mechanization of Abstraction
+*** What this book is about    
+*** What this chapter is about
+*** Data Models 
+*** The C Data Model 
+*** Algorithms and the Design of Programs
+*** Some C conventions used throught the book
+*** Summary of Chapte 1
+*** Bibliographic Notes for Chapter 1 
+   
+    Computer science is a science of abstraction, creating the right model
+    for thinking about a problem and devising the appropiate mechanizable
+    techniques to solve it.
+
+    The book highlights, as an example, that we can model the behavior of
+    electornic circutis used in building computers as an abstraction
+    called "propositional logic".
+
+    Pictorially, this is not a pipe famous example.
+    
+    The book says that Abstraction is not be feared. giving example
+    that  
+
+** FCSC Ch.2 
+   Chapter Title: Iteration, Induction, and Recursion
+*** What this chapter is about 
+*** Iteration 
+*** Inductive Proofs 
+*** Complete Induction 
+*** Proving Properties of Programs
+*** Recursive Definitions
+*** Recursive Functions
+*** Merge Sort: A Recursive Sorting Algorithm
+*** Proving Properties of Recursive Programs
+*** Summary of Chapter 2
+*** Bibliographic Notes for Chapter 2
+** FCSC Ch.3 
+   Chapter Title: The Running Time of Programs
+
+** FCSC Ch.4  
+   Combinatorics and Probability

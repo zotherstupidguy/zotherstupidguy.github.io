@@ -1,0 +1,11 @@
+3 
+'---' found starting 0 in '---+-++-'
+Case #1: 8
+Log: ---+-++- 3 
+'----ü' not found in '+++++', returning -1
+Case #2: 5
+Log: +++++ 4 
+'----ü' not found in '-+-+-', returning -1
+Case #3: 5
+Log: -+-+- 4 
+>>>>>>>Logging::ENABLED<<<<<<<<<<
